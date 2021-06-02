@@ -1,0 +1,13 @@
+{
+    "name": "audentio/sportsdataio-php",
+    "description": "PHP API Client for Sportsdata.io",
+    "type": "library",
+    "require": {
+        "jane-php/open-api-runtime": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sportsdata\\API\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+<?php
+
+namespace Sportsdata\API\Soccer\Endpoint;
+
+class UpcomingDfsSlatesByCompetition extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Soccer\Runtime\Client\Endpoint
+{
+    protected $format;
+    protected $competitionId;
+    /**
+    * 
+    *
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+    * @param string $competitionId The id of the competition.
+    <br>Examples: <code>3</code>
+    */
+    public function __construct(string $format, string $competitionId)
+    {
+        $this->format = $format;
+        $this->competitionId = $competitionId;
+    }
+    use \Sportsdata\API\Soccer\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
+    {
+        return 'GET';
+    }
+    public function getUri() : string
+    {
+        return str_replace(array('{format}', '{competitionId}'), array($this->format, $this->competitionId), '/stats/{format}/UpcomingDfsSlatesByCompetition/{competitionId}');
+    }
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    {
+        return array(array(), null);
+    }
+    public function getExtraHeaders() : array
+    {
+        return array('Accept' => array('application/json'));
+    }
+    /**
+     * {@inheritdoc}
+     *
+     *
+     * @return null|\Sportsdata\API\Soccer\Model\DfsSlate[]
+     */
+    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    {
+        if (200 === $status) {
+            return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\DfsSlate[]', 'json');
+        }
+    }
+    public function getAuthenticationScopes() : array
+    {
+        return array('apiKeyHeader', 'apiKeyQuery');
+    }
+}

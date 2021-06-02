@@ -2,6 +2,7 @@
     "name": "audentio/sportsdataio-php",
     "description": "PHP API Client for Sportsdata.io",
     "type": "library",
+    "license": "MIT",
     "require": {
         "jane-php/open-api-runtime": "^7.0"
     },

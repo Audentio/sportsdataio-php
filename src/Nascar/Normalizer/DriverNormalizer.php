@@ -39,59 +39,113 @@ class DriverNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('DriverID', $data)) {
             $object->setDriverID($data['DriverID']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('Number', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('Number', $data) && $data['Number'] !== null) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('NumberDisplay', $data)) {
+        elseif (\array_key_exists('Number', $data) && $data['Number'] === null) {
+            $object->setNumber(null);
+        }
+        if (\array_key_exists('NumberDisplay', $data) && $data['NumberDisplay'] !== null) {
             $object->setNumberDisplay($data['NumberDisplay']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('NumberDisplay', $data) && $data['NumberDisplay'] === null) {
+            $object->setNumberDisplay(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('BirthDate', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('BirthDate', $data) && $data['BirthDate'] !== null) {
             $object->setBirthDate($data['BirthDate']);
         }
-        if (\array_key_exists('BirthPlace', $data)) {
+        elseif (\array_key_exists('BirthDate', $data) && $data['BirthDate'] === null) {
+            $object->setBirthDate(null);
+        }
+        if (\array_key_exists('BirthPlace', $data) && $data['BirthPlace'] !== null) {
             $object->setBirthPlace($data['BirthPlace']);
         }
-        if (\array_key_exists('Gender', $data)) {
+        elseif (\array_key_exists('BirthPlace', $data) && $data['BirthPlace'] === null) {
+            $object->setBirthPlace(null);
+        }
+        if (\array_key_exists('Gender', $data) && $data['Gender'] !== null) {
             $object->setGender($data['Gender']);
         }
-        if (\array_key_exists('Height', $data)) {
+        elseif (\array_key_exists('Gender', $data) && $data['Gender'] === null) {
+            $object->setGender(null);
+        }
+        if (\array_key_exists('Height', $data) && $data['Height'] !== null) {
             $object->setHeight($data['Height']);
         }
-        if (\array_key_exists('Weight', $data)) {
+        elseif (\array_key_exists('Height', $data) && $data['Height'] === null) {
+            $object->setHeight(null);
+        }
+        if (\array_key_exists('Weight', $data) && $data['Weight'] !== null) {
             $object->setWeight($data['Weight']);
         }
-        if (\array_key_exists('Manufacturer', $data)) {
+        elseif (\array_key_exists('Weight', $data) && $data['Weight'] === null) {
+            $object->setWeight(null);
+        }
+        if (\array_key_exists('Manufacturer', $data) && $data['Manufacturer'] !== null) {
             $object->setManufacturer($data['Manufacturer']);
         }
-        if (\array_key_exists('Engine', $data)) {
+        elseif (\array_key_exists('Manufacturer', $data) && $data['Manufacturer'] === null) {
+            $object->setManufacturer(null);
+        }
+        if (\array_key_exists('Engine', $data) && $data['Engine'] !== null) {
             $object->setEngine($data['Engine']);
         }
-        if (\array_key_exists('Chassis', $data)) {
+        elseif (\array_key_exists('Engine', $data) && $data['Engine'] === null) {
+            $object->setEngine(null);
+        }
+        if (\array_key_exists('Chassis', $data) && $data['Chassis'] !== null) {
             $object->setChassis($data['Chassis']);
         }
-        if (\array_key_exists('Sponsors', $data)) {
+        elseif (\array_key_exists('Chassis', $data) && $data['Chassis'] === null) {
+            $object->setChassis(null);
+        }
+        if (\array_key_exists('Sponsors', $data) && $data['Sponsors'] !== null) {
             $object->setSponsors($data['Sponsors']);
         }
-        if (\array_key_exists('CrewChief', $data)) {
+        elseif (\array_key_exists('Sponsors', $data) && $data['Sponsors'] === null) {
+            $object->setSponsors(null);
+        }
+        if (\array_key_exists('CrewChief', $data) && $data['CrewChief'] !== null) {
             $object->setCrewChief($data['CrewChief']);
         }
-        if (\array_key_exists('PhotoUrl', $data)) {
+        elseif (\array_key_exists('CrewChief', $data) && $data['CrewChief'] === null) {
+            $object->setCrewChief(null);
+        }
+        if (\array_key_exists('PhotoUrl', $data) && $data['PhotoUrl'] !== null) {
             $object->setPhotoUrl($data['PhotoUrl']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('PhotoUrl', $data) && $data['PhotoUrl'] === null) {
+            $object->setPhotoUrl(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Created', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
+        }
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
         }
         return $object;
     }

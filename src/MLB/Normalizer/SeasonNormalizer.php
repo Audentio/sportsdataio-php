@@ -39,17 +39,29 @@ class SeasonNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('RegularSeasonStartDate', $data)) {
+        if (\array_key_exists('RegularSeasonStartDate', $data) && $data['RegularSeasonStartDate'] !== null) {
             $object->setRegularSeasonStartDate($data['RegularSeasonStartDate']);
         }
-        if (\array_key_exists('PostSeasonStartDate', $data)) {
+        elseif (\array_key_exists('RegularSeasonStartDate', $data) && $data['RegularSeasonStartDate'] === null) {
+            $object->setRegularSeasonStartDate(null);
+        }
+        if (\array_key_exists('PostSeasonStartDate', $data) && $data['PostSeasonStartDate'] !== null) {
             $object->setPostSeasonStartDate($data['PostSeasonStartDate']);
         }
-        if (\array_key_exists('SeasonType', $data)) {
+        elseif (\array_key_exists('PostSeasonStartDate', $data) && $data['PostSeasonStartDate'] === null) {
+            $object->setPostSeasonStartDate(null);
+        }
+        if (\array_key_exists('SeasonType', $data) && $data['SeasonType'] !== null) {
             $object->setSeasonType($data['SeasonType']);
         }
-        if (\array_key_exists('ApiSeason', $data)) {
+        elseif (\array_key_exists('SeasonType', $data) && $data['SeasonType'] === null) {
+            $object->setSeasonType(null);
+        }
+        if (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] !== null) {
             $object->setApiSeason($data['ApiSeason']);
+        }
+        elseif (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] === null) {
+            $object->setApiSeason(null);
         }
         return $object;
     }

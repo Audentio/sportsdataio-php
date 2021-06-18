@@ -19,19 +19,19 @@ class Match
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $mapName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $winningTeamId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gameVersion;
     /**
@@ -97,20 +97,20 @@ class Match
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getMapName() : string
+    public function getMapName() : ?string
     {
         return $this->mapName;
     }
     /**
      * 
      *
-     * @param string $mapName
+     * @param string|null $mapName
      *
      * @return self
      */
-    public function setMapName(string $mapName) : self
+    public function setMapName(?string $mapName) : self
     {
         $this->mapName = $mapName;
         return $this;
@@ -118,20 +118,20 @@ class Match
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWinningTeamId() : int
+    public function getWinningTeamId() : ?int
     {
         return $this->winningTeamId;
     }
     /**
      * 
      *
-     * @param int $winningTeamId
+     * @param int|null $winningTeamId
      *
      * @return self
      */
-    public function setWinningTeamId(int $winningTeamId) : self
+    public function setWinningTeamId(?int $winningTeamId) : self
     {
         $this->winningTeamId = $winningTeamId;
         return $this;
@@ -139,20 +139,20 @@ class Match
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGameVersion() : string
+    public function getGameVersion() : ?string
     {
         return $this->gameVersion;
     }
     /**
      * 
      *
-     * @param string $gameVersion
+     * @param string|null $gameVersion
      *
      * @return self
      */
-    public function setGameVersion(string $gameVersion) : self
+    public function setGameVersion(?string $gameVersion) : self
     {
         $this->gameVersion = $gameVersion;
         return $this;

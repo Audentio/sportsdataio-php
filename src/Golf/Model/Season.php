@@ -13,19 +13,19 @@ class Season
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $endDate;
     /**
@@ -52,20 +52,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -73,20 +73,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -94,20 +94,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEndDate() : string
+    public function getEndDate() : ?string
     {
         return $this->endDate;
     }
     /**
      * 
      *
-     * @param string $endDate
+     * @param string|null $endDate
      *
      * @return self
      */
-    public function setEndDate(string $endDate) : self
+    public function setEndDate(?string $endDate) : self
     {
         $this->endDate = $endDate;
         return $this;

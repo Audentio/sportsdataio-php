@@ -45,29 +45,53 @@ class PlayerSeasonNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('WorldGolfRank', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('WorldGolfRank', $data) && $data['WorldGolfRank'] !== null) {
             $object->setWorldGolfRank($data['WorldGolfRank']);
         }
-        if (\array_key_exists('WorldGolfRankLastWeek', $data)) {
+        elseif (\array_key_exists('WorldGolfRank', $data) && $data['WorldGolfRank'] === null) {
+            $object->setWorldGolfRank(null);
+        }
+        if (\array_key_exists('WorldGolfRankLastWeek', $data) && $data['WorldGolfRankLastWeek'] !== null) {
             $object->setWorldGolfRankLastWeek($data['WorldGolfRankLastWeek']);
         }
-        if (\array_key_exists('Events', $data)) {
+        elseif (\array_key_exists('WorldGolfRankLastWeek', $data) && $data['WorldGolfRankLastWeek'] === null) {
+            $object->setWorldGolfRankLastWeek(null);
+        }
+        if (\array_key_exists('Events', $data) && $data['Events'] !== null) {
             $object->setEvents($data['Events']);
         }
-        if (\array_key_exists('AveragePoints', $data)) {
+        elseif (\array_key_exists('Events', $data) && $data['Events'] === null) {
+            $object->setEvents(null);
+        }
+        if (\array_key_exists('AveragePoints', $data) && $data['AveragePoints'] !== null) {
             $object->setAveragePoints($data['AveragePoints']);
         }
-        if (\array_key_exists('TotalPoints', $data)) {
+        elseif (\array_key_exists('AveragePoints', $data) && $data['AveragePoints'] === null) {
+            $object->setAveragePoints(null);
+        }
+        if (\array_key_exists('TotalPoints', $data) && $data['TotalPoints'] !== null) {
             $object->setTotalPoints($data['TotalPoints']);
         }
-        if (\array_key_exists('PointsLost', $data)) {
+        elseif (\array_key_exists('TotalPoints', $data) && $data['TotalPoints'] === null) {
+            $object->setTotalPoints(null);
+        }
+        if (\array_key_exists('PointsLost', $data) && $data['PointsLost'] !== null) {
             $object->setPointsLost($data['PointsLost']);
         }
-        if (\array_key_exists('PointsGained', $data)) {
+        elseif (\array_key_exists('PointsLost', $data) && $data['PointsLost'] === null) {
+            $object->setPointsLost(null);
+        }
+        if (\array_key_exists('PointsGained', $data) && $data['PointsGained'] !== null) {
             $object->setPointsGained($data['PointsGained']);
+        }
+        elseif (\array_key_exists('PointsGained', $data) && $data['PointsGained'] === null) {
+            $object->setPointsGained(null);
         }
         return $object;
     }

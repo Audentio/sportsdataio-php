@@ -7,7 +7,7 @@ class TeamGameTrends
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $scope;
     /**
@@ -19,19 +19,19 @@ class TeamGameTrends
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opponentID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
@@ -55,68 +55,68 @@ class TeamGameTrends
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $winsAgainstTheSpread;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $lossesAgainstTheSpread;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pushesAgainstTheSpread;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $overs;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $unders;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $overUnderPushes;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageScore;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageOpponentScore;
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getScope() : string
+    public function getScope() : ?string
     {
         return $this->scope;
     }
     /**
      * 
      *
-     * @param string $scope
+     * @param string|null $scope
      *
      * @return self
      */
-    public function setScope(string $scope) : self
+    public function setScope(?string $scope) : self
     {
         $this->scope = $scope;
         return $this;
@@ -145,20 +145,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -166,20 +166,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpponentID() : int
+    public function getOpponentID() : ?int
     {
         return $this->opponentID;
     }
     /**
      * 
      *
-     * @param int $opponentID
+     * @param int|null $opponentID
      *
      * @return self
      */
-    public function setOpponentID(int $opponentID) : self
+    public function setOpponentID(?int $opponentID) : self
     {
         $this->opponentID = $opponentID;
         return $this;
@@ -187,20 +187,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -271,20 +271,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWinsAgainstTheSpread() : int
+    public function getWinsAgainstTheSpread() : ?int
     {
         return $this->winsAgainstTheSpread;
     }
     /**
      * 
      *
-     * @param int $winsAgainstTheSpread
+     * @param int|null $winsAgainstTheSpread
      *
      * @return self
      */
-    public function setWinsAgainstTheSpread(int $winsAgainstTheSpread) : self
+    public function setWinsAgainstTheSpread(?int $winsAgainstTheSpread) : self
     {
         $this->winsAgainstTheSpread = $winsAgainstTheSpread;
         return $this;
@@ -292,20 +292,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLossesAgainstTheSpread() : int
+    public function getLossesAgainstTheSpread() : ?int
     {
         return $this->lossesAgainstTheSpread;
     }
     /**
      * 
      *
-     * @param int $lossesAgainstTheSpread
+     * @param int|null $lossesAgainstTheSpread
      *
      * @return self
      */
-    public function setLossesAgainstTheSpread(int $lossesAgainstTheSpread) : self
+    public function setLossesAgainstTheSpread(?int $lossesAgainstTheSpread) : self
     {
         $this->lossesAgainstTheSpread = $lossesAgainstTheSpread;
         return $this;
@@ -313,20 +313,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPushesAgainstTheSpread() : int
+    public function getPushesAgainstTheSpread() : ?int
     {
         return $this->pushesAgainstTheSpread;
     }
     /**
      * 
      *
-     * @param int $pushesAgainstTheSpread
+     * @param int|null $pushesAgainstTheSpread
      *
      * @return self
      */
-    public function setPushesAgainstTheSpread(int $pushesAgainstTheSpread) : self
+    public function setPushesAgainstTheSpread(?int $pushesAgainstTheSpread) : self
     {
         $this->pushesAgainstTheSpread = $pushesAgainstTheSpread;
         return $this;
@@ -334,20 +334,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOvers() : int
+    public function getOvers() : ?int
     {
         return $this->overs;
     }
     /**
      * 
      *
-     * @param int $overs
+     * @param int|null $overs
      *
      * @return self
      */
-    public function setOvers(int $overs) : self
+    public function setOvers(?int $overs) : self
     {
         $this->overs = $overs;
         return $this;
@@ -355,20 +355,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getUnders() : int
+    public function getUnders() : ?int
     {
         return $this->unders;
     }
     /**
      * 
      *
-     * @param int $unders
+     * @param int|null $unders
      *
      * @return self
      */
-    public function setUnders(int $unders) : self
+    public function setUnders(?int $unders) : self
     {
         $this->unders = $unders;
         return $this;
@@ -376,20 +376,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOverUnderPushes() : int
+    public function getOverUnderPushes() : ?int
     {
         return $this->overUnderPushes;
     }
     /**
      * 
      *
-     * @param int $overUnderPushes
+     * @param int|null $overUnderPushes
      *
      * @return self
      */
-    public function setOverUnderPushes(int $overUnderPushes) : self
+    public function setOverUnderPushes(?int $overUnderPushes) : self
     {
         $this->overUnderPushes = $overUnderPushes;
         return $this;
@@ -397,20 +397,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageScore() : float
+    public function getAverageScore() : ?float
     {
         return $this->averageScore;
     }
     /**
      * 
      *
-     * @param float $averageScore
+     * @param float|null $averageScore
      *
      * @return self
      */
-    public function setAverageScore(float $averageScore) : self
+    public function setAverageScore(?float $averageScore) : self
     {
         $this->averageScore = $averageScore;
         return $this;
@@ -418,20 +418,20 @@ class TeamGameTrends
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageOpponentScore() : float
+    public function getAverageOpponentScore() : ?float
     {
         return $this->averageOpponentScore;
     }
     /**
      * 
      *
-     * @param float $averageOpponentScore
+     * @param float|null $averageOpponentScore
      *
      * @return self
      */
-    public function setAverageOpponentScore(float $averageOpponentScore) : self
+    public function setAverageOpponentScore(?float $averageOpponentScore) : self
     {
         $this->averageOpponentScore = $averageOpponentScore;
         return $this;

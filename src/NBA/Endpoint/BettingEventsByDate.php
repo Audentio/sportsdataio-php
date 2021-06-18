@@ -4,18 +4,18 @@ namespace Sportsdata\API\NBA\Endpoint;
 
 class BettingEventsByDate extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NBA\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $date;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $date The date of the game(s). <br>Examples: <code>2020-02-15</code>, <code>2020-02-23</code>.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $date)
+    public function __construct(string $date, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\NBA\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingEventsByDate extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoin
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}'), array($this->format, $this->date), '/odds/{format}/BettingEventsByDate/{date}');
+        return str_replace(array('{date}', '{format}'), array($this->date, $this->format), '/odds/{format}/BettingEventsByDate/{date}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

@@ -42,32 +42,56 @@ class RaceNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('SeriesID', $data)) {
             $object->setSeriesID($data['SeriesID']);
         }
-        if (\array_key_exists('SeriesName', $data)) {
+        if (\array_key_exists('SeriesName', $data) && $data['SeriesName'] !== null) {
             $object->setSeriesName($data['SeriesName']);
+        }
+        elseif (\array_key_exists('SeriesName', $data) && $data['SeriesName'] === null) {
+            $object->setSeriesName(null);
         }
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Day', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Day', $data) && $data['Day'] !== null) {
             $object->setDay($data['Day']);
         }
-        if (\array_key_exists('DateTime', $data)) {
+        elseif (\array_key_exists('Day', $data) && $data['Day'] === null) {
+            $object->setDay(null);
+        }
+        if (\array_key_exists('DateTime', $data) && $data['DateTime'] !== null) {
             $object->setDateTime($data['DateTime']);
         }
-        if (\array_key_exists('Track', $data)) {
+        elseif (\array_key_exists('DateTime', $data) && $data['DateTime'] === null) {
+            $object->setDateTime(null);
+        }
+        if (\array_key_exists('Track', $data) && $data['Track'] !== null) {
             $object->setTrack($data['Track']);
         }
-        if (\array_key_exists('Broadcast', $data)) {
+        elseif (\array_key_exists('Track', $data) && $data['Track'] === null) {
+            $object->setTrack(null);
+        }
+        if (\array_key_exists('Broadcast', $data) && $data['Broadcast'] !== null) {
             $object->setBroadcast($data['Broadcast']);
         }
-        if (\array_key_exists('WinnerID', $data)) {
+        elseif (\array_key_exists('Broadcast', $data) && $data['Broadcast'] === null) {
+            $object->setBroadcast(null);
+        }
+        if (\array_key_exists('WinnerID', $data) && $data['WinnerID'] !== null) {
             $object->setWinnerID($data['WinnerID']);
         }
-        if (\array_key_exists('PoleWinnerID', $data)) {
+        elseif (\array_key_exists('WinnerID', $data) && $data['WinnerID'] === null) {
+            $object->setWinnerID(null);
+        }
+        if (\array_key_exists('PoleWinnerID', $data) && $data['PoleWinnerID'] !== null) {
             $object->setPoleWinnerID($data['PoleWinnerID']);
+        }
+        elseif (\array_key_exists('PoleWinnerID', $data) && $data['PoleWinnerID'] === null) {
+            $object->setPoleWinnerID(null);
         }
         if (\array_key_exists('IsInProgress', $data)) {
             $object->setIsInProgress($data['IsInProgress']);
@@ -75,17 +99,29 @@ class RaceNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('IsOver', $data)) {
             $object->setIsOver($data['IsOver']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Created', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
         }
-        if (\array_key_exists('RescheduledDay', $data)) {
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
+        }
+        if (\array_key_exists('RescheduledDay', $data) && $data['RescheduledDay'] !== null) {
             $object->setRescheduledDay($data['RescheduledDay']);
         }
-        if (\array_key_exists('RescheduledDateTime', $data)) {
+        elseif (\array_key_exists('RescheduledDay', $data) && $data['RescheduledDay'] === null) {
+            $object->setRescheduledDay(null);
+        }
+        if (\array_key_exists('RescheduledDateTime', $data) && $data['RescheduledDateTime'] !== null) {
             $object->setRescheduledDateTime($data['RescheduledDateTime']);
+        }
+        elseif (\array_key_exists('RescheduledDateTime', $data) && $data['RescheduledDateTime'] === null) {
+            $object->setRescheduledDateTime(null);
         }
         if (\array_key_exists('Canceled', $data)) {
             $object->setCanceled($data['Canceled']);

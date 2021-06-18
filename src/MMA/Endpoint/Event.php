@@ -4,18 +4,18 @@ namespace Sportsdata\API\MMA\Endpoint;
 
 class Event extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implements \Sportsdata\API\MMA\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $eventid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $eventid The unique ID of this event. <br> Examples: <code>51</code>, <code>52</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $eventid)
+    public function __construct(string $eventid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->eventid = $eventid;
+        $this->format = $format;
     }
     use \Sportsdata\API\MMA\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class Event extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implements \
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{eventid}'), array($this->format, $this->eventid), '/stats/{format}/Event/{eventid}');
+        return str_replace(array('{eventid}', '{format}'), array($this->eventid, $this->format), '/scores/{format}/Event/{eventid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

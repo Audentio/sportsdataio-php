@@ -4,19 +4,19 @@ namespace Sportsdata\API\LOL\Endpoint;
 
 class BoxScore extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\LOL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $gameid;
+    protected $format;
     /**
     * Games by Date
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $gameid Unique FantasyData Game ID. 
     Example:<code>100002649</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $gameid)
+    public function __construct(string $gameid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->gameid = $gameid;
+        $this->format = $format;
     }
     use \Sportsdata\API\LOL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class BoxScore extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implement
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{gameid}'), array($this->format, $this->gameid), '/stats/{format}/BoxScore/{gameid}');
+        return str_replace(array('{gameid}', '{format}'), array($this->gameid, $this->format), '/stats/{format}/BoxScore/{gameid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

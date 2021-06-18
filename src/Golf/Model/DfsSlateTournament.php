@@ -19,7 +19,7 @@ class DfsSlateTournament
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $tournamentID;
     /**
@@ -31,13 +31,13 @@ class DfsSlateTournament
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $operatorTournamentID;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $removedByOperator;
     /**
@@ -85,20 +85,20 @@ class DfsSlateTournament
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTournamentID() : int
+    public function getTournamentID() : ?int
     {
         return $this->tournamentID;
     }
     /**
      * 
      *
-     * @param int $tournamentID
+     * @param int|null $tournamentID
      *
      * @return self
      */
-    public function setTournamentID(int $tournamentID) : self
+    public function setTournamentID(?int $tournamentID) : self
     {
         $this->tournamentID = $tournamentID;
         return $this;
@@ -127,20 +127,20 @@ class DfsSlateTournament
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOperatorTournamentID() : int
+    public function getOperatorTournamentID() : ?int
     {
         return $this->operatorTournamentID;
     }
     /**
      * 
      *
-     * @param int $operatorTournamentID
+     * @param int|null $operatorTournamentID
      *
      * @return self
      */
-    public function setOperatorTournamentID(int $operatorTournamentID) : self
+    public function setOperatorTournamentID(?int $operatorTournamentID) : self
     {
         $this->operatorTournamentID = $operatorTournamentID;
         return $this;
@@ -148,20 +148,20 @@ class DfsSlateTournament
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRemovedByOperator() : bool
+    public function getRemovedByOperator() : ?bool
     {
         return $this->removedByOperator;
     }
     /**
      * 
      *
-     * @param bool $removedByOperator
+     * @param bool|null $removedByOperator
      *
      * @return self
      */
-    public function setRemovedByOperator(bool $removedByOperator) : self
+    public function setRemovedByOperator(?bool $removedByOperator) : self
     {
         $this->removedByOperator = $removedByOperator;
         return $this;

@@ -36,23 +36,41 @@ class MapNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('Number', $data)) {
+        if (\array_key_exists('Number', $data) && $data['Number'] !== null) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('Number', $data) && $data['Number'] === null) {
+            $object->setNumber(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Status', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Status', $data) && $data['Status'] !== null) {
             $object->setStatus($data['Status']);
         }
-        if (\array_key_exists('CurrentRound', $data)) {
+        elseif (\array_key_exists('Status', $data) && $data['Status'] === null) {
+            $object->setStatus(null);
+        }
+        if (\array_key_exists('CurrentRound', $data) && $data['CurrentRound'] !== null) {
             $object->setCurrentRound($data['CurrentRound']);
         }
-        if (\array_key_exists('TeamAScore', $data)) {
+        elseif (\array_key_exists('CurrentRound', $data) && $data['CurrentRound'] === null) {
+            $object->setCurrentRound(null);
+        }
+        if (\array_key_exists('TeamAScore', $data) && $data['TeamAScore'] !== null) {
             $object->setTeamAScore($data['TeamAScore']);
         }
-        if (\array_key_exists('TeamBScore', $data)) {
+        elseif (\array_key_exists('TeamAScore', $data) && $data['TeamAScore'] === null) {
+            $object->setTeamAScore(null);
+        }
+        if (\array_key_exists('TeamBScore', $data) && $data['TeamBScore'] !== null) {
             $object->setTeamBScore($data['TeamBScore']);
+        }
+        elseif (\array_key_exists('TeamBScore', $data) && $data['TeamBScore'] === null) {
+            $object->setTeamBScore(null);
         }
         if (\array_key_exists('Leaderboards', $data)) {
             $values = array();

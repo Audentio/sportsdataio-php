@@ -13,25 +13,25 @@ class PlayerHole
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $number;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $par;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $score;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $toPar;
     /**
@@ -106,20 +106,20 @@ class PlayerHole
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumber() : int
+    public function getNumber() : ?int
     {
         return $this->number;
     }
     /**
      * 
      *
-     * @param int $number
+     * @param int|null $number
      *
      * @return self
      */
-    public function setNumber(int $number) : self
+    public function setNumber(?int $number) : self
     {
         $this->number = $number;
         return $this;
@@ -127,20 +127,20 @@ class PlayerHole
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPar() : int
+    public function getPar() : ?int
     {
         return $this->par;
     }
     /**
      * 
      *
-     * @param int $par
+     * @param int|null $par
      *
      * @return self
      */
-    public function setPar(int $par) : self
+    public function setPar(?int $par) : self
     {
         $this->par = $par;
         return $this;
@@ -148,20 +148,20 @@ class PlayerHole
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getScore() : int
+    public function getScore() : ?int
     {
         return $this->score;
     }
     /**
      * 
      *
-     * @param int $score
+     * @param int|null $score
      *
      * @return self
      */
-    public function setScore(int $score) : self
+    public function setScore(?int $score) : self
     {
         $this->score = $score;
         return $this;
@@ -169,20 +169,20 @@ class PlayerHole
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getToPar() : int
+    public function getToPar() : ?int
     {
         return $this->toPar;
     }
     /**
      * 
      *
-     * @param int $toPar
+     * @param int|null $toPar
      *
      * @return self
      */
-    public function setToPar(int $toPar) : self
+    public function setToPar(?int $toPar) : self
     {
         $this->toPar = $toPar;
         return $this;

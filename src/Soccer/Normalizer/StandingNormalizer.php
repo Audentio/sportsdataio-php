@@ -45,47 +45,89 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('ShortName', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('ShortName', $data) && $data['ShortName'] !== null) {
             $object->setShortName($data['ShortName']);
         }
-        if (\array_key_exists('Scope', $data)) {
+        elseif (\array_key_exists('ShortName', $data) && $data['ShortName'] === null) {
+            $object->setShortName(null);
+        }
+        if (\array_key_exists('Scope', $data) && $data['Scope'] !== null) {
             $object->setScope($data['Scope']);
         }
-        if (\array_key_exists('Order', $data)) {
+        elseif (\array_key_exists('Scope', $data) && $data['Scope'] === null) {
+            $object->setScope(null);
+        }
+        if (\array_key_exists('Order', $data) && $data['Order'] !== null) {
             $object->setOrder($data['Order']);
         }
-        if (\array_key_exists('Games', $data)) {
+        elseif (\array_key_exists('Order', $data) && $data['Order'] === null) {
+            $object->setOrder(null);
+        }
+        if (\array_key_exists('Games', $data) && $data['Games'] !== null) {
             $object->setGames($data['Games']);
         }
-        if (\array_key_exists('Wins', $data)) {
+        elseif (\array_key_exists('Games', $data) && $data['Games'] === null) {
+            $object->setGames(null);
+        }
+        if (\array_key_exists('Wins', $data) && $data['Wins'] !== null) {
             $object->setWins($data['Wins']);
         }
-        if (\array_key_exists('Losses', $data)) {
+        elseif (\array_key_exists('Wins', $data) && $data['Wins'] === null) {
+            $object->setWins(null);
+        }
+        if (\array_key_exists('Losses', $data) && $data['Losses'] !== null) {
             $object->setLosses($data['Losses']);
         }
-        if (\array_key_exists('Draws', $data)) {
+        elseif (\array_key_exists('Losses', $data) && $data['Losses'] === null) {
+            $object->setLosses(null);
+        }
+        if (\array_key_exists('Draws', $data) && $data['Draws'] !== null) {
             $object->setDraws($data['Draws']);
         }
-        if (\array_key_exists('GoalsScored', $data)) {
+        elseif (\array_key_exists('Draws', $data) && $data['Draws'] === null) {
+            $object->setDraws(null);
+        }
+        if (\array_key_exists('GoalsScored', $data) && $data['GoalsScored'] !== null) {
             $object->setGoalsScored($data['GoalsScored']);
         }
-        if (\array_key_exists('GoalsAgainst', $data)) {
+        elseif (\array_key_exists('GoalsScored', $data) && $data['GoalsScored'] === null) {
+            $object->setGoalsScored(null);
+        }
+        if (\array_key_exists('GoalsAgainst', $data) && $data['GoalsAgainst'] !== null) {
             $object->setGoalsAgainst($data['GoalsAgainst']);
         }
-        if (\array_key_exists('GoalsDifferential', $data)) {
+        elseif (\array_key_exists('GoalsAgainst', $data) && $data['GoalsAgainst'] === null) {
+            $object->setGoalsAgainst(null);
+        }
+        if (\array_key_exists('GoalsDifferential', $data) && $data['GoalsDifferential'] !== null) {
             $object->setGoalsDifferential($data['GoalsDifferential']);
         }
-        if (\array_key_exists('Points', $data)) {
+        elseif (\array_key_exists('GoalsDifferential', $data) && $data['GoalsDifferential'] === null) {
+            $object->setGoalsDifferential(null);
+        }
+        if (\array_key_exists('Points', $data) && $data['Points'] !== null) {
             $object->setPoints($data['Points']);
         }
-        if (\array_key_exists('Group', $data)) {
+        elseif (\array_key_exists('Points', $data) && $data['Points'] === null) {
+            $object->setPoints(null);
+        }
+        if (\array_key_exists('Group', $data) && $data['Group'] !== null) {
             $object->setGroup($data['Group']);
         }
-        if (\array_key_exists('GlobalTeamID', $data)) {
+        elseif (\array_key_exists('Group', $data) && $data['Group'] === null) {
+            $object->setGroup(null);
+        }
+        if (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] !== null) {
             $object->setGlobalTeamID($data['GlobalTeamID']);
+        }
+        elseif (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] === null) {
+            $object->setGlobalTeamID(null);
         }
         return $object;
     }

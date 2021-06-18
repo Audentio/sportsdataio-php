@@ -42,8 +42,11 @@ class ByeNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         if (\array_key_exists('Week', $data)) {
             $object->setWeek($data['Week']);
         }
-        if (\array_key_exists('Team', $data)) {
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
+        }
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
         }
         return $object;
     }

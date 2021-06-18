@@ -25,13 +25,13 @@ class Standing
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $order;
     /**
@@ -79,7 +79,7 @@ class Standing
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $group;
     /**
@@ -148,20 +148,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -169,20 +169,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrder() : int
+    public function getOrder() : ?int
     {
         return $this->order;
     }
     /**
      * 
      *
-     * @param int $order
+     * @param int|null $order
      *
      * @return self
      */
-    public function setOrder(int $order) : self
+    public function setOrder(?int $order) : self
     {
         $this->order = $order;
         return $this;
@@ -337,20 +337,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGroup() : string
+    public function getGroup() : ?string
     {
         return $this->group;
     }
     /**
      * 
      *
-     * @param string $group
+     * @param string|null $group
      *
      * @return self
      */
-    public function setGroup(string $group) : self
+    public function setGroup(?string $group) : self
     {
         $this->group = $group;
         return $this;

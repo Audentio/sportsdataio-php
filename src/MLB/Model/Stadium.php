@@ -19,121 +19,121 @@ class Stadium
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $state;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $capacity;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $surface;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $leftField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $midLeftField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $leftCenterField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $midLeftCenterField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $centerField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $midRightCenterField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rightCenterField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $midRightField;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rightField;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLat;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLong;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $altitude;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homePlateDirection;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -181,20 +181,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -202,20 +202,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -223,20 +223,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getState() : string
+    public function getState() : ?string
     {
         return $this->state;
     }
     /**
      * 
      *
-     * @param string $state
+     * @param string|null $state
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(?string $state) : self
     {
         $this->state = $state;
         return $this;
@@ -244,20 +244,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -265,20 +265,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCapacity() : int
+    public function getCapacity() : ?int
     {
         return $this->capacity;
     }
     /**
      * 
      *
-     * @param int $capacity
+     * @param int|null $capacity
      *
      * @return self
      */
-    public function setCapacity(int $capacity) : self
+    public function setCapacity(?int $capacity) : self
     {
         $this->capacity = $capacity;
         return $this;
@@ -286,20 +286,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSurface() : string
+    public function getSurface() : ?string
     {
         return $this->surface;
     }
     /**
      * 
      *
-     * @param string $surface
+     * @param string|null $surface
      *
      * @return self
      */
-    public function setSurface(string $surface) : self
+    public function setSurface(?string $surface) : self
     {
         $this->surface = $surface;
         return $this;
@@ -307,20 +307,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLeftField() : int
+    public function getLeftField() : ?int
     {
         return $this->leftField;
     }
     /**
      * 
      *
-     * @param int $leftField
+     * @param int|null $leftField
      *
      * @return self
      */
-    public function setLeftField(int $leftField) : self
+    public function setLeftField(?int $leftField) : self
     {
         $this->leftField = $leftField;
         return $this;
@@ -328,20 +328,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getMidLeftField() : int
+    public function getMidLeftField() : ?int
     {
         return $this->midLeftField;
     }
     /**
      * 
      *
-     * @param int $midLeftField
+     * @param int|null $midLeftField
      *
      * @return self
      */
-    public function setMidLeftField(int $midLeftField) : self
+    public function setMidLeftField(?int $midLeftField) : self
     {
         $this->midLeftField = $midLeftField;
         return $this;
@@ -349,20 +349,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLeftCenterField() : int
+    public function getLeftCenterField() : ?int
     {
         return $this->leftCenterField;
     }
     /**
      * 
      *
-     * @param int $leftCenterField
+     * @param int|null $leftCenterField
      *
      * @return self
      */
-    public function setLeftCenterField(int $leftCenterField) : self
+    public function setLeftCenterField(?int $leftCenterField) : self
     {
         $this->leftCenterField = $leftCenterField;
         return $this;
@@ -370,20 +370,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getMidLeftCenterField() : int
+    public function getMidLeftCenterField() : ?int
     {
         return $this->midLeftCenterField;
     }
     /**
      * 
      *
-     * @param int $midLeftCenterField
+     * @param int|null $midLeftCenterField
      *
      * @return self
      */
-    public function setMidLeftCenterField(int $midLeftCenterField) : self
+    public function setMidLeftCenterField(?int $midLeftCenterField) : self
     {
         $this->midLeftCenterField = $midLeftCenterField;
         return $this;
@@ -391,20 +391,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCenterField() : int
+    public function getCenterField() : ?int
     {
         return $this->centerField;
     }
     /**
      * 
      *
-     * @param int $centerField
+     * @param int|null $centerField
      *
      * @return self
      */
-    public function setCenterField(int $centerField) : self
+    public function setCenterField(?int $centerField) : self
     {
         $this->centerField = $centerField;
         return $this;
@@ -412,20 +412,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getMidRightCenterField() : int
+    public function getMidRightCenterField() : ?int
     {
         return $this->midRightCenterField;
     }
     /**
      * 
      *
-     * @param int $midRightCenterField
+     * @param int|null $midRightCenterField
      *
      * @return self
      */
-    public function setMidRightCenterField(int $midRightCenterField) : self
+    public function setMidRightCenterField(?int $midRightCenterField) : self
     {
         $this->midRightCenterField = $midRightCenterField;
         return $this;
@@ -433,20 +433,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRightCenterField() : int
+    public function getRightCenterField() : ?int
     {
         return $this->rightCenterField;
     }
     /**
      * 
      *
-     * @param int $rightCenterField
+     * @param int|null $rightCenterField
      *
      * @return self
      */
-    public function setRightCenterField(int $rightCenterField) : self
+    public function setRightCenterField(?int $rightCenterField) : self
     {
         $this->rightCenterField = $rightCenterField;
         return $this;
@@ -454,20 +454,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getMidRightField() : int
+    public function getMidRightField() : ?int
     {
         return $this->midRightField;
     }
     /**
      * 
      *
-     * @param int $midRightField
+     * @param int|null $midRightField
      *
      * @return self
      */
-    public function setMidRightField(int $midRightField) : self
+    public function setMidRightField(?int $midRightField) : self
     {
         $this->midRightField = $midRightField;
         return $this;
@@ -475,20 +475,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRightField() : int
+    public function getRightField() : ?int
     {
         return $this->rightField;
     }
     /**
      * 
      *
-     * @param int $rightField
+     * @param int|null $rightField
      *
      * @return self
      */
-    public function setRightField(int $rightField) : self
+    public function setRightField(?int $rightField) : self
     {
         $this->rightField = $rightField;
         return $this;
@@ -496,20 +496,20 @@ class Stadium
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLat() : float
+    public function getGeoLat() : ?float
     {
         return $this->geoLat;
     }
     /**
      * 
      *
-     * @param float $geoLat
+     * @param float|null $geoLat
      *
      * @return self
      */
-    public function setGeoLat(float $geoLat) : self
+    public function setGeoLat(?float $geoLat) : self
     {
         $this->geoLat = $geoLat;
         return $this;
@@ -517,20 +517,20 @@ class Stadium
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLong() : float
+    public function getGeoLong() : ?float
     {
         return $this->geoLong;
     }
     /**
      * 
      *
-     * @param float $geoLong
+     * @param float|null $geoLong
      *
      * @return self
      */
-    public function setGeoLong(float $geoLong) : self
+    public function setGeoLong(?float $geoLong) : self
     {
         $this->geoLong = $geoLong;
         return $this;
@@ -538,20 +538,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAltitude() : int
+    public function getAltitude() : ?int
     {
         return $this->altitude;
     }
     /**
      * 
      *
-     * @param int $altitude
+     * @param int|null $altitude
      *
      * @return self
      */
-    public function setAltitude(int $altitude) : self
+    public function setAltitude(?int $altitude) : self
     {
         $this->altitude = $altitude;
         return $this;
@@ -559,20 +559,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomePlateDirection() : int
+    public function getHomePlateDirection() : ?int
     {
         return $this->homePlateDirection;
     }
     /**
      * 
      *
-     * @param int $homePlateDirection
+     * @param int|null $homePlateDirection
      *
      * @return self
      */
-    public function setHomePlateDirection(int $homePlateDirection) : self
+    public function setHomePlateDirection(?int $homePlateDirection) : self
     {
         $this->homePlateDirection = $homePlateDirection;
         return $this;
@@ -580,20 +580,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;

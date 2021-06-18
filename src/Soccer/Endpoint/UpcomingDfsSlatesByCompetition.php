@@ -4,19 +4,19 @@ namespace Sportsdata\API\Soccer\Endpoint;
 
 class UpcomingDfsSlatesByCompetition extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Soccer\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $competitionId;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $competitionId The id of the competition.
+    * @param string $competitionId The Competition Id.
     <br>Examples: <code>3</code>
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format, string $competitionId)
+    public function __construct(string $competitionId, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->competitionId = $competitionId;
+        $this->format = $format;
     }
     use \Sportsdata\API\Soccer\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class UpcomingDfsSlatesByCompetition extends \Sportsdata\API\Soccer\Runtime\Clie
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{competitionId}'), array($this->format, $this->competitionId), '/stats/{format}/UpcomingDfsSlatesByCompetition/{competitionId}');
+        return str_replace(array('{competitionId}', '{format}'), array($this->competitionId, $this->format), '/projections/{format}/UpcomingDfsSlatesByCompetition/{competitionId}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

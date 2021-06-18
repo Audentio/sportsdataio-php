@@ -45,56 +45,107 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('TeamID', $data)) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Key', $data)) {
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
         }
-        if (\array_key_exists('City', $data)) {
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
+        }
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Conference', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Conference', $data) && $data['Conference'] !== null) {
             $object->setConference($data['Conference']);
         }
-        if (\array_key_exists('Division', $data)) {
+        elseif (\array_key_exists('Conference', $data) && $data['Conference'] === null) {
+            $object->setConference(null);
+        }
+        if (\array_key_exists('Division', $data) && $data['Division'] !== null) {
             $object->setDivision($data['Division']);
         }
-        if (\array_key_exists('Wins', $data)) {
+        elseif (\array_key_exists('Division', $data) && $data['Division'] === null) {
+            $object->setDivision(null);
+        }
+        if (\array_key_exists('Wins', $data) && $data['Wins'] !== null) {
             $object->setWins($data['Wins']);
         }
-        if (\array_key_exists('Losses', $data)) {
+        elseif (\array_key_exists('Wins', $data) && $data['Wins'] === null) {
+            $object->setWins(null);
+        }
+        if (\array_key_exists('Losses', $data) && $data['Losses'] !== null) {
             $object->setLosses($data['Losses']);
         }
-        if (\array_key_exists('OvertimeLosses', $data)) {
+        elseif (\array_key_exists('Losses', $data) && $data['Losses'] === null) {
+            $object->setLosses(null);
+        }
+        if (\array_key_exists('OvertimeLosses', $data) && $data['OvertimeLosses'] !== null) {
             $object->setOvertimeLosses($data['OvertimeLosses']);
         }
-        if (\array_key_exists('Percentage', $data)) {
+        elseif (\array_key_exists('OvertimeLosses', $data) && $data['OvertimeLosses'] === null) {
+            $object->setOvertimeLosses(null);
+        }
+        if (\array_key_exists('Percentage', $data) && $data['Percentage'] !== null) {
             $object->setPercentage($data['Percentage']);
         }
-        if (\array_key_exists('ConferenceWins', $data)) {
+        elseif (\array_key_exists('Percentage', $data) && $data['Percentage'] === null) {
+            $object->setPercentage(null);
+        }
+        if (\array_key_exists('ConferenceWins', $data) && $data['ConferenceWins'] !== null) {
             $object->setConferenceWins($data['ConferenceWins']);
         }
-        if (\array_key_exists('ConferenceLosses', $data)) {
+        elseif (\array_key_exists('ConferenceWins', $data) && $data['ConferenceWins'] === null) {
+            $object->setConferenceWins(null);
+        }
+        if (\array_key_exists('ConferenceLosses', $data) && $data['ConferenceLosses'] !== null) {
             $object->setConferenceLosses($data['ConferenceLosses']);
         }
-        if (\array_key_exists('DivisionWins', $data)) {
+        elseif (\array_key_exists('ConferenceLosses', $data) && $data['ConferenceLosses'] === null) {
+            $object->setConferenceLosses(null);
+        }
+        if (\array_key_exists('DivisionWins', $data) && $data['DivisionWins'] !== null) {
             $object->setDivisionWins($data['DivisionWins']);
         }
-        if (\array_key_exists('DivisionLosses', $data)) {
+        elseif (\array_key_exists('DivisionWins', $data) && $data['DivisionWins'] === null) {
+            $object->setDivisionWins(null);
+        }
+        if (\array_key_exists('DivisionLosses', $data) && $data['DivisionLosses'] !== null) {
             $object->setDivisionLosses($data['DivisionLosses']);
         }
-        if (\array_key_exists('ShutoutWins', $data)) {
+        elseif (\array_key_exists('DivisionLosses', $data) && $data['DivisionLosses'] === null) {
+            $object->setDivisionLosses(null);
+        }
+        if (\array_key_exists('ShutoutWins', $data) && $data['ShutoutWins'] !== null) {
             $object->setShutoutWins($data['ShutoutWins']);
         }
-        if (\array_key_exists('ConferenceRank', $data)) {
+        elseif (\array_key_exists('ShutoutWins', $data) && $data['ShutoutWins'] === null) {
+            $object->setShutoutWins(null);
+        }
+        if (\array_key_exists('ConferenceRank', $data) && $data['ConferenceRank'] !== null) {
             $object->setConferenceRank($data['ConferenceRank']);
         }
-        if (\array_key_exists('DivisionRank', $data)) {
+        elseif (\array_key_exists('ConferenceRank', $data) && $data['ConferenceRank'] === null) {
+            $object->setConferenceRank(null);
+        }
+        if (\array_key_exists('DivisionRank', $data) && $data['DivisionRank'] !== null) {
             $object->setDivisionRank($data['DivisionRank']);
         }
-        if (\array_key_exists('GlobalTeamID', $data)) {
+        elseif (\array_key_exists('DivisionRank', $data) && $data['DivisionRank'] === null) {
+            $object->setDivisionRank(null);
+        }
+        if (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] !== null) {
             $object->setGlobalTeamID($data['GlobalTeamID']);
+        }
+        elseif (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] === null) {
+            $object->setGlobalTeamID(null);
         }
         return $object;
     }

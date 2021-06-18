@@ -45,11 +45,17 @@ class InningNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('InningNumber', $data)) {
             $object->setInningNumber($data['InningNumber']);
         }
-        if (\array_key_exists('AwayTeamRuns', $data)) {
+        if (\array_key_exists('AwayTeamRuns', $data) && $data['AwayTeamRuns'] !== null) {
             $object->setAwayTeamRuns($data['AwayTeamRuns']);
         }
-        if (\array_key_exists('HomeTeamRuns', $data)) {
+        elseif (\array_key_exists('AwayTeamRuns', $data) && $data['AwayTeamRuns'] === null) {
+            $object->setAwayTeamRuns(null);
+        }
+        if (\array_key_exists('HomeTeamRuns', $data) && $data['HomeTeamRuns'] !== null) {
             $object->setHomeTeamRuns($data['HomeTeamRuns']);
+        }
+        elseif (\array_key_exists('HomeTeamRuns', $data) && $data['HomeTeamRuns'] === null) {
+            $object->setHomeTeamRuns(null);
         }
         return $object;
     }

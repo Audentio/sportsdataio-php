@@ -4,21 +4,21 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class InGameOddsByWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $week;
+    protected $season;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $season Year of the season, with optional season type. <br>Examples: <code>2018</code>, <code>2018POST</code>, etc.
      * @param string $week The week of the game(s). <br>Examples: <code>1</code>, <code>2</code>, etc.
+     * @param string $season Year of the season, with optional season type. <br>Examples: <code>2018</code>, <code>2018POST</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $season, string $week)
+    public function __construct(string $week, string $season, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->week = $week;
+        $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -27,7 +27,7 @@ class InGameOddsByWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint i
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{week}'), array($this->format, $this->season, $this->week), '/odds/{format}/LiveGameOddsByWeek/{season}/{week}');
+        return str_replace(array('{week}', '{season}', '{format}'), array($this->week, $this->season, $this->format), '/odds/{format}/LiveGameOddsByWeek/{season}/{week}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

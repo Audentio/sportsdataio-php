@@ -42,11 +42,17 @@ class RoundNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('RoundID', $data)) {
             $object->setRoundID($data['RoundID']);
         }
-        if (\array_key_exists('Number', $data)) {
+        if (\array_key_exists('Number', $data) && $data['Number'] !== null) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Day', $data)) {
+        elseif (\array_key_exists('Number', $data) && $data['Number'] === null) {
+            $object->setNumber(null);
+        }
+        if (\array_key_exists('Day', $data) && $data['Day'] !== null) {
             $object->setDay($data['Day']);
+        }
+        elseif (\array_key_exists('Day', $data) && $data['Day'] === null) {
+            $object->setDay(null);
         }
         return $object;
     }

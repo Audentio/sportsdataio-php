@@ -19,13 +19,13 @@ class Tournament
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $location;
     /**
@@ -37,25 +37,25 @@ class Tournament
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $leftTopBracketConference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $leftBottomBracketConference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $rightTopBracketConference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $rightBottomBracketConference;
     /**
@@ -103,20 +103,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -124,20 +124,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLocation() : string
+    public function getLocation() : ?string
     {
         return $this->location;
     }
     /**
      * 
      *
-     * @param string $location
+     * @param string|null $location
      *
      * @return self
      */
-    public function setLocation(string $location) : self
+    public function setLocation(?string $location) : self
     {
         $this->location = $location;
         return $this;
@@ -166,20 +166,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLeftTopBracketConference() : string
+    public function getLeftTopBracketConference() : ?string
     {
         return $this->leftTopBracketConference;
     }
     /**
      * 
      *
-     * @param string $leftTopBracketConference
+     * @param string|null $leftTopBracketConference
      *
      * @return self
      */
-    public function setLeftTopBracketConference(string $leftTopBracketConference) : self
+    public function setLeftTopBracketConference(?string $leftTopBracketConference) : self
     {
         $this->leftTopBracketConference = $leftTopBracketConference;
         return $this;
@@ -187,20 +187,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLeftBottomBracketConference() : string
+    public function getLeftBottomBracketConference() : ?string
     {
         return $this->leftBottomBracketConference;
     }
     /**
      * 
      *
-     * @param string $leftBottomBracketConference
+     * @param string|null $leftBottomBracketConference
      *
      * @return self
      */
-    public function setLeftBottomBracketConference(string $leftBottomBracketConference) : self
+    public function setLeftBottomBracketConference(?string $leftBottomBracketConference) : self
     {
         $this->leftBottomBracketConference = $leftBottomBracketConference;
         return $this;
@@ -208,20 +208,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRightTopBracketConference() : string
+    public function getRightTopBracketConference() : ?string
     {
         return $this->rightTopBracketConference;
     }
     /**
      * 
      *
-     * @param string $rightTopBracketConference
+     * @param string|null $rightTopBracketConference
      *
      * @return self
      */
-    public function setRightTopBracketConference(string $rightTopBracketConference) : self
+    public function setRightTopBracketConference(?string $rightTopBracketConference) : self
     {
         $this->rightTopBracketConference = $rightTopBracketConference;
         return $this;
@@ -229,20 +229,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRightBottomBracketConference() : string
+    public function getRightBottomBracketConference() : ?string
     {
         return $this->rightBottomBracketConference;
     }
     /**
      * 
      *
-     * @param string $rightBottomBracketConference
+     * @param string|null $rightBottomBracketConference
      *
      * @return self
      */
-    public function setRightBottomBracketConference(string $rightBottomBracketConference) : self
+    public function setRightBottomBracketConference(?string $rightBottomBracketConference) : self
     {
         $this->rightBottomBracketConference = $rightBottomBracketConference;
         return $this;

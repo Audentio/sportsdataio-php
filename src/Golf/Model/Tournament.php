@@ -13,19 +13,19 @@ class Tournament
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $endDate;
     /**
@@ -43,85 +43,85 @@ class Tournament
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $venue;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $location;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $par;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yards;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $purse;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDateTime;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $canceled;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $covered;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $state;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $zipCode;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $timeZone;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $format;
     /**
@@ -133,7 +133,7 @@ class Tournament
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $sportRadarTournamentID;
     /**
@@ -160,20 +160,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -181,20 +181,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -202,20 +202,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEndDate() : string
+    public function getEndDate() : ?string
     {
         return $this->endDate;
     }
     /**
      * 
      *
-     * @param string $endDate
+     * @param string|null $endDate
      *
      * @return self
      */
-    public function setEndDate(string $endDate) : self
+    public function setEndDate(?string $endDate) : self
     {
         $this->endDate = $endDate;
         return $this;
@@ -265,20 +265,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getVenue() : string
+    public function getVenue() : ?string
     {
         return $this->venue;
     }
     /**
      * 
      *
-     * @param string $venue
+     * @param string|null $venue
      *
      * @return self
      */
-    public function setVenue(string $venue) : self
+    public function setVenue(?string $venue) : self
     {
         $this->venue = $venue;
         return $this;
@@ -286,20 +286,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLocation() : string
+    public function getLocation() : ?string
     {
         return $this->location;
     }
     /**
      * 
      *
-     * @param string $location
+     * @param string|null $location
      *
      * @return self
      */
-    public function setLocation(string $location) : self
+    public function setLocation(?string $location) : self
     {
         $this->location = $location;
         return $this;
@@ -307,20 +307,20 @@ class Tournament
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPar() : int
+    public function getPar() : ?int
     {
         return $this->par;
     }
     /**
      * 
      *
-     * @param int $par
+     * @param int|null $par
      *
      * @return self
      */
-    public function setPar(int $par) : self
+    public function setPar(?int $par) : self
     {
         $this->par = $par;
         return $this;
@@ -328,20 +328,20 @@ class Tournament
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYards() : int
+    public function getYards() : ?int
     {
         return $this->yards;
     }
     /**
      * 
      *
-     * @param int $yards
+     * @param int|null $yards
      *
      * @return self
      */
-    public function setYards(int $yards) : self
+    public function setYards(?int $yards) : self
     {
         $this->yards = $yards;
         return $this;
@@ -349,20 +349,20 @@ class Tournament
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPurse() : float
+    public function getPurse() : ?float
     {
         return $this->purse;
     }
     /**
      * 
      *
-     * @param float $purse
+     * @param float|null $purse
      *
      * @return self
      */
-    public function setPurse(float $purse) : self
+    public function setPurse(?float $purse) : self
     {
         $this->purse = $purse;
         return $this;
@@ -370,20 +370,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDateTime() : string
+    public function getStartDateTime() : ?string
     {
         return $this->startDateTime;
     }
     /**
      * 
      *
-     * @param string $startDateTime
+     * @param string|null $startDateTime
      *
      * @return self
      */
-    public function setStartDateTime(string $startDateTime) : self
+    public function setStartDateTime(?string $startDateTime) : self
     {
         $this->startDateTime = $startDateTime;
         return $this;
@@ -391,20 +391,20 @@ class Tournament
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCanceled() : bool
+    public function getCanceled() : ?bool
     {
         return $this->canceled;
     }
     /**
      * 
      *
-     * @param bool $canceled
+     * @param bool|null $canceled
      *
      * @return self
      */
-    public function setCanceled(bool $canceled) : self
+    public function setCanceled(?bool $canceled) : self
     {
         $this->canceled = $canceled;
         return $this;
@@ -412,20 +412,20 @@ class Tournament
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCovered() : bool
+    public function getCovered() : ?bool
     {
         return $this->covered;
     }
     /**
      * 
      *
-     * @param bool $covered
+     * @param bool|null $covered
      *
      * @return self
      */
-    public function setCovered(bool $covered) : self
+    public function setCovered(?bool $covered) : self
     {
         $this->covered = $covered;
         return $this;
@@ -433,20 +433,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -454,20 +454,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getState() : string
+    public function getState() : ?string
     {
         return $this->state;
     }
     /**
      * 
      *
-     * @param string $state
+     * @param string|null $state
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(?string $state) : self
     {
         $this->state = $state;
         return $this;
@@ -475,20 +475,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getZipCode() : string
+    public function getZipCode() : ?string
     {
         return $this->zipCode;
     }
     /**
      * 
      *
-     * @param string $zipCode
+     * @param string|null $zipCode
      *
      * @return self
      */
-    public function setZipCode(string $zipCode) : self
+    public function setZipCode(?string $zipCode) : self
     {
         $this->zipCode = $zipCode;
         return $this;
@@ -496,20 +496,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -517,20 +517,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTimeZone() : string
+    public function getTimeZone() : ?string
     {
         return $this->timeZone;
     }
     /**
      * 
      *
-     * @param string $timeZone
+     * @param string|null $timeZone
      *
      * @return self
      */
-    public function setTimeZone(string $timeZone) : self
+    public function setTimeZone(?string $timeZone) : self
     {
         $this->timeZone = $timeZone;
         return $this;
@@ -538,20 +538,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFormat() : string
+    public function getFormat() : ?string
     {
         return $this->format;
     }
     /**
      * 
      *
-     * @param string $format
+     * @param string|null $format
      *
      * @return self
      */
-    public function setFormat(string $format) : self
+    public function setFormat(?string $format) : self
     {
         $this->format = $format;
         return $this;
@@ -580,20 +580,20 @@ class Tournament
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSportRadarTournamentID() : string
+    public function getSportRadarTournamentID() : ?string
     {
         return $this->sportRadarTournamentID;
     }
     /**
      * 
      *
-     * @param string $sportRadarTournamentID
+     * @param string|null $sportRadarTournamentID
      *
      * @return self
      */
-    public function setSportRadarTournamentID(string $sportRadarTournamentID) : self
+    public function setSportRadarTournamentID(?string $sportRadarTournamentID) : self
     {
         $this->sportRadarTournamentID = $sportRadarTournamentID;
         return $this;

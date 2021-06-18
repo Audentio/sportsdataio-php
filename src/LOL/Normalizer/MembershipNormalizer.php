@@ -45,26 +45,44 @@ class MembershipNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('PlayerId', $data)) {
             $object->setPlayerId($data['PlayerId']);
         }
-        if (\array_key_exists('PlayerName', $data)) {
+        if (\array_key_exists('PlayerName', $data) && $data['PlayerName'] !== null) {
             $object->setPlayerName($data['PlayerName']);
         }
-        if (\array_key_exists('TeamName', $data)) {
+        elseif (\array_key_exists('PlayerName', $data) && $data['PlayerName'] === null) {
+            $object->setPlayerName(null);
+        }
+        if (\array_key_exists('TeamName', $data) && $data['TeamName'] !== null) {
             $object->setTeamName($data['TeamName']);
         }
-        if (\array_key_exists('TeamArea', $data)) {
+        elseif (\array_key_exists('TeamName', $data) && $data['TeamName'] === null) {
+            $object->setTeamName(null);
+        }
+        if (\array_key_exists('TeamArea', $data) && $data['TeamArea'] !== null) {
             $object->setTeamArea($data['TeamArea']);
+        }
+        elseif (\array_key_exists('TeamArea', $data) && $data['TeamArea'] === null) {
+            $object->setTeamArea(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('EndDate', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('EndDate', $data) && $data['EndDate'] !== null) {
             $object->setEndDate($data['EndDate']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('EndDate', $data) && $data['EndDate'] === null) {
+            $object->setEndDate(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
+        }
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
         }
         return $object;
     }

@@ -25,19 +25,19 @@ class Season
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $apiSeason;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $apiWeek;
     /**
@@ -106,20 +106,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -127,20 +127,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getApiSeason() : string
+    public function getApiSeason() : ?string
     {
         return $this->apiSeason;
     }
     /**
      * 
      *
-     * @param string $apiSeason
+     * @param string|null $apiSeason
      *
      * @return self
      */
-    public function setApiSeason(string $apiSeason) : self
+    public function setApiSeason(?string $apiSeason) : self
     {
         $this->apiSeason = $apiSeason;
         return $this;
@@ -148,20 +148,20 @@ class Season
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getApiWeek() : int
+    public function getApiWeek() : ?int
     {
         return $this->apiWeek;
     }
     /**
      * 
      *
-     * @param int $apiWeek
+     * @param int|null $apiWeek
      *
      * @return self
      */
-    public function setApiWeek(int $apiWeek) : self
+    public function setApiWeek(?int $apiWeek) : self
     {
         $this->apiWeek = $apiWeek;
         return $this;

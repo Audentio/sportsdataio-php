@@ -42,29 +42,53 @@ class TimeframeNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Week', $data)) {
+        if (\array_key_exists('Week', $data) && $data['Week'] !== null) {
             $object->setWeek($data['Week']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('Week', $data) && $data['Week'] === null) {
+            $object->setWeek(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('ShortName', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('ShortName', $data) && $data['ShortName'] !== null) {
             $object->setShortName($data['ShortName']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        elseif (\array_key_exists('ShortName', $data) && $data['ShortName'] === null) {
+            $object->setShortName(null);
+        }
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('EndDate', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('EndDate', $data) && $data['EndDate'] !== null) {
             $object->setEndDate($data['EndDate']);
         }
-        if (\array_key_exists('FirstGameStart', $data)) {
+        elseif (\array_key_exists('EndDate', $data) && $data['EndDate'] === null) {
+            $object->setEndDate(null);
+        }
+        if (\array_key_exists('FirstGameStart', $data) && $data['FirstGameStart'] !== null) {
             $object->setFirstGameStart($data['FirstGameStart']);
         }
-        if (\array_key_exists('FirstGameEnd', $data)) {
+        elseif (\array_key_exists('FirstGameStart', $data) && $data['FirstGameStart'] === null) {
+            $object->setFirstGameStart(null);
+        }
+        if (\array_key_exists('FirstGameEnd', $data) && $data['FirstGameEnd'] !== null) {
             $object->setFirstGameEnd($data['FirstGameEnd']);
         }
-        if (\array_key_exists('LastGameEnd', $data)) {
+        elseif (\array_key_exists('FirstGameEnd', $data) && $data['FirstGameEnd'] === null) {
+            $object->setFirstGameEnd(null);
+        }
+        if (\array_key_exists('LastGameEnd', $data) && $data['LastGameEnd'] !== null) {
             $object->setLastGameEnd($data['LastGameEnd']);
+        }
+        elseif (\array_key_exists('LastGameEnd', $data) && $data['LastGameEnd'] === null) {
+            $object->setLastGameEnd(null);
         }
         if (\array_key_exists('HasGames', $data)) {
             $object->setHasGames($data['HasGames']);
@@ -84,11 +108,17 @@ class TimeframeNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('HasLastGameEnded', $data)) {
             $object->setHasLastGameEnded($data['HasLastGameEnded']);
         }
-        if (\array_key_exists('ApiSeason', $data)) {
+        if (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] !== null) {
             $object->setApiSeason($data['ApiSeason']);
         }
-        if (\array_key_exists('ApiWeek', $data)) {
+        elseif (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] === null) {
+            $object->setApiSeason(null);
+        }
+        if (\array_key_exists('ApiWeek', $data) && $data['ApiWeek'] !== null) {
             $object->setApiWeek($data['ApiWeek']);
+        }
+        elseif (\array_key_exists('ApiWeek', $data) && $data['ApiWeek'] === null) {
+            $object->setApiWeek(null);
         }
         return $object;
     }

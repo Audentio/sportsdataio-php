@@ -39,20 +39,35 @@ class PlayerLineNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('LineNumber', $data)) {
             $object->setLineNumber($data['LineNumber']);
         }
-        if (\array_key_exists('Position', $data)) {
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Shoots', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Shoots', $data) && $data['Shoots'] !== null) {
             $object->setShoots($data['Shoots']);
         }
-        if (\array_key_exists('LineType', $data)) {
+        elseif (\array_key_exists('Shoots', $data) && $data['Shoots'] === null) {
+            $object->setShoots(null);
+        }
+        if (\array_key_exists('LineType', $data) && $data['LineType'] !== null) {
             $object->setLineType($data['LineType']);
+        }
+        elseif (\array_key_exists('LineType', $data) && $data['LineType'] === null) {
+            $object->setLineType(null);
         }
         return $object;
     }

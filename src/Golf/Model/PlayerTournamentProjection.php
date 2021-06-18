@@ -25,193 +25,193 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rank;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalScore;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalStrokes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $totalThrough;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $earnings;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fedExPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsDraftKings;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $draftKingsSalary;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $doubleEagles;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $eagles;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $birdies;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $pars;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $bogeys;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $doubleBogeys;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $worseThanDoubleBogey;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $holeInOnes;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $streaksOfThreeBirdiesOrBetter;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $bogeyFreeRounds;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $roundsUnderSeventy;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $tripleBogeys;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $worseThanTripleBogey;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teeTime;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $madeCut;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $win;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $tournamentStatus;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isAlternate;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fanDuelSalary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fantasyDraftSalary;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $madeCutDidNotFinish;
     /**
@@ -223,55 +223,55 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $oddsToWin;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $oddsToWinDescription;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFanDuel;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFantasyDraft;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $streaksOfFourBirdiesOrBetter;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $streaksOfFiveBirdiesOrBetter;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $consecutiveBirdieOrBetterCount;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $bounceBackCount;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $roundsWithFiveOrMoreBirdiesOrBetter;
     /**
@@ -283,13 +283,13 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsYahoo;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $streaksOfSixBirdiesOrBetter;
     /**
@@ -358,20 +358,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -379,20 +379,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRank() : int
+    public function getRank() : ?int
     {
         return $this->rank;
     }
     /**
      * 
      *
-     * @param int $rank
+     * @param int|null $rank
      *
      * @return self
      */
-    public function setRank(int $rank) : self
+    public function setRank(?int $rank) : self
     {
         $this->rank = $rank;
         return $this;
@@ -400,20 +400,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -421,20 +421,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalScore() : float
+    public function getTotalScore() : ?float
     {
         return $this->totalScore;
     }
     /**
      * 
      *
-     * @param float $totalScore
+     * @param float|null $totalScore
      *
      * @return self
      */
-    public function setTotalScore(float $totalScore) : self
+    public function setTotalScore(?float $totalScore) : self
     {
         $this->totalScore = $totalScore;
         return $this;
@@ -442,20 +442,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalStrokes() : float
+    public function getTotalStrokes() : ?float
     {
         return $this->totalStrokes;
     }
     /**
      * 
      *
-     * @param float $totalStrokes
+     * @param float|null $totalStrokes
      *
      * @return self
      */
-    public function setTotalStrokes(float $totalStrokes) : self
+    public function setTotalStrokes(?float $totalStrokes) : self
     {
         $this->totalStrokes = $totalStrokes;
         return $this;
@@ -463,20 +463,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTotalThrough() : int
+    public function getTotalThrough() : ?int
     {
         return $this->totalThrough;
     }
     /**
      * 
      *
-     * @param int $totalThrough
+     * @param int|null $totalThrough
      *
      * @return self
      */
-    public function setTotalThrough(int $totalThrough) : self
+    public function setTotalThrough(?int $totalThrough) : self
     {
         $this->totalThrough = $totalThrough;
         return $this;
@@ -484,20 +484,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getEarnings() : float
+    public function getEarnings() : ?float
     {
         return $this->earnings;
     }
     /**
      * 
      *
-     * @param float $earnings
+     * @param float|null $earnings
      *
      * @return self
      */
-    public function setEarnings(float $earnings) : self
+    public function setEarnings(?float $earnings) : self
     {
         $this->earnings = $earnings;
         return $this;
@@ -505,20 +505,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFedExPoints() : int
+    public function getFedExPoints() : ?int
     {
         return $this->fedExPoints;
     }
     /**
      * 
      *
-     * @param int $fedExPoints
+     * @param int|null $fedExPoints
      *
      * @return self
      */
-    public function setFedExPoints(int $fedExPoints) : self
+    public function setFedExPoints(?int $fedExPoints) : self
     {
         $this->fedExPoints = $fedExPoints;
         return $this;
@@ -526,20 +526,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -547,20 +547,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsDraftKings() : float
+    public function getFantasyPointsDraftKings() : ?float
     {
         return $this->fantasyPointsDraftKings;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsDraftKings
+     * @param float|null $fantasyPointsDraftKings
      *
      * @return self
      */
-    public function setFantasyPointsDraftKings(float $fantasyPointsDraftKings) : self
+    public function setFantasyPointsDraftKings(?float $fantasyPointsDraftKings) : self
     {
         $this->fantasyPointsDraftKings = $fantasyPointsDraftKings;
         return $this;
@@ -568,20 +568,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDraftKingsSalary() : int
+    public function getDraftKingsSalary() : ?int
     {
         return $this->draftKingsSalary;
     }
     /**
      * 
      *
-     * @param int $draftKingsSalary
+     * @param int|null $draftKingsSalary
      *
      * @return self
      */
-    public function setDraftKingsSalary(int $draftKingsSalary) : self
+    public function setDraftKingsSalary(?int $draftKingsSalary) : self
     {
         $this->draftKingsSalary = $draftKingsSalary;
         return $this;
@@ -589,20 +589,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDoubleEagles() : float
+    public function getDoubleEagles() : ?float
     {
         return $this->doubleEagles;
     }
     /**
      * 
      *
-     * @param float $doubleEagles
+     * @param float|null $doubleEagles
      *
      * @return self
      */
-    public function setDoubleEagles(float $doubleEagles) : self
+    public function setDoubleEagles(?float $doubleEagles) : self
     {
         $this->doubleEagles = $doubleEagles;
         return $this;
@@ -610,20 +610,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getEagles() : float
+    public function getEagles() : ?float
     {
         return $this->eagles;
     }
     /**
      * 
      *
-     * @param float $eagles
+     * @param float|null $eagles
      *
      * @return self
      */
-    public function setEagles(float $eagles) : self
+    public function setEagles(?float $eagles) : self
     {
         $this->eagles = $eagles;
         return $this;
@@ -631,20 +631,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBirdies() : float
+    public function getBirdies() : ?float
     {
         return $this->birdies;
     }
     /**
      * 
      *
-     * @param float $birdies
+     * @param float|null $birdies
      *
      * @return self
      */
-    public function setBirdies(float $birdies) : self
+    public function setBirdies(?float $birdies) : self
     {
         $this->birdies = $birdies;
         return $this;
@@ -652,20 +652,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPars() : float
+    public function getPars() : ?float
     {
         return $this->pars;
     }
     /**
      * 
      *
-     * @param float $pars
+     * @param float|null $pars
      *
      * @return self
      */
-    public function setPars(float $pars) : self
+    public function setPars(?float $pars) : self
     {
         $this->pars = $pars;
         return $this;
@@ -673,20 +673,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBogeys() : float
+    public function getBogeys() : ?float
     {
         return $this->bogeys;
     }
     /**
      * 
      *
-     * @param float $bogeys
+     * @param float|null $bogeys
      *
      * @return self
      */
-    public function setBogeys(float $bogeys) : self
+    public function setBogeys(?float $bogeys) : self
     {
         $this->bogeys = $bogeys;
         return $this;
@@ -694,20 +694,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDoubleBogeys() : float
+    public function getDoubleBogeys() : ?float
     {
         return $this->doubleBogeys;
     }
     /**
      * 
      *
-     * @param float $doubleBogeys
+     * @param float|null $doubleBogeys
      *
      * @return self
      */
-    public function setDoubleBogeys(float $doubleBogeys) : self
+    public function setDoubleBogeys(?float $doubleBogeys) : self
     {
         $this->doubleBogeys = $doubleBogeys;
         return $this;
@@ -715,20 +715,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWorseThanDoubleBogey() : float
+    public function getWorseThanDoubleBogey() : ?float
     {
         return $this->worseThanDoubleBogey;
     }
     /**
      * 
      *
-     * @param float $worseThanDoubleBogey
+     * @param float|null $worseThanDoubleBogey
      *
      * @return self
      */
-    public function setWorseThanDoubleBogey(float $worseThanDoubleBogey) : self
+    public function setWorseThanDoubleBogey(?float $worseThanDoubleBogey) : self
     {
         $this->worseThanDoubleBogey = $worseThanDoubleBogey;
         return $this;
@@ -736,20 +736,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getHoleInOnes() : float
+    public function getHoleInOnes() : ?float
     {
         return $this->holeInOnes;
     }
     /**
      * 
      *
-     * @param float $holeInOnes
+     * @param float|null $holeInOnes
      *
      * @return self
      */
-    public function setHoleInOnes(float $holeInOnes) : self
+    public function setHoleInOnes(?float $holeInOnes) : self
     {
         $this->holeInOnes = $holeInOnes;
         return $this;
@@ -757,20 +757,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStreaksOfThreeBirdiesOrBetter() : float
+    public function getStreaksOfThreeBirdiesOrBetter() : ?float
     {
         return $this->streaksOfThreeBirdiesOrBetter;
     }
     /**
      * 
      *
-     * @param float $streaksOfThreeBirdiesOrBetter
+     * @param float|null $streaksOfThreeBirdiesOrBetter
      *
      * @return self
      */
-    public function setStreaksOfThreeBirdiesOrBetter(float $streaksOfThreeBirdiesOrBetter) : self
+    public function setStreaksOfThreeBirdiesOrBetter(?float $streaksOfThreeBirdiesOrBetter) : self
     {
         $this->streaksOfThreeBirdiesOrBetter = $streaksOfThreeBirdiesOrBetter;
         return $this;
@@ -778,20 +778,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBogeyFreeRounds() : float
+    public function getBogeyFreeRounds() : ?float
     {
         return $this->bogeyFreeRounds;
     }
     /**
      * 
      *
-     * @param float $bogeyFreeRounds
+     * @param float|null $bogeyFreeRounds
      *
      * @return self
      */
-    public function setBogeyFreeRounds(float $bogeyFreeRounds) : self
+    public function setBogeyFreeRounds(?float $bogeyFreeRounds) : self
     {
         $this->bogeyFreeRounds = $bogeyFreeRounds;
         return $this;
@@ -799,20 +799,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getRoundsUnderSeventy() : float
+    public function getRoundsUnderSeventy() : ?float
     {
         return $this->roundsUnderSeventy;
     }
     /**
      * 
      *
-     * @param float $roundsUnderSeventy
+     * @param float|null $roundsUnderSeventy
      *
      * @return self
      */
-    public function setRoundsUnderSeventy(float $roundsUnderSeventy) : self
+    public function setRoundsUnderSeventy(?float $roundsUnderSeventy) : self
     {
         $this->roundsUnderSeventy = $roundsUnderSeventy;
         return $this;
@@ -820,20 +820,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTripleBogeys() : float
+    public function getTripleBogeys() : ?float
     {
         return $this->tripleBogeys;
     }
     /**
      * 
      *
-     * @param float $tripleBogeys
+     * @param float|null $tripleBogeys
      *
      * @return self
      */
-    public function setTripleBogeys(float $tripleBogeys) : self
+    public function setTripleBogeys(?float $tripleBogeys) : self
     {
         $this->tripleBogeys = $tripleBogeys;
         return $this;
@@ -841,20 +841,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWorseThanTripleBogey() : float
+    public function getWorseThanTripleBogey() : ?float
     {
         return $this->worseThanTripleBogey;
     }
     /**
      * 
      *
-     * @param float $worseThanTripleBogey
+     * @param float|null $worseThanTripleBogey
      *
      * @return self
      */
-    public function setWorseThanTripleBogey(float $worseThanTripleBogey) : self
+    public function setWorseThanTripleBogey(?float $worseThanTripleBogey) : self
     {
         $this->worseThanTripleBogey = $worseThanTripleBogey;
         return $this;
@@ -862,20 +862,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeeTime() : string
+    public function getTeeTime() : ?string
     {
         return $this->teeTime;
     }
     /**
      * 
      *
-     * @param string $teeTime
+     * @param string|null $teeTime
      *
      * @return self
      */
-    public function setTeeTime(string $teeTime) : self
+    public function setTeeTime(?string $teeTime) : self
     {
         $this->teeTime = $teeTime;
         return $this;
@@ -883,20 +883,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getMadeCut() : float
+    public function getMadeCut() : ?float
     {
         return $this->madeCut;
     }
     /**
      * 
      *
-     * @param float $madeCut
+     * @param float|null $madeCut
      *
      * @return self
      */
-    public function setMadeCut(float $madeCut) : self
+    public function setMadeCut(?float $madeCut) : self
     {
         $this->madeCut = $madeCut;
         return $this;
@@ -904,20 +904,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWin() : float
+    public function getWin() : ?float
     {
         return $this->win;
     }
     /**
      * 
      *
-     * @param float $win
+     * @param float|null $win
      *
      * @return self
      */
-    public function setWin(float $win) : self
+    public function setWin(?float $win) : self
     {
         $this->win = $win;
         return $this;
@@ -925,20 +925,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTournamentStatus() : string
+    public function getTournamentStatus() : ?string
     {
         return $this->tournamentStatus;
     }
     /**
      * 
      *
-     * @param string $tournamentStatus
+     * @param string|null $tournamentStatus
      *
      * @return self
      */
-    public function setTournamentStatus(string $tournamentStatus) : self
+    public function setTournamentStatus(?string $tournamentStatus) : self
     {
         $this->tournamentStatus = $tournamentStatus;
         return $this;
@@ -946,20 +946,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsAlternate() : bool
+    public function getIsAlternate() : ?bool
     {
         return $this->isAlternate;
     }
     /**
      * 
      *
-     * @param bool $isAlternate
+     * @param bool|null $isAlternate
      *
      * @return self
      */
-    public function setIsAlternate(bool $isAlternate) : self
+    public function setIsAlternate(?bool $isAlternate) : self
     {
         $this->isAlternate = $isAlternate;
         return $this;
@@ -967,20 +967,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFanDuelSalary() : int
+    public function getFanDuelSalary() : ?int
     {
         return $this->fanDuelSalary;
     }
     /**
      * 
      *
-     * @param int $fanDuelSalary
+     * @param int|null $fanDuelSalary
      *
      * @return self
      */
-    public function setFanDuelSalary(int $fanDuelSalary) : self
+    public function setFanDuelSalary(?int $fanDuelSalary) : self
     {
         $this->fanDuelSalary = $fanDuelSalary;
         return $this;
@@ -988,20 +988,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFantasyDraftSalary() : int
+    public function getFantasyDraftSalary() : ?int
     {
         return $this->fantasyDraftSalary;
     }
     /**
      * 
      *
-     * @param int $fantasyDraftSalary
+     * @param int|null $fantasyDraftSalary
      *
      * @return self
      */
-    public function setFantasyDraftSalary(int $fantasyDraftSalary) : self
+    public function setFantasyDraftSalary(?int $fantasyDraftSalary) : self
     {
         $this->fantasyDraftSalary = $fantasyDraftSalary;
         return $this;
@@ -1009,20 +1009,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getMadeCutDidNotFinish() : bool
+    public function getMadeCutDidNotFinish() : ?bool
     {
         return $this->madeCutDidNotFinish;
     }
     /**
      * 
      *
-     * @param bool $madeCutDidNotFinish
+     * @param bool|null $madeCutDidNotFinish
      *
      * @return self
      */
-    public function setMadeCutDidNotFinish(bool $madeCutDidNotFinish) : self
+    public function setMadeCutDidNotFinish(?bool $madeCutDidNotFinish) : self
     {
         $this->madeCutDidNotFinish = $madeCutDidNotFinish;
         return $this;
@@ -1051,20 +1051,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getOddsToWin() : float
+    public function getOddsToWin() : ?float
     {
         return $this->oddsToWin;
     }
     /**
      * 
      *
-     * @param float $oddsToWin
+     * @param float|null $oddsToWin
      *
      * @return self
      */
-    public function setOddsToWin(float $oddsToWin) : self
+    public function setOddsToWin(?float $oddsToWin) : self
     {
         $this->oddsToWin = $oddsToWin;
         return $this;
@@ -1072,20 +1072,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOddsToWinDescription() : string
+    public function getOddsToWinDescription() : ?string
     {
         return $this->oddsToWinDescription;
     }
     /**
      * 
      *
-     * @param string $oddsToWinDescription
+     * @param string|null $oddsToWinDescription
      *
      * @return self
      */
-    public function setOddsToWinDescription(string $oddsToWinDescription) : self
+    public function setOddsToWinDescription(?string $oddsToWinDescription) : self
     {
         $this->oddsToWinDescription = $oddsToWinDescription;
         return $this;
@@ -1093,20 +1093,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFanDuel() : float
+    public function getFantasyPointsFanDuel() : ?float
     {
         return $this->fantasyPointsFanDuel;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFanDuel
+     * @param float|null $fantasyPointsFanDuel
      *
      * @return self
      */
-    public function setFantasyPointsFanDuel(float $fantasyPointsFanDuel) : self
+    public function setFantasyPointsFanDuel(?float $fantasyPointsFanDuel) : self
     {
         $this->fantasyPointsFanDuel = $fantasyPointsFanDuel;
         return $this;
@@ -1114,20 +1114,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFantasyDraft() : float
+    public function getFantasyPointsFantasyDraft() : ?float
     {
         return $this->fantasyPointsFantasyDraft;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFantasyDraft
+     * @param float|null $fantasyPointsFantasyDraft
      *
      * @return self
      */
-    public function setFantasyPointsFantasyDraft(float $fantasyPointsFantasyDraft) : self
+    public function setFantasyPointsFantasyDraft(?float $fantasyPointsFantasyDraft) : self
     {
         $this->fantasyPointsFantasyDraft = $fantasyPointsFantasyDraft;
         return $this;
@@ -1135,20 +1135,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStreaksOfFourBirdiesOrBetter() : float
+    public function getStreaksOfFourBirdiesOrBetter() : ?float
     {
         return $this->streaksOfFourBirdiesOrBetter;
     }
     /**
      * 
      *
-     * @param float $streaksOfFourBirdiesOrBetter
+     * @param float|null $streaksOfFourBirdiesOrBetter
      *
      * @return self
      */
-    public function setStreaksOfFourBirdiesOrBetter(float $streaksOfFourBirdiesOrBetter) : self
+    public function setStreaksOfFourBirdiesOrBetter(?float $streaksOfFourBirdiesOrBetter) : self
     {
         $this->streaksOfFourBirdiesOrBetter = $streaksOfFourBirdiesOrBetter;
         return $this;
@@ -1156,20 +1156,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStreaksOfFiveBirdiesOrBetter() : float
+    public function getStreaksOfFiveBirdiesOrBetter() : ?float
     {
         return $this->streaksOfFiveBirdiesOrBetter;
     }
     /**
      * 
      *
-     * @param float $streaksOfFiveBirdiesOrBetter
+     * @param float|null $streaksOfFiveBirdiesOrBetter
      *
      * @return self
      */
-    public function setStreaksOfFiveBirdiesOrBetter(float $streaksOfFiveBirdiesOrBetter) : self
+    public function setStreaksOfFiveBirdiesOrBetter(?float $streaksOfFiveBirdiesOrBetter) : self
     {
         $this->streaksOfFiveBirdiesOrBetter = $streaksOfFiveBirdiesOrBetter;
         return $this;
@@ -1177,20 +1177,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getConsecutiveBirdieOrBetterCount() : float
+    public function getConsecutiveBirdieOrBetterCount() : ?float
     {
         return $this->consecutiveBirdieOrBetterCount;
     }
     /**
      * 
      *
-     * @param float $consecutiveBirdieOrBetterCount
+     * @param float|null $consecutiveBirdieOrBetterCount
      *
      * @return self
      */
-    public function setConsecutiveBirdieOrBetterCount(float $consecutiveBirdieOrBetterCount) : self
+    public function setConsecutiveBirdieOrBetterCount(?float $consecutiveBirdieOrBetterCount) : self
     {
         $this->consecutiveBirdieOrBetterCount = $consecutiveBirdieOrBetterCount;
         return $this;
@@ -1198,20 +1198,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBounceBackCount() : float
+    public function getBounceBackCount() : ?float
     {
         return $this->bounceBackCount;
     }
     /**
      * 
      *
-     * @param float $bounceBackCount
+     * @param float|null $bounceBackCount
      *
      * @return self
      */
-    public function setBounceBackCount(float $bounceBackCount) : self
+    public function setBounceBackCount(?float $bounceBackCount) : self
     {
         $this->bounceBackCount = $bounceBackCount;
         return $this;
@@ -1219,20 +1219,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getRoundsWithFiveOrMoreBirdiesOrBetter() : float
+    public function getRoundsWithFiveOrMoreBirdiesOrBetter() : ?float
     {
         return $this->roundsWithFiveOrMoreBirdiesOrBetter;
     }
     /**
      * 
      *
-     * @param float $roundsWithFiveOrMoreBirdiesOrBetter
+     * @param float|null $roundsWithFiveOrMoreBirdiesOrBetter
      *
      * @return self
      */
-    public function setRoundsWithFiveOrMoreBirdiesOrBetter(float $roundsWithFiveOrMoreBirdiesOrBetter) : self
+    public function setRoundsWithFiveOrMoreBirdiesOrBetter(?float $roundsWithFiveOrMoreBirdiesOrBetter) : self
     {
         $this->roundsWithFiveOrMoreBirdiesOrBetter = $roundsWithFiveOrMoreBirdiesOrBetter;
         return $this;
@@ -1261,20 +1261,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsYahoo() : float
+    public function getFantasyPointsYahoo() : ?float
     {
         return $this->fantasyPointsYahoo;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsYahoo
+     * @param float|null $fantasyPointsYahoo
      *
      * @return self
      */
-    public function setFantasyPointsYahoo(float $fantasyPointsYahoo) : self
+    public function setFantasyPointsYahoo(?float $fantasyPointsYahoo) : self
     {
         $this->fantasyPointsYahoo = $fantasyPointsYahoo;
         return $this;
@@ -1282,20 +1282,20 @@ class PlayerTournamentProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStreaksOfSixBirdiesOrBetter() : float
+    public function getStreaksOfSixBirdiesOrBetter() : ?float
     {
         return $this->streaksOfSixBirdiesOrBetter;
     }
     /**
      * 
      *
-     * @param float $streaksOfSixBirdiesOrBetter
+     * @param float|null $streaksOfSixBirdiesOrBetter
      *
      * @return self
      */
-    public function setStreaksOfSixBirdiesOrBetter(float $streaksOfSixBirdiesOrBetter) : self
+    public function setStreaksOfSixBirdiesOrBetter(?float $streaksOfSixBirdiesOrBetter) : self
     {
         $this->streaksOfSixBirdiesOrBetter = $streaksOfSixBirdiesOrBetter;
         return $this;

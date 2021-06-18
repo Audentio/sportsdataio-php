@@ -4,18 +4,18 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class PlayerDetailsByRookieDraftYear extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $season;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $season Year of the season.<br>Examples: <code>2018</code>, <code>2019</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format, string $season)
+    public function __construct(string $season, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class PlayerDetailsByRookieDraftYear extends \Sportsdata\API\NFL\Runtime\Client\
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}'), array($this->format, $this->season), '/stats/{format}/Rookies/{season}');
+        return str_replace(array('{season}', '{format}'), array($this->season, $this->format), '/scores/{format}/Rookies/{season}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

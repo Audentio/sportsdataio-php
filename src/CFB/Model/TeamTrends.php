@@ -7,13 +7,13 @@ class TeamTrends
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
@@ -31,20 +31,20 @@ class TeamTrends
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -52,20 +52,20 @@ class TeamTrends
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;

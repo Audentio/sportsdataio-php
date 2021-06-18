@@ -4,18 +4,18 @@ namespace Sportsdata\API\CBB\Endpoint;
 
 class BettingMarketsByGameid extends \Sportsdata\API\CBB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CBB\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $gameid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $gameid The GameID of the desired game for which to pull all betting markets (includes outcomes/bets).
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $gameid)
+    public function __construct(string $gameid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->gameid = $gameid;
+        $this->format = $format;
     }
     use \Sportsdata\API\CBB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingMarketsByGameid extends \Sportsdata\API\CBB\Runtime\Client\BaseEndp
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{gameid}'), array($this->format, $this->gameid), '/odds/{format}/BettingMarketsByGameID/{gameid}');
+        return str_replace(array('{gameid}', '{format}'), array($this->gameid, $this->format), '/odds/{format}/BettingMarketsByGameID/{gameid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

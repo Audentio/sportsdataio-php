@@ -25,55 +25,55 @@ class Goal
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $assistedByPlayerId1;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $assistedByPlayerName1;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $assistedByPlayerId2;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $assistedByPlayerName2;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameMinute;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameMinuteExtra;
     /**
@@ -142,20 +142,20 @@ class Goal
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerId() : int
+    public function getPlayerId() : ?int
     {
         return $this->playerId;
     }
     /**
      * 
      *
-     * @param int $playerId
+     * @param int|null $playerId
      *
      * @return self
      */
-    public function setPlayerId(int $playerId) : self
+    public function setPlayerId(?int $playerId) : self
     {
         $this->playerId = $playerId;
         return $this;
@@ -163,20 +163,20 @@ class Goal
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -184,20 +184,20 @@ class Goal
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -205,20 +205,20 @@ class Goal
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssistedByPlayerId1() : int
+    public function getAssistedByPlayerId1() : ?int
     {
         return $this->assistedByPlayerId1;
     }
     /**
      * 
      *
-     * @param int $assistedByPlayerId1
+     * @param int|null $assistedByPlayerId1
      *
      * @return self
      */
-    public function setAssistedByPlayerId1(int $assistedByPlayerId1) : self
+    public function setAssistedByPlayerId1(?int $assistedByPlayerId1) : self
     {
         $this->assistedByPlayerId1 = $assistedByPlayerId1;
         return $this;
@@ -226,20 +226,20 @@ class Goal
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAssistedByPlayerName1() : string
+    public function getAssistedByPlayerName1() : ?string
     {
         return $this->assistedByPlayerName1;
     }
     /**
      * 
      *
-     * @param string $assistedByPlayerName1
+     * @param string|null $assistedByPlayerName1
      *
      * @return self
      */
-    public function setAssistedByPlayerName1(string $assistedByPlayerName1) : self
+    public function setAssistedByPlayerName1(?string $assistedByPlayerName1) : self
     {
         $this->assistedByPlayerName1 = $assistedByPlayerName1;
         return $this;
@@ -247,20 +247,20 @@ class Goal
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssistedByPlayerId2() : int
+    public function getAssistedByPlayerId2() : ?int
     {
         return $this->assistedByPlayerId2;
     }
     /**
      * 
      *
-     * @param int $assistedByPlayerId2
+     * @param int|null $assistedByPlayerId2
      *
      * @return self
      */
-    public function setAssistedByPlayerId2(int $assistedByPlayerId2) : self
+    public function setAssistedByPlayerId2(?int $assistedByPlayerId2) : self
     {
         $this->assistedByPlayerId2 = $assistedByPlayerId2;
         return $this;
@@ -268,20 +268,20 @@ class Goal
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAssistedByPlayerName2() : string
+    public function getAssistedByPlayerName2() : ?string
     {
         return $this->assistedByPlayerName2;
     }
     /**
      * 
      *
-     * @param string $assistedByPlayerName2
+     * @param string|null $assistedByPlayerName2
      *
      * @return self
      */
-    public function setAssistedByPlayerName2(string $assistedByPlayerName2) : self
+    public function setAssistedByPlayerName2(?string $assistedByPlayerName2) : self
     {
         $this->assistedByPlayerName2 = $assistedByPlayerName2;
         return $this;
@@ -289,20 +289,20 @@ class Goal
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameMinute() : int
+    public function getGameMinute() : ?int
     {
         return $this->gameMinute;
     }
     /**
      * 
      *
-     * @param int $gameMinute
+     * @param int|null $gameMinute
      *
      * @return self
      */
-    public function setGameMinute(int $gameMinute) : self
+    public function setGameMinute(?int $gameMinute) : self
     {
         $this->gameMinute = $gameMinute;
         return $this;
@@ -310,20 +310,20 @@ class Goal
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameMinuteExtra() : int
+    public function getGameMinuteExtra() : ?int
     {
         return $this->gameMinuteExtra;
     }
     /**
      * 
      *
-     * @param int $gameMinuteExtra
+     * @param int|null $gameMinuteExtra
      *
      * @return self
      */
-    public function setGameMinuteExtra(int $gameMinuteExtra) : self
+    public function setGameMinuteExtra(?int $gameMinuteExtra) : self
     {
         $this->gameMinuteExtra = $gameMinuteExtra;
         return $this;

@@ -25,19 +25,19 @@ class Membership
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $playerName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teamName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teamArea;
     /**
@@ -49,19 +49,19 @@ class Membership
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $endDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
@@ -130,20 +130,20 @@ class Membership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPlayerName() : string
+    public function getPlayerName() : ?string
     {
         return $this->playerName;
     }
     /**
      * 
      *
-     * @param string $playerName
+     * @param string|null $playerName
      *
      * @return self
      */
-    public function setPlayerName(string $playerName) : self
+    public function setPlayerName(?string $playerName) : self
     {
         $this->playerName = $playerName;
         return $this;
@@ -151,20 +151,20 @@ class Membership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeamName() : string
+    public function getTeamName() : ?string
     {
         return $this->teamName;
     }
     /**
      * 
      *
-     * @param string $teamName
+     * @param string|null $teamName
      *
      * @return self
      */
-    public function setTeamName(string $teamName) : self
+    public function setTeamName(?string $teamName) : self
     {
         $this->teamName = $teamName;
         return $this;
@@ -172,20 +172,20 @@ class Membership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeamArea() : string
+    public function getTeamArea() : ?string
     {
         return $this->teamArea;
     }
     /**
      * 
      *
-     * @param string $teamArea
+     * @param string|null $teamArea
      *
      * @return self
      */
-    public function setTeamArea(string $teamArea) : self
+    public function setTeamArea(?string $teamArea) : self
     {
         $this->teamArea = $teamArea;
         return $this;
@@ -214,20 +214,20 @@ class Membership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -235,20 +235,20 @@ class Membership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEndDate() : string
+    public function getEndDate() : ?string
     {
         return $this->endDate;
     }
     /**
      * 
      *
-     * @param string $endDate
+     * @param string|null $endDate
      *
      * @return self
      */
-    public function setEndDate(string $endDate) : self
+    public function setEndDate(?string $endDate) : self
     {
         $this->endDate = $endDate;
         return $this;
@@ -256,20 +256,20 @@ class Membership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;

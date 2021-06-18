@@ -39,17 +39,26 @@ class RefereeNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('RefereeID', $data)) {
             $object->setRefereeID($data['RefereeID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         if (\array_key_exists('Number', $data)) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Position', $data)) {
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('College', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('College', $data) && $data['College'] !== null) {
             $object->setCollege($data['College']);
+        }
+        elseif (\array_key_exists('College', $data) && $data['College'] === null) {
+            $object->setCollege(null);
         }
         if (\array_key_exists('Experience', $data)) {
             $object->setExperience($data['Experience']);

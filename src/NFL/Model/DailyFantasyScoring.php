@@ -13,49 +13,49 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsPPR;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFanDuel;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsDraftKings;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsYahoo;
     /**
@@ -79,13 +79,13 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $date;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFantasyDraft;
     /**
@@ -112,20 +112,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -133,20 +133,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -154,20 +154,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -175,20 +175,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -196,20 +196,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsPPR() : float
+    public function getFantasyPointsPPR() : ?float
     {
         return $this->fantasyPointsPPR;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsPPR
+     * @param float|null $fantasyPointsPPR
      *
      * @return self
      */
-    public function setFantasyPointsPPR(float $fantasyPointsPPR) : self
+    public function setFantasyPointsPPR(?float $fantasyPointsPPR) : self
     {
         $this->fantasyPointsPPR = $fantasyPointsPPR;
         return $this;
@@ -217,20 +217,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFanDuel() : float
+    public function getFantasyPointsFanDuel() : ?float
     {
         return $this->fantasyPointsFanDuel;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFanDuel
+     * @param float|null $fantasyPointsFanDuel
      *
      * @return self
      */
-    public function setFantasyPointsFanDuel(float $fantasyPointsFanDuel) : self
+    public function setFantasyPointsFanDuel(?float $fantasyPointsFanDuel) : self
     {
         $this->fantasyPointsFanDuel = $fantasyPointsFanDuel;
         return $this;
@@ -238,20 +238,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsDraftKings() : float
+    public function getFantasyPointsDraftKings() : ?float
     {
         return $this->fantasyPointsDraftKings;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsDraftKings
+     * @param float|null $fantasyPointsDraftKings
      *
      * @return self
      */
-    public function setFantasyPointsDraftKings(float $fantasyPointsDraftKings) : self
+    public function setFantasyPointsDraftKings(?float $fantasyPointsDraftKings) : self
     {
         $this->fantasyPointsDraftKings = $fantasyPointsDraftKings;
         return $this;
@@ -259,20 +259,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsYahoo() : float
+    public function getFantasyPointsYahoo() : ?float
     {
         return $this->fantasyPointsYahoo;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsYahoo
+     * @param float|null $fantasyPointsYahoo
      *
      * @return self
      */
-    public function setFantasyPointsYahoo(float $fantasyPointsYahoo) : self
+    public function setFantasyPointsYahoo(?float $fantasyPointsYahoo) : self
     {
         $this->fantasyPointsYahoo = $fantasyPointsYahoo;
         return $this;
@@ -343,20 +343,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDate() : string
+    public function getDate() : ?string
     {
         return $this->date;
     }
     /**
      * 
      *
-     * @param string $date
+     * @param string|null $date
      *
      * @return self
      */
-    public function setDate(string $date) : self
+    public function setDate(?string $date) : self
     {
         $this->date = $date;
         return $this;
@@ -364,20 +364,20 @@ class DailyFantasyScoring
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFantasyDraft() : float
+    public function getFantasyPointsFantasyDraft() : ?float
     {
         return $this->fantasyPointsFantasyDraft;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFantasyDraft
+     * @param float|null $fantasyPointsFantasyDraft
      *
      * @return self
      */
-    public function setFantasyPointsFantasyDraft(float $fantasyPointsFantasyDraft) : self
+    public function setFantasyPointsFantasyDraft(?float $fantasyPointsFantasyDraft) : self
     {
         $this->fantasyPointsFantasyDraft = $fantasyPointsFantasyDraft;
         return $this;

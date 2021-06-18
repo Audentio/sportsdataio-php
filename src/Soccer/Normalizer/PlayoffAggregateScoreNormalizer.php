@@ -51,11 +51,17 @@ class PlayoffAggregateScoreNormalizer implements DenormalizerInterface, Normaliz
         if (\array_key_exists('WinningTeamId', $data)) {
             $object->setWinningTeamId($data['WinningTeamId']);
         }
-        if (\array_key_exists('Created', $data)) {
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
+        }
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
         }
         return $object;
     }

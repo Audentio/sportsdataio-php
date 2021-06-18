@@ -13,31 +13,31 @@ class Venue
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $address;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $zip;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
@@ -49,37 +49,37 @@ class Venue
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opened;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nickname1;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nickname2;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $capacity;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLat;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLong;
     /**
@@ -106,20 +106,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -127,20 +127,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAddress() : string
+    public function getAddress() : ?string
     {
         return $this->address;
     }
     /**
      * 
      *
-     * @param string $address
+     * @param string|null $address
      *
      * @return self
      */
-    public function setAddress(string $address) : self
+    public function setAddress(?string $address) : self
     {
         $this->address = $address;
         return $this;
@@ -148,20 +148,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -169,20 +169,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getZip() : string
+    public function getZip() : ?string
     {
         return $this->zip;
     }
     /**
      * 
      *
-     * @param string $zip
+     * @param string|null $zip
      *
      * @return self
      */
-    public function setZip(string $zip) : self
+    public function setZip(?string $zip) : self
     {
         $this->zip = $zip;
         return $this;
@@ -190,20 +190,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -232,20 +232,20 @@ class Venue
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpened() : int
+    public function getOpened() : ?int
     {
         return $this->opened;
     }
     /**
      * 
      *
-     * @param int $opened
+     * @param int|null $opened
      *
      * @return self
      */
-    public function setOpened(int $opened) : self
+    public function setOpened(?int $opened) : self
     {
         $this->opened = $opened;
         return $this;
@@ -253,20 +253,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNickname1() : string
+    public function getNickname1() : ?string
     {
         return $this->nickname1;
     }
     /**
      * 
      *
-     * @param string $nickname1
+     * @param string|null $nickname1
      *
      * @return self
      */
-    public function setNickname1(string $nickname1) : self
+    public function setNickname1(?string $nickname1) : self
     {
         $this->nickname1 = $nickname1;
         return $this;
@@ -274,20 +274,20 @@ class Venue
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNickname2() : string
+    public function getNickname2() : ?string
     {
         return $this->nickname2;
     }
     /**
      * 
      *
-     * @param string $nickname2
+     * @param string|null $nickname2
      *
      * @return self
      */
-    public function setNickname2(string $nickname2) : self
+    public function setNickname2(?string $nickname2) : self
     {
         $this->nickname2 = $nickname2;
         return $this;
@@ -295,20 +295,20 @@ class Venue
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCapacity() : int
+    public function getCapacity() : ?int
     {
         return $this->capacity;
     }
     /**
      * 
      *
-     * @param int $capacity
+     * @param int|null $capacity
      *
      * @return self
      */
-    public function setCapacity(int $capacity) : self
+    public function setCapacity(?int $capacity) : self
     {
         $this->capacity = $capacity;
         return $this;
@@ -316,20 +316,20 @@ class Venue
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLat() : float
+    public function getGeoLat() : ?float
     {
         return $this->geoLat;
     }
     /**
      * 
      *
-     * @param float $geoLat
+     * @param float|null $geoLat
      *
      * @return self
      */
-    public function setGeoLat(float $geoLat) : self
+    public function setGeoLat(?float $geoLat) : self
     {
         $this->geoLat = $geoLat;
         return $this;
@@ -337,20 +337,20 @@ class Venue
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLong() : float
+    public function getGeoLong() : ?float
     {
         return $this->geoLong;
     }
     /**
      * 
      *
-     * @param float $geoLong
+     * @param float|null $geoLong
      *
      * @return self
      */
-    public function setGeoLong(float $geoLong) : self
+    public function setGeoLong(?float $geoLong) : self
     {
         $this->geoLong = $geoLong;
         return $this;

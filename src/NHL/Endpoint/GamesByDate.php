@@ -4,19 +4,20 @@ namespace Sportsdata\API\NHL\Endpoint;
 
 class GamesByDate extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NHL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $date;
+    protected $format;
     /**
-     * 
-     *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $date The date of the game(s).
-     <br>Examples: <code>2017-OCT-31</code>, <code>2018-FEB-15</code>.
+    * 
+    *
+    * @param string $date The date of the game(s).
+    <br>Examples: <code>2018-JAN-31</code>, <code>2017-OCT-01</code>.
+    
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $date)
+    public function __construct(string $date, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\NHL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +26,7 @@ class GamesByDate extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implem
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}'), array($this->format, $this->date), '/stats/{format}/GamesByDate/{date}');
+        return str_replace(array('{date}', '{format}'), array($this->date, $this->format), '/scores/{format}/GamesByDate/{date}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

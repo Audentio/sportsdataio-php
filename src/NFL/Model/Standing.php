@@ -19,25 +19,25 @@ class Standing
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $conference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $division;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -85,7 +85,7 @@ class Standing
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $touchdowns;
     /**
@@ -133,7 +133,7 @@ class Standing
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
@@ -193,20 +193,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getConference() : string
+    public function getConference() : ?string
     {
         return $this->conference;
     }
     /**
      * 
      *
-     * @param string $conference
+     * @param string|null $conference
      *
      * @return self
      */
-    public function setConference(string $conference) : self
+    public function setConference(?string $conference) : self
     {
         $this->conference = $conference;
         return $this;
@@ -214,20 +214,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDivision() : string
+    public function getDivision() : ?string
     {
         return $this->division;
     }
     /**
      * 
      *
-     * @param string $division
+     * @param string|null $division
      *
      * @return self
      */
-    public function setDivision(string $division) : self
+    public function setDivision(?string $division) : self
     {
         $this->division = $division;
         return $this;
@@ -235,20 +235,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -256,20 +256,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -424,20 +424,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTouchdowns() : int
+    public function getTouchdowns() : ?int
     {
         return $this->touchdowns;
     }
     /**
      * 
      *
-     * @param int $touchdowns
+     * @param int|null $touchdowns
      *
      * @return self
      */
-    public function setTouchdowns(int $touchdowns) : self
+    public function setTouchdowns(?int $touchdowns) : self
     {
         $this->touchdowns = $touchdowns;
         return $this;
@@ -592,20 +592,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;

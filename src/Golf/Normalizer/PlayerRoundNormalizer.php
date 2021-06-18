@@ -42,17 +42,29 @@ class PlayerRoundNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('PlayerTournamentID', $data)) {
             $object->setPlayerTournamentID($data['PlayerTournamentID']);
         }
-        if (\array_key_exists('Number', $data)) {
+        if (\array_key_exists('Number', $data) && $data['Number'] !== null) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Day', $data)) {
+        elseif (\array_key_exists('Number', $data) && $data['Number'] === null) {
+            $object->setNumber(null);
+        }
+        if (\array_key_exists('Day', $data) && $data['Day'] !== null) {
             $object->setDay($data['Day']);
         }
-        if (\array_key_exists('Par', $data)) {
+        elseif (\array_key_exists('Day', $data) && $data['Day'] === null) {
+            $object->setDay(null);
+        }
+        if (\array_key_exists('Par', $data) && $data['Par'] !== null) {
             $object->setPar($data['Par']);
         }
-        if (\array_key_exists('Score', $data)) {
+        elseif (\array_key_exists('Par', $data) && $data['Par'] === null) {
+            $object->setPar(null);
+        }
+        if (\array_key_exists('Score', $data) && $data['Score'] !== null) {
             $object->setScore($data['Score']);
+        }
+        elseif (\array_key_exists('Score', $data) && $data['Score'] === null) {
+            $object->setScore(null);
         }
         if (\array_key_exists('BogeyFree', $data)) {
             $object->setBogeyFree($data['BogeyFree']);
@@ -60,35 +72,65 @@ class PlayerRoundNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('IncludesStreakOfThreeBirdiesOrBetter', $data)) {
             $object->setIncludesStreakOfThreeBirdiesOrBetter($data['IncludesStreakOfThreeBirdiesOrBetter']);
         }
-        if (\array_key_exists('DoubleEagles', $data)) {
+        if (\array_key_exists('DoubleEagles', $data) && $data['DoubleEagles'] !== null) {
             $object->setDoubleEagles($data['DoubleEagles']);
         }
-        if (\array_key_exists('Eagles', $data)) {
+        elseif (\array_key_exists('DoubleEagles', $data) && $data['DoubleEagles'] === null) {
+            $object->setDoubleEagles(null);
+        }
+        if (\array_key_exists('Eagles', $data) && $data['Eagles'] !== null) {
             $object->setEagles($data['Eagles']);
         }
-        if (\array_key_exists('Birdies', $data)) {
+        elseif (\array_key_exists('Eagles', $data) && $data['Eagles'] === null) {
+            $object->setEagles(null);
+        }
+        if (\array_key_exists('Birdies', $data) && $data['Birdies'] !== null) {
             $object->setBirdies($data['Birdies']);
         }
-        if (\array_key_exists('Pars', $data)) {
+        elseif (\array_key_exists('Birdies', $data) && $data['Birdies'] === null) {
+            $object->setBirdies(null);
+        }
+        if (\array_key_exists('Pars', $data) && $data['Pars'] !== null) {
             $object->setPars($data['Pars']);
         }
-        if (\array_key_exists('Bogeys', $data)) {
+        elseif (\array_key_exists('Pars', $data) && $data['Pars'] === null) {
+            $object->setPars(null);
+        }
+        if (\array_key_exists('Bogeys', $data) && $data['Bogeys'] !== null) {
             $object->setBogeys($data['Bogeys']);
         }
-        if (\array_key_exists('DoubleBogeys', $data)) {
+        elseif (\array_key_exists('Bogeys', $data) && $data['Bogeys'] === null) {
+            $object->setBogeys(null);
+        }
+        if (\array_key_exists('DoubleBogeys', $data) && $data['DoubleBogeys'] !== null) {
             $object->setDoubleBogeys($data['DoubleBogeys']);
         }
-        if (\array_key_exists('WorseThanDoubleBogey', $data)) {
+        elseif (\array_key_exists('DoubleBogeys', $data) && $data['DoubleBogeys'] === null) {
+            $object->setDoubleBogeys(null);
+        }
+        if (\array_key_exists('WorseThanDoubleBogey', $data) && $data['WorseThanDoubleBogey'] !== null) {
             $object->setWorseThanDoubleBogey($data['WorseThanDoubleBogey']);
         }
-        if (\array_key_exists('HoleInOnes', $data)) {
+        elseif (\array_key_exists('WorseThanDoubleBogey', $data) && $data['WorseThanDoubleBogey'] === null) {
+            $object->setWorseThanDoubleBogey(null);
+        }
+        if (\array_key_exists('HoleInOnes', $data) && $data['HoleInOnes'] !== null) {
             $object->setHoleInOnes($data['HoleInOnes']);
         }
-        if (\array_key_exists('TripleBogeys', $data)) {
+        elseif (\array_key_exists('HoleInOnes', $data) && $data['HoleInOnes'] === null) {
+            $object->setHoleInOnes(null);
+        }
+        if (\array_key_exists('TripleBogeys', $data) && $data['TripleBogeys'] !== null) {
             $object->setTripleBogeys($data['TripleBogeys']);
         }
-        if (\array_key_exists('WorseThanTripleBogey', $data)) {
+        elseif (\array_key_exists('TripleBogeys', $data) && $data['TripleBogeys'] === null) {
+            $object->setTripleBogeys(null);
+        }
+        if (\array_key_exists('WorseThanTripleBogey', $data) && $data['WorseThanTripleBogey'] !== null) {
             $object->setWorseThanTripleBogey($data['WorseThanTripleBogey']);
+        }
+        elseif (\array_key_exists('WorseThanTripleBogey', $data) && $data['WorseThanTripleBogey'] === null) {
+            $object->setWorseThanTripleBogey(null);
         }
         if (\array_key_exists('Holes', $data)) {
             $values = array();
@@ -97,14 +139,23 @@ class PlayerRoundNormalizer implements DenormalizerInterface, NormalizerInterfac
             }
             $object->setHoles($values);
         }
-        if (\array_key_exists('LongestBirdieOrBetterStreak', $data)) {
+        if (\array_key_exists('LongestBirdieOrBetterStreak', $data) && $data['LongestBirdieOrBetterStreak'] !== null) {
             $object->setLongestBirdieOrBetterStreak($data['LongestBirdieOrBetterStreak']);
         }
-        if (\array_key_exists('ConsecutiveBirdieOrBetterCount', $data)) {
+        elseif (\array_key_exists('LongestBirdieOrBetterStreak', $data) && $data['LongestBirdieOrBetterStreak'] === null) {
+            $object->setLongestBirdieOrBetterStreak(null);
+        }
+        if (\array_key_exists('ConsecutiveBirdieOrBetterCount', $data) && $data['ConsecutiveBirdieOrBetterCount'] !== null) {
             $object->setConsecutiveBirdieOrBetterCount($data['ConsecutiveBirdieOrBetterCount']);
         }
-        if (\array_key_exists('BounceBackCount', $data)) {
+        elseif (\array_key_exists('ConsecutiveBirdieOrBetterCount', $data) && $data['ConsecutiveBirdieOrBetterCount'] === null) {
+            $object->setConsecutiveBirdieOrBetterCount(null);
+        }
+        if (\array_key_exists('BounceBackCount', $data) && $data['BounceBackCount'] !== null) {
             $object->setBounceBackCount($data['BounceBackCount']);
+        }
+        elseif (\array_key_exists('BounceBackCount', $data) && $data['BounceBackCount'] === null) {
+            $object->setBounceBackCount(null);
         }
         if (\array_key_exists('IncludesStreakOfFourBirdiesOrBetter', $data)) {
             $object->setIncludesStreakOfFourBirdiesOrBetter($data['IncludesStreakOfFourBirdiesOrBetter']);
@@ -118,8 +169,11 @@ class PlayerRoundNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('IncludesStreakOfSixBirdiesOrBetter', $data)) {
             $object->setIncludesStreakOfSixBirdiesOrBetter($data['IncludesStreakOfSixBirdiesOrBetter']);
         }
-        if (\array_key_exists('TeeTime', $data)) {
+        if (\array_key_exists('TeeTime', $data) && $data['TeeTime'] !== null) {
             $object->setTeeTime($data['TeeTime']);
+        }
+        elseif (\array_key_exists('TeeTime', $data) && $data['TeeTime'] === null) {
+            $object->setTeeTime(null);
         }
         return $object;
     }

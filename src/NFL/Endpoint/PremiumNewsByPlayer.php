@@ -4,19 +4,19 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class PremiumNewsByPlayer extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $playerid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $playerid Unique FantasyData Player ID.
     Example:<code>10000507</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $playerid)
+    public function __construct(string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class PremiumNewsByPlayer extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoin
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{playerid}'), array($this->format, $this->playerid), '/news-rotoballer/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}');
+        return str_replace(array('{playerid}', '{format}'), array($this->playerid, $this->format), '/news-rotoballer/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

@@ -10,7 +10,7 @@ class News extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoint implements \S
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML')
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class News extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoint implements \S
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/News');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/News');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

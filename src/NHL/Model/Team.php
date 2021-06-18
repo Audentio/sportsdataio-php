@@ -13,7 +13,7 @@ class Team
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
@@ -25,67 +25,67 @@ class Team
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $stadiumID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $conference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $division;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $primaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $secondaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $tertiaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quaternaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $wikipediaLogoUrl;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $wikipediaWordMarkUrl;
     /**
@@ -118,20 +118,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -160,20 +160,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -181,20 +181,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -202,20 +202,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getStadiumID() : int
+    public function getStadiumID() : ?int
     {
         return $this->stadiumID;
     }
     /**
      * 
      *
-     * @param int $stadiumID
+     * @param int|null $stadiumID
      *
      * @return self
      */
-    public function setStadiumID(int $stadiumID) : self
+    public function setStadiumID(?int $stadiumID) : self
     {
         $this->stadiumID = $stadiumID;
         return $this;
@@ -223,20 +223,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getConference() : string
+    public function getConference() : ?string
     {
         return $this->conference;
     }
     /**
      * 
      *
-     * @param string $conference
+     * @param string|null $conference
      *
      * @return self
      */
-    public function setConference(string $conference) : self
+    public function setConference(?string $conference) : self
     {
         $this->conference = $conference;
         return $this;
@@ -244,20 +244,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDivision() : string
+    public function getDivision() : ?string
     {
         return $this->division;
     }
     /**
      * 
      *
-     * @param string $division
+     * @param string|null $division
      *
      * @return self
      */
-    public function setDivision(string $division) : self
+    public function setDivision(?string $division) : self
     {
         $this->division = $division;
         return $this;
@@ -265,20 +265,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPrimaryColor() : string
+    public function getPrimaryColor() : ?string
     {
         return $this->primaryColor;
     }
     /**
      * 
      *
-     * @param string $primaryColor
+     * @param string|null $primaryColor
      *
      * @return self
      */
-    public function setPrimaryColor(string $primaryColor) : self
+    public function setPrimaryColor(?string $primaryColor) : self
     {
         $this->primaryColor = $primaryColor;
         return $this;
@@ -286,20 +286,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSecondaryColor() : string
+    public function getSecondaryColor() : ?string
     {
         return $this->secondaryColor;
     }
     /**
      * 
      *
-     * @param string $secondaryColor
+     * @param string|null $secondaryColor
      *
      * @return self
      */
-    public function setSecondaryColor(string $secondaryColor) : self
+    public function setSecondaryColor(?string $secondaryColor) : self
     {
         $this->secondaryColor = $secondaryColor;
         return $this;
@@ -307,20 +307,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTertiaryColor() : string
+    public function getTertiaryColor() : ?string
     {
         return $this->tertiaryColor;
     }
     /**
      * 
      *
-     * @param string $tertiaryColor
+     * @param string|null $tertiaryColor
      *
      * @return self
      */
-    public function setTertiaryColor(string $tertiaryColor) : self
+    public function setTertiaryColor(?string $tertiaryColor) : self
     {
         $this->tertiaryColor = $tertiaryColor;
         return $this;
@@ -328,20 +328,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuaternaryColor() : string
+    public function getQuaternaryColor() : ?string
     {
         return $this->quaternaryColor;
     }
     /**
      * 
      *
-     * @param string $quaternaryColor
+     * @param string|null $quaternaryColor
      *
      * @return self
      */
-    public function setQuaternaryColor(string $quaternaryColor) : self
+    public function setQuaternaryColor(?string $quaternaryColor) : self
     {
         $this->quaternaryColor = $quaternaryColor;
         return $this;
@@ -349,20 +349,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWikipediaLogoUrl() : string
+    public function getWikipediaLogoUrl() : ?string
     {
         return $this->wikipediaLogoUrl;
     }
     /**
      * 
      *
-     * @param string $wikipediaLogoUrl
+     * @param string|null $wikipediaLogoUrl
      *
      * @return self
      */
-    public function setWikipediaLogoUrl(string $wikipediaLogoUrl) : self
+    public function setWikipediaLogoUrl(?string $wikipediaLogoUrl) : self
     {
         $this->wikipediaLogoUrl = $wikipediaLogoUrl;
         return $this;
@@ -370,20 +370,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWikipediaWordMarkUrl() : string
+    public function getWikipediaWordMarkUrl() : ?string
     {
         return $this->wikipediaWordMarkUrl;
     }
     /**
      * 
      *
-     * @param string $wikipediaWordMarkUrl
+     * @param string|null $wikipediaWordMarkUrl
      *
      * @return self
      */
-    public function setWikipediaWordMarkUrl(string $wikipediaWordMarkUrl) : self
+    public function setWikipediaWordMarkUrl(?string $wikipediaWordMarkUrl) : self
     {
         $this->wikipediaWordMarkUrl = $wikipediaWordMarkUrl;
         return $this;

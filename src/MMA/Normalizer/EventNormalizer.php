@@ -42,26 +42,47 @@ class EventNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('LeagueId', $data)) {
             $object->setLeagueId($data['LeagueId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('ShortName', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('ShortName', $data) && $data['ShortName'] !== null) {
             $object->setShortName($data['ShortName']);
         }
-        if (\array_key_exists('Season', $data)) {
+        elseif (\array_key_exists('ShortName', $data) && $data['ShortName'] === null) {
+            $object->setShortName(null);
+        }
+        if (\array_key_exists('Season', $data) && $data['Season'] !== null) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Day', $data)) {
+        elseif (\array_key_exists('Season', $data) && $data['Season'] === null) {
+            $object->setSeason(null);
+        }
+        if (\array_key_exists('Day', $data) && $data['Day'] !== null) {
             $object->setDay($data['Day']);
         }
-        if (\array_key_exists('DateTime', $data)) {
+        elseif (\array_key_exists('Day', $data) && $data['Day'] === null) {
+            $object->setDay(null);
+        }
+        if (\array_key_exists('DateTime', $data) && $data['DateTime'] !== null) {
             $object->setDateTime($data['DateTime']);
         }
-        if (\array_key_exists('Status', $data)) {
+        elseif (\array_key_exists('DateTime', $data) && $data['DateTime'] === null) {
+            $object->setDateTime(null);
+        }
+        if (\array_key_exists('Status', $data) && $data['Status'] !== null) {
             $object->setStatus($data['Status']);
         }
-        if (\array_key_exists('Active', $data)) {
+        elseif (\array_key_exists('Status', $data) && $data['Status'] === null) {
+            $object->setStatus(null);
+        }
+        if (\array_key_exists('Active', $data) && $data['Active'] !== null) {
             $object->setActive($data['Active']);
+        }
+        elseif (\array_key_exists('Active', $data) && $data['Active'] === null) {
+            $object->setActive(null);
         }
         return $object;
     }

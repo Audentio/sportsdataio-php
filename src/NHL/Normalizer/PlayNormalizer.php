@@ -42,68 +42,128 @@ class PlayNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('PeriodID', $data)) {
             $object->setPeriodID($data['PeriodID']);
         }
-        if (\array_key_exists('PeriodName', $data)) {
+        if (\array_key_exists('PeriodName', $data) && $data['PeriodName'] !== null) {
             $object->setPeriodName($data['PeriodName']);
+        }
+        elseif (\array_key_exists('PeriodName', $data) && $data['PeriodName'] === null) {
+            $object->setPeriodName(null);
         }
         if (\array_key_exists('Sequence', $data)) {
             $object->setSequence($data['Sequence']);
         }
-        if (\array_key_exists('ClockMinutes', $data)) {
+        if (\array_key_exists('ClockMinutes', $data) && $data['ClockMinutes'] !== null) {
             $object->setClockMinutes($data['ClockMinutes']);
         }
-        if (\array_key_exists('ClockSeconds', $data)) {
+        elseif (\array_key_exists('ClockMinutes', $data) && $data['ClockMinutes'] === null) {
+            $object->setClockMinutes(null);
+        }
+        if (\array_key_exists('ClockSeconds', $data) && $data['ClockSeconds'] !== null) {
             $object->setClockSeconds($data['ClockSeconds']);
         }
-        if (\array_key_exists('AwayTeamScore', $data)) {
+        elseif (\array_key_exists('ClockSeconds', $data) && $data['ClockSeconds'] === null) {
+            $object->setClockSeconds(null);
+        }
+        if (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] !== null) {
             $object->setAwayTeamScore($data['AwayTeamScore']);
         }
-        if (\array_key_exists('HomeTeamScore', $data)) {
+        elseif (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] === null) {
+            $object->setAwayTeamScore(null);
+        }
+        if (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] !== null) {
             $object->setHomeTeamScore($data['HomeTeamScore']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        elseif (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] === null) {
+            $object->setHomeTeamScore(null);
+        }
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('OpponentID', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('OpponentID', $data) && $data['OpponentID'] !== null) {
             $object->setOpponentID($data['OpponentID']);
         }
-        if (\array_key_exists('Opponent', $data)) {
+        elseif (\array_key_exists('OpponentID', $data) && $data['OpponentID'] === null) {
+            $object->setOpponentID(null);
+        }
+        if (\array_key_exists('Opponent', $data) && $data['Opponent'] !== null) {
             $object->setOpponent($data['Opponent']);
         }
-        if (\array_key_exists('Category', $data)) {
+        elseif (\array_key_exists('Opponent', $data) && $data['Opponent'] === null) {
+            $object->setOpponent(null);
+        }
+        if (\array_key_exists('Category', $data) && $data['Category'] !== null) {
             $object->setCategory($data['Category']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Category', $data) && $data['Category'] === null) {
+            $object->setCategory(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Created', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
         }
-        if (\array_key_exists('FirstAssistedByPlayerID', $data)) {
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
+        }
+        if (\array_key_exists('FirstAssistedByPlayerID', $data) && $data['FirstAssistedByPlayerID'] !== null) {
             $object->setFirstAssistedByPlayerID($data['FirstAssistedByPlayerID']);
         }
-        if (\array_key_exists('SecondAssistedByPlayerID', $data)) {
+        elseif (\array_key_exists('FirstAssistedByPlayerID', $data) && $data['FirstAssistedByPlayerID'] === null) {
+            $object->setFirstAssistedByPlayerID(null);
+        }
+        if (\array_key_exists('SecondAssistedByPlayerID', $data) && $data['SecondAssistedByPlayerID'] !== null) {
             $object->setSecondAssistedByPlayerID($data['SecondAssistedByPlayerID']);
         }
-        if (\array_key_exists('PowerPlayTeamID', $data)) {
+        elseif (\array_key_exists('SecondAssistedByPlayerID', $data) && $data['SecondAssistedByPlayerID'] === null) {
+            $object->setSecondAssistedByPlayerID(null);
+        }
+        if (\array_key_exists('PowerPlayTeamID', $data) && $data['PowerPlayTeamID'] !== null) {
             $object->setPowerPlayTeamID($data['PowerPlayTeamID']);
         }
-        if (\array_key_exists('PowerPlayTeam', $data)) {
+        elseif (\array_key_exists('PowerPlayTeamID', $data) && $data['PowerPlayTeamID'] === null) {
+            $object->setPowerPlayTeamID(null);
+        }
+        if (\array_key_exists('PowerPlayTeam', $data) && $data['PowerPlayTeam'] !== null) {
             $object->setPowerPlayTeam($data['PowerPlayTeam']);
         }
-        if (\array_key_exists('OpposingPlayerID', $data)) {
+        elseif (\array_key_exists('PowerPlayTeam', $data) && $data['PowerPlayTeam'] === null) {
+            $object->setPowerPlayTeam(null);
+        }
+        if (\array_key_exists('OpposingPlayerID', $data) && $data['OpposingPlayerID'] !== null) {
             $object->setOpposingPlayerID($data['OpposingPlayerID']);
+        }
+        elseif (\array_key_exists('OpposingPlayerID', $data) && $data['OpposingPlayerID'] === null) {
+            $object->setOpposingPlayerID(null);
         }
         return $object;
     }

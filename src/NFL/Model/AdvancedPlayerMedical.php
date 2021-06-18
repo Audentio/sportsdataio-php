@@ -13,13 +13,13 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
@@ -31,43 +31,43 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $incidentDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $injuryDescription;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $severity;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gamesMissed;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gamesOnInjuryReport;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $surgery;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $recoveryTimetable;
     /**
@@ -94,20 +94,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -115,20 +115,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -157,20 +157,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getIncidentDate() : string
+    public function getIncidentDate() : ?string
     {
         return $this->incidentDate;
     }
     /**
      * 
      *
-     * @param string $incidentDate
+     * @param string|null $incidentDate
      *
      * @return self
      */
-    public function setIncidentDate(string $incidentDate) : self
+    public function setIncidentDate(?string $incidentDate) : self
     {
         $this->incidentDate = $incidentDate;
         return $this;
@@ -178,20 +178,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getInjuryDescription() : string
+    public function getInjuryDescription() : ?string
     {
         return $this->injuryDescription;
     }
     /**
      * 
      *
-     * @param string $injuryDescription
+     * @param string|null $injuryDescription
      *
      * @return self
      */
-    public function setInjuryDescription(string $injuryDescription) : self
+    public function setInjuryDescription(?string $injuryDescription) : self
     {
         $this->injuryDescription = $injuryDescription;
         return $this;
@@ -199,20 +199,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSeverity() : string
+    public function getSeverity() : ?string
     {
         return $this->severity;
     }
     /**
      * 
      *
-     * @param string $severity
+     * @param string|null $severity
      *
      * @return self
      */
-    public function setSeverity(string $severity) : self
+    public function setSeverity(?string $severity) : self
     {
         $this->severity = $severity;
         return $this;
@@ -220,20 +220,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGamesMissed() : int
+    public function getGamesMissed() : ?int
     {
         return $this->gamesMissed;
     }
     /**
      * 
      *
-     * @param int $gamesMissed
+     * @param int|null $gamesMissed
      *
      * @return self
      */
-    public function setGamesMissed(int $gamesMissed) : self
+    public function setGamesMissed(?int $gamesMissed) : self
     {
         $this->gamesMissed = $gamesMissed;
         return $this;
@@ -241,20 +241,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGamesOnInjuryReport() : int
+    public function getGamesOnInjuryReport() : ?int
     {
         return $this->gamesOnInjuryReport;
     }
     /**
      * 
      *
-     * @param int $gamesOnInjuryReport
+     * @param int|null $gamesOnInjuryReport
      *
      * @return self
      */
-    public function setGamesOnInjuryReport(int $gamesOnInjuryReport) : self
+    public function setGamesOnInjuryReport(?int $gamesOnInjuryReport) : self
     {
         $this->gamesOnInjuryReport = $gamesOnInjuryReport;
         return $this;
@@ -262,20 +262,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSurgery() : string
+    public function getSurgery() : ?string
     {
         return $this->surgery;
     }
     /**
      * 
      *
-     * @param string $surgery
+     * @param string|null $surgery
      *
      * @return self
      */
-    public function setSurgery(string $surgery) : self
+    public function setSurgery(?string $surgery) : self
     {
         $this->surgery = $surgery;
         return $this;
@@ -283,20 +283,20 @@ class AdvancedPlayerMedical
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRecoveryTimetable() : string
+    public function getRecoveryTimetable() : ?string
     {
         return $this->recoveryTimetable;
     }
     /**
      * 
      *
-     * @param string $recoveryTimetable
+     * @param string|null $recoveryTimetable
      *
      * @return self
      */
-    public function setRecoveryTimetable(string $recoveryTimetable) : self
+    public function setRecoveryTimetable(?string $recoveryTimetable) : self
     {
         $this->recoveryTimetable = $recoveryTimetable;
         return $this;

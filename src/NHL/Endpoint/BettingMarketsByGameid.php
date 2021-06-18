@@ -4,18 +4,18 @@ namespace Sportsdata\API\NHL\Endpoint;
 
 class BettingMarketsByGameid extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NHL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $gameID;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $gameID The GameID of the desired game for which to pull all betting markets (includes outcomes/bets). Valid entries include: <code>14814</code>
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $gameID)
+    public function __construct(string $gameID, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->gameID = $gameID;
+        $this->format = $format;
     }
     use \Sportsdata\API\NHL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingMarketsByGameid extends \Sportsdata\API\NHL\Runtime\Client\BaseEndp
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{gameID}'), array($this->format, $this->gameID), '/odds/{format}/BettingMarketsByGameID/{gameID}');
+        return str_replace(array('{gameID}', '{format}'), array($this->gameID, $this->format), '/odds/{format}/BettingMarketsByGameID/{gameID}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

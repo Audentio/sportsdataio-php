@@ -4,18 +4,18 @@ namespace Sportsdata\API\Golf\Endpoint;
 
 class DfsSlates extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Golf\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $tournamentid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $tournamentid The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are <code>58</code>, <code>61</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $tournamentid)
+    public function __construct(string $tournamentid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->tournamentid = $tournamentid;
+        $this->format = $format;
     }
     use \Sportsdata\API\Golf\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class DfsSlates extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint impleme
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{tournamentid}'), array($this->format, $this->tournamentid), '/{format}/DfsSlatesByTournament/{tournamentid}');
+        return str_replace(array('{tournamentid}', '{format}'), array($this->tournamentid, $this->format), '/{format}/DfsSlatesByTournament/{tournamentid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

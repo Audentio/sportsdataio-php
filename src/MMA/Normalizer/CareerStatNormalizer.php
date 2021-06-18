@@ -36,35 +36,65 @@ class CareerStatNormalizer implements DenormalizerInterface, NormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('FighterId', $data)) {
+        if (\array_key_exists('FighterId', $data) && $data['FighterId'] !== null) {
             $object->setFighterId($data['FighterId']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        elseif (\array_key_exists('FighterId', $data) && $data['FighterId'] === null) {
+            $object->setFighterId(null);
+        }
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('SigStrikesLandedPerMinute', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('SigStrikesLandedPerMinute', $data) && $data['SigStrikesLandedPerMinute'] !== null) {
             $object->setSigStrikesLandedPerMinute($data['SigStrikesLandedPerMinute']);
         }
-        if (\array_key_exists('SigStrikeAccuracy', $data)) {
+        elseif (\array_key_exists('SigStrikesLandedPerMinute', $data) && $data['SigStrikesLandedPerMinute'] === null) {
+            $object->setSigStrikesLandedPerMinute(null);
+        }
+        if (\array_key_exists('SigStrikeAccuracy', $data) && $data['SigStrikeAccuracy'] !== null) {
             $object->setSigStrikeAccuracy($data['SigStrikeAccuracy']);
         }
-        if (\array_key_exists('TakedownAverage', $data)) {
+        elseif (\array_key_exists('SigStrikeAccuracy', $data) && $data['SigStrikeAccuracy'] === null) {
+            $object->setSigStrikeAccuracy(null);
+        }
+        if (\array_key_exists('TakedownAverage', $data) && $data['TakedownAverage'] !== null) {
             $object->setTakedownAverage($data['TakedownAverage']);
         }
-        if (\array_key_exists('SubmissionAverage', $data)) {
+        elseif (\array_key_exists('TakedownAverage', $data) && $data['TakedownAverage'] === null) {
+            $object->setTakedownAverage(null);
+        }
+        if (\array_key_exists('SubmissionAverage', $data) && $data['SubmissionAverage'] !== null) {
             $object->setSubmissionAverage($data['SubmissionAverage']);
         }
-        if (\array_key_exists('KnockoutPercentage', $data)) {
+        elseif (\array_key_exists('SubmissionAverage', $data) && $data['SubmissionAverage'] === null) {
+            $object->setSubmissionAverage(null);
+        }
+        if (\array_key_exists('KnockoutPercentage', $data) && $data['KnockoutPercentage'] !== null) {
             $object->setKnockoutPercentage($data['KnockoutPercentage']);
         }
-        if (\array_key_exists('TechnicalKnockoutPercentage', $data)) {
+        elseif (\array_key_exists('KnockoutPercentage', $data) && $data['KnockoutPercentage'] === null) {
+            $object->setKnockoutPercentage(null);
+        }
+        if (\array_key_exists('TechnicalKnockoutPercentage', $data) && $data['TechnicalKnockoutPercentage'] !== null) {
             $object->setTechnicalKnockoutPercentage($data['TechnicalKnockoutPercentage']);
         }
-        if (\array_key_exists('DecisionPercentage', $data)) {
+        elseif (\array_key_exists('TechnicalKnockoutPercentage', $data) && $data['TechnicalKnockoutPercentage'] === null) {
+            $object->setTechnicalKnockoutPercentage(null);
+        }
+        if (\array_key_exists('DecisionPercentage', $data) && $data['DecisionPercentage'] !== null) {
             $object->setDecisionPercentage($data['DecisionPercentage']);
+        }
+        elseif (\array_key_exists('DecisionPercentage', $data) && $data['DecisionPercentage'] === null) {
+            $object->setDecisionPercentage(null);
         }
         return $object;
     }

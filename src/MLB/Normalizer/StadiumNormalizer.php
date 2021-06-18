@@ -42,65 +42,125 @@ class StadiumNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('City', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('State', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('State', $data) && $data['State'] !== null) {
             $object->setState($data['State']);
         }
-        if (\array_key_exists('Country', $data)) {
+        elseif (\array_key_exists('State', $data) && $data['State'] === null) {
+            $object->setState(null);
+        }
+        if (\array_key_exists('Country', $data) && $data['Country'] !== null) {
             $object->setCountry($data['Country']);
         }
-        if (\array_key_exists('Capacity', $data)) {
+        elseif (\array_key_exists('Country', $data) && $data['Country'] === null) {
+            $object->setCountry(null);
+        }
+        if (\array_key_exists('Capacity', $data) && $data['Capacity'] !== null) {
             $object->setCapacity($data['Capacity']);
         }
-        if (\array_key_exists('Surface', $data)) {
+        elseif (\array_key_exists('Capacity', $data) && $data['Capacity'] === null) {
+            $object->setCapacity(null);
+        }
+        if (\array_key_exists('Surface', $data) && $data['Surface'] !== null) {
             $object->setSurface($data['Surface']);
         }
-        if (\array_key_exists('LeftField', $data)) {
+        elseif (\array_key_exists('Surface', $data) && $data['Surface'] === null) {
+            $object->setSurface(null);
+        }
+        if (\array_key_exists('LeftField', $data) && $data['LeftField'] !== null) {
             $object->setLeftField($data['LeftField']);
         }
-        if (\array_key_exists('MidLeftField', $data)) {
+        elseif (\array_key_exists('LeftField', $data) && $data['LeftField'] === null) {
+            $object->setLeftField(null);
+        }
+        if (\array_key_exists('MidLeftField', $data) && $data['MidLeftField'] !== null) {
             $object->setMidLeftField($data['MidLeftField']);
         }
-        if (\array_key_exists('LeftCenterField', $data)) {
+        elseif (\array_key_exists('MidLeftField', $data) && $data['MidLeftField'] === null) {
+            $object->setMidLeftField(null);
+        }
+        if (\array_key_exists('LeftCenterField', $data) && $data['LeftCenterField'] !== null) {
             $object->setLeftCenterField($data['LeftCenterField']);
         }
-        if (\array_key_exists('MidLeftCenterField', $data)) {
+        elseif (\array_key_exists('LeftCenterField', $data) && $data['LeftCenterField'] === null) {
+            $object->setLeftCenterField(null);
+        }
+        if (\array_key_exists('MidLeftCenterField', $data) && $data['MidLeftCenterField'] !== null) {
             $object->setMidLeftCenterField($data['MidLeftCenterField']);
         }
-        if (\array_key_exists('CenterField', $data)) {
+        elseif (\array_key_exists('MidLeftCenterField', $data) && $data['MidLeftCenterField'] === null) {
+            $object->setMidLeftCenterField(null);
+        }
+        if (\array_key_exists('CenterField', $data) && $data['CenterField'] !== null) {
             $object->setCenterField($data['CenterField']);
         }
-        if (\array_key_exists('MidRightCenterField', $data)) {
+        elseif (\array_key_exists('CenterField', $data) && $data['CenterField'] === null) {
+            $object->setCenterField(null);
+        }
+        if (\array_key_exists('MidRightCenterField', $data) && $data['MidRightCenterField'] !== null) {
             $object->setMidRightCenterField($data['MidRightCenterField']);
         }
-        if (\array_key_exists('RightCenterField', $data)) {
+        elseif (\array_key_exists('MidRightCenterField', $data) && $data['MidRightCenterField'] === null) {
+            $object->setMidRightCenterField(null);
+        }
+        if (\array_key_exists('RightCenterField', $data) && $data['RightCenterField'] !== null) {
             $object->setRightCenterField($data['RightCenterField']);
         }
-        if (\array_key_exists('MidRightField', $data)) {
+        elseif (\array_key_exists('RightCenterField', $data) && $data['RightCenterField'] === null) {
+            $object->setRightCenterField(null);
+        }
+        if (\array_key_exists('MidRightField', $data) && $data['MidRightField'] !== null) {
             $object->setMidRightField($data['MidRightField']);
         }
-        if (\array_key_exists('RightField', $data)) {
+        elseif (\array_key_exists('MidRightField', $data) && $data['MidRightField'] === null) {
+            $object->setMidRightField(null);
+        }
+        if (\array_key_exists('RightField', $data) && $data['RightField'] !== null) {
             $object->setRightField($data['RightField']);
         }
-        if (\array_key_exists('GeoLat', $data)) {
+        elseif (\array_key_exists('RightField', $data) && $data['RightField'] === null) {
+            $object->setRightField(null);
+        }
+        if (\array_key_exists('GeoLat', $data) && $data['GeoLat'] !== null) {
             $object->setGeoLat($data['GeoLat']);
         }
-        if (\array_key_exists('GeoLong', $data)) {
+        elseif (\array_key_exists('GeoLat', $data) && $data['GeoLat'] === null) {
+            $object->setGeoLat(null);
+        }
+        if (\array_key_exists('GeoLong', $data) && $data['GeoLong'] !== null) {
             $object->setGeoLong($data['GeoLong']);
         }
-        if (\array_key_exists('Altitude', $data)) {
+        elseif (\array_key_exists('GeoLong', $data) && $data['GeoLong'] === null) {
+            $object->setGeoLong(null);
+        }
+        if (\array_key_exists('Altitude', $data) && $data['Altitude'] !== null) {
             $object->setAltitude($data['Altitude']);
         }
-        if (\array_key_exists('HomePlateDirection', $data)) {
+        elseif (\array_key_exists('Altitude', $data) && $data['Altitude'] === null) {
+            $object->setAltitude(null);
+        }
+        if (\array_key_exists('HomePlateDirection', $data) && $data['HomePlateDirection'] !== null) {
             $object->setHomePlateDirection($data['HomePlateDirection']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('HomePlateDirection', $data) && $data['HomePlateDirection'] === null) {
+            $object->setHomePlateDirection(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
+        }
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
         }
         return $object;
     }

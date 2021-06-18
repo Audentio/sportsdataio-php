@@ -36,20 +36,32 @@ class TeamGameTrendsNormalizer implements DenormalizerInterface, NormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('Scope', $data)) {
+        if (\array_key_exists('Scope', $data) && $data['Scope'] !== null) {
             $object->setScope($data['Scope']);
+        }
+        elseif (\array_key_exists('Scope', $data) && $data['Scope'] === null) {
+            $object->setScope(null);
         }
         if (\array_key_exists('TeamID', $data)) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('OpponentID', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('OpponentID', $data) && $data['OpponentID'] !== null) {
             $object->setOpponentID($data['OpponentID']);
         }
-        if (\array_key_exists('Opponent', $data)) {
+        elseif (\array_key_exists('OpponentID', $data) && $data['OpponentID'] === null) {
+            $object->setOpponentID(null);
+        }
+        if (\array_key_exists('Opponent', $data) && $data['Opponent'] !== null) {
             $object->setOpponent($data['Opponent']);
+        }
+        elseif (\array_key_exists('Opponent', $data) && $data['Opponent'] === null) {
+            $object->setOpponent(null);
         }
         if (\array_key_exists('Wins', $data)) {
             $object->setWins($data['Wins']);
@@ -60,29 +72,53 @@ class TeamGameTrendsNormalizer implements DenormalizerInterface, NormalizerInter
         if (\array_key_exists('Ties', $data)) {
             $object->setTies($data['Ties']);
         }
-        if (\array_key_exists('WinsAgainstTheSpread', $data)) {
+        if (\array_key_exists('WinsAgainstTheSpread', $data) && $data['WinsAgainstTheSpread'] !== null) {
             $object->setWinsAgainstTheSpread($data['WinsAgainstTheSpread']);
         }
-        if (\array_key_exists('LossesAgainstTheSpread', $data)) {
+        elseif (\array_key_exists('WinsAgainstTheSpread', $data) && $data['WinsAgainstTheSpread'] === null) {
+            $object->setWinsAgainstTheSpread(null);
+        }
+        if (\array_key_exists('LossesAgainstTheSpread', $data) && $data['LossesAgainstTheSpread'] !== null) {
             $object->setLossesAgainstTheSpread($data['LossesAgainstTheSpread']);
         }
-        if (\array_key_exists('PushesAgainstTheSpread', $data)) {
+        elseif (\array_key_exists('LossesAgainstTheSpread', $data) && $data['LossesAgainstTheSpread'] === null) {
+            $object->setLossesAgainstTheSpread(null);
+        }
+        if (\array_key_exists('PushesAgainstTheSpread', $data) && $data['PushesAgainstTheSpread'] !== null) {
             $object->setPushesAgainstTheSpread($data['PushesAgainstTheSpread']);
         }
-        if (\array_key_exists('Overs', $data)) {
+        elseif (\array_key_exists('PushesAgainstTheSpread', $data) && $data['PushesAgainstTheSpread'] === null) {
+            $object->setPushesAgainstTheSpread(null);
+        }
+        if (\array_key_exists('Overs', $data) && $data['Overs'] !== null) {
             $object->setOvers($data['Overs']);
         }
-        if (\array_key_exists('Unders', $data)) {
+        elseif (\array_key_exists('Overs', $data) && $data['Overs'] === null) {
+            $object->setOvers(null);
+        }
+        if (\array_key_exists('Unders', $data) && $data['Unders'] !== null) {
             $object->setUnders($data['Unders']);
         }
-        if (\array_key_exists('OverUnderPushes', $data)) {
+        elseif (\array_key_exists('Unders', $data) && $data['Unders'] === null) {
+            $object->setUnders(null);
+        }
+        if (\array_key_exists('OverUnderPushes', $data) && $data['OverUnderPushes'] !== null) {
             $object->setOverUnderPushes($data['OverUnderPushes']);
         }
-        if (\array_key_exists('AverageScore', $data)) {
+        elseif (\array_key_exists('OverUnderPushes', $data) && $data['OverUnderPushes'] === null) {
+            $object->setOverUnderPushes(null);
+        }
+        if (\array_key_exists('AverageScore', $data) && $data['AverageScore'] !== null) {
             $object->setAverageScore($data['AverageScore']);
         }
-        if (\array_key_exists('AverageOpponentScore', $data)) {
+        elseif (\array_key_exists('AverageScore', $data) && $data['AverageScore'] === null) {
+            $object->setAverageScore(null);
+        }
+        if (\array_key_exists('AverageOpponentScore', $data) && $data['AverageOpponentScore'] !== null) {
             $object->setAverageOpponentScore($data['AverageOpponentScore']);
+        }
+        elseif (\array_key_exists('AverageOpponentScore', $data) && $data['AverageOpponentScore'] === null) {
+            $object->setAverageOpponentScore(null);
         }
         return $object;
     }

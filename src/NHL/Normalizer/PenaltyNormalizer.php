@@ -42,38 +42,71 @@ class PenaltyNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('PeriodID', $data)) {
             $object->setPeriodID($data['PeriodID']);
         }
-        if (\array_key_exists('Sequence', $data)) {
+        if (\array_key_exists('Sequence', $data) && $data['Sequence'] !== null) {
             $object->setSequence($data['Sequence']);
         }
-        if (\array_key_exists('TimeRemainingMinutes', $data)) {
+        elseif (\array_key_exists('Sequence', $data) && $data['Sequence'] === null) {
+            $object->setSequence(null);
+        }
+        if (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] !== null) {
             $object->setTimeRemainingMinutes($data['TimeRemainingMinutes']);
         }
-        if (\array_key_exists('TimeRemainingSeconds', $data)) {
+        elseif (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] === null) {
+            $object->setTimeRemainingMinutes(null);
+        }
+        if (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] !== null) {
             $object->setTimeRemainingSeconds($data['TimeRemainingSeconds']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] === null) {
+            $object->setTimeRemainingSeconds(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('PenaltyMinutes', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('PenaltyMinutes', $data) && $data['PenaltyMinutes'] !== null) {
             $object->setPenaltyMinutes($data['PenaltyMinutes']);
         }
-        if (\array_key_exists('PenalizedTeamID', $data)) {
+        elseif (\array_key_exists('PenaltyMinutes', $data) && $data['PenaltyMinutes'] === null) {
+            $object->setPenaltyMinutes(null);
+        }
+        if (\array_key_exists('PenalizedTeamID', $data) && $data['PenalizedTeamID'] !== null) {
             $object->setPenalizedTeamID($data['PenalizedTeamID']);
         }
-        if (\array_key_exists('PenalizedPlayerID', $data)) {
+        elseif (\array_key_exists('PenalizedTeamID', $data) && $data['PenalizedTeamID'] === null) {
+            $object->setPenalizedTeamID(null);
+        }
+        if (\array_key_exists('PenalizedPlayerID', $data) && $data['PenalizedPlayerID'] !== null) {
             $object->setPenalizedPlayerID($data['PenalizedPlayerID']);
         }
-        if (\array_key_exists('DrawnByTeamID', $data)) {
+        elseif (\array_key_exists('PenalizedPlayerID', $data) && $data['PenalizedPlayerID'] === null) {
+            $object->setPenalizedPlayerID(null);
+        }
+        if (\array_key_exists('DrawnByTeamID', $data) && $data['DrawnByTeamID'] !== null) {
             $object->setDrawnByTeamID($data['DrawnByTeamID']);
         }
-        if (\array_key_exists('DrawnByPlayerID', $data)) {
+        elseif (\array_key_exists('DrawnByTeamID', $data) && $data['DrawnByTeamID'] === null) {
+            $object->setDrawnByTeamID(null);
+        }
+        if (\array_key_exists('DrawnByPlayerID', $data) && $data['DrawnByPlayerID'] !== null) {
             $object->setDrawnByPlayerID($data['DrawnByPlayerID']);
         }
-        if (\array_key_exists('IsBenchPenalty', $data)) {
+        elseif (\array_key_exists('DrawnByPlayerID', $data) && $data['DrawnByPlayerID'] === null) {
+            $object->setDrawnByPlayerID(null);
+        }
+        if (\array_key_exists('IsBenchPenalty', $data) && $data['IsBenchPenalty'] !== null) {
             $object->setIsBenchPenalty($data['IsBenchPenalty']);
         }
-        if (\array_key_exists('BenchPenaltyServedByPlayerID', $data)) {
+        elseif (\array_key_exists('IsBenchPenalty', $data) && $data['IsBenchPenalty'] === null) {
+            $object->setIsBenchPenalty(null);
+        }
+        if (\array_key_exists('BenchPenaltyServedByPlayerID', $data) && $data['BenchPenaltyServedByPlayerID'] !== null) {
             $object->setBenchPenaltyServedByPlayerID($data['BenchPenaltyServedByPlayerID']);
+        }
+        elseif (\array_key_exists('BenchPenaltyServedByPlayerID', $data) && $data['BenchPenaltyServedByPlayerID'] === null) {
+            $object->setBenchPenaltyServedByPlayerID(null);
         }
         return $object;
     }

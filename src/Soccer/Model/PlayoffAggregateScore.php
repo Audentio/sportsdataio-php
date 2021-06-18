@@ -37,13 +37,13 @@ class PlayoffAggregateScore
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
@@ -154,20 +154,20 @@ class PlayoffAggregateScore
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -175,20 +175,20 @@ class PlayoffAggregateScore
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;

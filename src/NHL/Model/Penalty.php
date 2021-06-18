@@ -19,67 +19,67 @@ class Penalty
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $sequence;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingSeconds;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $penaltyMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $penalizedTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $penalizedPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $drawnByTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $drawnByPlayerID;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isBenchPenalty;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $benchPenaltyServedByPlayerID;
     /**
@@ -127,20 +127,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSequence() : int
+    public function getSequence() : ?int
     {
         return $this->sequence;
     }
     /**
      * 
      *
-     * @param int $sequence
+     * @param int|null $sequence
      *
      * @return self
      */
-    public function setSequence(int $sequence) : self
+    public function setSequence(?int $sequence) : self
     {
         $this->sequence = $sequence;
         return $this;
@@ -148,20 +148,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingMinutes() : int
+    public function getTimeRemainingMinutes() : ?int
     {
         return $this->timeRemainingMinutes;
     }
     /**
      * 
      *
-     * @param int $timeRemainingMinutes
+     * @param int|null $timeRemainingMinutes
      *
      * @return self
      */
-    public function setTimeRemainingMinutes(int $timeRemainingMinutes) : self
+    public function setTimeRemainingMinutes(?int $timeRemainingMinutes) : self
     {
         $this->timeRemainingMinutes = $timeRemainingMinutes;
         return $this;
@@ -169,20 +169,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingSeconds() : int
+    public function getTimeRemainingSeconds() : ?int
     {
         return $this->timeRemainingSeconds;
     }
     /**
      * 
      *
-     * @param int $timeRemainingSeconds
+     * @param int|null $timeRemainingSeconds
      *
      * @return self
      */
-    public function setTimeRemainingSeconds(int $timeRemainingSeconds) : self
+    public function setTimeRemainingSeconds(?int $timeRemainingSeconds) : self
     {
         $this->timeRemainingSeconds = $timeRemainingSeconds;
         return $this;
@@ -190,20 +190,20 @@ class Penalty
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -211,20 +211,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPenaltyMinutes() : int
+    public function getPenaltyMinutes() : ?int
     {
         return $this->penaltyMinutes;
     }
     /**
      * 
      *
-     * @param int $penaltyMinutes
+     * @param int|null $penaltyMinutes
      *
      * @return self
      */
-    public function setPenaltyMinutes(int $penaltyMinutes) : self
+    public function setPenaltyMinutes(?int $penaltyMinutes) : self
     {
         $this->penaltyMinutes = $penaltyMinutes;
         return $this;
@@ -232,20 +232,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPenalizedTeamID() : int
+    public function getPenalizedTeamID() : ?int
     {
         return $this->penalizedTeamID;
     }
     /**
      * 
      *
-     * @param int $penalizedTeamID
+     * @param int|null $penalizedTeamID
      *
      * @return self
      */
-    public function setPenalizedTeamID(int $penalizedTeamID) : self
+    public function setPenalizedTeamID(?int $penalizedTeamID) : self
     {
         $this->penalizedTeamID = $penalizedTeamID;
         return $this;
@@ -253,20 +253,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPenalizedPlayerID() : int
+    public function getPenalizedPlayerID() : ?int
     {
         return $this->penalizedPlayerID;
     }
     /**
      * 
      *
-     * @param int $penalizedPlayerID
+     * @param int|null $penalizedPlayerID
      *
      * @return self
      */
-    public function setPenalizedPlayerID(int $penalizedPlayerID) : self
+    public function setPenalizedPlayerID(?int $penalizedPlayerID) : self
     {
         $this->penalizedPlayerID = $penalizedPlayerID;
         return $this;
@@ -274,20 +274,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDrawnByTeamID() : int
+    public function getDrawnByTeamID() : ?int
     {
         return $this->drawnByTeamID;
     }
     /**
      * 
      *
-     * @param int $drawnByTeamID
+     * @param int|null $drawnByTeamID
      *
      * @return self
      */
-    public function setDrawnByTeamID(int $drawnByTeamID) : self
+    public function setDrawnByTeamID(?int $drawnByTeamID) : self
     {
         $this->drawnByTeamID = $drawnByTeamID;
         return $this;
@@ -295,20 +295,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDrawnByPlayerID() : int
+    public function getDrawnByPlayerID() : ?int
     {
         return $this->drawnByPlayerID;
     }
     /**
      * 
      *
-     * @param int $drawnByPlayerID
+     * @param int|null $drawnByPlayerID
      *
      * @return self
      */
-    public function setDrawnByPlayerID(int $drawnByPlayerID) : self
+    public function setDrawnByPlayerID(?int $drawnByPlayerID) : self
     {
         $this->drawnByPlayerID = $drawnByPlayerID;
         return $this;
@@ -316,20 +316,20 @@ class Penalty
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsBenchPenalty() : bool
+    public function getIsBenchPenalty() : ?bool
     {
         return $this->isBenchPenalty;
     }
     /**
      * 
      *
-     * @param bool $isBenchPenalty
+     * @param bool|null $isBenchPenalty
      *
      * @return self
      */
-    public function setIsBenchPenalty(bool $isBenchPenalty) : self
+    public function setIsBenchPenalty(?bool $isBenchPenalty) : self
     {
         $this->isBenchPenalty = $isBenchPenalty;
         return $this;
@@ -337,20 +337,20 @@ class Penalty
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBenchPenaltyServedByPlayerID() : int
+    public function getBenchPenaltyServedByPlayerID() : ?int
     {
         return $this->benchPenaltyServedByPlayerID;
     }
     /**
      * 
      *
-     * @param int $benchPenaltyServedByPlayerID
+     * @param int|null $benchPenaltyServedByPlayerID
      *
      * @return self
      */
-    public function setBenchPenaltyServedByPlayerID(int $benchPenaltyServedByPlayerID) : self
+    public function setBenchPenaltyServedByPlayerID(?int $benchPenaltyServedByPlayerID) : self
     {
         $this->benchPenaltyServedByPlayerID = $benchPenaltyServedByPlayerID;
         return $this;

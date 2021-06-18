@@ -39,11 +39,17 @@ class AreaNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('AreaId', $data)) {
             $object->setAreaId($data['AreaId']);
         }
-        if (\array_key_exists('CountryCode', $data)) {
+        if (\array_key_exists('CountryCode', $data) && $data['CountryCode'] !== null) {
             $object->setCountryCode($data['CountryCode']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('CountryCode', $data) && $data['CountryCode'] === null) {
+            $object->setCountryCode(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         return $object;
     }

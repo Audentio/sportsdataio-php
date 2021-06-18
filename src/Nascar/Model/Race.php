@@ -19,7 +19,7 @@ class Race
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $seriesName;
     /**
@@ -31,43 +31,43 @@ class Race
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $track;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $broadcast;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $winnerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $poleWinnerID;
     /**
@@ -85,25 +85,25 @@ class Race
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $rescheduledDay;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $rescheduledDateTime;
     /**
@@ -157,20 +157,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSeriesName() : string
+    public function getSeriesName() : ?string
     {
         return $this->seriesName;
     }
     /**
      * 
      *
-     * @param string $seriesName
+     * @param string|null $seriesName
      *
      * @return self
      */
-    public function setSeriesName(string $seriesName) : self
+    public function setSeriesName(?string $seriesName) : self
     {
         $this->seriesName = $seriesName;
         return $this;
@@ -199,20 +199,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -220,20 +220,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -241,20 +241,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -262,20 +262,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTrack() : string
+    public function getTrack() : ?string
     {
         return $this->track;
     }
     /**
      * 
      *
-     * @param string $track
+     * @param string|null $track
      *
      * @return self
      */
-    public function setTrack(string $track) : self
+    public function setTrack(?string $track) : self
     {
         $this->track = $track;
         return $this;
@@ -283,20 +283,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBroadcast() : string
+    public function getBroadcast() : ?string
     {
         return $this->broadcast;
     }
     /**
      * 
      *
-     * @param string $broadcast
+     * @param string|null $broadcast
      *
      * @return self
      */
-    public function setBroadcast(string $broadcast) : self
+    public function setBroadcast(?string $broadcast) : self
     {
         $this->broadcast = $broadcast;
         return $this;
@@ -304,20 +304,20 @@ class Race
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWinnerID() : int
+    public function getWinnerID() : ?int
     {
         return $this->winnerID;
     }
     /**
      * 
      *
-     * @param int $winnerID
+     * @param int|null $winnerID
      *
      * @return self
      */
-    public function setWinnerID(int $winnerID) : self
+    public function setWinnerID(?int $winnerID) : self
     {
         $this->winnerID = $winnerID;
         return $this;
@@ -325,20 +325,20 @@ class Race
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPoleWinnerID() : int
+    public function getPoleWinnerID() : ?int
     {
         return $this->poleWinnerID;
     }
     /**
      * 
      *
-     * @param int $poleWinnerID
+     * @param int|null $poleWinnerID
      *
      * @return self
      */
-    public function setPoleWinnerID(int $poleWinnerID) : self
+    public function setPoleWinnerID(?int $poleWinnerID) : self
     {
         $this->poleWinnerID = $poleWinnerID;
         return $this;
@@ -388,20 +388,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -409,20 +409,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -430,20 +430,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRescheduledDay() : string
+    public function getRescheduledDay() : ?string
     {
         return $this->rescheduledDay;
     }
     /**
      * 
      *
-     * @param string $rescheduledDay
+     * @param string|null $rescheduledDay
      *
      * @return self
      */
-    public function setRescheduledDay(string $rescheduledDay) : self
+    public function setRescheduledDay(?string $rescheduledDay) : self
     {
         $this->rescheduledDay = $rescheduledDay;
         return $this;
@@ -451,20 +451,20 @@ class Race
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRescheduledDateTime() : string
+    public function getRescheduledDateTime() : ?string
     {
         return $this->rescheduledDateTime;
     }
     /**
      * 
      *
-     * @param string $rescheduledDateTime
+     * @param string|null $rescheduledDateTime
      *
      * @return self
      */
-    public function setRescheduledDateTime(string $rescheduledDateTime) : self
+    public function setRescheduledDateTime(?string $rescheduledDateTime) : self
     {
         $this->rescheduledDateTime = $rescheduledDateTime;
         return $this;

@@ -19,49 +19,49 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $slateTournamentID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerTournamentProjectionID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorPlayerID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorSlatePlayerID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorPlayerName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorPosition;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $operatorSalary;
     /**
@@ -73,7 +73,7 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $removedByOperator;
     /**
@@ -121,20 +121,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSlateTournamentID() : int
+    public function getSlateTournamentID() : ?int
     {
         return $this->slateTournamentID;
     }
     /**
      * 
      *
-     * @param int $slateTournamentID
+     * @param int|null $slateTournamentID
      *
      * @return self
      */
-    public function setSlateTournamentID(int $slateTournamentID) : self
+    public function setSlateTournamentID(?int $slateTournamentID) : self
     {
         $this->slateTournamentID = $slateTournamentID;
         return $this;
@@ -142,20 +142,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerID() : int
+    public function getPlayerID() : ?int
     {
         return $this->playerID;
     }
     /**
      * 
      *
-     * @param int $playerID
+     * @param int|null $playerID
      *
      * @return self
      */
-    public function setPlayerID(int $playerID) : self
+    public function setPlayerID(?int $playerID) : self
     {
         $this->playerID = $playerID;
         return $this;
@@ -163,20 +163,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerTournamentProjectionID() : int
+    public function getPlayerTournamentProjectionID() : ?int
     {
         return $this->playerTournamentProjectionID;
     }
     /**
      * 
      *
-     * @param int $playerTournamentProjectionID
+     * @param int|null $playerTournamentProjectionID
      *
      * @return self
      */
-    public function setPlayerTournamentProjectionID(int $playerTournamentProjectionID) : self
+    public function setPlayerTournamentProjectionID(?int $playerTournamentProjectionID) : self
     {
         $this->playerTournamentProjectionID = $playerTournamentProjectionID;
         return $this;
@@ -184,20 +184,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorPlayerID() : string
+    public function getOperatorPlayerID() : ?string
     {
         return $this->operatorPlayerID;
     }
     /**
      * 
      *
-     * @param string $operatorPlayerID
+     * @param string|null $operatorPlayerID
      *
      * @return self
      */
-    public function setOperatorPlayerID(string $operatorPlayerID) : self
+    public function setOperatorPlayerID(?string $operatorPlayerID) : self
     {
         $this->operatorPlayerID = $operatorPlayerID;
         return $this;
@@ -205,20 +205,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorSlatePlayerID() : string
+    public function getOperatorSlatePlayerID() : ?string
     {
         return $this->operatorSlatePlayerID;
     }
     /**
      * 
      *
-     * @param string $operatorSlatePlayerID
+     * @param string|null $operatorSlatePlayerID
      *
      * @return self
      */
-    public function setOperatorSlatePlayerID(string $operatorSlatePlayerID) : self
+    public function setOperatorSlatePlayerID(?string $operatorSlatePlayerID) : self
     {
         $this->operatorSlatePlayerID = $operatorSlatePlayerID;
         return $this;
@@ -226,20 +226,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorPlayerName() : string
+    public function getOperatorPlayerName() : ?string
     {
         return $this->operatorPlayerName;
     }
     /**
      * 
      *
-     * @param string $operatorPlayerName
+     * @param string|null $operatorPlayerName
      *
      * @return self
      */
-    public function setOperatorPlayerName(string $operatorPlayerName) : self
+    public function setOperatorPlayerName(?string $operatorPlayerName) : self
     {
         $this->operatorPlayerName = $operatorPlayerName;
         return $this;
@@ -247,20 +247,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorPosition() : string
+    public function getOperatorPosition() : ?string
     {
         return $this->operatorPosition;
     }
     /**
      * 
      *
-     * @param string $operatorPosition
+     * @param string|null $operatorPosition
      *
      * @return self
      */
-    public function setOperatorPosition(string $operatorPosition) : self
+    public function setOperatorPosition(?string $operatorPosition) : self
     {
         $this->operatorPosition = $operatorPosition;
         return $this;
@@ -268,20 +268,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOperatorSalary() : int
+    public function getOperatorSalary() : ?int
     {
         return $this->operatorSalary;
     }
     /**
      * 
      *
-     * @param int $operatorSalary
+     * @param int|null $operatorSalary
      *
      * @return self
      */
-    public function setOperatorSalary(int $operatorSalary) : self
+    public function setOperatorSalary(?int $operatorSalary) : self
     {
         $this->operatorSalary = $operatorSalary;
         return $this;
@@ -310,20 +310,20 @@ class DfsSlatePlayer
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRemovedByOperator() : bool
+    public function getRemovedByOperator() : ?bool
     {
         return $this->removedByOperator;
     }
     /**
      * 
      *
-     * @param bool $removedByOperator
+     * @param bool|null $removedByOperator
      *
      * @return self
      */
-    public function setRemovedByOperator(bool $removedByOperator) : self
+    public function setRemovedByOperator(?bool $removedByOperator) : self
     {
         $this->removedByOperator = $removedByOperator;
         return $this;

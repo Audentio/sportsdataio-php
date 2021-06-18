@@ -25,175 +25,175 @@ class Standing
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $league;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $division;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $losses;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $percentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $divisionWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $divisionLosses;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $gamesBehind;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $lastTenGamesWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $lastTenGamesLosses;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $streak;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $leagueRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $divisionRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wildCardRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $wildCardGamesBehind;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $dayWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $dayLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $nightWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $nightLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $runsScored;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $runsAgainst;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
@@ -262,20 +262,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -283,20 +283,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -304,20 +304,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -325,20 +325,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLeague() : string
+    public function getLeague() : ?string
     {
         return $this->league;
     }
     /**
      * 
      *
-     * @param string $league
+     * @param string|null $league
      *
      * @return self
      */
-    public function setLeague(string $league) : self
+    public function setLeague(?string $league) : self
     {
         $this->league = $league;
         return $this;
@@ -346,20 +346,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDivision() : string
+    public function getDivision() : ?string
     {
         return $this->division;
     }
     /**
      * 
      *
-     * @param string $division
+     * @param string|null $division
      *
      * @return self
      */
-    public function setDivision(string $division) : self
+    public function setDivision(?string $division) : self
     {
         $this->division = $division;
         return $this;
@@ -367,20 +367,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWins() : int
+    public function getWins() : ?int
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param int $wins
+     * @param int|null $wins
      *
      * @return self
      */
-    public function setWins(int $wins) : self
+    public function setWins(?int $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -388,20 +388,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLosses() : int
+    public function getLosses() : ?int
     {
         return $this->losses;
     }
     /**
      * 
      *
-     * @param int $losses
+     * @param int|null $losses
      *
      * @return self
      */
-    public function setLosses(int $losses) : self
+    public function setLosses(?int $losses) : self
     {
         $this->losses = $losses;
         return $this;
@@ -409,20 +409,20 @@ class Standing
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPercentage() : float
+    public function getPercentage() : ?float
     {
         return $this->percentage;
     }
     /**
      * 
      *
-     * @param float $percentage
+     * @param float|null $percentage
      *
      * @return self
      */
-    public function setPercentage(float $percentage) : self
+    public function setPercentage(?float $percentage) : self
     {
         $this->percentage = $percentage;
         return $this;
@@ -430,20 +430,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDivisionWins() : int
+    public function getDivisionWins() : ?int
     {
         return $this->divisionWins;
     }
     /**
      * 
      *
-     * @param int $divisionWins
+     * @param int|null $divisionWins
      *
      * @return self
      */
-    public function setDivisionWins(int $divisionWins) : self
+    public function setDivisionWins(?int $divisionWins) : self
     {
         $this->divisionWins = $divisionWins;
         return $this;
@@ -451,20 +451,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDivisionLosses() : int
+    public function getDivisionLosses() : ?int
     {
         return $this->divisionLosses;
     }
     /**
      * 
      *
-     * @param int $divisionLosses
+     * @param int|null $divisionLosses
      *
      * @return self
      */
-    public function setDivisionLosses(int $divisionLosses) : self
+    public function setDivisionLosses(?int $divisionLosses) : self
     {
         $this->divisionLosses = $divisionLosses;
         return $this;
@@ -472,20 +472,20 @@ class Standing
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGamesBehind() : float
+    public function getGamesBehind() : ?float
     {
         return $this->gamesBehind;
     }
     /**
      * 
      *
-     * @param float $gamesBehind
+     * @param float|null $gamesBehind
      *
      * @return self
      */
-    public function setGamesBehind(float $gamesBehind) : self
+    public function setGamesBehind(?float $gamesBehind) : self
     {
         $this->gamesBehind = $gamesBehind;
         return $this;
@@ -493,20 +493,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLastTenGamesWins() : int
+    public function getLastTenGamesWins() : ?int
     {
         return $this->lastTenGamesWins;
     }
     /**
      * 
      *
-     * @param int $lastTenGamesWins
+     * @param int|null $lastTenGamesWins
      *
      * @return self
      */
-    public function setLastTenGamesWins(int $lastTenGamesWins) : self
+    public function setLastTenGamesWins(?int $lastTenGamesWins) : self
     {
         $this->lastTenGamesWins = $lastTenGamesWins;
         return $this;
@@ -514,20 +514,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLastTenGamesLosses() : int
+    public function getLastTenGamesLosses() : ?int
     {
         return $this->lastTenGamesLosses;
     }
     /**
      * 
      *
-     * @param int $lastTenGamesLosses
+     * @param int|null $lastTenGamesLosses
      *
      * @return self
      */
-    public function setLastTenGamesLosses(int $lastTenGamesLosses) : self
+    public function setLastTenGamesLosses(?int $lastTenGamesLosses) : self
     {
         $this->lastTenGamesLosses = $lastTenGamesLosses;
         return $this;
@@ -535,20 +535,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStreak() : string
+    public function getStreak() : ?string
     {
         return $this->streak;
     }
     /**
      * 
      *
-     * @param string $streak
+     * @param string|null $streak
      *
      * @return self
      */
-    public function setStreak(string $streak) : self
+    public function setStreak(?string $streak) : self
     {
         $this->streak = $streak;
         return $this;
@@ -556,20 +556,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLeagueRank() : int
+    public function getLeagueRank() : ?int
     {
         return $this->leagueRank;
     }
     /**
      * 
      *
-     * @param int $leagueRank
+     * @param int|null $leagueRank
      *
      * @return self
      */
-    public function setLeagueRank(int $leagueRank) : self
+    public function setLeagueRank(?int $leagueRank) : self
     {
         $this->leagueRank = $leagueRank;
         return $this;
@@ -577,20 +577,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDivisionRank() : int
+    public function getDivisionRank() : ?int
     {
         return $this->divisionRank;
     }
     /**
      * 
      *
-     * @param int $divisionRank
+     * @param int|null $divisionRank
      *
      * @return self
      */
-    public function setDivisionRank(int $divisionRank) : self
+    public function setDivisionRank(?int $divisionRank) : self
     {
         $this->divisionRank = $divisionRank;
         return $this;
@@ -598,20 +598,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWildCardRank() : int
+    public function getWildCardRank() : ?int
     {
         return $this->wildCardRank;
     }
     /**
      * 
      *
-     * @param int $wildCardRank
+     * @param int|null $wildCardRank
      *
      * @return self
      */
-    public function setWildCardRank(int $wildCardRank) : self
+    public function setWildCardRank(?int $wildCardRank) : self
     {
         $this->wildCardRank = $wildCardRank;
         return $this;
@@ -619,20 +619,20 @@ class Standing
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWildCardGamesBehind() : float
+    public function getWildCardGamesBehind() : ?float
     {
         return $this->wildCardGamesBehind;
     }
     /**
      * 
      *
-     * @param float $wildCardGamesBehind
+     * @param float|null $wildCardGamesBehind
      *
      * @return self
      */
-    public function setWildCardGamesBehind(float $wildCardGamesBehind) : self
+    public function setWildCardGamesBehind(?float $wildCardGamesBehind) : self
     {
         $this->wildCardGamesBehind = $wildCardGamesBehind;
         return $this;
@@ -640,20 +640,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeWins() : int
+    public function getHomeWins() : ?int
     {
         return $this->homeWins;
     }
     /**
      * 
      *
-     * @param int $homeWins
+     * @param int|null $homeWins
      *
      * @return self
      */
-    public function setHomeWins(int $homeWins) : self
+    public function setHomeWins(?int $homeWins) : self
     {
         $this->homeWins = $homeWins;
         return $this;
@@ -661,20 +661,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeLosses() : int
+    public function getHomeLosses() : ?int
     {
         return $this->homeLosses;
     }
     /**
      * 
      *
-     * @param int $homeLosses
+     * @param int|null $homeLosses
      *
      * @return self
      */
-    public function setHomeLosses(int $homeLosses) : self
+    public function setHomeLosses(?int $homeLosses) : self
     {
         $this->homeLosses = $homeLosses;
         return $this;
@@ -682,20 +682,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayWins() : int
+    public function getAwayWins() : ?int
     {
         return $this->awayWins;
     }
     /**
      * 
      *
-     * @param int $awayWins
+     * @param int|null $awayWins
      *
      * @return self
      */
-    public function setAwayWins(int $awayWins) : self
+    public function setAwayWins(?int $awayWins) : self
     {
         $this->awayWins = $awayWins;
         return $this;
@@ -703,20 +703,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayLosses() : int
+    public function getAwayLosses() : ?int
     {
         return $this->awayLosses;
     }
     /**
      * 
      *
-     * @param int $awayLosses
+     * @param int|null $awayLosses
      *
      * @return self
      */
-    public function setAwayLosses(int $awayLosses) : self
+    public function setAwayLosses(?int $awayLosses) : self
     {
         $this->awayLosses = $awayLosses;
         return $this;
@@ -724,20 +724,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDayWins() : int
+    public function getDayWins() : ?int
     {
         return $this->dayWins;
     }
     /**
      * 
      *
-     * @param int $dayWins
+     * @param int|null $dayWins
      *
      * @return self
      */
-    public function setDayWins(int $dayWins) : self
+    public function setDayWins(?int $dayWins) : self
     {
         $this->dayWins = $dayWins;
         return $this;
@@ -745,20 +745,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDayLosses() : int
+    public function getDayLosses() : ?int
     {
         return $this->dayLosses;
     }
     /**
      * 
      *
-     * @param int $dayLosses
+     * @param int|null $dayLosses
      *
      * @return self
      */
-    public function setDayLosses(int $dayLosses) : self
+    public function setDayLosses(?int $dayLosses) : self
     {
         $this->dayLosses = $dayLosses;
         return $this;
@@ -766,20 +766,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNightWins() : int
+    public function getNightWins() : ?int
     {
         return $this->nightWins;
     }
     /**
      * 
      *
-     * @param int $nightWins
+     * @param int|null $nightWins
      *
      * @return self
      */
-    public function setNightWins(int $nightWins) : self
+    public function setNightWins(?int $nightWins) : self
     {
         $this->nightWins = $nightWins;
         return $this;
@@ -787,20 +787,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNightLosses() : int
+    public function getNightLosses() : ?int
     {
         return $this->nightLosses;
     }
     /**
      * 
      *
-     * @param int $nightLosses
+     * @param int|null $nightLosses
      *
      * @return self
      */
-    public function setNightLosses(int $nightLosses) : self
+    public function setNightLosses(?int $nightLosses) : self
     {
         $this->nightLosses = $nightLosses;
         return $this;
@@ -808,20 +808,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRunsScored() : int
+    public function getRunsScored() : ?int
     {
         return $this->runsScored;
     }
     /**
      * 
      *
-     * @param int $runsScored
+     * @param int|null $runsScored
      *
      * @return self
      */
-    public function setRunsScored(int $runsScored) : self
+    public function setRunsScored(?int $runsScored) : self
     {
         $this->runsScored = $runsScored;
         return $this;
@@ -829,20 +829,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRunsAgainst() : int
+    public function getRunsAgainst() : ?int
     {
         return $this->runsAgainst;
     }
     /**
      * 
      *
-     * @param int $runsAgainst
+     * @param int|null $runsAgainst
      *
      * @return self
      */
-    public function setRunsAgainst(int $runsAgainst) : self
+    public function setRunsAgainst(?int $runsAgainst) : self
     {
         $this->runsAgainst = $runsAgainst;
         return $this;
@@ -850,20 +850,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;

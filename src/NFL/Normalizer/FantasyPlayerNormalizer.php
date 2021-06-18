@@ -36,53 +36,98 @@ class FantasyPlayerNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('FantasyPlayerKey', $data)) {
+        if (\array_key_exists('FantasyPlayerKey', $data) && $data['FantasyPlayerKey'] !== null) {
             $object->setFantasyPlayerKey($data['FantasyPlayerKey']);
+        }
+        elseif (\array_key_exists('FantasyPlayerKey', $data) && $data['FantasyPlayerKey'] === null) {
+            $object->setFantasyPlayerKey(null);
         }
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('AverageDraftPosition', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('AverageDraftPosition', $data) && $data['AverageDraftPosition'] !== null) {
             $object->setAverageDraftPosition($data['AverageDraftPosition']);
         }
-        if (\array_key_exists('AverageDraftPositionPPR', $data)) {
+        elseif (\array_key_exists('AverageDraftPosition', $data) && $data['AverageDraftPosition'] === null) {
+            $object->setAverageDraftPosition(null);
+        }
+        if (\array_key_exists('AverageDraftPositionPPR', $data) && $data['AverageDraftPositionPPR'] !== null) {
             $object->setAverageDraftPositionPPR($data['AverageDraftPositionPPR']);
         }
-        if (\array_key_exists('ByeWeek', $data)) {
+        elseif (\array_key_exists('AverageDraftPositionPPR', $data) && $data['AverageDraftPositionPPR'] === null) {
+            $object->setAverageDraftPositionPPR(null);
+        }
+        if (\array_key_exists('ByeWeek', $data) && $data['ByeWeek'] !== null) {
             $object->setByeWeek($data['ByeWeek']);
         }
-        if (\array_key_exists('LastSeasonFantasyPoints', $data)) {
+        elseif (\array_key_exists('ByeWeek', $data) && $data['ByeWeek'] === null) {
+            $object->setByeWeek(null);
+        }
+        if (\array_key_exists('LastSeasonFantasyPoints', $data) && $data['LastSeasonFantasyPoints'] !== null) {
             $object->setLastSeasonFantasyPoints($data['LastSeasonFantasyPoints']);
         }
-        if (\array_key_exists('ProjectedFantasyPoints', $data)) {
+        elseif (\array_key_exists('LastSeasonFantasyPoints', $data) && $data['LastSeasonFantasyPoints'] === null) {
+            $object->setLastSeasonFantasyPoints(null);
+        }
+        if (\array_key_exists('ProjectedFantasyPoints', $data) && $data['ProjectedFantasyPoints'] !== null) {
             $object->setProjectedFantasyPoints($data['ProjectedFantasyPoints']);
         }
-        if (\array_key_exists('AuctionValue', $data)) {
+        elseif (\array_key_exists('ProjectedFantasyPoints', $data) && $data['ProjectedFantasyPoints'] === null) {
+            $object->setProjectedFantasyPoints(null);
+        }
+        if (\array_key_exists('AuctionValue', $data) && $data['AuctionValue'] !== null) {
             $object->setAuctionValue($data['AuctionValue']);
         }
-        if (\array_key_exists('AuctionValuePPR', $data)) {
+        elseif (\array_key_exists('AuctionValue', $data) && $data['AuctionValue'] === null) {
+            $object->setAuctionValue(null);
+        }
+        if (\array_key_exists('AuctionValuePPR', $data) && $data['AuctionValuePPR'] !== null) {
             $object->setAuctionValuePPR($data['AuctionValuePPR']);
         }
-        if (\array_key_exists('AverageDraftPositionIDP', $data)) {
+        elseif (\array_key_exists('AuctionValuePPR', $data) && $data['AuctionValuePPR'] === null) {
+            $object->setAuctionValuePPR(null);
+        }
+        if (\array_key_exists('AverageDraftPositionIDP', $data) && $data['AverageDraftPositionIDP'] !== null) {
             $object->setAverageDraftPositionIDP($data['AverageDraftPositionIDP']);
         }
-        if (\array_key_exists('AverageDraftPositionRookie', $data)) {
+        elseif (\array_key_exists('AverageDraftPositionIDP', $data) && $data['AverageDraftPositionIDP'] === null) {
+            $object->setAverageDraftPositionIDP(null);
+        }
+        if (\array_key_exists('AverageDraftPositionRookie', $data) && $data['AverageDraftPositionRookie'] !== null) {
             $object->setAverageDraftPositionRookie($data['AverageDraftPositionRookie']);
         }
-        if (\array_key_exists('AverageDraftPositionDynasty', $data)) {
+        elseif (\array_key_exists('AverageDraftPositionRookie', $data) && $data['AverageDraftPositionRookie'] === null) {
+            $object->setAverageDraftPositionRookie(null);
+        }
+        if (\array_key_exists('AverageDraftPositionDynasty', $data) && $data['AverageDraftPositionDynasty'] !== null) {
             $object->setAverageDraftPositionDynasty($data['AverageDraftPositionDynasty']);
         }
-        if (\array_key_exists('AverageDraftPosition2QB', $data)) {
+        elseif (\array_key_exists('AverageDraftPositionDynasty', $data) && $data['AverageDraftPositionDynasty'] === null) {
+            $object->setAverageDraftPositionDynasty(null);
+        }
+        if (\array_key_exists('AverageDraftPosition2QB', $data) && $data['AverageDraftPosition2QB'] !== null) {
             $object->setAverageDraftPosition2QB($data['AverageDraftPosition2QB']);
+        }
+        elseif (\array_key_exists('AverageDraftPosition2QB', $data) && $data['AverageDraftPosition2QB'] === null) {
+            $object->setAverageDraftPosition2QB(null);
         }
         return $object;
     }

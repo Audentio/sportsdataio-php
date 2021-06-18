@@ -4,18 +4,18 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class BettingEventsBySeason extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $season;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $season Year of the season<br>Examples: <code>2020</code>, <code>2021</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format, string $season)
+    public function __construct(string $season, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingEventsBySeason extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpo
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}'), array($this->format, $this->season), '/odds/{format}/BettingEvents/{season}');
+        return str_replace(array('{season}', '{format}'), array($this->season, $this->format), '/odds/{format}/BettingEvents/{season}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

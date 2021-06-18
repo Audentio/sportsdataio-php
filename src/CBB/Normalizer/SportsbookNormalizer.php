@@ -39,8 +39,11 @@ class SportsbookNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('SportsbookID', $data)) {
             $object->setSportsbookID($data['SportsbookID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         return $object;
     }

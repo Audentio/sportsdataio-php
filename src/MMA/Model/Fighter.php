@@ -13,115 +13,115 @@ class Fighter
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nickname;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $weightClass;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthDate;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $height;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $weight;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $reach;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $losses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $draws;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $noContests;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $technicalKnockouts;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $technicalKnockoutLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $submissions;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $submissionLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $titleWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $titleLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $titleDraws;
     /**
@@ -154,20 +154,20 @@ class Fighter
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -175,20 +175,20 @@ class Fighter
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -196,20 +196,20 @@ class Fighter
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNickname() : string
+    public function getNickname() : ?string
     {
         return $this->nickname;
     }
     /**
      * 
      *
-     * @param string $nickname
+     * @param string|null $nickname
      *
      * @return self
      */
-    public function setNickname(string $nickname) : self
+    public function setNickname(?string $nickname) : self
     {
         $this->nickname = $nickname;
         return $this;
@@ -217,20 +217,20 @@ class Fighter
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWeightClass() : string
+    public function getWeightClass() : ?string
     {
         return $this->weightClass;
     }
     /**
      * 
      *
-     * @param string $weightClass
+     * @param string|null $weightClass
      *
      * @return self
      */
-    public function setWeightClass(string $weightClass) : self
+    public function setWeightClass(?string $weightClass) : self
     {
         $this->weightClass = $weightClass;
         return $this;
@@ -238,20 +238,20 @@ class Fighter
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthDate() : string
+    public function getBirthDate() : ?string
     {
         return $this->birthDate;
     }
     /**
      * 
      *
-     * @param string $birthDate
+     * @param string|null $birthDate
      *
      * @return self
      */
-    public function setBirthDate(string $birthDate) : self
+    public function setBirthDate(?string $birthDate) : self
     {
         $this->birthDate = $birthDate;
         return $this;
@@ -259,20 +259,20 @@ class Fighter
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getHeight() : float
+    public function getHeight() : ?float
     {
         return $this->height;
     }
     /**
      * 
      *
-     * @param float $height
+     * @param float|null $height
      *
      * @return self
      */
-    public function setHeight(float $height) : self
+    public function setHeight(?float $height) : self
     {
         $this->height = $height;
         return $this;
@@ -280,20 +280,20 @@ class Fighter
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWeight() : float
+    public function getWeight() : ?float
     {
         return $this->weight;
     }
     /**
      * 
      *
-     * @param float $weight
+     * @param float|null $weight
      *
      * @return self
      */
-    public function setWeight(float $weight) : self
+    public function setWeight(?float $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -301,20 +301,20 @@ class Fighter
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getReach() : float
+    public function getReach() : ?float
     {
         return $this->reach;
     }
     /**
      * 
      *
-     * @param float $reach
+     * @param float|null $reach
      *
      * @return self
      */
-    public function setReach(float $reach) : self
+    public function setReach(?float $reach) : self
     {
         $this->reach = $reach;
         return $this;
@@ -322,20 +322,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWins() : int
+    public function getWins() : ?int
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param int $wins
+     * @param int|null $wins
      *
      * @return self
      */
-    public function setWins(int $wins) : self
+    public function setWins(?int $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -343,20 +343,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLosses() : int
+    public function getLosses() : ?int
     {
         return $this->losses;
     }
     /**
      * 
      *
-     * @param int $losses
+     * @param int|null $losses
      *
      * @return self
      */
-    public function setLosses(int $losses) : self
+    public function setLosses(?int $losses) : self
     {
         $this->losses = $losses;
         return $this;
@@ -364,20 +364,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDraws() : int
+    public function getDraws() : ?int
     {
         return $this->draws;
     }
     /**
      * 
      *
-     * @param int $draws
+     * @param int|null $draws
      *
      * @return self
      */
-    public function setDraws(int $draws) : self
+    public function setDraws(?int $draws) : self
     {
         $this->draws = $draws;
         return $this;
@@ -385,20 +385,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNoContests() : int
+    public function getNoContests() : ?int
     {
         return $this->noContests;
     }
     /**
      * 
      *
-     * @param int $noContests
+     * @param int|null $noContests
      *
      * @return self
      */
-    public function setNoContests(int $noContests) : self
+    public function setNoContests(?int $noContests) : self
     {
         $this->noContests = $noContests;
         return $this;
@@ -406,20 +406,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTechnicalKnockouts() : int
+    public function getTechnicalKnockouts() : ?int
     {
         return $this->technicalKnockouts;
     }
     /**
      * 
      *
-     * @param int $technicalKnockouts
+     * @param int|null $technicalKnockouts
      *
      * @return self
      */
-    public function setTechnicalKnockouts(int $technicalKnockouts) : self
+    public function setTechnicalKnockouts(?int $technicalKnockouts) : self
     {
         $this->technicalKnockouts = $technicalKnockouts;
         return $this;
@@ -427,20 +427,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTechnicalKnockoutLosses() : int
+    public function getTechnicalKnockoutLosses() : ?int
     {
         return $this->technicalKnockoutLosses;
     }
     /**
      * 
      *
-     * @param int $technicalKnockoutLosses
+     * @param int|null $technicalKnockoutLosses
      *
      * @return self
      */
-    public function setTechnicalKnockoutLosses(int $technicalKnockoutLosses) : self
+    public function setTechnicalKnockoutLosses(?int $technicalKnockoutLosses) : self
     {
         $this->technicalKnockoutLosses = $technicalKnockoutLosses;
         return $this;
@@ -448,20 +448,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSubmissions() : int
+    public function getSubmissions() : ?int
     {
         return $this->submissions;
     }
     /**
      * 
      *
-     * @param int $submissions
+     * @param int|null $submissions
      *
      * @return self
      */
-    public function setSubmissions(int $submissions) : self
+    public function setSubmissions(?int $submissions) : self
     {
         $this->submissions = $submissions;
         return $this;
@@ -469,20 +469,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSubmissionLosses() : int
+    public function getSubmissionLosses() : ?int
     {
         return $this->submissionLosses;
     }
     /**
      * 
      *
-     * @param int $submissionLosses
+     * @param int|null $submissionLosses
      *
      * @return self
      */
-    public function setSubmissionLosses(int $submissionLosses) : self
+    public function setSubmissionLosses(?int $submissionLosses) : self
     {
         $this->submissionLosses = $submissionLosses;
         return $this;
@@ -490,20 +490,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTitleWins() : int
+    public function getTitleWins() : ?int
     {
         return $this->titleWins;
     }
     /**
      * 
      *
-     * @param int $titleWins
+     * @param int|null $titleWins
      *
      * @return self
      */
-    public function setTitleWins(int $titleWins) : self
+    public function setTitleWins(?int $titleWins) : self
     {
         $this->titleWins = $titleWins;
         return $this;
@@ -511,20 +511,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTitleLosses() : int
+    public function getTitleLosses() : ?int
     {
         return $this->titleLosses;
     }
     /**
      * 
      *
-     * @param int $titleLosses
+     * @param int|null $titleLosses
      *
      * @return self
      */
-    public function setTitleLosses(int $titleLosses) : self
+    public function setTitleLosses(?int $titleLosses) : self
     {
         $this->titleLosses = $titleLosses;
         return $this;
@@ -532,20 +532,20 @@ class Fighter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTitleDraws() : int
+    public function getTitleDraws() : ?int
     {
         return $this->titleDraws;
     }
     /**
      * 
      *
-     * @param int $titleDraws
+     * @param int|null $titleDraws
      *
      * @return self
      */
-    public function setTitleDraws(int $titleDraws) : self
+    public function setTitleDraws(?int $titleDraws) : self
     {
         $this->titleDraws = $titleDraws;
         return $this;

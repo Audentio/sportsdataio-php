@@ -19,31 +19,31 @@ class TeamDetail
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $areaId;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $venueId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $fullName;
     /**
@@ -55,121 +55,121 @@ class TeamDetail
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $areaName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $venueName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gender;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $address;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $zip;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $phone;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $fax;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $website;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $email;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $founded;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $clubColor1;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $clubColor2;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $clubColor3;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nickname1;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nickname2;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nickname3;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $wikipediaLogoUrl;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $wikipediaWordMarkUrl;
     /**
@@ -223,20 +223,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAreaId() : int
+    public function getAreaId() : ?int
     {
         return $this->areaId;
     }
     /**
      * 
      *
-     * @param int $areaId
+     * @param int|null $areaId
      *
      * @return self
      */
-    public function setAreaId(int $areaId) : self
+    public function setAreaId(?int $areaId) : self
     {
         $this->areaId = $areaId;
         return $this;
@@ -244,20 +244,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getVenueId() : int
+    public function getVenueId() : ?int
     {
         return $this->venueId;
     }
     /**
      * 
      *
-     * @param int $venueId
+     * @param int|null $venueId
      *
      * @return self
      */
-    public function setVenueId(int $venueId) : self
+    public function setVenueId(?int $venueId) : self
     {
         $this->venueId = $venueId;
         return $this;
@@ -265,20 +265,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -286,20 +286,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -307,20 +307,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFullName() : string
+    public function getFullName() : ?string
     {
         return $this->fullName;
     }
     /**
      * 
      *
-     * @param string $fullName
+     * @param string|null $fullName
      *
      * @return self
      */
-    public function setFullName(string $fullName) : self
+    public function setFullName(?string $fullName) : self
     {
         $this->fullName = $fullName;
         return $this;
@@ -349,20 +349,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAreaName() : string
+    public function getAreaName() : ?string
     {
         return $this->areaName;
     }
     /**
      * 
      *
-     * @param string $areaName
+     * @param string|null $areaName
      *
      * @return self
      */
-    public function setAreaName(string $areaName) : self
+    public function setAreaName(?string $areaName) : self
     {
         $this->areaName = $areaName;
         return $this;
@@ -370,20 +370,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getVenueName() : string
+    public function getVenueName() : ?string
     {
         return $this->venueName;
     }
     /**
      * 
      *
-     * @param string $venueName
+     * @param string|null $venueName
      *
      * @return self
      */
-    public function setVenueName(string $venueName) : self
+    public function setVenueName(?string $venueName) : self
     {
         $this->venueName = $venueName;
         return $this;
@@ -391,20 +391,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGender() : string
+    public function getGender() : ?string
     {
         return $this->gender;
     }
     /**
      * 
      *
-     * @param string $gender
+     * @param string|null $gender
      *
      * @return self
      */
-    public function setGender(string $gender) : self
+    public function setGender(?string $gender) : self
     {
         $this->gender = $gender;
         return $this;
@@ -412,20 +412,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -433,20 +433,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAddress() : string
+    public function getAddress() : ?string
     {
         return $this->address;
     }
     /**
      * 
      *
-     * @param string $address
+     * @param string|null $address
      *
      * @return self
      */
-    public function setAddress(string $address) : self
+    public function setAddress(?string $address) : self
     {
         $this->address = $address;
         return $this;
@@ -454,20 +454,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -475,20 +475,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getZip() : string
+    public function getZip() : ?string
     {
         return $this->zip;
     }
     /**
      * 
      *
-     * @param string $zip
+     * @param string|null $zip
      *
      * @return self
      */
-    public function setZip(string $zip) : self
+    public function setZip(?string $zip) : self
     {
         $this->zip = $zip;
         return $this;
@@ -496,20 +496,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPhone() : string
+    public function getPhone() : ?string
     {
         return $this->phone;
     }
     /**
      * 
      *
-     * @param string $phone
+     * @param string|null $phone
      *
      * @return self
      */
-    public function setPhone(string $phone) : self
+    public function setPhone(?string $phone) : self
     {
         $this->phone = $phone;
         return $this;
@@ -517,20 +517,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFax() : string
+    public function getFax() : ?string
     {
         return $this->fax;
     }
     /**
      * 
      *
-     * @param string $fax
+     * @param string|null $fax
      *
      * @return self
      */
-    public function setFax(string $fax) : self
+    public function setFax(?string $fax) : self
     {
         $this->fax = $fax;
         return $this;
@@ -538,20 +538,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWebsite() : string
+    public function getWebsite() : ?string
     {
         return $this->website;
     }
     /**
      * 
      *
-     * @param string $website
+     * @param string|null $website
      *
      * @return self
      */
-    public function setWebsite(string $website) : self
+    public function setWebsite(?string $website) : self
     {
         $this->website = $website;
         return $this;
@@ -559,20 +559,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmail() : string
+    public function getEmail() : ?string
     {
         return $this->email;
     }
     /**
      * 
      *
-     * @param string $email
+     * @param string|null $email
      *
      * @return self
      */
-    public function setEmail(string $email) : self
+    public function setEmail(?string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -580,20 +580,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFounded() : int
+    public function getFounded() : ?int
     {
         return $this->founded;
     }
     /**
      * 
      *
-     * @param int $founded
+     * @param int|null $founded
      *
      * @return self
      */
-    public function setFounded(int $founded) : self
+    public function setFounded(?int $founded) : self
     {
         $this->founded = $founded;
         return $this;
@@ -601,20 +601,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getClubColor1() : string
+    public function getClubColor1() : ?string
     {
         return $this->clubColor1;
     }
     /**
      * 
      *
-     * @param string $clubColor1
+     * @param string|null $clubColor1
      *
      * @return self
      */
-    public function setClubColor1(string $clubColor1) : self
+    public function setClubColor1(?string $clubColor1) : self
     {
         $this->clubColor1 = $clubColor1;
         return $this;
@@ -622,20 +622,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getClubColor2() : string
+    public function getClubColor2() : ?string
     {
         return $this->clubColor2;
     }
     /**
      * 
      *
-     * @param string $clubColor2
+     * @param string|null $clubColor2
      *
      * @return self
      */
-    public function setClubColor2(string $clubColor2) : self
+    public function setClubColor2(?string $clubColor2) : self
     {
         $this->clubColor2 = $clubColor2;
         return $this;
@@ -643,20 +643,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getClubColor3() : string
+    public function getClubColor3() : ?string
     {
         return $this->clubColor3;
     }
     /**
      * 
      *
-     * @param string $clubColor3
+     * @param string|null $clubColor3
      *
      * @return self
      */
-    public function setClubColor3(string $clubColor3) : self
+    public function setClubColor3(?string $clubColor3) : self
     {
         $this->clubColor3 = $clubColor3;
         return $this;
@@ -664,20 +664,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNickname1() : string
+    public function getNickname1() : ?string
     {
         return $this->nickname1;
     }
     /**
      * 
      *
-     * @param string $nickname1
+     * @param string|null $nickname1
      *
      * @return self
      */
-    public function setNickname1(string $nickname1) : self
+    public function setNickname1(?string $nickname1) : self
     {
         $this->nickname1 = $nickname1;
         return $this;
@@ -685,20 +685,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNickname2() : string
+    public function getNickname2() : ?string
     {
         return $this->nickname2;
     }
     /**
      * 
      *
-     * @param string $nickname2
+     * @param string|null $nickname2
      *
      * @return self
      */
-    public function setNickname2(string $nickname2) : self
+    public function setNickname2(?string $nickname2) : self
     {
         $this->nickname2 = $nickname2;
         return $this;
@@ -706,20 +706,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNickname3() : string
+    public function getNickname3() : ?string
     {
         return $this->nickname3;
     }
     /**
      * 
      *
-     * @param string $nickname3
+     * @param string|null $nickname3
      *
      * @return self
      */
-    public function setNickname3(string $nickname3) : self
+    public function setNickname3(?string $nickname3) : self
     {
         $this->nickname3 = $nickname3;
         return $this;
@@ -727,20 +727,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWikipediaLogoUrl() : string
+    public function getWikipediaLogoUrl() : ?string
     {
         return $this->wikipediaLogoUrl;
     }
     /**
      * 
      *
-     * @param string $wikipediaLogoUrl
+     * @param string|null $wikipediaLogoUrl
      *
      * @return self
      */
-    public function setWikipediaLogoUrl(string $wikipediaLogoUrl) : self
+    public function setWikipediaLogoUrl(?string $wikipediaLogoUrl) : self
     {
         $this->wikipediaLogoUrl = $wikipediaLogoUrl;
         return $this;
@@ -748,20 +748,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWikipediaWordMarkUrl() : string
+    public function getWikipediaWordMarkUrl() : ?string
     {
         return $this->wikipediaWordMarkUrl;
     }
     /**
      * 
      *
-     * @param string $wikipediaWordMarkUrl
+     * @param string|null $wikipediaWordMarkUrl
      *
      * @return self
      */
-    public function setWikipediaWordMarkUrl(string $wikipediaWordMarkUrl) : self
+    public function setWikipediaWordMarkUrl(?string $wikipediaWordMarkUrl) : self
     {
         $this->wikipediaWordMarkUrl = $wikipediaWordMarkUrl;
         return $this;

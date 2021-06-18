@@ -4,19 +4,19 @@ namespace Sportsdata\API\CSGO\Endpoint;
 
 class SeasonTeams extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CSGO\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $seasonid;
+    protected $format;
     /**
     * Season Teams
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $seasonid Unique FantasyData Season ID. SeasonIDs can be found in the Competitions and Competition Details endpoints. 
     Examples: <code>100000023</code>, <code>100000024</code>, etc
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $seasonid)
+    public function __construct(string $seasonid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->seasonid = $seasonid;
+        $this->format = $format;
     }
     use \Sportsdata\API\CSGO\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class SeasonTeams extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint imple
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{seasonid}'), array($this->format, $this->seasonid), '/stats/{format}/SeasonTeams/{seasonid}');
+        return str_replace(array('{seasonid}', '{format}'), array($this->seasonid, $this->format), '/scores/{format}/SeasonTeams/{seasonid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

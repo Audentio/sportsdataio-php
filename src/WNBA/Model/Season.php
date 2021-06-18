@@ -13,31 +13,31 @@ class Season
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $preseasonStartDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $regularSeasonStartDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $postSeasonStartDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $currentSeasonType;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $apiSeason;
     /**
@@ -64,20 +64,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPreseasonStartDate() : string
+    public function getPreseasonStartDate() : ?string
     {
         return $this->preseasonStartDate;
     }
     /**
      * 
      *
-     * @param string $preseasonStartDate
+     * @param string|null $preseasonStartDate
      *
      * @return self
      */
-    public function setPreseasonStartDate(string $preseasonStartDate) : self
+    public function setPreseasonStartDate(?string $preseasonStartDate) : self
     {
         $this->preseasonStartDate = $preseasonStartDate;
         return $this;
@@ -85,20 +85,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRegularSeasonStartDate() : string
+    public function getRegularSeasonStartDate() : ?string
     {
         return $this->regularSeasonStartDate;
     }
     /**
      * 
      *
-     * @param string $regularSeasonStartDate
+     * @param string|null $regularSeasonStartDate
      *
      * @return self
      */
-    public function setRegularSeasonStartDate(string $regularSeasonStartDate) : self
+    public function setRegularSeasonStartDate(?string $regularSeasonStartDate) : self
     {
         $this->regularSeasonStartDate = $regularSeasonStartDate;
         return $this;
@@ -106,20 +106,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPostSeasonStartDate() : string
+    public function getPostSeasonStartDate() : ?string
     {
         return $this->postSeasonStartDate;
     }
     /**
      * 
      *
-     * @param string $postSeasonStartDate
+     * @param string|null $postSeasonStartDate
      *
      * @return self
      */
-    public function setPostSeasonStartDate(string $postSeasonStartDate) : self
+    public function setPostSeasonStartDate(?string $postSeasonStartDate) : self
     {
         $this->postSeasonStartDate = $postSeasonStartDate;
         return $this;
@@ -127,20 +127,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrentSeasonType() : string
+    public function getCurrentSeasonType() : ?string
     {
         return $this->currentSeasonType;
     }
     /**
      * 
      *
-     * @param string $currentSeasonType
+     * @param string|null $currentSeasonType
      *
      * @return self
      */
-    public function setCurrentSeasonType(string $currentSeasonType) : self
+    public function setCurrentSeasonType(?string $currentSeasonType) : self
     {
         $this->currentSeasonType = $currentSeasonType;
         return $this;
@@ -148,20 +148,20 @@ class Season
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getApiSeason() : string
+    public function getApiSeason() : ?string
     {
         return $this->apiSeason;
     }
     /**
      * 
      *
-     * @param string $apiSeason
+     * @param string|null $apiSeason
      *
      * @return self
      */
-    public function setApiSeason(string $apiSeason) : self
+    public function setApiSeason(?string $apiSeason) : self
     {
         $this->apiSeason = $apiSeason;
         return $this;

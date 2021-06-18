@@ -4,23 +4,23 @@ namespace Sportsdata\API\NHL\Endpoint;
 
 class PlayByPlayDelta extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NHL\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $date;
     protected $minutes;
+    protected $date;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $date The date of the game(s).
-    <br>Examples: <code>2018-JAN-31</code>, <code>2017-OCT-01</code>.
     * @param string $minutes Only returns plays that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:
     <code>1</code>, <code>2</code> ... <code>all</code>.
+    * @param string $date The date of the game(s).
+    <br>Examples: <code>2018-JAN-31</code>, <code>2017-OCT-01</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $date, string $minutes)
+    public function __construct(string $minutes, string $date, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->date = $date;
         $this->minutes = $minutes;
+        $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\NHL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -29,7 +29,7 @@ class PlayByPlayDelta extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint im
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}', '{minutes}'), array($this->format, $this->date, $this->minutes), '/pbp/{format}/PlayByPlayDelta/{date}/{minutes}');
+        return str_replace(array('{minutes}', '{date}', '{format}'), array($this->minutes, $this->date, $this->format), '/pbp/{format}/PlayByPlayDelta/{date}/{minutes}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

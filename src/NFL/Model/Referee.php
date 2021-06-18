@@ -13,7 +13,7 @@ class Referee
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -25,13 +25,13 @@ class Referee
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $college;
     /**
@@ -64,20 +64,20 @@ class Referee
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -106,20 +106,20 @@ class Referee
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -127,20 +127,20 @@ class Referee
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCollege() : string
+    public function getCollege() : ?string
     {
         return $this->college;
     }
     /**
      * 
      *
-     * @param string $college
+     * @param string|null $college
      *
      * @return self
      */
-    public function setCollege(string $college) : self
+    public function setCollege(?string $college) : self
     {
         $this->college = $college;
         return $this;

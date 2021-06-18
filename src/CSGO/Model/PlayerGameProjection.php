@@ -7,194 +7,194 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerId;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $matchName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameId;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opponentId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedUtc;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $games;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $maps;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $kills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $assists;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $deaths;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $headshots;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageDamagePerRound;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $kast;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $rating;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $entryKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $quadKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $aces;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $clutch1v2s;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $clutch1v3s;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $clutch1v4s;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $clutch1v5s;
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerId() : int
+    public function getPlayerId() : ?int
     {
         return $this->playerId;
     }
     /**
      * 
      *
-     * @param int $playerId
+     * @param int|null $playerId
      *
      * @return self
      */
-    public function setPlayerId(int $playerId) : self
+    public function setPlayerId(?int $playerId) : self
     {
         $this->playerId = $playerId;
         return $this;
@@ -202,20 +202,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamId() : int
+    public function getTeamId() : ?int
     {
         return $this->teamId;
     }
     /**
      * 
      *
-     * @param int $teamId
+     * @param int|null $teamId
      *
      * @return self
      */
-    public function setTeamId(int $teamId) : self
+    public function setTeamId(?int $teamId) : self
     {
         $this->teamId = $teamId;
         return $this;
@@ -223,20 +223,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -244,20 +244,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getMatchName() : string
+    public function getMatchName() : ?string
     {
         return $this->matchName;
     }
     /**
      * 
      *
-     * @param string $matchName
+     * @param string|null $matchName
      *
      * @return self
      */
-    public function setMatchName(string $matchName) : self
+    public function setMatchName(?string $matchName) : self
     {
         $this->matchName = $matchName;
         return $this;
@@ -265,20 +265,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -286,20 +286,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameId() : int
+    public function getGameId() : ?int
     {
         return $this->gameId;
     }
     /**
      * 
      *
-     * @param int $gameId
+     * @param int|null $gameId
      *
      * @return self
      */
-    public function setGameId(int $gameId) : self
+    public function setGameId(?int $gameId) : self
     {
         $this->gameId = $gameId;
         return $this;
@@ -307,20 +307,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpponentId() : int
+    public function getOpponentId() : ?int
     {
         return $this->opponentId;
     }
     /**
      * 
      *
-     * @param int $opponentId
+     * @param int|null $opponentId
      *
      * @return self
      */
-    public function setOpponentId(int $opponentId) : self
+    public function setOpponentId(?int $opponentId) : self
     {
         $this->opponentId = $opponentId;
         return $this;
@@ -328,20 +328,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -349,20 +349,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -370,20 +370,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -391,20 +391,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -412,20 +412,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedUtc() : string
+    public function getUpdatedUtc() : ?string
     {
         return $this->updatedUtc;
     }
     /**
      * 
      *
-     * @param string $updatedUtc
+     * @param string|null $updatedUtc
      *
      * @return self
      */
-    public function setUpdatedUtc(string $updatedUtc) : self
+    public function setUpdatedUtc(?string $updatedUtc) : self
     {
         $this->updatedUtc = $updatedUtc;
         return $this;
@@ -433,20 +433,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGames() : int
+    public function getGames() : ?int
     {
         return $this->games;
     }
     /**
      * 
      *
-     * @param int $games
+     * @param int|null $games
      *
      * @return self
      */
-    public function setGames(int $games) : self
+    public function setGames(?int $games) : self
     {
         $this->games = $games;
         return $this;
@@ -454,20 +454,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getMaps() : float
+    public function getMaps() : ?float
     {
         return $this->maps;
     }
     /**
      * 
      *
-     * @param float $maps
+     * @param float|null $maps
      *
      * @return self
      */
-    public function setMaps(float $maps) : self
+    public function setMaps(?float $maps) : self
     {
         $this->maps = $maps;
         return $this;
@@ -475,20 +475,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -496,20 +496,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKills() : float
+    public function getKills() : ?float
     {
         return $this->kills;
     }
     /**
      * 
      *
-     * @param float $kills
+     * @param float|null $kills
      *
      * @return self
      */
-    public function setKills(float $kills) : self
+    public function setKills(?float $kills) : self
     {
         $this->kills = $kills;
         return $this;
@@ -517,20 +517,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAssists() : float
+    public function getAssists() : ?float
     {
         return $this->assists;
     }
     /**
      * 
      *
-     * @param float $assists
+     * @param float|null $assists
      *
      * @return self
      */
-    public function setAssists(float $assists) : self
+    public function setAssists(?float $assists) : self
     {
         $this->assists = $assists;
         return $this;
@@ -538,20 +538,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDeaths() : float
+    public function getDeaths() : ?float
     {
         return $this->deaths;
     }
     /**
      * 
      *
-     * @param float $deaths
+     * @param float|null $deaths
      *
      * @return self
      */
-    public function setDeaths(float $deaths) : self
+    public function setDeaths(?float $deaths) : self
     {
         $this->deaths = $deaths;
         return $this;
@@ -559,20 +559,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getHeadshots() : float
+    public function getHeadshots() : ?float
     {
         return $this->headshots;
     }
     /**
      * 
      *
-     * @param float $headshots
+     * @param float|null $headshots
      *
      * @return self
      */
-    public function setHeadshots(float $headshots) : self
+    public function setHeadshots(?float $headshots) : self
     {
         $this->headshots = $headshots;
         return $this;
@@ -580,20 +580,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageDamagePerRound() : float
+    public function getAverageDamagePerRound() : ?float
     {
         return $this->averageDamagePerRound;
     }
     /**
      * 
      *
-     * @param float $averageDamagePerRound
+     * @param float|null $averageDamagePerRound
      *
      * @return self
      */
-    public function setAverageDamagePerRound(float $averageDamagePerRound) : self
+    public function setAverageDamagePerRound(?float $averageDamagePerRound) : self
     {
         $this->averageDamagePerRound = $averageDamagePerRound;
         return $this;
@@ -601,20 +601,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKast() : float
+    public function getKast() : ?float
     {
         return $this->kast;
     }
     /**
      * 
      *
-     * @param float $kast
+     * @param float|null $kast
      *
      * @return self
      */
-    public function setKast(float $kast) : self
+    public function setKast(?float $kast) : self
     {
         $this->kast = $kast;
         return $this;
@@ -622,20 +622,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getRating() : float
+    public function getRating() : ?float
     {
         return $this->rating;
     }
     /**
      * 
      *
-     * @param float $rating
+     * @param float|null $rating
      *
      * @return self
      */
-    public function setRating(float $rating) : self
+    public function setRating(?float $rating) : self
     {
         $this->rating = $rating;
         return $this;
@@ -643,20 +643,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getEntryKills() : float
+    public function getEntryKills() : ?float
     {
         return $this->entryKills;
     }
     /**
      * 
      *
-     * @param float $entryKills
+     * @param float|null $entryKills
      *
      * @return self
      */
-    public function setEntryKills(float $entryKills) : self
+    public function setEntryKills(?float $entryKills) : self
     {
         $this->entryKills = $entryKills;
         return $this;
@@ -664,20 +664,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getQuadKills() : float
+    public function getQuadKills() : ?float
     {
         return $this->quadKills;
     }
     /**
      * 
      *
-     * @param float $quadKills
+     * @param float|null $quadKills
      *
      * @return self
      */
-    public function setQuadKills(float $quadKills) : self
+    public function setQuadKills(?float $quadKills) : self
     {
         $this->quadKills = $quadKills;
         return $this;
@@ -685,20 +685,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAces() : float
+    public function getAces() : ?float
     {
         return $this->aces;
     }
     /**
      * 
      *
-     * @param float $aces
+     * @param float|null $aces
      *
      * @return self
      */
-    public function setAces(float $aces) : self
+    public function setAces(?float $aces) : self
     {
         $this->aces = $aces;
         return $this;
@@ -706,20 +706,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getClutch1v2s() : float
+    public function getClutch1v2s() : ?float
     {
         return $this->clutch1v2s;
     }
     /**
      * 
      *
-     * @param float $clutch1v2s
+     * @param float|null $clutch1v2s
      *
      * @return self
      */
-    public function setClutch1v2s(float $clutch1v2s) : self
+    public function setClutch1v2s(?float $clutch1v2s) : self
     {
         $this->clutch1v2s = $clutch1v2s;
         return $this;
@@ -727,20 +727,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getClutch1v3s() : float
+    public function getClutch1v3s() : ?float
     {
         return $this->clutch1v3s;
     }
     /**
      * 
      *
-     * @param float $clutch1v3s
+     * @param float|null $clutch1v3s
      *
      * @return self
      */
-    public function setClutch1v3s(float $clutch1v3s) : self
+    public function setClutch1v3s(?float $clutch1v3s) : self
     {
         $this->clutch1v3s = $clutch1v3s;
         return $this;
@@ -748,20 +748,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getClutch1v4s() : float
+    public function getClutch1v4s() : ?float
     {
         return $this->clutch1v4s;
     }
     /**
      * 
      *
-     * @param float $clutch1v4s
+     * @param float|null $clutch1v4s
      *
      * @return self
      */
-    public function setClutch1v4s(float $clutch1v4s) : self
+    public function setClutch1v4s(?float $clutch1v4s) : self
     {
         $this->clutch1v4s = $clutch1v4s;
         return $this;
@@ -769,20 +769,20 @@ class PlayerGameProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getClutch1v5s() : float
+    public function getClutch1v5s() : ?float
     {
         return $this->clutch1v5s;
     }
     /**
      * 
      *
-     * @param float $clutch1v5s
+     * @param float|null $clutch1v5s
      *
      * @return self
      */
-    public function setClutch1v5s(float $clutch1v5s) : self
+    public function setClutch1v5s(?float $clutch1v5s) : self
     {
         $this->clutch1v5s = $clutch1v5s;
         return $this;

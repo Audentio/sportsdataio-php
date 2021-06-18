@@ -4,21 +4,21 @@ namespace Sportsdata\API\NHL\Endpoint;
 
 class PlayerPropsByTeam extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NHL\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $date;
     protected $team;
+    protected $date;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $date The date of the game(s). <br>Examples: <code>2018-11-20</code>, <code>2018-11-23</code>.
      * @param string $team The abbreviation of the requested team. <br> Examples: <code>PHI</code>, <code>MIN</code>, <code>DET</code>, etc.
+     * @param string $date The date of the game(s). <br>Examples: <code>2018-11-20</code>, <code>2018-11-23</code>.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $date, string $team)
+    public function __construct(string $team, string $date, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->date = $date;
         $this->team = $team;
+        $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\NHL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -27,7 +27,7 @@ class PlayerPropsByTeam extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint 
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}', '{team}'), array($this->format, $this->date, $this->team), '/odds/{format}/PlayerPropsByTeam/{date}/{team}');
+        return str_replace(array('{team}', '{date}', '{format}'), array($this->team, $this->date, $this->format), '/odds/{format}/PlayerPropsByTeam/{date}/{team}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

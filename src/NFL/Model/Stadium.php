@@ -13,55 +13,55 @@ class Stadium
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $state;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $capacity;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $playingSurface;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLat;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLong;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -88,20 +88,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -109,20 +109,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -130,20 +130,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getState() : string
+    public function getState() : ?string
     {
         return $this->state;
     }
     /**
      * 
      *
-     * @param string $state
+     * @param string|null $state
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(?string $state) : self
     {
         $this->state = $state;
         return $this;
@@ -151,20 +151,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -172,20 +172,20 @@ class Stadium
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCapacity() : int
+    public function getCapacity() : ?int
     {
         return $this->capacity;
     }
     /**
      * 
      *
-     * @param int $capacity
+     * @param int|null $capacity
      *
      * @return self
      */
-    public function setCapacity(int $capacity) : self
+    public function setCapacity(?int $capacity) : self
     {
         $this->capacity = $capacity;
         return $this;
@@ -193,20 +193,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPlayingSurface() : string
+    public function getPlayingSurface() : ?string
     {
         return $this->playingSurface;
     }
     /**
      * 
      *
-     * @param string $playingSurface
+     * @param string|null $playingSurface
      *
      * @return self
      */
-    public function setPlayingSurface(string $playingSurface) : self
+    public function setPlayingSurface(?string $playingSurface) : self
     {
         $this->playingSurface = $playingSurface;
         return $this;
@@ -214,20 +214,20 @@ class Stadium
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLat() : float
+    public function getGeoLat() : ?float
     {
         return $this->geoLat;
     }
     /**
      * 
      *
-     * @param float $geoLat
+     * @param float|null $geoLat
      *
      * @return self
      */
-    public function setGeoLat(float $geoLat) : self
+    public function setGeoLat(?float $geoLat) : self
     {
         $this->geoLat = $geoLat;
         return $this;
@@ -235,20 +235,20 @@ class Stadium
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLong() : float
+    public function getGeoLong() : ?float
     {
         return $this->geoLong;
     }
     /**
      * 
      *
-     * @param float $geoLong
+     * @param float|null $geoLong
      *
      * @return self
      */
-    public function setGeoLong(float $geoLong) : self
+    public function setGeoLong(?float $geoLong) : self
     {
         $this->geoLong = $geoLong;
         return $this;
@@ -256,20 +256,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;

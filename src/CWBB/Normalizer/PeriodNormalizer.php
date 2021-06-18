@@ -45,17 +45,29 @@ class PeriodNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('Number', $data)) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('AwayScore', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('AwayScore', $data) && $data['AwayScore'] !== null) {
             $object->setAwayScore($data['AwayScore']);
         }
-        if (\array_key_exists('HomeScore', $data)) {
+        elseif (\array_key_exists('AwayScore', $data) && $data['AwayScore'] === null) {
+            $object->setAwayScore(null);
+        }
+        if (\array_key_exists('HomeScore', $data) && $data['HomeScore'] !== null) {
             $object->setHomeScore($data['HomeScore']);
+        }
+        elseif (\array_key_exists('HomeScore', $data) && $data['HomeScore'] === null) {
+            $object->setHomeScore(null);
         }
         return $object;
     }

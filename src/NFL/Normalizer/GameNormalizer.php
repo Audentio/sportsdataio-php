@@ -36,11 +36,17 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('GameKey', $data)) {
+        if (\array_key_exists('GameKey', $data) && $data['GameKey'] !== null) {
             $object->setGameKey($data['GameKey']);
         }
-        if (\array_key_exists('Date', $data)) {
+        elseif (\array_key_exists('GameKey', $data) && $data['GameKey'] === null) {
+            $object->setGameKey(null);
+        }
+        if (\array_key_exists('Date', $data) && $data['Date'] !== null) {
             $object->setDate($data['Date']);
+        }
+        elseif (\array_key_exists('Date', $data) && $data['Date'] === null) {
+            $object->setDate(null);
         }
         if (\array_key_exists('SeasonType', $data)) {
             $object->setSeasonType($data['SeasonType']);
@@ -51,26 +57,47 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('Week', $data)) {
             $object->setWeek($data['Week']);
         }
-        if (\array_key_exists('Stadium', $data)) {
+        if (\array_key_exists('Stadium', $data) && $data['Stadium'] !== null) {
             $object->setStadium($data['Stadium']);
         }
-        if (\array_key_exists('PlayingSurface', $data)) {
+        elseif (\array_key_exists('Stadium', $data) && $data['Stadium'] === null) {
+            $object->setStadium(null);
+        }
+        if (\array_key_exists('PlayingSurface', $data) && $data['PlayingSurface'] !== null) {
             $object->setPlayingSurface($data['PlayingSurface']);
         }
-        if (\array_key_exists('Temperature', $data)) {
+        elseif (\array_key_exists('PlayingSurface', $data) && $data['PlayingSurface'] === null) {
+            $object->setPlayingSurface(null);
+        }
+        if (\array_key_exists('Temperature', $data) && $data['Temperature'] !== null) {
             $object->setTemperature($data['Temperature']);
         }
-        if (\array_key_exists('Humidity', $data)) {
+        elseif (\array_key_exists('Temperature', $data) && $data['Temperature'] === null) {
+            $object->setTemperature(null);
+        }
+        if (\array_key_exists('Humidity', $data) && $data['Humidity'] !== null) {
             $object->setHumidity($data['Humidity']);
         }
-        if (\array_key_exists('WindSpeed', $data)) {
+        elseif (\array_key_exists('Humidity', $data) && $data['Humidity'] === null) {
+            $object->setHumidity(null);
+        }
+        if (\array_key_exists('WindSpeed', $data) && $data['WindSpeed'] !== null) {
             $object->setWindSpeed($data['WindSpeed']);
         }
-        if (\array_key_exists('AwayTeam', $data)) {
+        elseif (\array_key_exists('WindSpeed', $data) && $data['WindSpeed'] === null) {
+            $object->setWindSpeed(null);
+        }
+        if (\array_key_exists('AwayTeam', $data) && $data['AwayTeam'] !== null) {
             $object->setAwayTeam($data['AwayTeam']);
         }
-        if (\array_key_exists('HomeTeam', $data)) {
+        elseif (\array_key_exists('AwayTeam', $data) && $data['AwayTeam'] === null) {
+            $object->setAwayTeam(null);
+        }
+        if (\array_key_exists('HomeTeam', $data) && $data['HomeTeam'] !== null) {
             $object->setHomeTeam($data['HomeTeam']);
+        }
+        elseif (\array_key_exists('HomeTeam', $data) && $data['HomeTeam'] === null) {
+            $object->setHomeTeam(null);
         }
         if (\array_key_exists('AwayScore', $data)) {
             $object->setAwayScore($data['AwayScore']);
@@ -78,593 +105,1178 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('HomeScore', $data)) {
             $object->setHomeScore($data['HomeScore']);
         }
-        if (\array_key_exists('TotalScore', $data)) {
+        if (\array_key_exists('TotalScore', $data) && $data['TotalScore'] !== null) {
             $object->setTotalScore($data['TotalScore']);
         }
-        if (\array_key_exists('OverUnder', $data)) {
+        elseif (\array_key_exists('TotalScore', $data) && $data['TotalScore'] === null) {
+            $object->setTotalScore(null);
+        }
+        if (\array_key_exists('OverUnder', $data) && $data['OverUnder'] !== null) {
             $object->setOverUnder($data['OverUnder']);
         }
-        if (\array_key_exists('PointSpread', $data)) {
+        elseif (\array_key_exists('OverUnder', $data) && $data['OverUnder'] === null) {
+            $object->setOverUnder(null);
+        }
+        if (\array_key_exists('PointSpread', $data) && $data['PointSpread'] !== null) {
             $object->setPointSpread($data['PointSpread']);
         }
-        if (\array_key_exists('AwayScoreQuarter1', $data)) {
+        elseif (\array_key_exists('PointSpread', $data) && $data['PointSpread'] === null) {
+            $object->setPointSpread(null);
+        }
+        if (\array_key_exists('AwayScoreQuarter1', $data) && $data['AwayScoreQuarter1'] !== null) {
             $object->setAwayScoreQuarter1($data['AwayScoreQuarter1']);
         }
-        if (\array_key_exists('AwayScoreQuarter2', $data)) {
+        elseif (\array_key_exists('AwayScoreQuarter1', $data) && $data['AwayScoreQuarter1'] === null) {
+            $object->setAwayScoreQuarter1(null);
+        }
+        if (\array_key_exists('AwayScoreQuarter2', $data) && $data['AwayScoreQuarter2'] !== null) {
             $object->setAwayScoreQuarter2($data['AwayScoreQuarter2']);
         }
-        if (\array_key_exists('AwayScoreQuarter3', $data)) {
+        elseif (\array_key_exists('AwayScoreQuarter2', $data) && $data['AwayScoreQuarter2'] === null) {
+            $object->setAwayScoreQuarter2(null);
+        }
+        if (\array_key_exists('AwayScoreQuarter3', $data) && $data['AwayScoreQuarter3'] !== null) {
             $object->setAwayScoreQuarter3($data['AwayScoreQuarter3']);
         }
-        if (\array_key_exists('AwayScoreQuarter4', $data)) {
+        elseif (\array_key_exists('AwayScoreQuarter3', $data) && $data['AwayScoreQuarter3'] === null) {
+            $object->setAwayScoreQuarter3(null);
+        }
+        if (\array_key_exists('AwayScoreQuarter4', $data) && $data['AwayScoreQuarter4'] !== null) {
             $object->setAwayScoreQuarter4($data['AwayScoreQuarter4']);
         }
-        if (\array_key_exists('AwayScoreOvertime', $data)) {
+        elseif (\array_key_exists('AwayScoreQuarter4', $data) && $data['AwayScoreQuarter4'] === null) {
+            $object->setAwayScoreQuarter4(null);
+        }
+        if (\array_key_exists('AwayScoreOvertime', $data) && $data['AwayScoreOvertime'] !== null) {
             $object->setAwayScoreOvertime($data['AwayScoreOvertime']);
         }
-        if (\array_key_exists('HomeScoreQuarter1', $data)) {
+        elseif (\array_key_exists('AwayScoreOvertime', $data) && $data['AwayScoreOvertime'] === null) {
+            $object->setAwayScoreOvertime(null);
+        }
+        if (\array_key_exists('HomeScoreQuarter1', $data) && $data['HomeScoreQuarter1'] !== null) {
             $object->setHomeScoreQuarter1($data['HomeScoreQuarter1']);
         }
-        if (\array_key_exists('HomeScoreQuarter2', $data)) {
+        elseif (\array_key_exists('HomeScoreQuarter1', $data) && $data['HomeScoreQuarter1'] === null) {
+            $object->setHomeScoreQuarter1(null);
+        }
+        if (\array_key_exists('HomeScoreQuarter2', $data) && $data['HomeScoreQuarter2'] !== null) {
             $object->setHomeScoreQuarter2($data['HomeScoreQuarter2']);
         }
-        if (\array_key_exists('HomeScoreQuarter3', $data)) {
+        elseif (\array_key_exists('HomeScoreQuarter2', $data) && $data['HomeScoreQuarter2'] === null) {
+            $object->setHomeScoreQuarter2(null);
+        }
+        if (\array_key_exists('HomeScoreQuarter3', $data) && $data['HomeScoreQuarter3'] !== null) {
             $object->setHomeScoreQuarter3($data['HomeScoreQuarter3']);
         }
-        if (\array_key_exists('HomeScoreQuarter4', $data)) {
+        elseif (\array_key_exists('HomeScoreQuarter3', $data) && $data['HomeScoreQuarter3'] === null) {
+            $object->setHomeScoreQuarter3(null);
+        }
+        if (\array_key_exists('HomeScoreQuarter4', $data) && $data['HomeScoreQuarter4'] !== null) {
             $object->setHomeScoreQuarter4($data['HomeScoreQuarter4']);
         }
-        if (\array_key_exists('HomeScoreOvertime', $data)) {
+        elseif (\array_key_exists('HomeScoreQuarter4', $data) && $data['HomeScoreQuarter4'] === null) {
+            $object->setHomeScoreQuarter4(null);
+        }
+        if (\array_key_exists('HomeScoreOvertime', $data) && $data['HomeScoreOvertime'] !== null) {
             $object->setHomeScoreOvertime($data['HomeScoreOvertime']);
         }
-        if (\array_key_exists('AwayTimeOfPossession', $data)) {
+        elseif (\array_key_exists('HomeScoreOvertime', $data) && $data['HomeScoreOvertime'] === null) {
+            $object->setHomeScoreOvertime(null);
+        }
+        if (\array_key_exists('AwayTimeOfPossession', $data) && $data['AwayTimeOfPossession'] !== null) {
             $object->setAwayTimeOfPossession($data['AwayTimeOfPossession']);
         }
-        if (\array_key_exists('HomeTimeOfPossession', $data)) {
+        elseif (\array_key_exists('AwayTimeOfPossession', $data) && $data['AwayTimeOfPossession'] === null) {
+            $object->setAwayTimeOfPossession(null);
+        }
+        if (\array_key_exists('HomeTimeOfPossession', $data) && $data['HomeTimeOfPossession'] !== null) {
             $object->setHomeTimeOfPossession($data['HomeTimeOfPossession']);
         }
-        if (\array_key_exists('AwayFirstDowns', $data)) {
+        elseif (\array_key_exists('HomeTimeOfPossession', $data) && $data['HomeTimeOfPossession'] === null) {
+            $object->setHomeTimeOfPossession(null);
+        }
+        if (\array_key_exists('AwayFirstDowns', $data) && $data['AwayFirstDowns'] !== null) {
             $object->setAwayFirstDowns($data['AwayFirstDowns']);
         }
-        if (\array_key_exists('HomeFirstDowns', $data)) {
+        elseif (\array_key_exists('AwayFirstDowns', $data) && $data['AwayFirstDowns'] === null) {
+            $object->setAwayFirstDowns(null);
+        }
+        if (\array_key_exists('HomeFirstDowns', $data) && $data['HomeFirstDowns'] !== null) {
             $object->setHomeFirstDowns($data['HomeFirstDowns']);
         }
-        if (\array_key_exists('AwayFirstDownsByRushing', $data)) {
+        elseif (\array_key_exists('HomeFirstDowns', $data) && $data['HomeFirstDowns'] === null) {
+            $object->setHomeFirstDowns(null);
+        }
+        if (\array_key_exists('AwayFirstDownsByRushing', $data) && $data['AwayFirstDownsByRushing'] !== null) {
             $object->setAwayFirstDownsByRushing($data['AwayFirstDownsByRushing']);
         }
-        if (\array_key_exists('HomeFirstDownsByRushing', $data)) {
+        elseif (\array_key_exists('AwayFirstDownsByRushing', $data) && $data['AwayFirstDownsByRushing'] === null) {
+            $object->setAwayFirstDownsByRushing(null);
+        }
+        if (\array_key_exists('HomeFirstDownsByRushing', $data) && $data['HomeFirstDownsByRushing'] !== null) {
             $object->setHomeFirstDownsByRushing($data['HomeFirstDownsByRushing']);
         }
-        if (\array_key_exists('AwayFirstDownsByPassing', $data)) {
+        elseif (\array_key_exists('HomeFirstDownsByRushing', $data) && $data['HomeFirstDownsByRushing'] === null) {
+            $object->setHomeFirstDownsByRushing(null);
+        }
+        if (\array_key_exists('AwayFirstDownsByPassing', $data) && $data['AwayFirstDownsByPassing'] !== null) {
             $object->setAwayFirstDownsByPassing($data['AwayFirstDownsByPassing']);
         }
-        if (\array_key_exists('HomeFirstDownsByPassing', $data)) {
+        elseif (\array_key_exists('AwayFirstDownsByPassing', $data) && $data['AwayFirstDownsByPassing'] === null) {
+            $object->setAwayFirstDownsByPassing(null);
+        }
+        if (\array_key_exists('HomeFirstDownsByPassing', $data) && $data['HomeFirstDownsByPassing'] !== null) {
             $object->setHomeFirstDownsByPassing($data['HomeFirstDownsByPassing']);
         }
-        if (\array_key_exists('AwayFirstDownsByPenalty', $data)) {
+        elseif (\array_key_exists('HomeFirstDownsByPassing', $data) && $data['HomeFirstDownsByPassing'] === null) {
+            $object->setHomeFirstDownsByPassing(null);
+        }
+        if (\array_key_exists('AwayFirstDownsByPenalty', $data) && $data['AwayFirstDownsByPenalty'] !== null) {
             $object->setAwayFirstDownsByPenalty($data['AwayFirstDownsByPenalty']);
         }
-        if (\array_key_exists('HomeFirstDownsByPenalty', $data)) {
+        elseif (\array_key_exists('AwayFirstDownsByPenalty', $data) && $data['AwayFirstDownsByPenalty'] === null) {
+            $object->setAwayFirstDownsByPenalty(null);
+        }
+        if (\array_key_exists('HomeFirstDownsByPenalty', $data) && $data['HomeFirstDownsByPenalty'] !== null) {
             $object->setHomeFirstDownsByPenalty($data['HomeFirstDownsByPenalty']);
         }
-        if (\array_key_exists('AwayOffensivePlays', $data)) {
+        elseif (\array_key_exists('HomeFirstDownsByPenalty', $data) && $data['HomeFirstDownsByPenalty'] === null) {
+            $object->setHomeFirstDownsByPenalty(null);
+        }
+        if (\array_key_exists('AwayOffensivePlays', $data) && $data['AwayOffensivePlays'] !== null) {
             $object->setAwayOffensivePlays($data['AwayOffensivePlays']);
         }
-        if (\array_key_exists('HomeOffensivePlays', $data)) {
+        elseif (\array_key_exists('AwayOffensivePlays', $data) && $data['AwayOffensivePlays'] === null) {
+            $object->setAwayOffensivePlays(null);
+        }
+        if (\array_key_exists('HomeOffensivePlays', $data) && $data['HomeOffensivePlays'] !== null) {
             $object->setHomeOffensivePlays($data['HomeOffensivePlays']);
         }
-        if (\array_key_exists('AwayOffensiveYards', $data)) {
+        elseif (\array_key_exists('HomeOffensivePlays', $data) && $data['HomeOffensivePlays'] === null) {
+            $object->setHomeOffensivePlays(null);
+        }
+        if (\array_key_exists('AwayOffensiveYards', $data) && $data['AwayOffensiveYards'] !== null) {
             $object->setAwayOffensiveYards($data['AwayOffensiveYards']);
         }
-        if (\array_key_exists('HomeOffensiveYards', $data)) {
+        elseif (\array_key_exists('AwayOffensiveYards', $data) && $data['AwayOffensiveYards'] === null) {
+            $object->setAwayOffensiveYards(null);
+        }
+        if (\array_key_exists('HomeOffensiveYards', $data) && $data['HomeOffensiveYards'] !== null) {
             $object->setHomeOffensiveYards($data['HomeOffensiveYards']);
         }
-        if (\array_key_exists('AwayOffensiveYardsPerPlay', $data)) {
+        elseif (\array_key_exists('HomeOffensiveYards', $data) && $data['HomeOffensiveYards'] === null) {
+            $object->setHomeOffensiveYards(null);
+        }
+        if (\array_key_exists('AwayOffensiveYardsPerPlay', $data) && $data['AwayOffensiveYardsPerPlay'] !== null) {
             $object->setAwayOffensiveYardsPerPlay($data['AwayOffensiveYardsPerPlay']);
         }
-        if (\array_key_exists('HomeOffensiveYardsPerPlay', $data)) {
+        elseif (\array_key_exists('AwayOffensiveYardsPerPlay', $data) && $data['AwayOffensiveYardsPerPlay'] === null) {
+            $object->setAwayOffensiveYardsPerPlay(null);
+        }
+        if (\array_key_exists('HomeOffensiveYardsPerPlay', $data) && $data['HomeOffensiveYardsPerPlay'] !== null) {
             $object->setHomeOffensiveYardsPerPlay($data['HomeOffensiveYardsPerPlay']);
         }
-        if (\array_key_exists('AwayTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeOffensiveYardsPerPlay', $data) && $data['HomeOffensiveYardsPerPlay'] === null) {
+            $object->setHomeOffensiveYardsPerPlay(null);
+        }
+        if (\array_key_exists('AwayTouchdowns', $data) && $data['AwayTouchdowns'] !== null) {
             $object->setAwayTouchdowns($data['AwayTouchdowns']);
         }
-        if (\array_key_exists('HomeTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayTouchdowns', $data) && $data['AwayTouchdowns'] === null) {
+            $object->setAwayTouchdowns(null);
+        }
+        if (\array_key_exists('HomeTouchdowns', $data) && $data['HomeTouchdowns'] !== null) {
             $object->setHomeTouchdowns($data['HomeTouchdowns']);
         }
-        if (\array_key_exists('AwayRushingAttempts', $data)) {
+        elseif (\array_key_exists('HomeTouchdowns', $data) && $data['HomeTouchdowns'] === null) {
+            $object->setHomeTouchdowns(null);
+        }
+        if (\array_key_exists('AwayRushingAttempts', $data) && $data['AwayRushingAttempts'] !== null) {
             $object->setAwayRushingAttempts($data['AwayRushingAttempts']);
         }
-        if (\array_key_exists('HomeRushingAttempts', $data)) {
+        elseif (\array_key_exists('AwayRushingAttempts', $data) && $data['AwayRushingAttempts'] === null) {
+            $object->setAwayRushingAttempts(null);
+        }
+        if (\array_key_exists('HomeRushingAttempts', $data) && $data['HomeRushingAttempts'] !== null) {
             $object->setHomeRushingAttempts($data['HomeRushingAttempts']);
         }
-        if (\array_key_exists('AwayRushingYards', $data)) {
+        elseif (\array_key_exists('HomeRushingAttempts', $data) && $data['HomeRushingAttempts'] === null) {
+            $object->setHomeRushingAttempts(null);
+        }
+        if (\array_key_exists('AwayRushingYards', $data) && $data['AwayRushingYards'] !== null) {
             $object->setAwayRushingYards($data['AwayRushingYards']);
         }
-        if (\array_key_exists('HomeRushingYards', $data)) {
+        elseif (\array_key_exists('AwayRushingYards', $data) && $data['AwayRushingYards'] === null) {
+            $object->setAwayRushingYards(null);
+        }
+        if (\array_key_exists('HomeRushingYards', $data) && $data['HomeRushingYards'] !== null) {
             $object->setHomeRushingYards($data['HomeRushingYards']);
         }
-        if (\array_key_exists('AwayRushingYardsPerAttempt', $data)) {
+        elseif (\array_key_exists('HomeRushingYards', $data) && $data['HomeRushingYards'] === null) {
+            $object->setHomeRushingYards(null);
+        }
+        if (\array_key_exists('AwayRushingYardsPerAttempt', $data) && $data['AwayRushingYardsPerAttempt'] !== null) {
             $object->setAwayRushingYardsPerAttempt($data['AwayRushingYardsPerAttempt']);
         }
-        if (\array_key_exists('HomeRushingYardsPerAttempt', $data)) {
+        elseif (\array_key_exists('AwayRushingYardsPerAttempt', $data) && $data['AwayRushingYardsPerAttempt'] === null) {
+            $object->setAwayRushingYardsPerAttempt(null);
+        }
+        if (\array_key_exists('HomeRushingYardsPerAttempt', $data) && $data['HomeRushingYardsPerAttempt'] !== null) {
             $object->setHomeRushingYardsPerAttempt($data['HomeRushingYardsPerAttempt']);
         }
-        if (\array_key_exists('AwayRushingTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeRushingYardsPerAttempt', $data) && $data['HomeRushingYardsPerAttempt'] === null) {
+            $object->setHomeRushingYardsPerAttempt(null);
+        }
+        if (\array_key_exists('AwayRushingTouchdowns', $data) && $data['AwayRushingTouchdowns'] !== null) {
             $object->setAwayRushingTouchdowns($data['AwayRushingTouchdowns']);
         }
-        if (\array_key_exists('HomeRushingTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayRushingTouchdowns', $data) && $data['AwayRushingTouchdowns'] === null) {
+            $object->setAwayRushingTouchdowns(null);
+        }
+        if (\array_key_exists('HomeRushingTouchdowns', $data) && $data['HomeRushingTouchdowns'] !== null) {
             $object->setHomeRushingTouchdowns($data['HomeRushingTouchdowns']);
         }
-        if (\array_key_exists('AwayPassingAttempts', $data)) {
+        elseif (\array_key_exists('HomeRushingTouchdowns', $data) && $data['HomeRushingTouchdowns'] === null) {
+            $object->setHomeRushingTouchdowns(null);
+        }
+        if (\array_key_exists('AwayPassingAttempts', $data) && $data['AwayPassingAttempts'] !== null) {
             $object->setAwayPassingAttempts($data['AwayPassingAttempts']);
         }
-        if (\array_key_exists('HomePassingAttempts', $data)) {
+        elseif (\array_key_exists('AwayPassingAttempts', $data) && $data['AwayPassingAttempts'] === null) {
+            $object->setAwayPassingAttempts(null);
+        }
+        if (\array_key_exists('HomePassingAttempts', $data) && $data['HomePassingAttempts'] !== null) {
             $object->setHomePassingAttempts($data['HomePassingAttempts']);
         }
-        if (\array_key_exists('AwayPassingCompletions', $data)) {
+        elseif (\array_key_exists('HomePassingAttempts', $data) && $data['HomePassingAttempts'] === null) {
+            $object->setHomePassingAttempts(null);
+        }
+        if (\array_key_exists('AwayPassingCompletions', $data) && $data['AwayPassingCompletions'] !== null) {
             $object->setAwayPassingCompletions($data['AwayPassingCompletions']);
         }
-        if (\array_key_exists('HomePassingCompletions', $data)) {
+        elseif (\array_key_exists('AwayPassingCompletions', $data) && $data['AwayPassingCompletions'] === null) {
+            $object->setAwayPassingCompletions(null);
+        }
+        if (\array_key_exists('HomePassingCompletions', $data) && $data['HomePassingCompletions'] !== null) {
             $object->setHomePassingCompletions($data['HomePassingCompletions']);
         }
-        if (\array_key_exists('AwayPassingYards', $data)) {
+        elseif (\array_key_exists('HomePassingCompletions', $data) && $data['HomePassingCompletions'] === null) {
+            $object->setHomePassingCompletions(null);
+        }
+        if (\array_key_exists('AwayPassingYards', $data) && $data['AwayPassingYards'] !== null) {
             $object->setAwayPassingYards($data['AwayPassingYards']);
         }
-        if (\array_key_exists('HomePassingYards', $data)) {
+        elseif (\array_key_exists('AwayPassingYards', $data) && $data['AwayPassingYards'] === null) {
+            $object->setAwayPassingYards(null);
+        }
+        if (\array_key_exists('HomePassingYards', $data) && $data['HomePassingYards'] !== null) {
             $object->setHomePassingYards($data['HomePassingYards']);
         }
-        if (\array_key_exists('AwayPassingTouchdowns', $data)) {
+        elseif (\array_key_exists('HomePassingYards', $data) && $data['HomePassingYards'] === null) {
+            $object->setHomePassingYards(null);
+        }
+        if (\array_key_exists('AwayPassingTouchdowns', $data) && $data['AwayPassingTouchdowns'] !== null) {
             $object->setAwayPassingTouchdowns($data['AwayPassingTouchdowns']);
         }
-        if (\array_key_exists('HomePassingTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayPassingTouchdowns', $data) && $data['AwayPassingTouchdowns'] === null) {
+            $object->setAwayPassingTouchdowns(null);
+        }
+        if (\array_key_exists('HomePassingTouchdowns', $data) && $data['HomePassingTouchdowns'] !== null) {
             $object->setHomePassingTouchdowns($data['HomePassingTouchdowns']);
         }
-        if (\array_key_exists('AwayPassingInterceptions', $data)) {
+        elseif (\array_key_exists('HomePassingTouchdowns', $data) && $data['HomePassingTouchdowns'] === null) {
+            $object->setHomePassingTouchdowns(null);
+        }
+        if (\array_key_exists('AwayPassingInterceptions', $data) && $data['AwayPassingInterceptions'] !== null) {
             $object->setAwayPassingInterceptions($data['AwayPassingInterceptions']);
         }
-        if (\array_key_exists('HomePassingInterceptions', $data)) {
+        elseif (\array_key_exists('AwayPassingInterceptions', $data) && $data['AwayPassingInterceptions'] === null) {
+            $object->setAwayPassingInterceptions(null);
+        }
+        if (\array_key_exists('HomePassingInterceptions', $data) && $data['HomePassingInterceptions'] !== null) {
             $object->setHomePassingInterceptions($data['HomePassingInterceptions']);
         }
-        if (\array_key_exists('AwayPassingYardsPerAttempt', $data)) {
+        elseif (\array_key_exists('HomePassingInterceptions', $data) && $data['HomePassingInterceptions'] === null) {
+            $object->setHomePassingInterceptions(null);
+        }
+        if (\array_key_exists('AwayPassingYardsPerAttempt', $data) && $data['AwayPassingYardsPerAttempt'] !== null) {
             $object->setAwayPassingYardsPerAttempt($data['AwayPassingYardsPerAttempt']);
         }
-        if (\array_key_exists('HomePassingYardsPerAttempt', $data)) {
+        elseif (\array_key_exists('AwayPassingYardsPerAttempt', $data) && $data['AwayPassingYardsPerAttempt'] === null) {
+            $object->setAwayPassingYardsPerAttempt(null);
+        }
+        if (\array_key_exists('HomePassingYardsPerAttempt', $data) && $data['HomePassingYardsPerAttempt'] !== null) {
             $object->setHomePassingYardsPerAttempt($data['HomePassingYardsPerAttempt']);
         }
-        if (\array_key_exists('AwayPassingYardsPerCompletion', $data)) {
+        elseif (\array_key_exists('HomePassingYardsPerAttempt', $data) && $data['HomePassingYardsPerAttempt'] === null) {
+            $object->setHomePassingYardsPerAttempt(null);
+        }
+        if (\array_key_exists('AwayPassingYardsPerCompletion', $data) && $data['AwayPassingYardsPerCompletion'] !== null) {
             $object->setAwayPassingYardsPerCompletion($data['AwayPassingYardsPerCompletion']);
         }
-        if (\array_key_exists('HomePassingYardsPerCompletion', $data)) {
+        elseif (\array_key_exists('AwayPassingYardsPerCompletion', $data) && $data['AwayPassingYardsPerCompletion'] === null) {
+            $object->setAwayPassingYardsPerCompletion(null);
+        }
+        if (\array_key_exists('HomePassingYardsPerCompletion', $data) && $data['HomePassingYardsPerCompletion'] !== null) {
             $object->setHomePassingYardsPerCompletion($data['HomePassingYardsPerCompletion']);
         }
-        if (\array_key_exists('AwayCompletionPercentage', $data)) {
+        elseif (\array_key_exists('HomePassingYardsPerCompletion', $data) && $data['HomePassingYardsPerCompletion'] === null) {
+            $object->setHomePassingYardsPerCompletion(null);
+        }
+        if (\array_key_exists('AwayCompletionPercentage', $data) && $data['AwayCompletionPercentage'] !== null) {
             $object->setAwayCompletionPercentage($data['AwayCompletionPercentage']);
         }
-        if (\array_key_exists('HomeCompletionPercentage', $data)) {
+        elseif (\array_key_exists('AwayCompletionPercentage', $data) && $data['AwayCompletionPercentage'] === null) {
+            $object->setAwayCompletionPercentage(null);
+        }
+        if (\array_key_exists('HomeCompletionPercentage', $data) && $data['HomeCompletionPercentage'] !== null) {
             $object->setHomeCompletionPercentage($data['HomeCompletionPercentage']);
         }
-        if (\array_key_exists('AwayPasserRating', $data)) {
+        elseif (\array_key_exists('HomeCompletionPercentage', $data) && $data['HomeCompletionPercentage'] === null) {
+            $object->setHomeCompletionPercentage(null);
+        }
+        if (\array_key_exists('AwayPasserRating', $data) && $data['AwayPasserRating'] !== null) {
             $object->setAwayPasserRating($data['AwayPasserRating']);
         }
-        if (\array_key_exists('HomePasserRating', $data)) {
+        elseif (\array_key_exists('AwayPasserRating', $data) && $data['AwayPasserRating'] === null) {
+            $object->setAwayPasserRating(null);
+        }
+        if (\array_key_exists('HomePasserRating', $data) && $data['HomePasserRating'] !== null) {
             $object->setHomePasserRating($data['HomePasserRating']);
         }
-        if (\array_key_exists('AwayThirdDownAttempts', $data)) {
+        elseif (\array_key_exists('HomePasserRating', $data) && $data['HomePasserRating'] === null) {
+            $object->setHomePasserRating(null);
+        }
+        if (\array_key_exists('AwayThirdDownAttempts', $data) && $data['AwayThirdDownAttempts'] !== null) {
             $object->setAwayThirdDownAttempts($data['AwayThirdDownAttempts']);
         }
-        if (\array_key_exists('HomeThirdDownAttempts', $data)) {
+        elseif (\array_key_exists('AwayThirdDownAttempts', $data) && $data['AwayThirdDownAttempts'] === null) {
+            $object->setAwayThirdDownAttempts(null);
+        }
+        if (\array_key_exists('HomeThirdDownAttempts', $data) && $data['HomeThirdDownAttempts'] !== null) {
             $object->setHomeThirdDownAttempts($data['HomeThirdDownAttempts']);
         }
-        if (\array_key_exists('AwayThirdDownConversions', $data)) {
+        elseif (\array_key_exists('HomeThirdDownAttempts', $data) && $data['HomeThirdDownAttempts'] === null) {
+            $object->setHomeThirdDownAttempts(null);
+        }
+        if (\array_key_exists('AwayThirdDownConversions', $data) && $data['AwayThirdDownConversions'] !== null) {
             $object->setAwayThirdDownConversions($data['AwayThirdDownConversions']);
         }
-        if (\array_key_exists('HomeThirdDownConversions', $data)) {
+        elseif (\array_key_exists('AwayThirdDownConversions', $data) && $data['AwayThirdDownConversions'] === null) {
+            $object->setAwayThirdDownConversions(null);
+        }
+        if (\array_key_exists('HomeThirdDownConversions', $data) && $data['HomeThirdDownConversions'] !== null) {
             $object->setHomeThirdDownConversions($data['HomeThirdDownConversions']);
         }
-        if (\array_key_exists('AwayThirdDownPercentage', $data)) {
+        elseif (\array_key_exists('HomeThirdDownConversions', $data) && $data['HomeThirdDownConversions'] === null) {
+            $object->setHomeThirdDownConversions(null);
+        }
+        if (\array_key_exists('AwayThirdDownPercentage', $data) && $data['AwayThirdDownPercentage'] !== null) {
             $object->setAwayThirdDownPercentage($data['AwayThirdDownPercentage']);
         }
-        if (\array_key_exists('HomeThirdDownPercentage', $data)) {
+        elseif (\array_key_exists('AwayThirdDownPercentage', $data) && $data['AwayThirdDownPercentage'] === null) {
+            $object->setAwayThirdDownPercentage(null);
+        }
+        if (\array_key_exists('HomeThirdDownPercentage', $data) && $data['HomeThirdDownPercentage'] !== null) {
             $object->setHomeThirdDownPercentage($data['HomeThirdDownPercentage']);
         }
-        if (\array_key_exists('AwayFourthDownAttempts', $data)) {
+        elseif (\array_key_exists('HomeThirdDownPercentage', $data) && $data['HomeThirdDownPercentage'] === null) {
+            $object->setHomeThirdDownPercentage(null);
+        }
+        if (\array_key_exists('AwayFourthDownAttempts', $data) && $data['AwayFourthDownAttempts'] !== null) {
             $object->setAwayFourthDownAttempts($data['AwayFourthDownAttempts']);
         }
-        if (\array_key_exists('HomeFourthDownAttempts', $data)) {
+        elseif (\array_key_exists('AwayFourthDownAttempts', $data) && $data['AwayFourthDownAttempts'] === null) {
+            $object->setAwayFourthDownAttempts(null);
+        }
+        if (\array_key_exists('HomeFourthDownAttempts', $data) && $data['HomeFourthDownAttempts'] !== null) {
             $object->setHomeFourthDownAttempts($data['HomeFourthDownAttempts']);
         }
-        if (\array_key_exists('AwayFourthDownConversions', $data)) {
+        elseif (\array_key_exists('HomeFourthDownAttempts', $data) && $data['HomeFourthDownAttempts'] === null) {
+            $object->setHomeFourthDownAttempts(null);
+        }
+        if (\array_key_exists('AwayFourthDownConversions', $data) && $data['AwayFourthDownConversions'] !== null) {
             $object->setAwayFourthDownConversions($data['AwayFourthDownConversions']);
         }
-        if (\array_key_exists('HomeFourthDownConversions', $data)) {
+        elseif (\array_key_exists('AwayFourthDownConversions', $data) && $data['AwayFourthDownConversions'] === null) {
+            $object->setAwayFourthDownConversions(null);
+        }
+        if (\array_key_exists('HomeFourthDownConversions', $data) && $data['HomeFourthDownConversions'] !== null) {
             $object->setHomeFourthDownConversions($data['HomeFourthDownConversions']);
         }
-        if (\array_key_exists('AwayFourthDownPercentage', $data)) {
+        elseif (\array_key_exists('HomeFourthDownConversions', $data) && $data['HomeFourthDownConversions'] === null) {
+            $object->setHomeFourthDownConversions(null);
+        }
+        if (\array_key_exists('AwayFourthDownPercentage', $data) && $data['AwayFourthDownPercentage'] !== null) {
             $object->setAwayFourthDownPercentage($data['AwayFourthDownPercentage']);
         }
-        if (\array_key_exists('HomeFourthDownPercentage', $data)) {
+        elseif (\array_key_exists('AwayFourthDownPercentage', $data) && $data['AwayFourthDownPercentage'] === null) {
+            $object->setAwayFourthDownPercentage(null);
+        }
+        if (\array_key_exists('HomeFourthDownPercentage', $data) && $data['HomeFourthDownPercentage'] !== null) {
             $object->setHomeFourthDownPercentage($data['HomeFourthDownPercentage']);
         }
-        if (\array_key_exists('AwayRedZoneAttempts', $data)) {
+        elseif (\array_key_exists('HomeFourthDownPercentage', $data) && $data['HomeFourthDownPercentage'] === null) {
+            $object->setHomeFourthDownPercentage(null);
+        }
+        if (\array_key_exists('AwayRedZoneAttempts', $data) && $data['AwayRedZoneAttempts'] !== null) {
             $object->setAwayRedZoneAttempts($data['AwayRedZoneAttempts']);
         }
-        if (\array_key_exists('HomeRedZoneAttempts', $data)) {
+        elseif (\array_key_exists('AwayRedZoneAttempts', $data) && $data['AwayRedZoneAttempts'] === null) {
+            $object->setAwayRedZoneAttempts(null);
+        }
+        if (\array_key_exists('HomeRedZoneAttempts', $data) && $data['HomeRedZoneAttempts'] !== null) {
             $object->setHomeRedZoneAttempts($data['HomeRedZoneAttempts']);
         }
-        if (\array_key_exists('AwayRedZoneConversions', $data)) {
+        elseif (\array_key_exists('HomeRedZoneAttempts', $data) && $data['HomeRedZoneAttempts'] === null) {
+            $object->setHomeRedZoneAttempts(null);
+        }
+        if (\array_key_exists('AwayRedZoneConversions', $data) && $data['AwayRedZoneConversions'] !== null) {
             $object->setAwayRedZoneConversions($data['AwayRedZoneConversions']);
         }
-        if (\array_key_exists('HomeRedZoneConversions', $data)) {
+        elseif (\array_key_exists('AwayRedZoneConversions', $data) && $data['AwayRedZoneConversions'] === null) {
+            $object->setAwayRedZoneConversions(null);
+        }
+        if (\array_key_exists('HomeRedZoneConversions', $data) && $data['HomeRedZoneConversions'] !== null) {
             $object->setHomeRedZoneConversions($data['HomeRedZoneConversions']);
         }
-        if (\array_key_exists('AwayGoalToGoAttempts', $data)) {
+        elseif (\array_key_exists('HomeRedZoneConversions', $data) && $data['HomeRedZoneConversions'] === null) {
+            $object->setHomeRedZoneConversions(null);
+        }
+        if (\array_key_exists('AwayGoalToGoAttempts', $data) && $data['AwayGoalToGoAttempts'] !== null) {
             $object->setAwayGoalToGoAttempts($data['AwayGoalToGoAttempts']);
         }
-        if (\array_key_exists('HomeGoalToGoAttempts', $data)) {
+        elseif (\array_key_exists('AwayGoalToGoAttempts', $data) && $data['AwayGoalToGoAttempts'] === null) {
+            $object->setAwayGoalToGoAttempts(null);
+        }
+        if (\array_key_exists('HomeGoalToGoAttempts', $data) && $data['HomeGoalToGoAttempts'] !== null) {
             $object->setHomeGoalToGoAttempts($data['HomeGoalToGoAttempts']);
         }
-        if (\array_key_exists('AwayGoalToGoConversions', $data)) {
+        elseif (\array_key_exists('HomeGoalToGoAttempts', $data) && $data['HomeGoalToGoAttempts'] === null) {
+            $object->setHomeGoalToGoAttempts(null);
+        }
+        if (\array_key_exists('AwayGoalToGoConversions', $data) && $data['AwayGoalToGoConversions'] !== null) {
             $object->setAwayGoalToGoConversions($data['AwayGoalToGoConversions']);
         }
-        if (\array_key_exists('HomeGoalToGoConversions', $data)) {
+        elseif (\array_key_exists('AwayGoalToGoConversions', $data) && $data['AwayGoalToGoConversions'] === null) {
+            $object->setAwayGoalToGoConversions(null);
+        }
+        if (\array_key_exists('HomeGoalToGoConversions', $data) && $data['HomeGoalToGoConversions'] !== null) {
             $object->setHomeGoalToGoConversions($data['HomeGoalToGoConversions']);
         }
-        if (\array_key_exists('AwayReturnYards', $data)) {
+        elseif (\array_key_exists('HomeGoalToGoConversions', $data) && $data['HomeGoalToGoConversions'] === null) {
+            $object->setHomeGoalToGoConversions(null);
+        }
+        if (\array_key_exists('AwayReturnYards', $data) && $data['AwayReturnYards'] !== null) {
             $object->setAwayReturnYards($data['AwayReturnYards']);
         }
-        if (\array_key_exists('HomeReturnYards', $data)) {
+        elseif (\array_key_exists('AwayReturnYards', $data) && $data['AwayReturnYards'] === null) {
+            $object->setAwayReturnYards(null);
+        }
+        if (\array_key_exists('HomeReturnYards', $data) && $data['HomeReturnYards'] !== null) {
             $object->setHomeReturnYards($data['HomeReturnYards']);
         }
-        if (\array_key_exists('AwayPenalties', $data)) {
+        elseif (\array_key_exists('HomeReturnYards', $data) && $data['HomeReturnYards'] === null) {
+            $object->setHomeReturnYards(null);
+        }
+        if (\array_key_exists('AwayPenalties', $data) && $data['AwayPenalties'] !== null) {
             $object->setAwayPenalties($data['AwayPenalties']);
         }
-        if (\array_key_exists('HomePenalties', $data)) {
+        elseif (\array_key_exists('AwayPenalties', $data) && $data['AwayPenalties'] === null) {
+            $object->setAwayPenalties(null);
+        }
+        if (\array_key_exists('HomePenalties', $data) && $data['HomePenalties'] !== null) {
             $object->setHomePenalties($data['HomePenalties']);
         }
-        if (\array_key_exists('AwayPenaltyYards', $data)) {
+        elseif (\array_key_exists('HomePenalties', $data) && $data['HomePenalties'] === null) {
+            $object->setHomePenalties(null);
+        }
+        if (\array_key_exists('AwayPenaltyYards', $data) && $data['AwayPenaltyYards'] !== null) {
             $object->setAwayPenaltyYards($data['AwayPenaltyYards']);
         }
-        if (\array_key_exists('HomePenaltyYards', $data)) {
+        elseif (\array_key_exists('AwayPenaltyYards', $data) && $data['AwayPenaltyYards'] === null) {
+            $object->setAwayPenaltyYards(null);
+        }
+        if (\array_key_exists('HomePenaltyYards', $data) && $data['HomePenaltyYards'] !== null) {
             $object->setHomePenaltyYards($data['HomePenaltyYards']);
         }
-        if (\array_key_exists('AwayFumbles', $data)) {
+        elseif (\array_key_exists('HomePenaltyYards', $data) && $data['HomePenaltyYards'] === null) {
+            $object->setHomePenaltyYards(null);
+        }
+        if (\array_key_exists('AwayFumbles', $data) && $data['AwayFumbles'] !== null) {
             $object->setAwayFumbles($data['AwayFumbles']);
         }
-        if (\array_key_exists('HomeFumbles', $data)) {
+        elseif (\array_key_exists('AwayFumbles', $data) && $data['AwayFumbles'] === null) {
+            $object->setAwayFumbles(null);
+        }
+        if (\array_key_exists('HomeFumbles', $data) && $data['HomeFumbles'] !== null) {
             $object->setHomeFumbles($data['HomeFumbles']);
         }
-        if (\array_key_exists('AwayFumblesLost', $data)) {
+        elseif (\array_key_exists('HomeFumbles', $data) && $data['HomeFumbles'] === null) {
+            $object->setHomeFumbles(null);
+        }
+        if (\array_key_exists('AwayFumblesLost', $data) && $data['AwayFumblesLost'] !== null) {
             $object->setAwayFumblesLost($data['AwayFumblesLost']);
         }
-        if (\array_key_exists('HomeFumblesLost', $data)) {
+        elseif (\array_key_exists('AwayFumblesLost', $data) && $data['AwayFumblesLost'] === null) {
+            $object->setAwayFumblesLost(null);
+        }
+        if (\array_key_exists('HomeFumblesLost', $data) && $data['HomeFumblesLost'] !== null) {
             $object->setHomeFumblesLost($data['HomeFumblesLost']);
         }
-        if (\array_key_exists('AwayTimesSacked', $data)) {
+        elseif (\array_key_exists('HomeFumblesLost', $data) && $data['HomeFumblesLost'] === null) {
+            $object->setHomeFumblesLost(null);
+        }
+        if (\array_key_exists('AwayTimesSacked', $data) && $data['AwayTimesSacked'] !== null) {
             $object->setAwayTimesSacked($data['AwayTimesSacked']);
         }
-        if (\array_key_exists('HomeTimesSacked', $data)) {
+        elseif (\array_key_exists('AwayTimesSacked', $data) && $data['AwayTimesSacked'] === null) {
+            $object->setAwayTimesSacked(null);
+        }
+        if (\array_key_exists('HomeTimesSacked', $data) && $data['HomeTimesSacked'] !== null) {
             $object->setHomeTimesSacked($data['HomeTimesSacked']);
         }
-        if (\array_key_exists('AwayTimesSackedYards', $data)) {
+        elseif (\array_key_exists('HomeTimesSacked', $data) && $data['HomeTimesSacked'] === null) {
+            $object->setHomeTimesSacked(null);
+        }
+        if (\array_key_exists('AwayTimesSackedYards', $data) && $data['AwayTimesSackedYards'] !== null) {
             $object->setAwayTimesSackedYards($data['AwayTimesSackedYards']);
         }
-        if (\array_key_exists('HomeTimesSackedYards', $data)) {
+        elseif (\array_key_exists('AwayTimesSackedYards', $data) && $data['AwayTimesSackedYards'] === null) {
+            $object->setAwayTimesSackedYards(null);
+        }
+        if (\array_key_exists('HomeTimesSackedYards', $data) && $data['HomeTimesSackedYards'] !== null) {
             $object->setHomeTimesSackedYards($data['HomeTimesSackedYards']);
         }
-        if (\array_key_exists('AwaySafeties', $data)) {
+        elseif (\array_key_exists('HomeTimesSackedYards', $data) && $data['HomeTimesSackedYards'] === null) {
+            $object->setHomeTimesSackedYards(null);
+        }
+        if (\array_key_exists('AwaySafeties', $data) && $data['AwaySafeties'] !== null) {
             $object->setAwaySafeties($data['AwaySafeties']);
         }
-        if (\array_key_exists('HomeSafeties', $data)) {
+        elseif (\array_key_exists('AwaySafeties', $data) && $data['AwaySafeties'] === null) {
+            $object->setAwaySafeties(null);
+        }
+        if (\array_key_exists('HomeSafeties', $data) && $data['HomeSafeties'] !== null) {
             $object->setHomeSafeties($data['HomeSafeties']);
         }
-        if (\array_key_exists('AwayPunts', $data)) {
+        elseif (\array_key_exists('HomeSafeties', $data) && $data['HomeSafeties'] === null) {
+            $object->setHomeSafeties(null);
+        }
+        if (\array_key_exists('AwayPunts', $data) && $data['AwayPunts'] !== null) {
             $object->setAwayPunts($data['AwayPunts']);
         }
-        if (\array_key_exists('HomePunts', $data)) {
+        elseif (\array_key_exists('AwayPunts', $data) && $data['AwayPunts'] === null) {
+            $object->setAwayPunts(null);
+        }
+        if (\array_key_exists('HomePunts', $data) && $data['HomePunts'] !== null) {
             $object->setHomePunts($data['HomePunts']);
         }
-        if (\array_key_exists('AwayPuntYards', $data)) {
+        elseif (\array_key_exists('HomePunts', $data) && $data['HomePunts'] === null) {
+            $object->setHomePunts(null);
+        }
+        if (\array_key_exists('AwayPuntYards', $data) && $data['AwayPuntYards'] !== null) {
             $object->setAwayPuntYards($data['AwayPuntYards']);
         }
-        if (\array_key_exists('HomePuntYards', $data)) {
+        elseif (\array_key_exists('AwayPuntYards', $data) && $data['AwayPuntYards'] === null) {
+            $object->setAwayPuntYards(null);
+        }
+        if (\array_key_exists('HomePuntYards', $data) && $data['HomePuntYards'] !== null) {
             $object->setHomePuntYards($data['HomePuntYards']);
         }
-        if (\array_key_exists('AwayPuntAverage', $data)) {
+        elseif (\array_key_exists('HomePuntYards', $data) && $data['HomePuntYards'] === null) {
+            $object->setHomePuntYards(null);
+        }
+        if (\array_key_exists('AwayPuntAverage', $data) && $data['AwayPuntAverage'] !== null) {
             $object->setAwayPuntAverage($data['AwayPuntAverage']);
         }
-        if (\array_key_exists('HomePuntAverage', $data)) {
+        elseif (\array_key_exists('AwayPuntAverage', $data) && $data['AwayPuntAverage'] === null) {
+            $object->setAwayPuntAverage(null);
+        }
+        if (\array_key_exists('HomePuntAverage', $data) && $data['HomePuntAverage'] !== null) {
             $object->setHomePuntAverage($data['HomePuntAverage']);
         }
-        if (\array_key_exists('AwayGiveaways', $data)) {
+        elseif (\array_key_exists('HomePuntAverage', $data) && $data['HomePuntAverage'] === null) {
+            $object->setHomePuntAverage(null);
+        }
+        if (\array_key_exists('AwayGiveaways', $data) && $data['AwayGiveaways'] !== null) {
             $object->setAwayGiveaways($data['AwayGiveaways']);
         }
-        if (\array_key_exists('HomeGiveaways', $data)) {
+        elseif (\array_key_exists('AwayGiveaways', $data) && $data['AwayGiveaways'] === null) {
+            $object->setAwayGiveaways(null);
+        }
+        if (\array_key_exists('HomeGiveaways', $data) && $data['HomeGiveaways'] !== null) {
             $object->setHomeGiveaways($data['HomeGiveaways']);
         }
-        if (\array_key_exists('AwayTakeaways', $data)) {
+        elseif (\array_key_exists('HomeGiveaways', $data) && $data['HomeGiveaways'] === null) {
+            $object->setHomeGiveaways(null);
+        }
+        if (\array_key_exists('AwayTakeaways', $data) && $data['AwayTakeaways'] !== null) {
             $object->setAwayTakeaways($data['AwayTakeaways']);
         }
-        if (\array_key_exists('HomeTakeaways', $data)) {
+        elseif (\array_key_exists('AwayTakeaways', $data) && $data['AwayTakeaways'] === null) {
+            $object->setAwayTakeaways(null);
+        }
+        if (\array_key_exists('HomeTakeaways', $data) && $data['HomeTakeaways'] !== null) {
             $object->setHomeTakeaways($data['HomeTakeaways']);
         }
-        if (\array_key_exists('AwayTurnoverDifferential', $data)) {
+        elseif (\array_key_exists('HomeTakeaways', $data) && $data['HomeTakeaways'] === null) {
+            $object->setHomeTakeaways(null);
+        }
+        if (\array_key_exists('AwayTurnoverDifferential', $data) && $data['AwayTurnoverDifferential'] !== null) {
             $object->setAwayTurnoverDifferential($data['AwayTurnoverDifferential']);
         }
-        if (\array_key_exists('HomeTurnoverDifferential', $data)) {
+        elseif (\array_key_exists('AwayTurnoverDifferential', $data) && $data['AwayTurnoverDifferential'] === null) {
+            $object->setAwayTurnoverDifferential(null);
+        }
+        if (\array_key_exists('HomeTurnoverDifferential', $data) && $data['HomeTurnoverDifferential'] !== null) {
             $object->setHomeTurnoverDifferential($data['HomeTurnoverDifferential']);
         }
-        if (\array_key_exists('AwayKickoffs', $data)) {
+        elseif (\array_key_exists('HomeTurnoverDifferential', $data) && $data['HomeTurnoverDifferential'] === null) {
+            $object->setHomeTurnoverDifferential(null);
+        }
+        if (\array_key_exists('AwayKickoffs', $data) && $data['AwayKickoffs'] !== null) {
             $object->setAwayKickoffs($data['AwayKickoffs']);
         }
-        if (\array_key_exists('HomeKickoffs', $data)) {
+        elseif (\array_key_exists('AwayKickoffs', $data) && $data['AwayKickoffs'] === null) {
+            $object->setAwayKickoffs(null);
+        }
+        if (\array_key_exists('HomeKickoffs', $data) && $data['HomeKickoffs'] !== null) {
             $object->setHomeKickoffs($data['HomeKickoffs']);
         }
-        if (\array_key_exists('AwayKickoffsInEndZone', $data)) {
+        elseif (\array_key_exists('HomeKickoffs', $data) && $data['HomeKickoffs'] === null) {
+            $object->setHomeKickoffs(null);
+        }
+        if (\array_key_exists('AwayKickoffsInEndZone', $data) && $data['AwayKickoffsInEndZone'] !== null) {
             $object->setAwayKickoffsInEndZone($data['AwayKickoffsInEndZone']);
         }
-        if (\array_key_exists('HomeKickoffsInEndZone', $data)) {
+        elseif (\array_key_exists('AwayKickoffsInEndZone', $data) && $data['AwayKickoffsInEndZone'] === null) {
+            $object->setAwayKickoffsInEndZone(null);
+        }
+        if (\array_key_exists('HomeKickoffsInEndZone', $data) && $data['HomeKickoffsInEndZone'] !== null) {
             $object->setHomeKickoffsInEndZone($data['HomeKickoffsInEndZone']);
         }
-        if (\array_key_exists('AwayKickoffTouchbacks', $data)) {
+        elseif (\array_key_exists('HomeKickoffsInEndZone', $data) && $data['HomeKickoffsInEndZone'] === null) {
+            $object->setHomeKickoffsInEndZone(null);
+        }
+        if (\array_key_exists('AwayKickoffTouchbacks', $data) && $data['AwayKickoffTouchbacks'] !== null) {
             $object->setAwayKickoffTouchbacks($data['AwayKickoffTouchbacks']);
         }
-        if (\array_key_exists('HomeKickoffTouchbacks', $data)) {
+        elseif (\array_key_exists('AwayKickoffTouchbacks', $data) && $data['AwayKickoffTouchbacks'] === null) {
+            $object->setAwayKickoffTouchbacks(null);
+        }
+        if (\array_key_exists('HomeKickoffTouchbacks', $data) && $data['HomeKickoffTouchbacks'] !== null) {
             $object->setHomeKickoffTouchbacks($data['HomeKickoffTouchbacks']);
         }
-        if (\array_key_exists('AwayPuntsHadBlocked', $data)) {
+        elseif (\array_key_exists('HomeKickoffTouchbacks', $data) && $data['HomeKickoffTouchbacks'] === null) {
+            $object->setHomeKickoffTouchbacks(null);
+        }
+        if (\array_key_exists('AwayPuntsHadBlocked', $data) && $data['AwayPuntsHadBlocked'] !== null) {
             $object->setAwayPuntsHadBlocked($data['AwayPuntsHadBlocked']);
         }
-        if (\array_key_exists('HomePuntsHadBlocked', $data)) {
+        elseif (\array_key_exists('AwayPuntsHadBlocked', $data) && $data['AwayPuntsHadBlocked'] === null) {
+            $object->setAwayPuntsHadBlocked(null);
+        }
+        if (\array_key_exists('HomePuntsHadBlocked', $data) && $data['HomePuntsHadBlocked'] !== null) {
             $object->setHomePuntsHadBlocked($data['HomePuntsHadBlocked']);
         }
-        if (\array_key_exists('AwayPuntNetAverage', $data)) {
+        elseif (\array_key_exists('HomePuntsHadBlocked', $data) && $data['HomePuntsHadBlocked'] === null) {
+            $object->setHomePuntsHadBlocked(null);
+        }
+        if (\array_key_exists('AwayPuntNetAverage', $data) && $data['AwayPuntNetAverage'] !== null) {
             $object->setAwayPuntNetAverage($data['AwayPuntNetAverage']);
         }
-        if (\array_key_exists('HomePuntNetAverage', $data)) {
+        elseif (\array_key_exists('AwayPuntNetAverage', $data) && $data['AwayPuntNetAverage'] === null) {
+            $object->setAwayPuntNetAverage(null);
+        }
+        if (\array_key_exists('HomePuntNetAverage', $data) && $data['HomePuntNetAverage'] !== null) {
             $object->setHomePuntNetAverage($data['HomePuntNetAverage']);
         }
-        if (\array_key_exists('AwayExtraPointKickingAttempts', $data)) {
+        elseif (\array_key_exists('HomePuntNetAverage', $data) && $data['HomePuntNetAverage'] === null) {
+            $object->setHomePuntNetAverage(null);
+        }
+        if (\array_key_exists('AwayExtraPointKickingAttempts', $data) && $data['AwayExtraPointKickingAttempts'] !== null) {
             $object->setAwayExtraPointKickingAttempts($data['AwayExtraPointKickingAttempts']);
         }
-        if (\array_key_exists('HomeExtraPointKickingAttempts', $data)) {
+        elseif (\array_key_exists('AwayExtraPointKickingAttempts', $data) && $data['AwayExtraPointKickingAttempts'] === null) {
+            $object->setAwayExtraPointKickingAttempts(null);
+        }
+        if (\array_key_exists('HomeExtraPointKickingAttempts', $data) && $data['HomeExtraPointKickingAttempts'] !== null) {
             $object->setHomeExtraPointKickingAttempts($data['HomeExtraPointKickingAttempts']);
         }
-        if (\array_key_exists('AwayExtraPointKickingConversions', $data)) {
+        elseif (\array_key_exists('HomeExtraPointKickingAttempts', $data) && $data['HomeExtraPointKickingAttempts'] === null) {
+            $object->setHomeExtraPointKickingAttempts(null);
+        }
+        if (\array_key_exists('AwayExtraPointKickingConversions', $data) && $data['AwayExtraPointKickingConversions'] !== null) {
             $object->setAwayExtraPointKickingConversions($data['AwayExtraPointKickingConversions']);
         }
-        if (\array_key_exists('HomeExtraPointKickingConversions', $data)) {
+        elseif (\array_key_exists('AwayExtraPointKickingConversions', $data) && $data['AwayExtraPointKickingConversions'] === null) {
+            $object->setAwayExtraPointKickingConversions(null);
+        }
+        if (\array_key_exists('HomeExtraPointKickingConversions', $data) && $data['HomeExtraPointKickingConversions'] !== null) {
             $object->setHomeExtraPointKickingConversions($data['HomeExtraPointKickingConversions']);
         }
-        if (\array_key_exists('AwayExtraPointsHadBlocked', $data)) {
+        elseif (\array_key_exists('HomeExtraPointKickingConversions', $data) && $data['HomeExtraPointKickingConversions'] === null) {
+            $object->setHomeExtraPointKickingConversions(null);
+        }
+        if (\array_key_exists('AwayExtraPointsHadBlocked', $data) && $data['AwayExtraPointsHadBlocked'] !== null) {
             $object->setAwayExtraPointsHadBlocked($data['AwayExtraPointsHadBlocked']);
         }
-        if (\array_key_exists('HomeExtraPointsHadBlocked', $data)) {
+        elseif (\array_key_exists('AwayExtraPointsHadBlocked', $data) && $data['AwayExtraPointsHadBlocked'] === null) {
+            $object->setAwayExtraPointsHadBlocked(null);
+        }
+        if (\array_key_exists('HomeExtraPointsHadBlocked', $data) && $data['HomeExtraPointsHadBlocked'] !== null) {
             $object->setHomeExtraPointsHadBlocked($data['HomeExtraPointsHadBlocked']);
         }
-        if (\array_key_exists('AwayExtraPointPassingAttempts', $data)) {
+        elseif (\array_key_exists('HomeExtraPointsHadBlocked', $data) && $data['HomeExtraPointsHadBlocked'] === null) {
+            $object->setHomeExtraPointsHadBlocked(null);
+        }
+        if (\array_key_exists('AwayExtraPointPassingAttempts', $data) && $data['AwayExtraPointPassingAttempts'] !== null) {
             $object->setAwayExtraPointPassingAttempts($data['AwayExtraPointPassingAttempts']);
         }
-        if (\array_key_exists('HomeExtraPointPassingAttempts', $data)) {
+        elseif (\array_key_exists('AwayExtraPointPassingAttempts', $data) && $data['AwayExtraPointPassingAttempts'] === null) {
+            $object->setAwayExtraPointPassingAttempts(null);
+        }
+        if (\array_key_exists('HomeExtraPointPassingAttempts', $data) && $data['HomeExtraPointPassingAttempts'] !== null) {
             $object->setHomeExtraPointPassingAttempts($data['HomeExtraPointPassingAttempts']);
         }
-        if (\array_key_exists('AwayExtraPointPassingConversions', $data)) {
+        elseif (\array_key_exists('HomeExtraPointPassingAttempts', $data) && $data['HomeExtraPointPassingAttempts'] === null) {
+            $object->setHomeExtraPointPassingAttempts(null);
+        }
+        if (\array_key_exists('AwayExtraPointPassingConversions', $data) && $data['AwayExtraPointPassingConversions'] !== null) {
             $object->setAwayExtraPointPassingConversions($data['AwayExtraPointPassingConversions']);
         }
-        if (\array_key_exists('HomeExtraPointPassingConversions', $data)) {
+        elseif (\array_key_exists('AwayExtraPointPassingConversions', $data) && $data['AwayExtraPointPassingConversions'] === null) {
+            $object->setAwayExtraPointPassingConversions(null);
+        }
+        if (\array_key_exists('HomeExtraPointPassingConversions', $data) && $data['HomeExtraPointPassingConversions'] !== null) {
             $object->setHomeExtraPointPassingConversions($data['HomeExtraPointPassingConversions']);
         }
-        if (\array_key_exists('AwayExtraPointRushingAttempts', $data)) {
+        elseif (\array_key_exists('HomeExtraPointPassingConversions', $data) && $data['HomeExtraPointPassingConversions'] === null) {
+            $object->setHomeExtraPointPassingConversions(null);
+        }
+        if (\array_key_exists('AwayExtraPointRushingAttempts', $data) && $data['AwayExtraPointRushingAttempts'] !== null) {
             $object->setAwayExtraPointRushingAttempts($data['AwayExtraPointRushingAttempts']);
         }
-        if (\array_key_exists('HomeExtraPointRushingAttempts', $data)) {
+        elseif (\array_key_exists('AwayExtraPointRushingAttempts', $data) && $data['AwayExtraPointRushingAttempts'] === null) {
+            $object->setAwayExtraPointRushingAttempts(null);
+        }
+        if (\array_key_exists('HomeExtraPointRushingAttempts', $data) && $data['HomeExtraPointRushingAttempts'] !== null) {
             $object->setHomeExtraPointRushingAttempts($data['HomeExtraPointRushingAttempts']);
         }
-        if (\array_key_exists('AwayExtraPointRushingConversions', $data)) {
+        elseif (\array_key_exists('HomeExtraPointRushingAttempts', $data) && $data['HomeExtraPointRushingAttempts'] === null) {
+            $object->setHomeExtraPointRushingAttempts(null);
+        }
+        if (\array_key_exists('AwayExtraPointRushingConversions', $data) && $data['AwayExtraPointRushingConversions'] !== null) {
             $object->setAwayExtraPointRushingConversions($data['AwayExtraPointRushingConversions']);
         }
-        if (\array_key_exists('HomeExtraPointRushingConversions', $data)) {
+        elseif (\array_key_exists('AwayExtraPointRushingConversions', $data) && $data['AwayExtraPointRushingConversions'] === null) {
+            $object->setAwayExtraPointRushingConversions(null);
+        }
+        if (\array_key_exists('HomeExtraPointRushingConversions', $data) && $data['HomeExtraPointRushingConversions'] !== null) {
             $object->setHomeExtraPointRushingConversions($data['HomeExtraPointRushingConversions']);
         }
-        if (\array_key_exists('AwayFieldGoalAttempts', $data)) {
+        elseif (\array_key_exists('HomeExtraPointRushingConversions', $data) && $data['HomeExtraPointRushingConversions'] === null) {
+            $object->setHomeExtraPointRushingConversions(null);
+        }
+        if (\array_key_exists('AwayFieldGoalAttempts', $data) && $data['AwayFieldGoalAttempts'] !== null) {
             $object->setAwayFieldGoalAttempts($data['AwayFieldGoalAttempts']);
         }
-        if (\array_key_exists('HomeFieldGoalAttempts', $data)) {
+        elseif (\array_key_exists('AwayFieldGoalAttempts', $data) && $data['AwayFieldGoalAttempts'] === null) {
+            $object->setAwayFieldGoalAttempts(null);
+        }
+        if (\array_key_exists('HomeFieldGoalAttempts', $data) && $data['HomeFieldGoalAttempts'] !== null) {
             $object->setHomeFieldGoalAttempts($data['HomeFieldGoalAttempts']);
         }
-        if (\array_key_exists('AwayFieldGoalsMade', $data)) {
+        elseif (\array_key_exists('HomeFieldGoalAttempts', $data) && $data['HomeFieldGoalAttempts'] === null) {
+            $object->setHomeFieldGoalAttempts(null);
+        }
+        if (\array_key_exists('AwayFieldGoalsMade', $data) && $data['AwayFieldGoalsMade'] !== null) {
             $object->setAwayFieldGoalsMade($data['AwayFieldGoalsMade']);
         }
-        if (\array_key_exists('HomeFieldGoalsMade', $data)) {
+        elseif (\array_key_exists('AwayFieldGoalsMade', $data) && $data['AwayFieldGoalsMade'] === null) {
+            $object->setAwayFieldGoalsMade(null);
+        }
+        if (\array_key_exists('HomeFieldGoalsMade', $data) && $data['HomeFieldGoalsMade'] !== null) {
             $object->setHomeFieldGoalsMade($data['HomeFieldGoalsMade']);
         }
-        if (\array_key_exists('AwayFieldGoalsHadBlocked', $data)) {
+        elseif (\array_key_exists('HomeFieldGoalsMade', $data) && $data['HomeFieldGoalsMade'] === null) {
+            $object->setHomeFieldGoalsMade(null);
+        }
+        if (\array_key_exists('AwayFieldGoalsHadBlocked', $data) && $data['AwayFieldGoalsHadBlocked'] !== null) {
             $object->setAwayFieldGoalsHadBlocked($data['AwayFieldGoalsHadBlocked']);
         }
-        if (\array_key_exists('HomeFieldGoalsHadBlocked', $data)) {
+        elseif (\array_key_exists('AwayFieldGoalsHadBlocked', $data) && $data['AwayFieldGoalsHadBlocked'] === null) {
+            $object->setAwayFieldGoalsHadBlocked(null);
+        }
+        if (\array_key_exists('HomeFieldGoalsHadBlocked', $data) && $data['HomeFieldGoalsHadBlocked'] !== null) {
             $object->setHomeFieldGoalsHadBlocked($data['HomeFieldGoalsHadBlocked']);
         }
-        if (\array_key_exists('AwayPuntReturns', $data)) {
+        elseif (\array_key_exists('HomeFieldGoalsHadBlocked', $data) && $data['HomeFieldGoalsHadBlocked'] === null) {
+            $object->setHomeFieldGoalsHadBlocked(null);
+        }
+        if (\array_key_exists('AwayPuntReturns', $data) && $data['AwayPuntReturns'] !== null) {
             $object->setAwayPuntReturns($data['AwayPuntReturns']);
         }
-        if (\array_key_exists('HomePuntReturns', $data)) {
+        elseif (\array_key_exists('AwayPuntReturns', $data) && $data['AwayPuntReturns'] === null) {
+            $object->setAwayPuntReturns(null);
+        }
+        if (\array_key_exists('HomePuntReturns', $data) && $data['HomePuntReturns'] !== null) {
             $object->setHomePuntReturns($data['HomePuntReturns']);
         }
-        if (\array_key_exists('AwayPuntReturnYards', $data)) {
+        elseif (\array_key_exists('HomePuntReturns', $data) && $data['HomePuntReturns'] === null) {
+            $object->setHomePuntReturns(null);
+        }
+        if (\array_key_exists('AwayPuntReturnYards', $data) && $data['AwayPuntReturnYards'] !== null) {
             $object->setAwayPuntReturnYards($data['AwayPuntReturnYards']);
         }
-        if (\array_key_exists('HomePuntReturnYards', $data)) {
+        elseif (\array_key_exists('AwayPuntReturnYards', $data) && $data['AwayPuntReturnYards'] === null) {
+            $object->setAwayPuntReturnYards(null);
+        }
+        if (\array_key_exists('HomePuntReturnYards', $data) && $data['HomePuntReturnYards'] !== null) {
             $object->setHomePuntReturnYards($data['HomePuntReturnYards']);
         }
-        if (\array_key_exists('AwayKickReturns', $data)) {
+        elseif (\array_key_exists('HomePuntReturnYards', $data) && $data['HomePuntReturnYards'] === null) {
+            $object->setHomePuntReturnYards(null);
+        }
+        if (\array_key_exists('AwayKickReturns', $data) && $data['AwayKickReturns'] !== null) {
             $object->setAwayKickReturns($data['AwayKickReturns']);
         }
-        if (\array_key_exists('HomeKickReturns', $data)) {
+        elseif (\array_key_exists('AwayKickReturns', $data) && $data['AwayKickReturns'] === null) {
+            $object->setAwayKickReturns(null);
+        }
+        if (\array_key_exists('HomeKickReturns', $data) && $data['HomeKickReturns'] !== null) {
             $object->setHomeKickReturns($data['HomeKickReturns']);
         }
-        if (\array_key_exists('AwayKickReturnYards', $data)) {
+        elseif (\array_key_exists('HomeKickReturns', $data) && $data['HomeKickReturns'] === null) {
+            $object->setHomeKickReturns(null);
+        }
+        if (\array_key_exists('AwayKickReturnYards', $data) && $data['AwayKickReturnYards'] !== null) {
             $object->setAwayKickReturnYards($data['AwayKickReturnYards']);
         }
-        if (\array_key_exists('HomeKickReturnYards', $data)) {
+        elseif (\array_key_exists('AwayKickReturnYards', $data) && $data['AwayKickReturnYards'] === null) {
+            $object->setAwayKickReturnYards(null);
+        }
+        if (\array_key_exists('HomeKickReturnYards', $data) && $data['HomeKickReturnYards'] !== null) {
             $object->setHomeKickReturnYards($data['HomeKickReturnYards']);
         }
-        if (\array_key_exists('AwayInterceptionReturns', $data)) {
+        elseif (\array_key_exists('HomeKickReturnYards', $data) && $data['HomeKickReturnYards'] === null) {
+            $object->setHomeKickReturnYards(null);
+        }
+        if (\array_key_exists('AwayInterceptionReturns', $data) && $data['AwayInterceptionReturns'] !== null) {
             $object->setAwayInterceptionReturns($data['AwayInterceptionReturns']);
         }
-        if (\array_key_exists('HomeInterceptionReturns', $data)) {
+        elseif (\array_key_exists('AwayInterceptionReturns', $data) && $data['AwayInterceptionReturns'] === null) {
+            $object->setAwayInterceptionReturns(null);
+        }
+        if (\array_key_exists('HomeInterceptionReturns', $data) && $data['HomeInterceptionReturns'] !== null) {
             $object->setHomeInterceptionReturns($data['HomeInterceptionReturns']);
         }
-        if (\array_key_exists('AwayInterceptionReturnYards', $data)) {
+        elseif (\array_key_exists('HomeInterceptionReturns', $data) && $data['HomeInterceptionReturns'] === null) {
+            $object->setHomeInterceptionReturns(null);
+        }
+        if (\array_key_exists('AwayInterceptionReturnYards', $data) && $data['AwayInterceptionReturnYards'] !== null) {
             $object->setAwayInterceptionReturnYards($data['AwayInterceptionReturnYards']);
         }
-        if (\array_key_exists('HomeInterceptionReturnYards', $data)) {
+        elseif (\array_key_exists('AwayInterceptionReturnYards', $data) && $data['AwayInterceptionReturnYards'] === null) {
+            $object->setAwayInterceptionReturnYards(null);
+        }
+        if (\array_key_exists('HomeInterceptionReturnYards', $data) && $data['HomeInterceptionReturnYards'] !== null) {
             $object->setHomeInterceptionReturnYards($data['HomeInterceptionReturnYards']);
         }
-        if (\array_key_exists('AwaySoloTackles', $data)) {
+        elseif (\array_key_exists('HomeInterceptionReturnYards', $data) && $data['HomeInterceptionReturnYards'] === null) {
+            $object->setHomeInterceptionReturnYards(null);
+        }
+        if (\array_key_exists('AwaySoloTackles', $data) && $data['AwaySoloTackles'] !== null) {
             $object->setAwaySoloTackles($data['AwaySoloTackles']);
         }
-        if (\array_key_exists('AwayAssistedTackles', $data)) {
+        elseif (\array_key_exists('AwaySoloTackles', $data) && $data['AwaySoloTackles'] === null) {
+            $object->setAwaySoloTackles(null);
+        }
+        if (\array_key_exists('AwayAssistedTackles', $data) && $data['AwayAssistedTackles'] !== null) {
             $object->setAwayAssistedTackles($data['AwayAssistedTackles']);
         }
-        if (\array_key_exists('AwayQuarterbackHits', $data)) {
+        elseif (\array_key_exists('AwayAssistedTackles', $data) && $data['AwayAssistedTackles'] === null) {
+            $object->setAwayAssistedTackles(null);
+        }
+        if (\array_key_exists('AwayQuarterbackHits', $data) && $data['AwayQuarterbackHits'] !== null) {
             $object->setAwayQuarterbackHits($data['AwayQuarterbackHits']);
         }
-        if (\array_key_exists('AwayTacklesForLoss', $data)) {
+        elseif (\array_key_exists('AwayQuarterbackHits', $data) && $data['AwayQuarterbackHits'] === null) {
+            $object->setAwayQuarterbackHits(null);
+        }
+        if (\array_key_exists('AwayTacklesForLoss', $data) && $data['AwayTacklesForLoss'] !== null) {
             $object->setAwayTacklesForLoss($data['AwayTacklesForLoss']);
         }
-        if (\array_key_exists('AwaySacks', $data)) {
+        elseif (\array_key_exists('AwayTacklesForLoss', $data) && $data['AwayTacklesForLoss'] === null) {
+            $object->setAwayTacklesForLoss(null);
+        }
+        if (\array_key_exists('AwaySacks', $data) && $data['AwaySacks'] !== null) {
             $object->setAwaySacks($data['AwaySacks']);
         }
-        if (\array_key_exists('AwaySackYards', $data)) {
+        elseif (\array_key_exists('AwaySacks', $data) && $data['AwaySacks'] === null) {
+            $object->setAwaySacks(null);
+        }
+        if (\array_key_exists('AwaySackYards', $data) && $data['AwaySackYards'] !== null) {
             $object->setAwaySackYards($data['AwaySackYards']);
         }
-        if (\array_key_exists('AwayPassesDefended', $data)) {
+        elseif (\array_key_exists('AwaySackYards', $data) && $data['AwaySackYards'] === null) {
+            $object->setAwaySackYards(null);
+        }
+        if (\array_key_exists('AwayPassesDefended', $data) && $data['AwayPassesDefended'] !== null) {
             $object->setAwayPassesDefended($data['AwayPassesDefended']);
         }
-        if (\array_key_exists('AwayFumblesForced', $data)) {
+        elseif (\array_key_exists('AwayPassesDefended', $data) && $data['AwayPassesDefended'] === null) {
+            $object->setAwayPassesDefended(null);
+        }
+        if (\array_key_exists('AwayFumblesForced', $data) && $data['AwayFumblesForced'] !== null) {
             $object->setAwayFumblesForced($data['AwayFumblesForced']);
         }
-        if (\array_key_exists('AwayFumblesRecovered', $data)) {
+        elseif (\array_key_exists('AwayFumblesForced', $data) && $data['AwayFumblesForced'] === null) {
+            $object->setAwayFumblesForced(null);
+        }
+        if (\array_key_exists('AwayFumblesRecovered', $data) && $data['AwayFumblesRecovered'] !== null) {
             $object->setAwayFumblesRecovered($data['AwayFumblesRecovered']);
         }
-        if (\array_key_exists('AwayFumbleReturnYards', $data)) {
+        elseif (\array_key_exists('AwayFumblesRecovered', $data) && $data['AwayFumblesRecovered'] === null) {
+            $object->setAwayFumblesRecovered(null);
+        }
+        if (\array_key_exists('AwayFumbleReturnYards', $data) && $data['AwayFumbleReturnYards'] !== null) {
             $object->setAwayFumbleReturnYards($data['AwayFumbleReturnYards']);
         }
-        if (\array_key_exists('AwayFumbleReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayFumbleReturnYards', $data) && $data['AwayFumbleReturnYards'] === null) {
+            $object->setAwayFumbleReturnYards(null);
+        }
+        if (\array_key_exists('AwayFumbleReturnTouchdowns', $data) && $data['AwayFumbleReturnTouchdowns'] !== null) {
             $object->setAwayFumbleReturnTouchdowns($data['AwayFumbleReturnTouchdowns']);
         }
-        if (\array_key_exists('AwayInterceptionReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayFumbleReturnTouchdowns', $data) && $data['AwayFumbleReturnTouchdowns'] === null) {
+            $object->setAwayFumbleReturnTouchdowns(null);
+        }
+        if (\array_key_exists('AwayInterceptionReturnTouchdowns', $data) && $data['AwayInterceptionReturnTouchdowns'] !== null) {
             $object->setAwayInterceptionReturnTouchdowns($data['AwayInterceptionReturnTouchdowns']);
         }
-        if (\array_key_exists('AwayBlockedKicks', $data)) {
+        elseif (\array_key_exists('AwayInterceptionReturnTouchdowns', $data) && $data['AwayInterceptionReturnTouchdowns'] === null) {
+            $object->setAwayInterceptionReturnTouchdowns(null);
+        }
+        if (\array_key_exists('AwayBlockedKicks', $data) && $data['AwayBlockedKicks'] !== null) {
             $object->setAwayBlockedKicks($data['AwayBlockedKicks']);
         }
-        if (\array_key_exists('AwayPuntReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayBlockedKicks', $data) && $data['AwayBlockedKicks'] === null) {
+            $object->setAwayBlockedKicks(null);
+        }
+        if (\array_key_exists('AwayPuntReturnTouchdowns', $data) && $data['AwayPuntReturnTouchdowns'] !== null) {
             $object->setAwayPuntReturnTouchdowns($data['AwayPuntReturnTouchdowns']);
         }
-        if (\array_key_exists('AwayPuntReturnLong', $data)) {
+        elseif (\array_key_exists('AwayPuntReturnTouchdowns', $data) && $data['AwayPuntReturnTouchdowns'] === null) {
+            $object->setAwayPuntReturnTouchdowns(null);
+        }
+        if (\array_key_exists('AwayPuntReturnLong', $data) && $data['AwayPuntReturnLong'] !== null) {
             $object->setAwayPuntReturnLong($data['AwayPuntReturnLong']);
         }
-        if (\array_key_exists('AwayKickReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayPuntReturnLong', $data) && $data['AwayPuntReturnLong'] === null) {
+            $object->setAwayPuntReturnLong(null);
+        }
+        if (\array_key_exists('AwayKickReturnTouchdowns', $data) && $data['AwayKickReturnTouchdowns'] !== null) {
             $object->setAwayKickReturnTouchdowns($data['AwayKickReturnTouchdowns']);
         }
-        if (\array_key_exists('AwayKickReturnLong', $data)) {
+        elseif (\array_key_exists('AwayKickReturnTouchdowns', $data) && $data['AwayKickReturnTouchdowns'] === null) {
+            $object->setAwayKickReturnTouchdowns(null);
+        }
+        if (\array_key_exists('AwayKickReturnLong', $data) && $data['AwayKickReturnLong'] !== null) {
             $object->setAwayKickReturnLong($data['AwayKickReturnLong']);
         }
-        if (\array_key_exists('AwayBlockedKickReturnYards', $data)) {
+        elseif (\array_key_exists('AwayKickReturnLong', $data) && $data['AwayKickReturnLong'] === null) {
+            $object->setAwayKickReturnLong(null);
+        }
+        if (\array_key_exists('AwayBlockedKickReturnYards', $data) && $data['AwayBlockedKickReturnYards'] !== null) {
             $object->setAwayBlockedKickReturnYards($data['AwayBlockedKickReturnYards']);
         }
-        if (\array_key_exists('AwayBlockedKickReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayBlockedKickReturnYards', $data) && $data['AwayBlockedKickReturnYards'] === null) {
+            $object->setAwayBlockedKickReturnYards(null);
+        }
+        if (\array_key_exists('AwayBlockedKickReturnTouchdowns', $data) && $data['AwayBlockedKickReturnTouchdowns'] !== null) {
             $object->setAwayBlockedKickReturnTouchdowns($data['AwayBlockedKickReturnTouchdowns']);
         }
-        if (\array_key_exists('AwayFieldGoalReturnYards', $data)) {
+        elseif (\array_key_exists('AwayBlockedKickReturnTouchdowns', $data) && $data['AwayBlockedKickReturnTouchdowns'] === null) {
+            $object->setAwayBlockedKickReturnTouchdowns(null);
+        }
+        if (\array_key_exists('AwayFieldGoalReturnYards', $data) && $data['AwayFieldGoalReturnYards'] !== null) {
             $object->setAwayFieldGoalReturnYards($data['AwayFieldGoalReturnYards']);
         }
-        if (\array_key_exists('AwayFieldGoalReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('AwayFieldGoalReturnYards', $data) && $data['AwayFieldGoalReturnYards'] === null) {
+            $object->setAwayFieldGoalReturnYards(null);
+        }
+        if (\array_key_exists('AwayFieldGoalReturnTouchdowns', $data) && $data['AwayFieldGoalReturnTouchdowns'] !== null) {
             $object->setAwayFieldGoalReturnTouchdowns($data['AwayFieldGoalReturnTouchdowns']);
         }
-        if (\array_key_exists('AwayPuntNetYards', $data)) {
+        elseif (\array_key_exists('AwayFieldGoalReturnTouchdowns', $data) && $data['AwayFieldGoalReturnTouchdowns'] === null) {
+            $object->setAwayFieldGoalReturnTouchdowns(null);
+        }
+        if (\array_key_exists('AwayPuntNetYards', $data) && $data['AwayPuntNetYards'] !== null) {
             $object->setAwayPuntNetYards($data['AwayPuntNetYards']);
         }
-        if (\array_key_exists('HomeSoloTackles', $data)) {
+        elseif (\array_key_exists('AwayPuntNetYards', $data) && $data['AwayPuntNetYards'] === null) {
+            $object->setAwayPuntNetYards(null);
+        }
+        if (\array_key_exists('HomeSoloTackles', $data) && $data['HomeSoloTackles'] !== null) {
             $object->setHomeSoloTackles($data['HomeSoloTackles']);
         }
-        if (\array_key_exists('HomeAssistedTackles', $data)) {
+        elseif (\array_key_exists('HomeSoloTackles', $data) && $data['HomeSoloTackles'] === null) {
+            $object->setHomeSoloTackles(null);
+        }
+        if (\array_key_exists('HomeAssistedTackles', $data) && $data['HomeAssistedTackles'] !== null) {
             $object->setHomeAssistedTackles($data['HomeAssistedTackles']);
         }
-        if (\array_key_exists('HomeQuarterbackHits', $data)) {
+        elseif (\array_key_exists('HomeAssistedTackles', $data) && $data['HomeAssistedTackles'] === null) {
+            $object->setHomeAssistedTackles(null);
+        }
+        if (\array_key_exists('HomeQuarterbackHits', $data) && $data['HomeQuarterbackHits'] !== null) {
             $object->setHomeQuarterbackHits($data['HomeQuarterbackHits']);
         }
-        if (\array_key_exists('HomeTacklesForLoss', $data)) {
+        elseif (\array_key_exists('HomeQuarterbackHits', $data) && $data['HomeQuarterbackHits'] === null) {
+            $object->setHomeQuarterbackHits(null);
+        }
+        if (\array_key_exists('HomeTacklesForLoss', $data) && $data['HomeTacklesForLoss'] !== null) {
             $object->setHomeTacklesForLoss($data['HomeTacklesForLoss']);
         }
-        if (\array_key_exists('HomeSacks', $data)) {
+        elseif (\array_key_exists('HomeTacklesForLoss', $data) && $data['HomeTacklesForLoss'] === null) {
+            $object->setHomeTacklesForLoss(null);
+        }
+        if (\array_key_exists('HomeSacks', $data) && $data['HomeSacks'] !== null) {
             $object->setHomeSacks($data['HomeSacks']);
         }
-        if (\array_key_exists('HomeSackYards', $data)) {
+        elseif (\array_key_exists('HomeSacks', $data) && $data['HomeSacks'] === null) {
+            $object->setHomeSacks(null);
+        }
+        if (\array_key_exists('HomeSackYards', $data) && $data['HomeSackYards'] !== null) {
             $object->setHomeSackYards($data['HomeSackYards']);
         }
-        if (\array_key_exists('HomePassesDefended', $data)) {
+        elseif (\array_key_exists('HomeSackYards', $data) && $data['HomeSackYards'] === null) {
+            $object->setHomeSackYards(null);
+        }
+        if (\array_key_exists('HomePassesDefended', $data) && $data['HomePassesDefended'] !== null) {
             $object->setHomePassesDefended($data['HomePassesDefended']);
         }
-        if (\array_key_exists('HomeFumblesForced', $data)) {
+        elseif (\array_key_exists('HomePassesDefended', $data) && $data['HomePassesDefended'] === null) {
+            $object->setHomePassesDefended(null);
+        }
+        if (\array_key_exists('HomeFumblesForced', $data) && $data['HomeFumblesForced'] !== null) {
             $object->setHomeFumblesForced($data['HomeFumblesForced']);
         }
-        if (\array_key_exists('HomeFumblesRecovered', $data)) {
+        elseif (\array_key_exists('HomeFumblesForced', $data) && $data['HomeFumblesForced'] === null) {
+            $object->setHomeFumblesForced(null);
+        }
+        if (\array_key_exists('HomeFumblesRecovered', $data) && $data['HomeFumblesRecovered'] !== null) {
             $object->setHomeFumblesRecovered($data['HomeFumblesRecovered']);
         }
-        if (\array_key_exists('HomeFumbleReturnYards', $data)) {
+        elseif (\array_key_exists('HomeFumblesRecovered', $data) && $data['HomeFumblesRecovered'] === null) {
+            $object->setHomeFumblesRecovered(null);
+        }
+        if (\array_key_exists('HomeFumbleReturnYards', $data) && $data['HomeFumbleReturnYards'] !== null) {
             $object->setHomeFumbleReturnYards($data['HomeFumbleReturnYards']);
         }
-        if (\array_key_exists('HomeFumbleReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeFumbleReturnYards', $data) && $data['HomeFumbleReturnYards'] === null) {
+            $object->setHomeFumbleReturnYards(null);
+        }
+        if (\array_key_exists('HomeFumbleReturnTouchdowns', $data) && $data['HomeFumbleReturnTouchdowns'] !== null) {
             $object->setHomeFumbleReturnTouchdowns($data['HomeFumbleReturnTouchdowns']);
         }
-        if (\array_key_exists('HomeInterceptionReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeFumbleReturnTouchdowns', $data) && $data['HomeFumbleReturnTouchdowns'] === null) {
+            $object->setHomeFumbleReturnTouchdowns(null);
+        }
+        if (\array_key_exists('HomeInterceptionReturnTouchdowns', $data) && $data['HomeInterceptionReturnTouchdowns'] !== null) {
             $object->setHomeInterceptionReturnTouchdowns($data['HomeInterceptionReturnTouchdowns']);
         }
-        if (\array_key_exists('HomeBlockedKicks', $data)) {
+        elseif (\array_key_exists('HomeInterceptionReturnTouchdowns', $data) && $data['HomeInterceptionReturnTouchdowns'] === null) {
+            $object->setHomeInterceptionReturnTouchdowns(null);
+        }
+        if (\array_key_exists('HomeBlockedKicks', $data) && $data['HomeBlockedKicks'] !== null) {
             $object->setHomeBlockedKicks($data['HomeBlockedKicks']);
         }
-        if (\array_key_exists('HomePuntReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeBlockedKicks', $data) && $data['HomeBlockedKicks'] === null) {
+            $object->setHomeBlockedKicks(null);
+        }
+        if (\array_key_exists('HomePuntReturnTouchdowns', $data) && $data['HomePuntReturnTouchdowns'] !== null) {
             $object->setHomePuntReturnTouchdowns($data['HomePuntReturnTouchdowns']);
         }
-        if (\array_key_exists('HomePuntReturnLong', $data)) {
+        elseif (\array_key_exists('HomePuntReturnTouchdowns', $data) && $data['HomePuntReturnTouchdowns'] === null) {
+            $object->setHomePuntReturnTouchdowns(null);
+        }
+        if (\array_key_exists('HomePuntReturnLong', $data) && $data['HomePuntReturnLong'] !== null) {
             $object->setHomePuntReturnLong($data['HomePuntReturnLong']);
         }
-        if (\array_key_exists('HomeKickReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('HomePuntReturnLong', $data) && $data['HomePuntReturnLong'] === null) {
+            $object->setHomePuntReturnLong(null);
+        }
+        if (\array_key_exists('HomeKickReturnTouchdowns', $data) && $data['HomeKickReturnTouchdowns'] !== null) {
             $object->setHomeKickReturnTouchdowns($data['HomeKickReturnTouchdowns']);
         }
-        if (\array_key_exists('HomeKickReturnLong', $data)) {
+        elseif (\array_key_exists('HomeKickReturnTouchdowns', $data) && $data['HomeKickReturnTouchdowns'] === null) {
+            $object->setHomeKickReturnTouchdowns(null);
+        }
+        if (\array_key_exists('HomeKickReturnLong', $data) && $data['HomeKickReturnLong'] !== null) {
             $object->setHomeKickReturnLong($data['HomeKickReturnLong']);
         }
-        if (\array_key_exists('HomeBlockedKickReturnYards', $data)) {
+        elseif (\array_key_exists('HomeKickReturnLong', $data) && $data['HomeKickReturnLong'] === null) {
+            $object->setHomeKickReturnLong(null);
+        }
+        if (\array_key_exists('HomeBlockedKickReturnYards', $data) && $data['HomeBlockedKickReturnYards'] !== null) {
             $object->setHomeBlockedKickReturnYards($data['HomeBlockedKickReturnYards']);
         }
-        if (\array_key_exists('HomeBlockedKickReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeBlockedKickReturnYards', $data) && $data['HomeBlockedKickReturnYards'] === null) {
+            $object->setHomeBlockedKickReturnYards(null);
+        }
+        if (\array_key_exists('HomeBlockedKickReturnTouchdowns', $data) && $data['HomeBlockedKickReturnTouchdowns'] !== null) {
             $object->setHomeBlockedKickReturnTouchdowns($data['HomeBlockedKickReturnTouchdowns']);
         }
-        if (\array_key_exists('HomeFieldGoalReturnYards', $data)) {
+        elseif (\array_key_exists('HomeBlockedKickReturnTouchdowns', $data) && $data['HomeBlockedKickReturnTouchdowns'] === null) {
+            $object->setHomeBlockedKickReturnTouchdowns(null);
+        }
+        if (\array_key_exists('HomeFieldGoalReturnYards', $data) && $data['HomeFieldGoalReturnYards'] !== null) {
             $object->setHomeFieldGoalReturnYards($data['HomeFieldGoalReturnYards']);
         }
-        if (\array_key_exists('HomeFieldGoalReturnTouchdowns', $data)) {
+        elseif (\array_key_exists('HomeFieldGoalReturnYards', $data) && $data['HomeFieldGoalReturnYards'] === null) {
+            $object->setHomeFieldGoalReturnYards(null);
+        }
+        if (\array_key_exists('HomeFieldGoalReturnTouchdowns', $data) && $data['HomeFieldGoalReturnTouchdowns'] !== null) {
             $object->setHomeFieldGoalReturnTouchdowns($data['HomeFieldGoalReturnTouchdowns']);
         }
-        if (\array_key_exists('HomePuntNetYards', $data)) {
+        elseif (\array_key_exists('HomeFieldGoalReturnTouchdowns', $data) && $data['HomeFieldGoalReturnTouchdowns'] === null) {
+            $object->setHomeFieldGoalReturnTouchdowns(null);
+        }
+        if (\array_key_exists('HomePuntNetYards', $data) && $data['HomePuntNetYards'] !== null) {
             $object->setHomePuntNetYards($data['HomePuntNetYards']);
         }
-        if (\array_key_exists('IsGameOver', $data)) {
+        elseif (\array_key_exists('HomePuntNetYards', $data) && $data['HomePuntNetYards'] === null) {
+            $object->setHomePuntNetYards(null);
+        }
+        if (\array_key_exists('IsGameOver', $data) && $data['IsGameOver'] !== null) {
             $object->setIsGameOver($data['IsGameOver']);
+        }
+        elseif (\array_key_exists('IsGameOver', $data) && $data['IsGameOver'] === null) {
+            $object->setIsGameOver(null);
         }
         if (\array_key_exists('GameID', $data)) {
             $object->setGameID($data['GameID']);
         }
-        if (\array_key_exists('StadiumID', $data)) {
+        if (\array_key_exists('StadiumID', $data) && $data['StadiumID'] !== null) {
             $object->setStadiumID($data['StadiumID']);
         }
-        if (\array_key_exists('AwayTwoPointConversionReturns', $data)) {
+        elseif (\array_key_exists('StadiumID', $data) && $data['StadiumID'] === null) {
+            $object->setStadiumID(null);
+        }
+        if (\array_key_exists('AwayTwoPointConversionReturns', $data) && $data['AwayTwoPointConversionReturns'] !== null) {
             $object->setAwayTwoPointConversionReturns($data['AwayTwoPointConversionReturns']);
         }
-        if (\array_key_exists('HomeTwoPointConversionReturns', $data)) {
+        elseif (\array_key_exists('AwayTwoPointConversionReturns', $data) && $data['AwayTwoPointConversionReturns'] === null) {
+            $object->setAwayTwoPointConversionReturns(null);
+        }
+        if (\array_key_exists('HomeTwoPointConversionReturns', $data) && $data['HomeTwoPointConversionReturns'] !== null) {
             $object->setHomeTwoPointConversionReturns($data['HomeTwoPointConversionReturns']);
+        }
+        elseif (\array_key_exists('HomeTwoPointConversionReturns', $data) && $data['HomeTwoPointConversionReturns'] === null) {
+            $object->setHomeTwoPointConversionReturns(null);
         }
         if (\array_key_exists('ScoreID', $data)) {
             $object->setScoreID($data['ScoreID']);

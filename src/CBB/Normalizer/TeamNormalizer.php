@@ -39,47 +39,83 @@ class TeamNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('TeamID', $data)) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Key', $data)) {
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
+        }
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('School', $data)) {
+        if (\array_key_exists('School', $data) && $data['School'] !== null) {
             $object->setSchool($data['School']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('School', $data) && $data['School'] === null) {
+            $object->setSchool(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('ApRank', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('ApRank', $data) && $data['ApRank'] !== null) {
             $object->setApRank($data['ApRank']);
         }
-        if (\array_key_exists('Wins', $data)) {
+        elseif (\array_key_exists('ApRank', $data) && $data['ApRank'] === null) {
+            $object->setApRank(null);
+        }
+        if (\array_key_exists('Wins', $data) && $data['Wins'] !== null) {
             $object->setWins($data['Wins']);
         }
-        if (\array_key_exists('Losses', $data)) {
+        elseif (\array_key_exists('Wins', $data) && $data['Wins'] === null) {
+            $object->setWins(null);
+        }
+        if (\array_key_exists('Losses', $data) && $data['Losses'] !== null) {
             $object->setLosses($data['Losses']);
         }
-        if (\array_key_exists('ConferenceWins', $data)) {
+        elseif (\array_key_exists('Losses', $data) && $data['Losses'] === null) {
+            $object->setLosses(null);
+        }
+        if (\array_key_exists('ConferenceWins', $data) && $data['ConferenceWins'] !== null) {
             $object->setConferenceWins($data['ConferenceWins']);
         }
-        if (\array_key_exists('ConferenceLosses', $data)) {
+        elseif (\array_key_exists('ConferenceWins', $data) && $data['ConferenceWins'] === null) {
+            $object->setConferenceWins(null);
+        }
+        if (\array_key_exists('ConferenceLosses', $data) && $data['ConferenceLosses'] !== null) {
             $object->setConferenceLosses($data['ConferenceLosses']);
+        }
+        elseif (\array_key_exists('ConferenceLosses', $data) && $data['ConferenceLosses'] === null) {
+            $object->setConferenceLosses(null);
         }
         if (\array_key_exists('GlobalTeamID', $data)) {
             $object->setGlobalTeamID($data['GlobalTeamID']);
         }
-        if (\array_key_exists('ConferenceID', $data)) {
+        if (\array_key_exists('ConferenceID', $data) && $data['ConferenceID'] !== null) {
             $object->setConferenceID($data['ConferenceID']);
         }
-        if (\array_key_exists('Conference', $data)) {
+        elseif (\array_key_exists('ConferenceID', $data) && $data['ConferenceID'] === null) {
+            $object->setConferenceID(null);
+        }
+        if (\array_key_exists('Conference', $data) && $data['Conference'] !== null) {
             $object->setConference($data['Conference']);
         }
-        if (\array_key_exists('TeamLogoUrl', $data)) {
+        elseif (\array_key_exists('Conference', $data) && $data['Conference'] === null) {
+            $object->setConference(null);
+        }
+        if (\array_key_exists('TeamLogoUrl', $data) && $data['TeamLogoUrl'] !== null) {
             $object->setTeamLogoUrl($data['TeamLogoUrl']);
         }
-        if (\array_key_exists('ShortDisplayName', $data)) {
+        elseif (\array_key_exists('TeamLogoUrl', $data) && $data['TeamLogoUrl'] === null) {
+            $object->setTeamLogoUrl(null);
+        }
+        if (\array_key_exists('ShortDisplayName', $data) && $data['ShortDisplayName'] !== null) {
             $object->setShortDisplayName($data['ShortDisplayName']);
+        }
+        elseif (\array_key_exists('ShortDisplayName', $data) && $data['ShortDisplayName'] === null) {
+            $object->setShortDisplayName(null);
         }
         if (\array_key_exists('Stadium', $data)) {
             $object->setStadium($this->denormalizer->denormalize($data['Stadium'], 'Sportsdata\\API\\CBB\\Model\\Stadium', 'json', $context));

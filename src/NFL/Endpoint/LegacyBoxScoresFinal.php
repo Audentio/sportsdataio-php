@@ -10,7 +10,7 @@ class LegacyBoxScoresFinal extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoi
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML')
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }

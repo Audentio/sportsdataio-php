@@ -31,49 +31,49 @@ class PlayerOwnership
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $ownershipPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $deltaOwnershipPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $startPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $deltaStartPercentage;
     /**
@@ -163,20 +163,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -184,20 +184,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -205,20 +205,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -226,20 +226,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -247,20 +247,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getOwnershipPercentage() : float
+    public function getOwnershipPercentage() : ?float
     {
         return $this->ownershipPercentage;
     }
     /**
      * 
      *
-     * @param float $ownershipPercentage
+     * @param float|null $ownershipPercentage
      *
      * @return self
      */
-    public function setOwnershipPercentage(float $ownershipPercentage) : self
+    public function setOwnershipPercentage(?float $ownershipPercentage) : self
     {
         $this->ownershipPercentage = $ownershipPercentage;
         return $this;
@@ -268,20 +268,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDeltaOwnershipPercentage() : float
+    public function getDeltaOwnershipPercentage() : ?float
     {
         return $this->deltaOwnershipPercentage;
     }
     /**
      * 
      *
-     * @param float $deltaOwnershipPercentage
+     * @param float|null $deltaOwnershipPercentage
      *
      * @return self
      */
-    public function setDeltaOwnershipPercentage(float $deltaOwnershipPercentage) : self
+    public function setDeltaOwnershipPercentage(?float $deltaOwnershipPercentage) : self
     {
         $this->deltaOwnershipPercentage = $deltaOwnershipPercentage;
         return $this;
@@ -289,20 +289,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStartPercentage() : float
+    public function getStartPercentage() : ?float
     {
         return $this->startPercentage;
     }
     /**
      * 
      *
-     * @param float $startPercentage
+     * @param float|null $startPercentage
      *
      * @return self
      */
-    public function setStartPercentage(float $startPercentage) : self
+    public function setStartPercentage(?float $startPercentage) : self
     {
         $this->startPercentage = $startPercentage;
         return $this;
@@ -310,20 +310,20 @@ class PlayerOwnership
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDeltaStartPercentage() : float
+    public function getDeltaStartPercentage() : ?float
     {
         return $this->deltaStartPercentage;
     }
     /**
      * 
      *
-     * @param float $deltaStartPercentage
+     * @param float|null $deltaStartPercentage
      *
      * @return self
      */
-    public function setDeltaStartPercentage(float $deltaStartPercentage) : self
+    public function setDeltaStartPercentage(?float $deltaStartPercentage) : self
     {
         $this->deltaStartPercentage = $deltaStartPercentage;
         return $this;

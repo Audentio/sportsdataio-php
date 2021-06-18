@@ -4,18 +4,18 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class BoxScore extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $gameid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $gameid The GameID of an CFB game.  GameIDs can be found in the Games API.  Valid entries are <code>1148</code> or <code>1149</code>
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $gameid)
+    public function __construct(string $gameid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->gameid = $gameid;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BoxScore extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implement
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{gameid}'), array($this->format, $this->gameid), '/stats/{format}/BoxScore/{gameid}');
+        return str_replace(array('{gameid}', '{format}'), array($this->gameid, $this->format), '/stats/{format}/BoxScore/{gameid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

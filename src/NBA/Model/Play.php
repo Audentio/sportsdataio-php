@@ -19,7 +19,7 @@ class Play
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quarterName;
     /**
@@ -31,193 +31,193 @@ class Play
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingSeconds;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $potentialPoints;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $points;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $shotMade;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $category;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opponentID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $receivingTeamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $receivingTeam;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $assistedByPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $blockedByPlayerID;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $fastBreak;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $sideOfBasket;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $substituteInPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $substituteOutPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homePlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $receivingPlayerID;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $baselineOffsetPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sidelineOffsetPercentage;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $coordinates;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $stolenByPlayerID;
     /**
@@ -265,20 +265,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuarterName() : string
+    public function getQuarterName() : ?string
     {
         return $this->quarterName;
     }
     /**
      * 
      *
-     * @param string $quarterName
+     * @param string|null $quarterName
      *
      * @return self
      */
-    public function setQuarterName(string $quarterName) : self
+    public function setQuarterName(?string $quarterName) : self
     {
         $this->quarterName = $quarterName;
         return $this;
@@ -307,20 +307,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingMinutes() : int
+    public function getTimeRemainingMinutes() : ?int
     {
         return $this->timeRemainingMinutes;
     }
     /**
      * 
      *
-     * @param int $timeRemainingMinutes
+     * @param int|null $timeRemainingMinutes
      *
      * @return self
      */
-    public function setTimeRemainingMinutes(int $timeRemainingMinutes) : self
+    public function setTimeRemainingMinutes(?int $timeRemainingMinutes) : self
     {
         $this->timeRemainingMinutes = $timeRemainingMinutes;
         return $this;
@@ -328,20 +328,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingSeconds() : int
+    public function getTimeRemainingSeconds() : ?int
     {
         return $this->timeRemainingSeconds;
     }
     /**
      * 
      *
-     * @param int $timeRemainingSeconds
+     * @param int|null $timeRemainingSeconds
      *
      * @return self
      */
-    public function setTimeRemainingSeconds(int $timeRemainingSeconds) : self
+    public function setTimeRemainingSeconds(?int $timeRemainingSeconds) : self
     {
         $this->timeRemainingSeconds = $timeRemainingSeconds;
         return $this;
@@ -349,20 +349,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamScore() : int
+    public function getAwayTeamScore() : ?int
     {
         return $this->awayTeamScore;
     }
     /**
      * 
      *
-     * @param int $awayTeamScore
+     * @param int|null $awayTeamScore
      *
      * @return self
      */
-    public function setAwayTeamScore(int $awayTeamScore) : self
+    public function setAwayTeamScore(?int $awayTeamScore) : self
     {
         $this->awayTeamScore = $awayTeamScore;
         return $this;
@@ -370,20 +370,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamScore() : int
+    public function getHomeTeamScore() : ?int
     {
         return $this->homeTeamScore;
     }
     /**
      * 
      *
-     * @param int $homeTeamScore
+     * @param int|null $homeTeamScore
      *
      * @return self
      */
-    public function setHomeTeamScore(int $homeTeamScore) : self
+    public function setHomeTeamScore(?int $homeTeamScore) : self
     {
         $this->homeTeamScore = $homeTeamScore;
         return $this;
@@ -391,20 +391,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPotentialPoints() : int
+    public function getPotentialPoints() : ?int
     {
         return $this->potentialPoints;
     }
     /**
      * 
      *
-     * @param int $potentialPoints
+     * @param int|null $potentialPoints
      *
      * @return self
      */
-    public function setPotentialPoints(int $potentialPoints) : self
+    public function setPotentialPoints(?int $potentialPoints) : self
     {
         $this->potentialPoints = $potentialPoints;
         return $this;
@@ -412,20 +412,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPoints() : int
+    public function getPoints() : ?int
     {
         return $this->points;
     }
     /**
      * 
      *
-     * @param int $points
+     * @param int|null $points
      *
      * @return self
      */
-    public function setPoints(int $points) : self
+    public function setPoints(?int $points) : self
     {
         $this->points = $points;
         return $this;
@@ -433,20 +433,20 @@ class Play
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getShotMade() : bool
+    public function getShotMade() : ?bool
     {
         return $this->shotMade;
     }
     /**
      * 
      *
-     * @param bool $shotMade
+     * @param bool|null $shotMade
      *
      * @return self
      */
-    public function setShotMade(bool $shotMade) : self
+    public function setShotMade(?bool $shotMade) : self
     {
         $this->shotMade = $shotMade;
         return $this;
@@ -454,20 +454,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCategory() : string
+    public function getCategory() : ?string
     {
         return $this->category;
     }
     /**
      * 
      *
-     * @param string $category
+     * @param string|null $category
      *
      * @return self
      */
-    public function setCategory(string $category) : self
+    public function setCategory(?string $category) : self
     {
         $this->category = $category;
         return $this;
@@ -475,20 +475,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -496,20 +496,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -517,20 +517,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -538,20 +538,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpponentID() : int
+    public function getOpponentID() : ?int
     {
         return $this->opponentID;
     }
     /**
      * 
      *
-     * @param int $opponentID
+     * @param int|null $opponentID
      *
      * @return self
      */
-    public function setOpponentID(int $opponentID) : self
+    public function setOpponentID(?int $opponentID) : self
     {
         $this->opponentID = $opponentID;
         return $this;
@@ -559,20 +559,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -580,20 +580,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getReceivingTeamID() : int
+    public function getReceivingTeamID() : ?int
     {
         return $this->receivingTeamID;
     }
     /**
      * 
      *
-     * @param int $receivingTeamID
+     * @param int|null $receivingTeamID
      *
      * @return self
      */
-    public function setReceivingTeamID(int $receivingTeamID) : self
+    public function setReceivingTeamID(?int $receivingTeamID) : self
     {
         $this->receivingTeamID = $receivingTeamID;
         return $this;
@@ -601,20 +601,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getReceivingTeam() : string
+    public function getReceivingTeam() : ?string
     {
         return $this->receivingTeam;
     }
     /**
      * 
      *
-     * @param string $receivingTeam
+     * @param string|null $receivingTeam
      *
      * @return self
      */
-    public function setReceivingTeam(string $receivingTeam) : self
+    public function setReceivingTeam(?string $receivingTeam) : self
     {
         $this->receivingTeam = $receivingTeam;
         return $this;
@@ -622,20 +622,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -643,20 +643,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerID() : int
+    public function getPlayerID() : ?int
     {
         return $this->playerID;
     }
     /**
      * 
      *
-     * @param int $playerID
+     * @param int|null $playerID
      *
      * @return self
      */
-    public function setPlayerID(int $playerID) : self
+    public function setPlayerID(?int $playerID) : self
     {
         $this->playerID = $playerID;
         return $this;
@@ -664,20 +664,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssistedByPlayerID() : int
+    public function getAssistedByPlayerID() : ?int
     {
         return $this->assistedByPlayerID;
     }
     /**
      * 
      *
-     * @param int $assistedByPlayerID
+     * @param int|null $assistedByPlayerID
      *
      * @return self
      */
-    public function setAssistedByPlayerID(int $assistedByPlayerID) : self
+    public function setAssistedByPlayerID(?int $assistedByPlayerID) : self
     {
         $this->assistedByPlayerID = $assistedByPlayerID;
         return $this;
@@ -685,20 +685,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBlockedByPlayerID() : int
+    public function getBlockedByPlayerID() : ?int
     {
         return $this->blockedByPlayerID;
     }
     /**
      * 
      *
-     * @param int $blockedByPlayerID
+     * @param int|null $blockedByPlayerID
      *
      * @return self
      */
-    public function setBlockedByPlayerID(int $blockedByPlayerID) : self
+    public function setBlockedByPlayerID(?int $blockedByPlayerID) : self
     {
         $this->blockedByPlayerID = $blockedByPlayerID;
         return $this;
@@ -706,20 +706,20 @@ class Play
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getFastBreak() : bool
+    public function getFastBreak() : ?bool
     {
         return $this->fastBreak;
     }
     /**
      * 
      *
-     * @param bool $fastBreak
+     * @param bool|null $fastBreak
      *
      * @return self
      */
-    public function setFastBreak(bool $fastBreak) : self
+    public function setFastBreak(?bool $fastBreak) : self
     {
         $this->fastBreak = $fastBreak;
         return $this;
@@ -727,20 +727,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSideOfBasket() : string
+    public function getSideOfBasket() : ?string
     {
         return $this->sideOfBasket;
     }
     /**
      * 
      *
-     * @param string $sideOfBasket
+     * @param string|null $sideOfBasket
      *
      * @return self
      */
-    public function setSideOfBasket(string $sideOfBasket) : self
+    public function setSideOfBasket(?string $sideOfBasket) : self
     {
         $this->sideOfBasket = $sideOfBasket;
         return $this;
@@ -748,20 +748,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -769,20 +769,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -790,20 +790,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSubstituteInPlayerID() : int
+    public function getSubstituteInPlayerID() : ?int
     {
         return $this->substituteInPlayerID;
     }
     /**
      * 
      *
-     * @param int $substituteInPlayerID
+     * @param int|null $substituteInPlayerID
      *
      * @return self
      */
-    public function setSubstituteInPlayerID(int $substituteInPlayerID) : self
+    public function setSubstituteInPlayerID(?int $substituteInPlayerID) : self
     {
         $this->substituteInPlayerID = $substituteInPlayerID;
         return $this;
@@ -811,20 +811,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSubstituteOutPlayerID() : int
+    public function getSubstituteOutPlayerID() : ?int
     {
         return $this->substituteOutPlayerID;
     }
     /**
      * 
      *
-     * @param int $substituteOutPlayerID
+     * @param int|null $substituteOutPlayerID
      *
      * @return self
      */
-    public function setSubstituteOutPlayerID(int $substituteOutPlayerID) : self
+    public function setSubstituteOutPlayerID(?int $substituteOutPlayerID) : self
     {
         $this->substituteOutPlayerID = $substituteOutPlayerID;
         return $this;
@@ -832,20 +832,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayPlayerID() : int
+    public function getAwayPlayerID() : ?int
     {
         return $this->awayPlayerID;
     }
     /**
      * 
      *
-     * @param int $awayPlayerID
+     * @param int|null $awayPlayerID
      *
      * @return self
      */
-    public function setAwayPlayerID(int $awayPlayerID) : self
+    public function setAwayPlayerID(?int $awayPlayerID) : self
     {
         $this->awayPlayerID = $awayPlayerID;
         return $this;
@@ -853,20 +853,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomePlayerID() : int
+    public function getHomePlayerID() : ?int
     {
         return $this->homePlayerID;
     }
     /**
      * 
      *
-     * @param int $homePlayerID
+     * @param int|null $homePlayerID
      *
      * @return self
      */
-    public function setHomePlayerID(int $homePlayerID) : self
+    public function setHomePlayerID(?int $homePlayerID) : self
     {
         $this->homePlayerID = $homePlayerID;
         return $this;
@@ -874,20 +874,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getReceivingPlayerID() : int
+    public function getReceivingPlayerID() : ?int
     {
         return $this->receivingPlayerID;
     }
     /**
      * 
      *
-     * @param int $receivingPlayerID
+     * @param int|null $receivingPlayerID
      *
      * @return self
      */
-    public function setReceivingPlayerID(int $receivingPlayerID) : self
+    public function setReceivingPlayerID(?int $receivingPlayerID) : self
     {
         $this->receivingPlayerID = $receivingPlayerID;
         return $this;
@@ -895,20 +895,20 @@ class Play
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaselineOffsetPercentage() : float
+    public function getBaselineOffsetPercentage() : ?float
     {
         return $this->baselineOffsetPercentage;
     }
     /**
      * 
      *
-     * @param float $baselineOffsetPercentage
+     * @param float|null $baselineOffsetPercentage
      *
      * @return self
      */
-    public function setBaselineOffsetPercentage(float $baselineOffsetPercentage) : self
+    public function setBaselineOffsetPercentage(?float $baselineOffsetPercentage) : self
     {
         $this->baselineOffsetPercentage = $baselineOffsetPercentage;
         return $this;
@@ -916,20 +916,20 @@ class Play
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSidelineOffsetPercentage() : float
+    public function getSidelineOffsetPercentage() : ?float
     {
         return $this->sidelineOffsetPercentage;
     }
     /**
      * 
      *
-     * @param float $sidelineOffsetPercentage
+     * @param float|null $sidelineOffsetPercentage
      *
      * @return self
      */
-    public function setSidelineOffsetPercentage(float $sidelineOffsetPercentage) : self
+    public function setSidelineOffsetPercentage(?float $sidelineOffsetPercentage) : self
     {
         $this->sidelineOffsetPercentage = $sidelineOffsetPercentage;
         return $this;
@@ -937,20 +937,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCoordinates() : string
+    public function getCoordinates() : ?string
     {
         return $this->coordinates;
     }
     /**
      * 
      *
-     * @param string $coordinates
+     * @param string|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(string $coordinates) : self
+    public function setCoordinates(?string $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;
@@ -958,20 +958,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getStolenByPlayerID() : int
+    public function getStolenByPlayerID() : ?int
     {
         return $this->stolenByPlayerID;
     }
     /**
      * 
      *
-     * @param int $stolenByPlayerID
+     * @param int|null $stolenByPlayerID
      *
      * @return self
      */
-    public function setStolenByPlayerID(int $stolenByPlayerID) : self
+    public function setStolenByPlayerID(?int $stolenByPlayerID) : self
     {
         $this->stolenByPlayerID = $stolenByPlayerID;
         return $this;

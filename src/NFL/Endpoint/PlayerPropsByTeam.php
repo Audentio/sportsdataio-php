@@ -4,24 +4,24 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class PlayerPropsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $week;
+    protected $season;
     protected $team;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $season Year of the season and the season type. If no season type is provided, then the default is regular season. <br>Examples: <code>2018REG</code>, <code>2018PRE</code>, <code>2018POST</code>
      * @param string $week Week of the season. Valid values are as follows: Preseason 0 to 4, Regular Season 1 to 17, Postseason 1 to 4. Example: <code>1</code>, <code>2</code>, etc
+     * @param string $season Year of the season and the season type. If no season type is provided, then the default is regular season. <br>Examples: <code>2018REG</code>, <code>2018PRE</code>, <code>2018POST</code>
      * @param string $team Abbreviation of the team. Example: <code>PHI</code>, <code>NE</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $season, string $week, string $team)
+    public function __construct(string $week, string $season, string $team, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->week = $week;
+        $this->season = $season;
         $this->team = $team;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -30,7 +30,7 @@ class PlayerPropsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint 
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{week}', '{team}'), array($this->format, $this->season, $this->week, $this->team), '/odds/{format}/PlayerPropsByTeam/{season}/{week}/{team}');
+        return str_replace(array('{week}', '{season}', '{team}', '{format}'), array($this->week, $this->season, $this->team, $this->format), '/odds/{format}/PlayerPropsByTeam/{season}/{week}/{team}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

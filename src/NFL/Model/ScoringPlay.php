@@ -7,7 +7,7 @@ class ScoringPlay
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gameKey;
     /**
@@ -37,61 +37,61 @@ class ScoringPlay
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $awayTeam;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $homeTeam;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $date;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $sequence;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quarter;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $timeRemaining;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $playDescription;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScore;
     /**
@@ -103,20 +103,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGameKey() : string
+    public function getGameKey() : ?string
     {
         return $this->gameKey;
     }
     /**
      * 
      *
-     * @param string $gameKey
+     * @param string|null $gameKey
      *
      * @return self
      */
-    public function setGameKey(string $gameKey) : self
+    public function setGameKey(?string $gameKey) : self
     {
         $this->gameKey = $gameKey;
         return $this;
@@ -208,20 +208,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAwayTeam() : string
+    public function getAwayTeam() : ?string
     {
         return $this->awayTeam;
     }
     /**
      * 
      *
-     * @param string $awayTeam
+     * @param string|null $awayTeam
      *
      * @return self
      */
-    public function setAwayTeam(string $awayTeam) : self
+    public function setAwayTeam(?string $awayTeam) : self
     {
         $this->awayTeam = $awayTeam;
         return $this;
@@ -229,20 +229,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHomeTeam() : string
+    public function getHomeTeam() : ?string
     {
         return $this->homeTeam;
     }
     /**
      * 
      *
-     * @param string $homeTeam
+     * @param string|null $homeTeam
      *
      * @return self
      */
-    public function setHomeTeam(string $homeTeam) : self
+    public function setHomeTeam(?string $homeTeam) : self
     {
         $this->homeTeam = $homeTeam;
         return $this;
@@ -250,20 +250,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDate() : string
+    public function getDate() : ?string
     {
         return $this->date;
     }
     /**
      * 
      *
-     * @param string $date
+     * @param string|null $date
      *
      * @return self
      */
-    public function setDate(string $date) : self
+    public function setDate(?string $date) : self
     {
         $this->date = $date;
         return $this;
@@ -271,20 +271,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSequence() : int
+    public function getSequence() : ?int
     {
         return $this->sequence;
     }
     /**
      * 
      *
-     * @param int $sequence
+     * @param int|null $sequence
      *
      * @return self
      */
-    public function setSequence(int $sequence) : self
+    public function setSequence(?int $sequence) : self
     {
         $this->sequence = $sequence;
         return $this;
@@ -292,20 +292,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -313,20 +313,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuarter() : string
+    public function getQuarter() : ?string
     {
         return $this->quarter;
     }
     /**
      * 
      *
-     * @param string $quarter
+     * @param string|null $quarter
      *
      * @return self
      */
-    public function setQuarter(string $quarter) : self
+    public function setQuarter(?string $quarter) : self
     {
         $this->quarter = $quarter;
         return $this;
@@ -334,20 +334,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTimeRemaining() : string
+    public function getTimeRemaining() : ?string
     {
         return $this->timeRemaining;
     }
     /**
      * 
      *
-     * @param string $timeRemaining
+     * @param string|null $timeRemaining
      *
      * @return self
      */
-    public function setTimeRemaining(string $timeRemaining) : self
+    public function setTimeRemaining(?string $timeRemaining) : self
     {
         $this->timeRemaining = $timeRemaining;
         return $this;
@@ -355,20 +355,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPlayDescription() : string
+    public function getPlayDescription() : ?string
     {
         return $this->playDescription;
     }
     /**
      * 
      *
-     * @param string $playDescription
+     * @param string|null $playDescription
      *
      * @return self
      */
-    public function setPlayDescription(string $playDescription) : self
+    public function setPlayDescription(?string $playDescription) : self
     {
         $this->playDescription = $playDescription;
         return $this;
@@ -376,20 +376,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScore() : int
+    public function getAwayScore() : ?int
     {
         return $this->awayScore;
     }
     /**
      * 
      *
-     * @param int $awayScore
+     * @param int|null $awayScore
      *
      * @return self
      */
-    public function setAwayScore(int $awayScore) : self
+    public function setAwayScore(?int $awayScore) : self
     {
         $this->awayScore = $awayScore;
         return $this;
@@ -397,20 +397,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScore() : int
+    public function getHomeScore() : ?int
     {
         return $this->homeScore;
     }
     /**
      * 
      *
-     * @param int $homeScore
+     * @param int|null $homeScore
      *
      * @return self
      */
-    public function setHomeScore(int $homeScore) : self
+    public function setHomeScore(?int $homeScore) : self
     {
         $this->homeScore = $homeScore;
         return $this;

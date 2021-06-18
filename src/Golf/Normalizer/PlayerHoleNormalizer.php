@@ -39,17 +39,29 @@ class PlayerHoleNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('PlayerRoundID', $data)) {
             $object->setPlayerRoundID($data['PlayerRoundID']);
         }
-        if (\array_key_exists('Number', $data)) {
+        if (\array_key_exists('Number', $data) && $data['Number'] !== null) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Par', $data)) {
+        elseif (\array_key_exists('Number', $data) && $data['Number'] === null) {
+            $object->setNumber(null);
+        }
+        if (\array_key_exists('Par', $data) && $data['Par'] !== null) {
             $object->setPar($data['Par']);
         }
-        if (\array_key_exists('Score', $data)) {
+        elseif (\array_key_exists('Par', $data) && $data['Par'] === null) {
+            $object->setPar(null);
+        }
+        if (\array_key_exists('Score', $data) && $data['Score'] !== null) {
             $object->setScore($data['Score']);
         }
-        if (\array_key_exists('ToPar', $data)) {
+        elseif (\array_key_exists('Score', $data) && $data['Score'] === null) {
+            $object->setScore(null);
+        }
+        if (\array_key_exists('ToPar', $data) && $data['ToPar'] !== null) {
             $object->setToPar($data['ToPar']);
+        }
+        elseif (\array_key_exists('ToPar', $data) && $data['ToPar'] === null) {
+            $object->setToPar(null);
         }
         if (\array_key_exists('HoleInOne', $data)) {
             $object->setHoleInOne($data['HoleInOne']);

@@ -45,20 +45,35 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('SeasonType', $data)) {
             $object->setSeasonType($data['SeasonType']);
         }
-        if (\array_key_exists('Status', $data)) {
+        if (\array_key_exists('Status', $data) && $data['Status'] !== null) {
             $object->setStatus($data['Status']);
         }
-        if (\array_key_exists('Day', $data)) {
+        elseif (\array_key_exists('Status', $data) && $data['Status'] === null) {
+            $object->setStatus(null);
+        }
+        if (\array_key_exists('Day', $data) && $data['Day'] !== null) {
             $object->setDay($data['Day']);
         }
-        if (\array_key_exists('DateTime', $data)) {
+        elseif (\array_key_exists('Day', $data) && $data['Day'] === null) {
+            $object->setDay(null);
+        }
+        if (\array_key_exists('DateTime', $data) && $data['DateTime'] !== null) {
             $object->setDateTime($data['DateTime']);
         }
-        if (\array_key_exists('AwayTeam', $data)) {
+        elseif (\array_key_exists('DateTime', $data) && $data['DateTime'] === null) {
+            $object->setDateTime(null);
+        }
+        if (\array_key_exists('AwayTeam', $data) && $data['AwayTeam'] !== null) {
             $object->setAwayTeam($data['AwayTeam']);
         }
-        if (\array_key_exists('HomeTeam', $data)) {
+        elseif (\array_key_exists('AwayTeam', $data) && $data['AwayTeam'] === null) {
+            $object->setAwayTeam(null);
+        }
+        if (\array_key_exists('HomeTeam', $data) && $data['HomeTeam'] !== null) {
             $object->setHomeTeam($data['HomeTeam']);
+        }
+        elseif (\array_key_exists('HomeTeam', $data) && $data['HomeTeam'] === null) {
+            $object->setHomeTeam(null);
         }
         if (\array_key_exists('AwayTeamID', $data)) {
             $object->setAwayTeamID($data['AwayTeamID']);
@@ -66,44 +81,83 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('HomeTeamID', $data)) {
             $object->setHomeTeamID($data['HomeTeamID']);
         }
-        if (\array_key_exists('StadiumID', $data)) {
+        if (\array_key_exists('StadiumID', $data) && $data['StadiumID'] !== null) {
             $object->setStadiumID($data['StadiumID']);
         }
-        if (\array_key_exists('Channel', $data)) {
+        elseif (\array_key_exists('StadiumID', $data) && $data['StadiumID'] === null) {
+            $object->setStadiumID(null);
+        }
+        if (\array_key_exists('Channel', $data) && $data['Channel'] !== null) {
             $object->setChannel($data['Channel']);
         }
-        if (\array_key_exists('Attendance', $data)) {
+        elseif (\array_key_exists('Channel', $data) && $data['Channel'] === null) {
+            $object->setChannel(null);
+        }
+        if (\array_key_exists('Attendance', $data) && $data['Attendance'] !== null) {
             $object->setAttendance($data['Attendance']);
         }
-        if (\array_key_exists('AwayTeamScore', $data)) {
+        elseif (\array_key_exists('Attendance', $data) && $data['Attendance'] === null) {
+            $object->setAttendance(null);
+        }
+        if (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] !== null) {
             $object->setAwayTeamScore($data['AwayTeamScore']);
         }
-        if (\array_key_exists('HomeTeamScore', $data)) {
+        elseif (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] === null) {
+            $object->setAwayTeamScore(null);
+        }
+        if (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] !== null) {
             $object->setHomeTeamScore($data['HomeTeamScore']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] === null) {
+            $object->setHomeTeamScore(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Quarter', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Quarter', $data) && $data['Quarter'] !== null) {
             $object->setQuarter($data['Quarter']);
         }
-        if (\array_key_exists('TimeRemainingMinutes', $data)) {
+        elseif (\array_key_exists('Quarter', $data) && $data['Quarter'] === null) {
+            $object->setQuarter(null);
+        }
+        if (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] !== null) {
             $object->setTimeRemainingMinutes($data['TimeRemainingMinutes']);
         }
-        if (\array_key_exists('TimeRemainingSeconds', $data)) {
+        elseif (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] === null) {
+            $object->setTimeRemainingMinutes(null);
+        }
+        if (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] !== null) {
             $object->setTimeRemainingSeconds($data['TimeRemainingSeconds']);
         }
-        if (\array_key_exists('PointSpread', $data)) {
+        elseif (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] === null) {
+            $object->setTimeRemainingSeconds(null);
+        }
+        if (\array_key_exists('PointSpread', $data) && $data['PointSpread'] !== null) {
             $object->setPointSpread($data['PointSpread']);
         }
-        if (\array_key_exists('OverUnder', $data)) {
+        elseif (\array_key_exists('PointSpread', $data) && $data['PointSpread'] === null) {
+            $object->setPointSpread(null);
+        }
+        if (\array_key_exists('OverUnder', $data) && $data['OverUnder'] !== null) {
             $object->setOverUnder($data['OverUnder']);
         }
-        if (\array_key_exists('AwayTeamMoneyLine', $data)) {
+        elseif (\array_key_exists('OverUnder', $data) && $data['OverUnder'] === null) {
+            $object->setOverUnder(null);
+        }
+        if (\array_key_exists('AwayTeamMoneyLine', $data) && $data['AwayTeamMoneyLine'] !== null) {
             $object->setAwayTeamMoneyLine($data['AwayTeamMoneyLine']);
         }
-        if (\array_key_exists('HomeTeamMoneyLine', $data)) {
+        elseif (\array_key_exists('AwayTeamMoneyLine', $data) && $data['AwayTeamMoneyLine'] === null) {
+            $object->setAwayTeamMoneyLine(null);
+        }
+        if (\array_key_exists('HomeTeamMoneyLine', $data) && $data['HomeTeamMoneyLine'] !== null) {
             $object->setHomeTeamMoneyLine($data['HomeTeamMoneyLine']);
+        }
+        elseif (\array_key_exists('HomeTeamMoneyLine', $data) && $data['HomeTeamMoneyLine'] === null) {
+            $object->setHomeTeamMoneyLine(null);
         }
         if (\array_key_exists('GlobalGameID', $data)) {
             $object->setGlobalGameID($data['GlobalGameID']);
@@ -114,14 +168,23 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('GlobalHomeTeamID', $data)) {
             $object->setGlobalHomeTeamID($data['GlobalHomeTeamID']);
         }
-        if (\array_key_exists('PointSpreadAwayTeamMoneyLine', $data)) {
+        if (\array_key_exists('PointSpreadAwayTeamMoneyLine', $data) && $data['PointSpreadAwayTeamMoneyLine'] !== null) {
             $object->setPointSpreadAwayTeamMoneyLine($data['PointSpreadAwayTeamMoneyLine']);
         }
-        if (\array_key_exists('PointSpreadHomeTeamMoneyLine', $data)) {
+        elseif (\array_key_exists('PointSpreadAwayTeamMoneyLine', $data) && $data['PointSpreadAwayTeamMoneyLine'] === null) {
+            $object->setPointSpreadAwayTeamMoneyLine(null);
+        }
+        if (\array_key_exists('PointSpreadHomeTeamMoneyLine', $data) && $data['PointSpreadHomeTeamMoneyLine'] !== null) {
             $object->setPointSpreadHomeTeamMoneyLine($data['PointSpreadHomeTeamMoneyLine']);
         }
-        if (\array_key_exists('LastPlay', $data)) {
+        elseif (\array_key_exists('PointSpreadHomeTeamMoneyLine', $data) && $data['PointSpreadHomeTeamMoneyLine'] === null) {
+            $object->setPointSpreadHomeTeamMoneyLine(null);
+        }
+        if (\array_key_exists('LastPlay', $data) && $data['LastPlay'] !== null) {
             $object->setLastPlay($data['LastPlay']);
+        }
+        elseif (\array_key_exists('LastPlay', $data) && $data['LastPlay'] === null) {
+            $object->setLastPlay(null);
         }
         if (\array_key_exists('IsClosed', $data)) {
             $object->setIsClosed($data['IsClosed']);
@@ -133,23 +196,41 @@ class GameNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             }
             $object->setQuarters($values);
         }
-        if (\array_key_exists('GameEndDateTime', $data)) {
+        if (\array_key_exists('GameEndDateTime', $data) && $data['GameEndDateTime'] !== null) {
             $object->setGameEndDateTime($data['GameEndDateTime']);
         }
-        if (\array_key_exists('HomeRotationNumber', $data)) {
+        elseif (\array_key_exists('GameEndDateTime', $data) && $data['GameEndDateTime'] === null) {
+            $object->setGameEndDateTime(null);
+        }
+        if (\array_key_exists('HomeRotationNumber', $data) && $data['HomeRotationNumber'] !== null) {
             $object->setHomeRotationNumber($data['HomeRotationNumber']);
         }
-        if (\array_key_exists('AwayRotationNumber', $data)) {
+        elseif (\array_key_exists('HomeRotationNumber', $data) && $data['HomeRotationNumber'] === null) {
+            $object->setHomeRotationNumber(null);
+        }
+        if (\array_key_exists('AwayRotationNumber', $data) && $data['AwayRotationNumber'] !== null) {
             $object->setAwayRotationNumber($data['AwayRotationNumber']);
         }
-        if (\array_key_exists('NeutralVenue', $data)) {
+        elseif (\array_key_exists('AwayRotationNumber', $data) && $data['AwayRotationNumber'] === null) {
+            $object->setAwayRotationNumber(null);
+        }
+        if (\array_key_exists('NeutralVenue', $data) && $data['NeutralVenue'] !== null) {
             $object->setNeutralVenue($data['NeutralVenue']);
         }
-        if (\array_key_exists('OverPayout', $data)) {
+        elseif (\array_key_exists('NeutralVenue', $data) && $data['NeutralVenue'] === null) {
+            $object->setNeutralVenue(null);
+        }
+        if (\array_key_exists('OverPayout', $data) && $data['OverPayout'] !== null) {
             $object->setOverPayout($data['OverPayout']);
         }
-        if (\array_key_exists('UnderPayout', $data)) {
+        elseif (\array_key_exists('OverPayout', $data) && $data['OverPayout'] === null) {
+            $object->setOverPayout(null);
+        }
+        if (\array_key_exists('UnderPayout', $data) && $data['UnderPayout'] !== null) {
             $object->setUnderPayout($data['UnderPayout']);
+        }
+        elseif (\array_key_exists('UnderPayout', $data) && $data['UnderPayout'] === null) {
+            $object->setUnderPayout(null);
         }
         return $object;
     }

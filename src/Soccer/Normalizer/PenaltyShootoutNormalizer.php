@@ -42,20 +42,32 @@ class PenaltyShootoutNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('GameId', $data)) {
             $object->setGameId($data['GameId']);
         }
-        if (\array_key_exists('Type', $data)) {
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
+        }
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
         }
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('PlayerId', $data)) {
+        if (\array_key_exists('PlayerId', $data) && $data['PlayerId'] !== null) {
             $object->setPlayerId($data['PlayerId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('PlayerId', $data) && $data['PlayerId'] === null) {
+            $object->setPlayerId(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
+        }
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
         }
         if (\array_key_exists('Order', $data)) {
             $object->setOrder($data['Order']);

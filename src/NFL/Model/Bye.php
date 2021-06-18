@@ -19,7 +19,7 @@ class Bye
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
@@ -67,20 +67,20 @@ class Bye
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;

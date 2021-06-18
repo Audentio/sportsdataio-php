@@ -4,23 +4,23 @@ namespace Sportsdata\API\Soccer\Endpoint;
 
 class PlayerSeasonStatsByPlayer extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Soccer\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $roundid;
     protected $playerid;
+    protected $roundid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $roundid Unique FantasyData Round ID. RoundIDs can be found in the Competition Hierarchy (League Hierarchy). 
-    Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc
     * @param string $playerid Unique FantasyData Player ID.
     Example:<code>90026231</code>.
+    * @param string $roundid Unique FantasyData Round ID. RoundIDs can be found in the Competition Hierarchy (League Hierarchy). 
+    Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $roundid, string $playerid)
+    public function __construct(string $playerid, string $roundid, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->roundid = $roundid;
         $this->playerid = $playerid;
+        $this->roundid = $roundid;
+        $this->format = $format;
     }
     use \Sportsdata\API\Soccer\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -29,7 +29,7 @@ class PlayerSeasonStatsByPlayer extends \Sportsdata\API\Soccer\Runtime\Client\Ba
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{roundid}', '{playerid}'), array($this->format, $this->roundid, $this->playerid), '/stats/{format}/PlayerSeasonStatsByPlayer/{roundid}/{playerid}');
+        return str_replace(array('{playerid}', '{roundid}', '{format}'), array($this->playerid, $this->roundid, $this->format), '/stats/{format}/PlayerSeasonStatsByPlayer/{roundid}/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

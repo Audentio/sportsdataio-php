@@ -36,38 +36,68 @@ class PlayerPuntingNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('PlayerGameID', $data)) {
+        if (\array_key_exists('PlayerGameID', $data) && $data['PlayerGameID'] !== null) {
             $object->setPlayerGameID($data['PlayerGameID']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        elseif (\array_key_exists('PlayerGameID', $data) && $data['PlayerGameID'] === null) {
+            $object->setPlayerGameID(null);
+        }
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('ShortName', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('ShortName', $data) && $data['ShortName'] !== null) {
             $object->setShortName($data['ShortName']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('ShortName', $data) && $data['ShortName'] === null) {
+            $object->setShortName(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
+        }
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
         }
         if (\array_key_exists('Number', $data)) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Position', $data)) {
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('PositionCategory', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('PositionCategory', $data) && $data['PositionCategory'] !== null) {
             $object->setPositionCategory($data['PositionCategory']);
         }
-        if (\array_key_exists('FantasyPosition', $data)) {
+        elseif (\array_key_exists('PositionCategory', $data) && $data['PositionCategory'] === null) {
+            $object->setPositionCategory(null);
+        }
+        if (\array_key_exists('FantasyPosition', $data) && $data['FantasyPosition'] !== null) {
             $object->setFantasyPosition($data['FantasyPosition']);
         }
-        if (\array_key_exists('FantasyPoints', $data)) {
+        elseif (\array_key_exists('FantasyPosition', $data) && $data['FantasyPosition'] === null) {
+            $object->setFantasyPosition(null);
+        }
+        if (\array_key_exists('FantasyPoints', $data) && $data['FantasyPoints'] !== null) {
             $object->setFantasyPoints($data['FantasyPoints']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('FantasyPoints', $data) && $data['FantasyPoints'] === null) {
+            $object->setFantasyPoints(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
+        }
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
         }
         if (\array_key_exists('Punts', $data)) {
             $object->setPunts($data['Punts']);

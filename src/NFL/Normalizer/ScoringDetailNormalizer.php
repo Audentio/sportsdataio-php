@@ -36,17 +36,26 @@ class ScoringDetailNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('GameKey', $data)) {
+        if (\array_key_exists('GameKey', $data) && $data['GameKey'] !== null) {
             $object->setGameKey($data['GameKey']);
+        }
+        elseif (\array_key_exists('GameKey', $data) && $data['GameKey'] === null) {
+            $object->setGameKey(null);
         }
         if (\array_key_exists('SeasonType', $data)) {
             $object->setSeasonType($data['SeasonType']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
+        }
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
         }
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
@@ -54,8 +63,11 @@ class ScoringDetailNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('Week', $data)) {
             $object->setWeek($data['Week']);
         }
-        if (\array_key_exists('ScoringType', $data)) {
+        if (\array_key_exists('ScoringType', $data) && $data['ScoringType'] !== null) {
             $object->setScoringType($data['ScoringType']);
+        }
+        elseif (\array_key_exists('ScoringType', $data) && $data['ScoringType'] === null) {
+            $object->setScoringType(null);
         }
         if (\array_key_exists('Length', $data)) {
             $object->setLength($data['Length']);
@@ -66,8 +78,11 @@ class ScoringDetailNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('PlayerGameID', $data)) {
             $object->setPlayerGameID($data['PlayerGameID']);
         }
-        if (\array_key_exists('ScoreID', $data)) {
+        if (\array_key_exists('ScoreID', $data) && $data['ScoreID'] !== null) {
             $object->setScoreID($data['ScoreID']);
+        }
+        elseif (\array_key_exists('ScoreID', $data) && $data['ScoreID'] === null) {
+            $object->setScoreID(null);
         }
         return $object;
     }

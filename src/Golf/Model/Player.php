@@ -13,139 +13,139 @@ class Player
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $weight;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $swings;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pgaDebut;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthCity;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthState;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $college;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $photoUrl;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $sportRadarPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pgaTourPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rotoworldPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rotoWirePlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fantasyAlarmPlayerID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $draftKingsName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $fantasyDraftName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $fanDuelName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fantasyDraftPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $draftKingsPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fanDuelPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yahooPlayerID;
     /**
@@ -172,20 +172,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -193,20 +193,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -214,20 +214,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWeight() : int
+    public function getWeight() : ?int
     {
         return $this->weight;
     }
     /**
      * 
      *
-     * @param int $weight
+     * @param int|null $weight
      *
      * @return self
      */
-    public function setWeight(int $weight) : self
+    public function setWeight(?int $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -235,20 +235,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSwings() : string
+    public function getSwings() : ?string
     {
         return $this->swings;
     }
     /**
      * 
      *
-     * @param string $swings
+     * @param string|null $swings
      *
      * @return self
      */
-    public function setSwings(string $swings) : self
+    public function setSwings(?string $swings) : self
     {
         $this->swings = $swings;
         return $this;
@@ -256,20 +256,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPgaDebut() : int
+    public function getPgaDebut() : ?int
     {
         return $this->pgaDebut;
     }
     /**
      * 
      *
-     * @param int $pgaDebut
+     * @param int|null $pgaDebut
      *
      * @return self
      */
-    public function setPgaDebut(int $pgaDebut) : self
+    public function setPgaDebut(?int $pgaDebut) : self
     {
         $this->pgaDebut = $pgaDebut;
         return $this;
@@ -277,20 +277,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -298,20 +298,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthDate() : string
+    public function getBirthDate() : ?string
     {
         return $this->birthDate;
     }
     /**
      * 
      *
-     * @param string $birthDate
+     * @param string|null $birthDate
      *
      * @return self
      */
-    public function setBirthDate(string $birthDate) : self
+    public function setBirthDate(?string $birthDate) : self
     {
         $this->birthDate = $birthDate;
         return $this;
@@ -319,20 +319,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthCity() : string
+    public function getBirthCity() : ?string
     {
         return $this->birthCity;
     }
     /**
      * 
      *
-     * @param string $birthCity
+     * @param string|null $birthCity
      *
      * @return self
      */
-    public function setBirthCity(string $birthCity) : self
+    public function setBirthCity(?string $birthCity) : self
     {
         $this->birthCity = $birthCity;
         return $this;
@@ -340,20 +340,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthState() : string
+    public function getBirthState() : ?string
     {
         return $this->birthState;
     }
     /**
      * 
      *
-     * @param string $birthState
+     * @param string|null $birthState
      *
      * @return self
      */
-    public function setBirthState(string $birthState) : self
+    public function setBirthState(?string $birthState) : self
     {
         $this->birthState = $birthState;
         return $this;
@@ -361,20 +361,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCollege() : string
+    public function getCollege() : ?string
     {
         return $this->college;
     }
     /**
      * 
      *
-     * @param string $college
+     * @param string|null $college
      *
      * @return self
      */
-    public function setCollege(string $college) : self
+    public function setCollege(?string $college) : self
     {
         $this->college = $college;
         return $this;
@@ -382,20 +382,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPhotoUrl() : string
+    public function getPhotoUrl() : ?string
     {
         return $this->photoUrl;
     }
     /**
      * 
      *
-     * @param string $photoUrl
+     * @param string|null $photoUrl
      *
      * @return self
      */
-    public function setPhotoUrl(string $photoUrl) : self
+    public function setPhotoUrl(?string $photoUrl) : self
     {
         $this->photoUrl = $photoUrl;
         return $this;
@@ -403,20 +403,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSportRadarPlayerID() : string
+    public function getSportRadarPlayerID() : ?string
     {
         return $this->sportRadarPlayerID;
     }
     /**
      * 
      *
-     * @param string $sportRadarPlayerID
+     * @param string|null $sportRadarPlayerID
      *
      * @return self
      */
-    public function setSportRadarPlayerID(string $sportRadarPlayerID) : self
+    public function setSportRadarPlayerID(?string $sportRadarPlayerID) : self
     {
         $this->sportRadarPlayerID = $sportRadarPlayerID;
         return $this;
@@ -424,20 +424,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPgaTourPlayerID() : int
+    public function getPgaTourPlayerID() : ?int
     {
         return $this->pgaTourPlayerID;
     }
     /**
      * 
      *
-     * @param int $pgaTourPlayerID
+     * @param int|null $pgaTourPlayerID
      *
      * @return self
      */
-    public function setPgaTourPlayerID(int $pgaTourPlayerID) : self
+    public function setPgaTourPlayerID(?int $pgaTourPlayerID) : self
     {
         $this->pgaTourPlayerID = $pgaTourPlayerID;
         return $this;
@@ -445,20 +445,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRotoworldPlayerID() : int
+    public function getRotoworldPlayerID() : ?int
     {
         return $this->rotoworldPlayerID;
     }
     /**
      * 
      *
-     * @param int $rotoworldPlayerID
+     * @param int|null $rotoworldPlayerID
      *
      * @return self
      */
-    public function setRotoworldPlayerID(int $rotoworldPlayerID) : self
+    public function setRotoworldPlayerID(?int $rotoworldPlayerID) : self
     {
         $this->rotoworldPlayerID = $rotoworldPlayerID;
         return $this;
@@ -466,20 +466,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRotoWirePlayerID() : int
+    public function getRotoWirePlayerID() : ?int
     {
         return $this->rotoWirePlayerID;
     }
     /**
      * 
      *
-     * @param int $rotoWirePlayerID
+     * @param int|null $rotoWirePlayerID
      *
      * @return self
      */
-    public function setRotoWirePlayerID(int $rotoWirePlayerID) : self
+    public function setRotoWirePlayerID(?int $rotoWirePlayerID) : self
     {
         $this->rotoWirePlayerID = $rotoWirePlayerID;
         return $this;
@@ -487,20 +487,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFantasyAlarmPlayerID() : int
+    public function getFantasyAlarmPlayerID() : ?int
     {
         return $this->fantasyAlarmPlayerID;
     }
     /**
      * 
      *
-     * @param int $fantasyAlarmPlayerID
+     * @param int|null $fantasyAlarmPlayerID
      *
      * @return self
      */
-    public function setFantasyAlarmPlayerID(int $fantasyAlarmPlayerID) : self
+    public function setFantasyAlarmPlayerID(?int $fantasyAlarmPlayerID) : self
     {
         $this->fantasyAlarmPlayerID = $fantasyAlarmPlayerID;
         return $this;
@@ -508,20 +508,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDraftKingsName() : string
+    public function getDraftKingsName() : ?string
     {
         return $this->draftKingsName;
     }
     /**
      * 
      *
-     * @param string $draftKingsName
+     * @param string|null $draftKingsName
      *
      * @return self
      */
-    public function setDraftKingsName(string $draftKingsName) : self
+    public function setDraftKingsName(?string $draftKingsName) : self
     {
         $this->draftKingsName = $draftKingsName;
         return $this;
@@ -529,20 +529,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFantasyDraftName() : string
+    public function getFantasyDraftName() : ?string
     {
         return $this->fantasyDraftName;
     }
     /**
      * 
      *
-     * @param string $fantasyDraftName
+     * @param string|null $fantasyDraftName
      *
      * @return self
      */
-    public function setFantasyDraftName(string $fantasyDraftName) : self
+    public function setFantasyDraftName(?string $fantasyDraftName) : self
     {
         $this->fantasyDraftName = $fantasyDraftName;
         return $this;
@@ -550,20 +550,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFanDuelName() : string
+    public function getFanDuelName() : ?string
     {
         return $this->fanDuelName;
     }
     /**
      * 
      *
-     * @param string $fanDuelName
+     * @param string|null $fanDuelName
      *
      * @return self
      */
-    public function setFanDuelName(string $fanDuelName) : self
+    public function setFanDuelName(?string $fanDuelName) : self
     {
         $this->fanDuelName = $fanDuelName;
         return $this;
@@ -571,20 +571,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFantasyDraftPlayerID() : int
+    public function getFantasyDraftPlayerID() : ?int
     {
         return $this->fantasyDraftPlayerID;
     }
     /**
      * 
      *
-     * @param int $fantasyDraftPlayerID
+     * @param int|null $fantasyDraftPlayerID
      *
      * @return self
      */
-    public function setFantasyDraftPlayerID(int $fantasyDraftPlayerID) : self
+    public function setFantasyDraftPlayerID(?int $fantasyDraftPlayerID) : self
     {
         $this->fantasyDraftPlayerID = $fantasyDraftPlayerID;
         return $this;
@@ -592,20 +592,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDraftKingsPlayerID() : int
+    public function getDraftKingsPlayerID() : ?int
     {
         return $this->draftKingsPlayerID;
     }
     /**
      * 
      *
-     * @param int $draftKingsPlayerID
+     * @param int|null $draftKingsPlayerID
      *
      * @return self
      */
-    public function setDraftKingsPlayerID(int $draftKingsPlayerID) : self
+    public function setDraftKingsPlayerID(?int $draftKingsPlayerID) : self
     {
         $this->draftKingsPlayerID = $draftKingsPlayerID;
         return $this;
@@ -613,20 +613,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFanDuelPlayerID() : int
+    public function getFanDuelPlayerID() : ?int
     {
         return $this->fanDuelPlayerID;
     }
     /**
      * 
      *
-     * @param int $fanDuelPlayerID
+     * @param int|null $fanDuelPlayerID
      *
      * @return self
      */
-    public function setFanDuelPlayerID(int $fanDuelPlayerID) : self
+    public function setFanDuelPlayerID(?int $fanDuelPlayerID) : self
     {
         $this->fanDuelPlayerID = $fanDuelPlayerID;
         return $this;
@@ -634,20 +634,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYahooPlayerID() : int
+    public function getYahooPlayerID() : ?int
     {
         return $this->yahooPlayerID;
     }
     /**
      * 
      *
-     * @param int $yahooPlayerID
+     * @param int|null $yahooPlayerID
      *
      * @return self
      */
-    public function setYahooPlayerID(int $yahooPlayerID) : self
+    public function setYahooPlayerID(?int $yahooPlayerID) : self
     {
         $this->yahooPlayerID = $yahooPlayerID;
         return $this;

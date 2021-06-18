@@ -39,146 +39,287 @@ class AdvancedPlayerNormalizer implements DenormalizerInterface, NormalizerInter
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('FantasyPosition', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('FantasyPosition', $data) && $data['FantasyPosition'] !== null) {
             $object->setFantasyPosition($data['FantasyPosition']);
         }
-        if (\array_key_exists('PositionGroup', $data)) {
+        elseif (\array_key_exists('FantasyPosition', $data) && $data['FantasyPosition'] === null) {
+            $object->setFantasyPosition(null);
+        }
+        if (\array_key_exists('PositionGroup', $data) && $data['PositionGroup'] !== null) {
             $object->setPositionGroup($data['PositionGroup']);
         }
-        if (\array_key_exists('BMI', $data)) {
+        elseif (\array_key_exists('PositionGroup', $data) && $data['PositionGroup'] === null) {
+            $object->setPositionGroup(null);
+        }
+        if (\array_key_exists('BMI', $data) && $data['BMI'] !== null) {
             $object->setBMI($data['BMI']);
         }
-        if (\array_key_exists('BMIRank', $data)) {
+        elseif (\array_key_exists('BMI', $data) && $data['BMI'] === null) {
+            $object->setBMI(null);
+        }
+        if (\array_key_exists('BMIRank', $data) && $data['BMIRank'] !== null) {
             $object->setBMIRank($data['BMIRank']);
         }
-        if (\array_key_exists('HandSize', $data)) {
+        elseif (\array_key_exists('BMIRank', $data) && $data['BMIRank'] === null) {
+            $object->setBMIRank(null);
+        }
+        if (\array_key_exists('HandSize', $data) && $data['HandSize'] !== null) {
             $object->setHandSize($data['HandSize']);
         }
-        if (\array_key_exists('HandSizeRank', $data)) {
+        elseif (\array_key_exists('HandSize', $data) && $data['HandSize'] === null) {
+            $object->setHandSize(null);
+        }
+        if (\array_key_exists('HandSizeRank', $data) && $data['HandSizeRank'] !== null) {
             $object->setHandSizeRank($data['HandSizeRank']);
         }
-        if (\array_key_exists('ArmLength', $data)) {
+        elseif (\array_key_exists('HandSizeRank', $data) && $data['HandSizeRank'] === null) {
+            $object->setHandSizeRank(null);
+        }
+        if (\array_key_exists('ArmLength', $data) && $data['ArmLength'] !== null) {
             $object->setArmLength($data['ArmLength']);
         }
-        if (\array_key_exists('ArmLengthRank', $data)) {
+        elseif (\array_key_exists('ArmLength', $data) && $data['ArmLength'] === null) {
+            $object->setArmLength(null);
+        }
+        if (\array_key_exists('ArmLengthRank', $data) && $data['ArmLengthRank'] !== null) {
             $object->setArmLengthRank($data['ArmLengthRank']);
         }
-        if (\array_key_exists('QualityScore', $data)) {
+        elseif (\array_key_exists('ArmLengthRank', $data) && $data['ArmLengthRank'] === null) {
+            $object->setArmLengthRank(null);
+        }
+        if (\array_key_exists('QualityScore', $data) && $data['QualityScore'] !== null) {
             $object->setQualityScore($data['QualityScore']);
         }
-        if (\array_key_exists('QualityScoreRank', $data)) {
+        elseif (\array_key_exists('QualityScore', $data) && $data['QualityScore'] === null) {
+            $object->setQualityScore(null);
+        }
+        if (\array_key_exists('QualityScoreRank', $data) && $data['QualityScoreRank'] !== null) {
             $object->setQualityScoreRank($data['QualityScoreRank']);
         }
-        if (\array_key_exists('FortyYardDash', $data)) {
+        elseif (\array_key_exists('QualityScoreRank', $data) && $data['QualityScoreRank'] === null) {
+            $object->setQualityScoreRank(null);
+        }
+        if (\array_key_exists('FortyYardDash', $data) && $data['FortyYardDash'] !== null) {
             $object->setFortyYardDash($data['FortyYardDash']);
         }
-        if (\array_key_exists('FortyYardDashRank', $data)) {
+        elseif (\array_key_exists('FortyYardDash', $data) && $data['FortyYardDash'] === null) {
+            $object->setFortyYardDash(null);
+        }
+        if (\array_key_exists('FortyYardDashRank', $data) && $data['FortyYardDashRank'] !== null) {
             $object->setFortyYardDashRank($data['FortyYardDashRank']);
         }
-        if (\array_key_exists('ThreeConeDrill', $data)) {
+        elseif (\array_key_exists('FortyYardDashRank', $data) && $data['FortyYardDashRank'] === null) {
+            $object->setFortyYardDashRank(null);
+        }
+        if (\array_key_exists('ThreeConeDrill', $data) && $data['ThreeConeDrill'] !== null) {
             $object->setThreeConeDrill($data['ThreeConeDrill']);
         }
-        if (\array_key_exists('ThreeConeDrillRank', $data)) {
+        elseif (\array_key_exists('ThreeConeDrill', $data) && $data['ThreeConeDrill'] === null) {
+            $object->setThreeConeDrill(null);
+        }
+        if (\array_key_exists('ThreeConeDrillRank', $data) && $data['ThreeConeDrillRank'] !== null) {
             $object->setThreeConeDrillRank($data['ThreeConeDrillRank']);
         }
-        if (\array_key_exists('TwentyYardShuttle', $data)) {
+        elseif (\array_key_exists('ThreeConeDrillRank', $data) && $data['ThreeConeDrillRank'] === null) {
+            $object->setThreeConeDrillRank(null);
+        }
+        if (\array_key_exists('TwentyYardShuttle', $data) && $data['TwentyYardShuttle'] !== null) {
             $object->setTwentyYardShuttle($data['TwentyYardShuttle']);
         }
-        if (\array_key_exists('TwentyYardShuttleRank', $data)) {
+        elseif (\array_key_exists('TwentyYardShuttle', $data) && $data['TwentyYardShuttle'] === null) {
+            $object->setTwentyYardShuttle(null);
+        }
+        if (\array_key_exists('TwentyYardShuttleRank', $data) && $data['TwentyYardShuttleRank'] !== null) {
             $object->setTwentyYardShuttleRank($data['TwentyYardShuttleRank']);
         }
-        if (\array_key_exists('AgilityScore', $data)) {
+        elseif (\array_key_exists('TwentyYardShuttleRank', $data) && $data['TwentyYardShuttleRank'] === null) {
+            $object->setTwentyYardShuttleRank(null);
+        }
+        if (\array_key_exists('AgilityScore', $data) && $data['AgilityScore'] !== null) {
             $object->setAgilityScore($data['AgilityScore']);
         }
-        if (\array_key_exists('AgilityScoreRank', $data)) {
+        elseif (\array_key_exists('AgilityScore', $data) && $data['AgilityScore'] === null) {
+            $object->setAgilityScore(null);
+        }
+        if (\array_key_exists('AgilityScoreRank', $data) && $data['AgilityScoreRank'] !== null) {
             $object->setAgilityScoreRank($data['AgilityScoreRank']);
         }
-        if (\array_key_exists('VerticalJump', $data)) {
+        elseif (\array_key_exists('AgilityScoreRank', $data) && $data['AgilityScoreRank'] === null) {
+            $object->setAgilityScoreRank(null);
+        }
+        if (\array_key_exists('VerticalJump', $data) && $data['VerticalJump'] !== null) {
             $object->setVerticalJump($data['VerticalJump']);
         }
-        if (\array_key_exists('VerticalJumpRank', $data)) {
+        elseif (\array_key_exists('VerticalJump', $data) && $data['VerticalJump'] === null) {
+            $object->setVerticalJump(null);
+        }
+        if (\array_key_exists('VerticalJumpRank', $data) && $data['VerticalJumpRank'] !== null) {
             $object->setVerticalJumpRank($data['VerticalJumpRank']);
         }
-        if (\array_key_exists('BroadJump', $data)) {
+        elseif (\array_key_exists('VerticalJumpRank', $data) && $data['VerticalJumpRank'] === null) {
+            $object->setVerticalJumpRank(null);
+        }
+        if (\array_key_exists('BroadJump', $data) && $data['BroadJump'] !== null) {
             $object->setBroadJump($data['BroadJump']);
         }
-        if (\array_key_exists('BroadJumpRank', $data)) {
+        elseif (\array_key_exists('BroadJump', $data) && $data['BroadJump'] === null) {
+            $object->setBroadJump(null);
+        }
+        if (\array_key_exists('BroadJumpRank', $data) && $data['BroadJumpRank'] !== null) {
             $object->setBroadJumpRank($data['BroadJumpRank']);
         }
-        if (\array_key_exists('BurstScore', $data)) {
+        elseif (\array_key_exists('BroadJumpRank', $data) && $data['BroadJumpRank'] === null) {
+            $object->setBroadJumpRank(null);
+        }
+        if (\array_key_exists('BurstScore', $data) && $data['BurstScore'] !== null) {
             $object->setBurstScore($data['BurstScore']);
         }
-        if (\array_key_exists('BurstScoreRank', $data)) {
+        elseif (\array_key_exists('BurstScore', $data) && $data['BurstScore'] === null) {
+            $object->setBurstScore(null);
+        }
+        if (\array_key_exists('BurstScoreRank', $data) && $data['BurstScoreRank'] !== null) {
             $object->setBurstScoreRank($data['BurstScoreRank']);
         }
-        if (\array_key_exists('SPARQx', $data)) {
+        elseif (\array_key_exists('BurstScoreRank', $data) && $data['BurstScoreRank'] === null) {
+            $object->setBurstScoreRank(null);
+        }
+        if (\array_key_exists('SPARQx', $data) && $data['SPARQx'] !== null) {
             $object->setSPARQx($data['SPARQx']);
         }
-        if (\array_key_exists('SPARQxRank', $data)) {
+        elseif (\array_key_exists('SPARQx', $data) && $data['SPARQx'] === null) {
+            $object->setSPARQx(null);
+        }
+        if (\array_key_exists('SPARQxRank', $data) && $data['SPARQxRank'] !== null) {
             $object->setSPARQxRank($data['SPARQxRank']);
         }
-        if (\array_key_exists('AthleticismScore', $data)) {
+        elseif (\array_key_exists('SPARQxRank', $data) && $data['SPARQxRank'] === null) {
+            $object->setSPARQxRank(null);
+        }
+        if (\array_key_exists('AthleticismScore', $data) && $data['AthleticismScore'] !== null) {
             $object->setAthleticismScore($data['AthleticismScore']);
         }
-        if (\array_key_exists('AthleticismScoreRank', $data)) {
+        elseif (\array_key_exists('AthleticismScore', $data) && $data['AthleticismScore'] === null) {
+            $object->setAthleticismScore(null);
+        }
+        if (\array_key_exists('AthleticismScoreRank', $data) && $data['AthleticismScoreRank'] !== null) {
             $object->setAthleticismScoreRank($data['AthleticismScoreRank']);
         }
-        if (\array_key_exists('SpeedScore', $data)) {
+        elseif (\array_key_exists('AthleticismScoreRank', $data) && $data['AthleticismScoreRank'] === null) {
+            $object->setAthleticismScoreRank(null);
+        }
+        if (\array_key_exists('SpeedScore', $data) && $data['SpeedScore'] !== null) {
             $object->setSpeedScore($data['SpeedScore']);
         }
-        if (\array_key_exists('SpeedScoreRank', $data)) {
+        elseif (\array_key_exists('SpeedScore', $data) && $data['SpeedScore'] === null) {
+            $object->setSpeedScore(null);
+        }
+        if (\array_key_exists('SpeedScoreRank', $data) && $data['SpeedScoreRank'] !== null) {
             $object->setSpeedScoreRank($data['SpeedScoreRank']);
         }
-        if (\array_key_exists('ThrowVelocity', $data)) {
+        elseif (\array_key_exists('SpeedScoreRank', $data) && $data['SpeedScoreRank'] === null) {
+            $object->setSpeedScoreRank(null);
+        }
+        if (\array_key_exists('ThrowVelocity', $data) && $data['ThrowVelocity'] !== null) {
             $object->setThrowVelocity($data['ThrowVelocity']);
         }
-        if (\array_key_exists('ThrowVelocityRank', $data)) {
+        elseif (\array_key_exists('ThrowVelocity', $data) && $data['ThrowVelocity'] === null) {
+            $object->setThrowVelocity(null);
+        }
+        if (\array_key_exists('ThrowVelocityRank', $data) && $data['ThrowVelocityRank'] !== null) {
             $object->setThrowVelocityRank($data['ThrowVelocityRank']);
         }
-        if (\array_key_exists('WonderlicScore', $data)) {
+        elseif (\array_key_exists('ThrowVelocityRank', $data) && $data['ThrowVelocityRank'] === null) {
+            $object->setThrowVelocityRank(null);
+        }
+        if (\array_key_exists('WonderlicScore', $data) && $data['WonderlicScore'] !== null) {
             $object->setWonderlicScore($data['WonderlicScore']);
         }
-        if (\array_key_exists('WonderlicScoreRank', $data)) {
+        elseif (\array_key_exists('WonderlicScore', $data) && $data['WonderlicScore'] === null) {
+            $object->setWonderlicScore(null);
+        }
+        if (\array_key_exists('WonderlicScoreRank', $data) && $data['WonderlicScoreRank'] !== null) {
             $object->setWonderlicScoreRank($data['WonderlicScoreRank']);
         }
-        if (\array_key_exists('HeightAdjustedSpeedScore', $data)) {
+        elseif (\array_key_exists('WonderlicScoreRank', $data) && $data['WonderlicScoreRank'] === null) {
+            $object->setWonderlicScoreRank(null);
+        }
+        if (\array_key_exists('HeightAdjustedSpeedScore', $data) && $data['HeightAdjustedSpeedScore'] !== null) {
             $object->setHeightAdjustedSpeedScore($data['HeightAdjustedSpeedScore']);
         }
-        if (\array_key_exists('HeightAdjustedSpeedScoreRank', $data)) {
+        elseif (\array_key_exists('HeightAdjustedSpeedScore', $data) && $data['HeightAdjustedSpeedScore'] === null) {
+            $object->setHeightAdjustedSpeedScore(null);
+        }
+        if (\array_key_exists('HeightAdjustedSpeedScoreRank', $data) && $data['HeightAdjustedSpeedScoreRank'] !== null) {
             $object->setHeightAdjustedSpeedScoreRank($data['HeightAdjustedSpeedScoreRank']);
         }
-        if (\array_key_exists('CatchRadius', $data)) {
+        elseif (\array_key_exists('HeightAdjustedSpeedScoreRank', $data) && $data['HeightAdjustedSpeedScoreRank'] === null) {
+            $object->setHeightAdjustedSpeedScoreRank(null);
+        }
+        if (\array_key_exists('CatchRadius', $data) && $data['CatchRadius'] !== null) {
             $object->setCatchRadius($data['CatchRadius']);
         }
-        if (\array_key_exists('CatchRadiusRank', $data)) {
+        elseif (\array_key_exists('CatchRadius', $data) && $data['CatchRadius'] === null) {
+            $object->setCatchRadius(null);
+        }
+        if (\array_key_exists('CatchRadiusRank', $data) && $data['CatchRadiusRank'] !== null) {
             $object->setCatchRadiusRank($data['CatchRadiusRank']);
         }
-        if (\array_key_exists('BenchPress', $data)) {
+        elseif (\array_key_exists('CatchRadiusRank', $data) && $data['CatchRadiusRank'] === null) {
+            $object->setCatchRadiusRank(null);
+        }
+        if (\array_key_exists('BenchPress', $data) && $data['BenchPress'] !== null) {
             $object->setBenchPress($data['BenchPress']);
         }
-        if (\array_key_exists('BenchPressRank', $data)) {
+        elseif (\array_key_exists('BenchPress', $data) && $data['BenchPress'] === null) {
+            $object->setBenchPress(null);
+        }
+        if (\array_key_exists('BenchPressRank', $data) && $data['BenchPressRank'] !== null) {
             $object->setBenchPressRank($data['BenchPressRank']);
         }
-        if (\array_key_exists('PlaymakingRadius', $data)) {
+        elseif (\array_key_exists('BenchPressRank', $data) && $data['BenchPressRank'] === null) {
+            $object->setBenchPressRank(null);
+        }
+        if (\array_key_exists('PlaymakingRadius', $data) && $data['PlaymakingRadius'] !== null) {
             $object->setPlaymakingRadius($data['PlaymakingRadius']);
         }
-        if (\array_key_exists('PlaymakingRadiusRank', $data)) {
+        elseif (\array_key_exists('PlaymakingRadius', $data) && $data['PlaymakingRadius'] === null) {
+            $object->setPlaymakingRadius(null);
+        }
+        if (\array_key_exists('PlaymakingRadiusRank', $data) && $data['PlaymakingRadiusRank'] !== null) {
             $object->setPlaymakingRadiusRank($data['PlaymakingRadiusRank']);
         }
-        if (\array_key_exists('HighlightClip', $data)) {
+        elseif (\array_key_exists('PlaymakingRadiusRank', $data) && $data['PlaymakingRadiusRank'] === null) {
+            $object->setPlaymakingRadiusRank(null);
+        }
+        if (\array_key_exists('HighlightClip', $data) && $data['HighlightClip'] !== null) {
             $object->setHighlightClip($data['HighlightClip']);
+        }
+        elseif (\array_key_exists('HighlightClip', $data) && $data['HighlightClip'] === null) {
+            $object->setHighlightClip(null);
         }
         if (\array_key_exists('MedicalHistory', $data)) {
             $values = array();

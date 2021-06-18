@@ -39,11 +39,17 @@ class LeagueNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('LeagueId', $data)) {
             $object->setLeagueId($data['LeagueId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Key', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
+        }
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
         }
         return $object;
     }

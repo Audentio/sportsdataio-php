@@ -4,24 +4,24 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class PlayerSeasonStatsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $team;
+    protected $season;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+    * @param string $team Abbreviation of the team. Example: <code>WAS</code>.
     * @param string $season 
              Year of the season and the season type. If no season type is provided, then the default is regular season.
              <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
            
-    * @param string $team Abbreviation of the team. Example: <code>WAS</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $season, string $team)
+    public function __construct(string $team, string $season, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->team = $team;
+        $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -30,7 +30,7 @@ class PlayerSeasonStatsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEnd
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{team}'), array($this->format, $this->season, $this->team), '/stats/{format}/PlayerSeasonStatsByTeam/{season}/{team}');
+        return str_replace(array('{team}', '{season}', '{format}'), array($this->team, $this->season, $this->format), '/stats/{format}/PlayerSeasonStatsByTeam/{season}/{team}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

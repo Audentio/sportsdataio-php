@@ -4,18 +4,18 @@ namespace Sportsdata\API\CSGO\Endpoint;
 
 class BoxScore extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CSGO\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $gameid;
+    protected $format;
     /**
      * Box Scores by Date
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $gameid Unique GameId for the desired box scores. Examples: <code>100000091</code>
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'xml', string $gameid)
+    public function __construct(string $gameid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->gameid = $gameid;
+        $this->format = $format;
     }
     use \Sportsdata\API\CSGO\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BoxScore extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint implemen
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{gameid}'), array($this->format, $this->gameid), '/stats/{format}/BoxScore/{gameid}');
+        return str_replace(array('{gameid}', '{format}'), array($this->gameid, $this->format), '/stats/{format}/BoxScore/{gameid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

@@ -19,67 +19,67 @@ class Pitch
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pitchNumberThisAtBat;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pitcherID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $hitterID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $outs;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $ballsBeforePitch;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $strikesBeforePitch;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $strike;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $ball;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $foul;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $swinging;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $looking;
     /**
@@ -127,20 +127,20 @@ class Pitch
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPitchNumberThisAtBat() : int
+    public function getPitchNumberThisAtBat() : ?int
     {
         return $this->pitchNumberThisAtBat;
     }
     /**
      * 
      *
-     * @param int $pitchNumberThisAtBat
+     * @param int|null $pitchNumberThisAtBat
      *
      * @return self
      */
-    public function setPitchNumberThisAtBat(int $pitchNumberThisAtBat) : self
+    public function setPitchNumberThisAtBat(?int $pitchNumberThisAtBat) : self
     {
         $this->pitchNumberThisAtBat = $pitchNumberThisAtBat;
         return $this;
@@ -148,20 +148,20 @@ class Pitch
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPitcherID() : int
+    public function getPitcherID() : ?int
     {
         return $this->pitcherID;
     }
     /**
      * 
      *
-     * @param int $pitcherID
+     * @param int|null $pitcherID
      *
      * @return self
      */
-    public function setPitcherID(int $pitcherID) : self
+    public function setPitcherID(?int $pitcherID) : self
     {
         $this->pitcherID = $pitcherID;
         return $this;
@@ -169,20 +169,20 @@ class Pitch
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHitterID() : int
+    public function getHitterID() : ?int
     {
         return $this->hitterID;
     }
     /**
      * 
      *
-     * @param int $hitterID
+     * @param int|null $hitterID
      *
      * @return self
      */
-    public function setHitterID(int $hitterID) : self
+    public function setHitterID(?int $hitterID) : self
     {
         $this->hitterID = $hitterID;
         return $this;
@@ -190,20 +190,20 @@ class Pitch
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOuts() : int
+    public function getOuts() : ?int
     {
         return $this->outs;
     }
     /**
      * 
      *
-     * @param int $outs
+     * @param int|null $outs
      *
      * @return self
      */
-    public function setOuts(int $outs) : self
+    public function setOuts(?int $outs) : self
     {
         $this->outs = $outs;
         return $this;
@@ -211,20 +211,20 @@ class Pitch
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBallsBeforePitch() : int
+    public function getBallsBeforePitch() : ?int
     {
         return $this->ballsBeforePitch;
     }
     /**
      * 
      *
-     * @param int $ballsBeforePitch
+     * @param int|null $ballsBeforePitch
      *
      * @return self
      */
-    public function setBallsBeforePitch(int $ballsBeforePitch) : self
+    public function setBallsBeforePitch(?int $ballsBeforePitch) : self
     {
         $this->ballsBeforePitch = $ballsBeforePitch;
         return $this;
@@ -232,20 +232,20 @@ class Pitch
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getStrikesBeforePitch() : int
+    public function getStrikesBeforePitch() : ?int
     {
         return $this->strikesBeforePitch;
     }
     /**
      * 
      *
-     * @param int $strikesBeforePitch
+     * @param int|null $strikesBeforePitch
      *
      * @return self
      */
-    public function setStrikesBeforePitch(int $strikesBeforePitch) : self
+    public function setStrikesBeforePitch(?int $strikesBeforePitch) : self
     {
         $this->strikesBeforePitch = $strikesBeforePitch;
         return $this;
@@ -253,20 +253,20 @@ class Pitch
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getStrike() : bool
+    public function getStrike() : ?bool
     {
         return $this->strike;
     }
     /**
      * 
      *
-     * @param bool $strike
+     * @param bool|null $strike
      *
      * @return self
      */
-    public function setStrike(bool $strike) : self
+    public function setStrike(?bool $strike) : self
     {
         $this->strike = $strike;
         return $this;
@@ -274,20 +274,20 @@ class Pitch
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getBall() : bool
+    public function getBall() : ?bool
     {
         return $this->ball;
     }
     /**
      * 
      *
-     * @param bool $ball
+     * @param bool|null $ball
      *
      * @return self
      */
-    public function setBall(bool $ball) : self
+    public function setBall(?bool $ball) : self
     {
         $this->ball = $ball;
         return $this;
@@ -295,20 +295,20 @@ class Pitch
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getFoul() : bool
+    public function getFoul() : ?bool
     {
         return $this->foul;
     }
     /**
      * 
      *
-     * @param bool $foul
+     * @param bool|null $foul
      *
      * @return self
      */
-    public function setFoul(bool $foul) : self
+    public function setFoul(?bool $foul) : self
     {
         $this->foul = $foul;
         return $this;
@@ -316,20 +316,20 @@ class Pitch
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getSwinging() : bool
+    public function getSwinging() : ?bool
     {
         return $this->swinging;
     }
     /**
      * 
      *
-     * @param bool $swinging
+     * @param bool|null $swinging
      *
      * @return self
      */
-    public function setSwinging(bool $swinging) : self
+    public function setSwinging(?bool $swinging) : self
     {
         $this->swinging = $swinging;
         return $this;
@@ -337,20 +337,20 @@ class Pitch
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getLooking() : bool
+    public function getLooking() : ?bool
     {
         return $this->looking;
     }
     /**
      * 
      *
-     * @param bool $looking
+     * @param bool|null $looking
      *
      * @return self
      */
-    public function setLooking(bool $looking) : self
+    public function setLooking(?bool $looking) : self
     {
         $this->looking = $looking;
         return $this;

@@ -39,155 +39,305 @@ class PlayerNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('SportsDataID', $data)) {
+        if (\array_key_exists('SportsDataID', $data) && $data['SportsDataID'] !== null) {
             $object->setSportsDataID($data['SportsDataID']);
         }
-        if (\array_key_exists('Status', $data)) {
+        elseif (\array_key_exists('SportsDataID', $data) && $data['SportsDataID'] === null) {
+            $object->setSportsDataID(null);
+        }
+        if (\array_key_exists('Status', $data) && $data['Status'] !== null) {
             $object->setStatus($data['Status']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        elseif (\array_key_exists('Status', $data) && $data['Status'] === null) {
+            $object->setStatus(null);
+        }
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Jersey', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Jersey', $data) && $data['Jersey'] !== null) {
             $object->setJersey($data['Jersey']);
         }
-        if (\array_key_exists('PositionCategory', $data)) {
+        elseif (\array_key_exists('Jersey', $data) && $data['Jersey'] === null) {
+            $object->setJersey(null);
+        }
+        if (\array_key_exists('PositionCategory', $data) && $data['PositionCategory'] !== null) {
             $object->setPositionCategory($data['PositionCategory']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('PositionCategory', $data) && $data['PositionCategory'] === null) {
+            $object->setPositionCategory(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('MLBAMID', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('MLBAMID', $data) && $data['MLBAMID'] !== null) {
             $object->setMLBAMID($data['MLBAMID']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        elseif (\array_key_exists('MLBAMID', $data) && $data['MLBAMID'] === null) {
+            $object->setMLBAMID(null);
+        }
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('BatHand', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('BatHand', $data) && $data['BatHand'] !== null) {
             $object->setBatHand($data['BatHand']);
         }
-        if (\array_key_exists('ThrowHand', $data)) {
+        elseif (\array_key_exists('BatHand', $data) && $data['BatHand'] === null) {
+            $object->setBatHand(null);
+        }
+        if (\array_key_exists('ThrowHand', $data) && $data['ThrowHand'] !== null) {
             $object->setThrowHand($data['ThrowHand']);
         }
-        if (\array_key_exists('Height', $data)) {
+        elseif (\array_key_exists('ThrowHand', $data) && $data['ThrowHand'] === null) {
+            $object->setThrowHand(null);
+        }
+        if (\array_key_exists('Height', $data) && $data['Height'] !== null) {
             $object->setHeight($data['Height']);
         }
-        if (\array_key_exists('Weight', $data)) {
+        elseif (\array_key_exists('Height', $data) && $data['Height'] === null) {
+            $object->setHeight(null);
+        }
+        if (\array_key_exists('Weight', $data) && $data['Weight'] !== null) {
             $object->setWeight($data['Weight']);
         }
-        if (\array_key_exists('BirthDate', $data)) {
+        elseif (\array_key_exists('Weight', $data) && $data['Weight'] === null) {
+            $object->setWeight(null);
+        }
+        if (\array_key_exists('BirthDate', $data) && $data['BirthDate'] !== null) {
             $object->setBirthDate($data['BirthDate']);
         }
-        if (\array_key_exists('BirthCity', $data)) {
+        elseif (\array_key_exists('BirthDate', $data) && $data['BirthDate'] === null) {
+            $object->setBirthDate(null);
+        }
+        if (\array_key_exists('BirthCity', $data) && $data['BirthCity'] !== null) {
             $object->setBirthCity($data['BirthCity']);
         }
-        if (\array_key_exists('BirthState', $data)) {
+        elseif (\array_key_exists('BirthCity', $data) && $data['BirthCity'] === null) {
+            $object->setBirthCity(null);
+        }
+        if (\array_key_exists('BirthState', $data) && $data['BirthState'] !== null) {
             $object->setBirthState($data['BirthState']);
         }
-        if (\array_key_exists('BirthCountry', $data)) {
+        elseif (\array_key_exists('BirthState', $data) && $data['BirthState'] === null) {
+            $object->setBirthState(null);
+        }
+        if (\array_key_exists('BirthCountry', $data) && $data['BirthCountry'] !== null) {
             $object->setBirthCountry($data['BirthCountry']);
         }
-        if (\array_key_exists('HighSchool', $data)) {
+        elseif (\array_key_exists('BirthCountry', $data) && $data['BirthCountry'] === null) {
+            $object->setBirthCountry(null);
+        }
+        if (\array_key_exists('HighSchool', $data) && $data['HighSchool'] !== null) {
             $object->setHighSchool($data['HighSchool']);
         }
-        if (\array_key_exists('College', $data)) {
+        elseif (\array_key_exists('HighSchool', $data) && $data['HighSchool'] === null) {
+            $object->setHighSchool(null);
+        }
+        if (\array_key_exists('College', $data) && $data['College'] !== null) {
             $object->setCollege($data['College']);
         }
-        if (\array_key_exists('ProDebut', $data)) {
+        elseif (\array_key_exists('College', $data) && $data['College'] === null) {
+            $object->setCollege(null);
+        }
+        if (\array_key_exists('ProDebut', $data) && $data['ProDebut'] !== null) {
             $object->setProDebut($data['ProDebut']);
         }
-        if (\array_key_exists('Salary', $data)) {
+        elseif (\array_key_exists('ProDebut', $data) && $data['ProDebut'] === null) {
+            $object->setProDebut(null);
+        }
+        if (\array_key_exists('Salary', $data) && $data['Salary'] !== null) {
             $object->setSalary($data['Salary']);
         }
-        if (\array_key_exists('PhotoUrl', $data)) {
+        elseif (\array_key_exists('Salary', $data) && $data['Salary'] === null) {
+            $object->setSalary(null);
+        }
+        if (\array_key_exists('PhotoUrl', $data) && $data['PhotoUrl'] !== null) {
             $object->setPhotoUrl($data['PhotoUrl']);
         }
-        if (\array_key_exists('SportRadarPlayerID', $data)) {
+        elseif (\array_key_exists('PhotoUrl', $data) && $data['PhotoUrl'] === null) {
+            $object->setPhotoUrl(null);
+        }
+        if (\array_key_exists('SportRadarPlayerID', $data) && $data['SportRadarPlayerID'] !== null) {
             $object->setSportRadarPlayerID($data['SportRadarPlayerID']);
         }
-        if (\array_key_exists('RotoworldPlayerID', $data)) {
+        elseif (\array_key_exists('SportRadarPlayerID', $data) && $data['SportRadarPlayerID'] === null) {
+            $object->setSportRadarPlayerID(null);
+        }
+        if (\array_key_exists('RotoworldPlayerID', $data) && $data['RotoworldPlayerID'] !== null) {
             $object->setRotoworldPlayerID($data['RotoworldPlayerID']);
         }
-        if (\array_key_exists('RotoWirePlayerID', $data)) {
+        elseif (\array_key_exists('RotoworldPlayerID', $data) && $data['RotoworldPlayerID'] === null) {
+            $object->setRotoworldPlayerID(null);
+        }
+        if (\array_key_exists('RotoWirePlayerID', $data) && $data['RotoWirePlayerID'] !== null) {
             $object->setRotoWirePlayerID($data['RotoWirePlayerID']);
         }
-        if (\array_key_exists('FantasyAlarmPlayerID', $data)) {
+        elseif (\array_key_exists('RotoWirePlayerID', $data) && $data['RotoWirePlayerID'] === null) {
+            $object->setRotoWirePlayerID(null);
+        }
+        if (\array_key_exists('FantasyAlarmPlayerID', $data) && $data['FantasyAlarmPlayerID'] !== null) {
             $object->setFantasyAlarmPlayerID($data['FantasyAlarmPlayerID']);
         }
-        if (\array_key_exists('StatsPlayerID', $data)) {
+        elseif (\array_key_exists('FantasyAlarmPlayerID', $data) && $data['FantasyAlarmPlayerID'] === null) {
+            $object->setFantasyAlarmPlayerID(null);
+        }
+        if (\array_key_exists('StatsPlayerID', $data) && $data['StatsPlayerID'] !== null) {
             $object->setStatsPlayerID($data['StatsPlayerID']);
         }
-        if (\array_key_exists('SportsDirectPlayerID', $data)) {
+        elseif (\array_key_exists('StatsPlayerID', $data) && $data['StatsPlayerID'] === null) {
+            $object->setStatsPlayerID(null);
+        }
+        if (\array_key_exists('SportsDirectPlayerID', $data) && $data['SportsDirectPlayerID'] !== null) {
             $object->setSportsDirectPlayerID($data['SportsDirectPlayerID']);
         }
-        if (\array_key_exists('XmlTeamPlayerID', $data)) {
+        elseif (\array_key_exists('SportsDirectPlayerID', $data) && $data['SportsDirectPlayerID'] === null) {
+            $object->setSportsDirectPlayerID(null);
+        }
+        if (\array_key_exists('XmlTeamPlayerID', $data) && $data['XmlTeamPlayerID'] !== null) {
             $object->setXmlTeamPlayerID($data['XmlTeamPlayerID']);
         }
-        if (\array_key_exists('InjuryStatus', $data)) {
+        elseif (\array_key_exists('XmlTeamPlayerID', $data) && $data['XmlTeamPlayerID'] === null) {
+            $object->setXmlTeamPlayerID(null);
+        }
+        if (\array_key_exists('InjuryStatus', $data) && $data['InjuryStatus'] !== null) {
             $object->setInjuryStatus($data['InjuryStatus']);
         }
-        if (\array_key_exists('InjuryBodyPart', $data)) {
+        elseif (\array_key_exists('InjuryStatus', $data) && $data['InjuryStatus'] === null) {
+            $object->setInjuryStatus(null);
+        }
+        if (\array_key_exists('InjuryBodyPart', $data) && $data['InjuryBodyPart'] !== null) {
             $object->setInjuryBodyPart($data['InjuryBodyPart']);
         }
-        if (\array_key_exists('InjuryStartDate', $data)) {
+        elseif (\array_key_exists('InjuryBodyPart', $data) && $data['InjuryBodyPart'] === null) {
+            $object->setInjuryBodyPart(null);
+        }
+        if (\array_key_exists('InjuryStartDate', $data) && $data['InjuryStartDate'] !== null) {
             $object->setInjuryStartDate($data['InjuryStartDate']);
         }
-        if (\array_key_exists('InjuryNotes', $data)) {
+        elseif (\array_key_exists('InjuryStartDate', $data) && $data['InjuryStartDate'] === null) {
+            $object->setInjuryStartDate(null);
+        }
+        if (\array_key_exists('InjuryNotes', $data) && $data['InjuryNotes'] !== null) {
             $object->setInjuryNotes($data['InjuryNotes']);
         }
-        if (\array_key_exists('FanDuelPlayerID', $data)) {
+        elseif (\array_key_exists('InjuryNotes', $data) && $data['InjuryNotes'] === null) {
+            $object->setInjuryNotes(null);
+        }
+        if (\array_key_exists('FanDuelPlayerID', $data) && $data['FanDuelPlayerID'] !== null) {
             $object->setFanDuelPlayerID($data['FanDuelPlayerID']);
         }
-        if (\array_key_exists('DraftKingsPlayerID', $data)) {
+        elseif (\array_key_exists('FanDuelPlayerID', $data) && $data['FanDuelPlayerID'] === null) {
+            $object->setFanDuelPlayerID(null);
+        }
+        if (\array_key_exists('DraftKingsPlayerID', $data) && $data['DraftKingsPlayerID'] !== null) {
             $object->setDraftKingsPlayerID($data['DraftKingsPlayerID']);
         }
-        if (\array_key_exists('YahooPlayerID', $data)) {
+        elseif (\array_key_exists('DraftKingsPlayerID', $data) && $data['DraftKingsPlayerID'] === null) {
+            $object->setDraftKingsPlayerID(null);
+        }
+        if (\array_key_exists('YahooPlayerID', $data) && $data['YahooPlayerID'] !== null) {
             $object->setYahooPlayerID($data['YahooPlayerID']);
         }
-        if (\array_key_exists('UpcomingGameID', $data)) {
+        elseif (\array_key_exists('YahooPlayerID', $data) && $data['YahooPlayerID'] === null) {
+            $object->setYahooPlayerID(null);
+        }
+        if (\array_key_exists('UpcomingGameID', $data) && $data['UpcomingGameID'] !== null) {
             $object->setUpcomingGameID($data['UpcomingGameID']);
         }
-        if (\array_key_exists('FanDuelName', $data)) {
+        elseif (\array_key_exists('UpcomingGameID', $data) && $data['UpcomingGameID'] === null) {
+            $object->setUpcomingGameID(null);
+        }
+        if (\array_key_exists('FanDuelName', $data) && $data['FanDuelName'] !== null) {
             $object->setFanDuelName($data['FanDuelName']);
         }
-        if (\array_key_exists('DraftKingsName', $data)) {
+        elseif (\array_key_exists('FanDuelName', $data) && $data['FanDuelName'] === null) {
+            $object->setFanDuelName(null);
+        }
+        if (\array_key_exists('DraftKingsName', $data) && $data['DraftKingsName'] !== null) {
             $object->setDraftKingsName($data['DraftKingsName']);
         }
-        if (\array_key_exists('YahooName', $data)) {
+        elseif (\array_key_exists('DraftKingsName', $data) && $data['DraftKingsName'] === null) {
+            $object->setDraftKingsName(null);
+        }
+        if (\array_key_exists('YahooName', $data) && $data['YahooName'] !== null) {
             $object->setYahooName($data['YahooName']);
         }
-        if (\array_key_exists('GlobalTeamID', $data)) {
+        elseif (\array_key_exists('YahooName', $data) && $data['YahooName'] === null) {
+            $object->setYahooName(null);
+        }
+        if (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] !== null) {
             $object->setGlobalTeamID($data['GlobalTeamID']);
         }
-        if (\array_key_exists('FantasyDraftName', $data)) {
+        elseif (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] === null) {
+            $object->setGlobalTeamID(null);
+        }
+        if (\array_key_exists('FantasyDraftName', $data) && $data['FantasyDraftName'] !== null) {
             $object->setFantasyDraftName($data['FantasyDraftName']);
         }
-        if (\array_key_exists('FantasyDraftPlayerID', $data)) {
+        elseif (\array_key_exists('FantasyDraftName', $data) && $data['FantasyDraftName'] === null) {
+            $object->setFantasyDraftName(null);
+        }
+        if (\array_key_exists('FantasyDraftPlayerID', $data) && $data['FantasyDraftPlayerID'] !== null) {
             $object->setFantasyDraftPlayerID($data['FantasyDraftPlayerID']);
         }
-        if (\array_key_exists('Experience', $data)) {
+        elseif (\array_key_exists('FantasyDraftPlayerID', $data) && $data['FantasyDraftPlayerID'] === null) {
+            $object->setFantasyDraftPlayerID(null);
+        }
+        if (\array_key_exists('Experience', $data) && $data['Experience'] !== null) {
             $object->setExperience($data['Experience']);
         }
-        if (\array_key_exists('UsaTodayPlayerID', $data)) {
+        elseif (\array_key_exists('Experience', $data) && $data['Experience'] === null) {
+            $object->setExperience(null);
+        }
+        if (\array_key_exists('UsaTodayPlayerID', $data) && $data['UsaTodayPlayerID'] !== null) {
             $object->setUsaTodayPlayerID($data['UsaTodayPlayerID']);
         }
-        if (\array_key_exists('UsaTodayHeadshotUrl', $data)) {
+        elseif (\array_key_exists('UsaTodayPlayerID', $data) && $data['UsaTodayPlayerID'] === null) {
+            $object->setUsaTodayPlayerID(null);
+        }
+        if (\array_key_exists('UsaTodayHeadshotUrl', $data) && $data['UsaTodayHeadshotUrl'] !== null) {
             $object->setUsaTodayHeadshotUrl($data['UsaTodayHeadshotUrl']);
         }
-        if (\array_key_exists('UsaTodayHeadshotNoBackgroundUrl', $data)) {
+        elseif (\array_key_exists('UsaTodayHeadshotUrl', $data) && $data['UsaTodayHeadshotUrl'] === null) {
+            $object->setUsaTodayHeadshotUrl(null);
+        }
+        if (\array_key_exists('UsaTodayHeadshotNoBackgroundUrl', $data) && $data['UsaTodayHeadshotNoBackgroundUrl'] !== null) {
             $object->setUsaTodayHeadshotNoBackgroundUrl($data['UsaTodayHeadshotNoBackgroundUrl']);
         }
-        if (\array_key_exists('UsaTodayHeadshotUpdated', $data)) {
+        elseif (\array_key_exists('UsaTodayHeadshotNoBackgroundUrl', $data) && $data['UsaTodayHeadshotNoBackgroundUrl'] === null) {
+            $object->setUsaTodayHeadshotNoBackgroundUrl(null);
+        }
+        if (\array_key_exists('UsaTodayHeadshotUpdated', $data) && $data['UsaTodayHeadshotUpdated'] !== null) {
             $object->setUsaTodayHeadshotUpdated($data['UsaTodayHeadshotUpdated']);
         }
-        if (\array_key_exists('UsaTodayHeadshotNoBackgroundUpdated', $data)) {
+        elseif (\array_key_exists('UsaTodayHeadshotUpdated', $data) && $data['UsaTodayHeadshotUpdated'] === null) {
+            $object->setUsaTodayHeadshotUpdated(null);
+        }
+        if (\array_key_exists('UsaTodayHeadshotNoBackgroundUpdated', $data) && $data['UsaTodayHeadshotNoBackgroundUpdated'] !== null) {
             $object->setUsaTodayHeadshotNoBackgroundUpdated($data['UsaTodayHeadshotNoBackgroundUpdated']);
+        }
+        elseif (\array_key_exists('UsaTodayHeadshotNoBackgroundUpdated', $data) && $data['UsaTodayHeadshotNoBackgroundUpdated'] === null) {
+            $object->setUsaTodayHeadshotNoBackgroundUpdated(null);
         }
         return $object;
     }

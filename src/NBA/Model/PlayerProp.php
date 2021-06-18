@@ -19,31 +19,31 @@ class PlayerProp
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
@@ -67,13 +67,13 @@ class PlayerProp
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $betResult;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $statResult;
     /**
@@ -121,20 +121,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -142,20 +142,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -163,20 +163,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -184,20 +184,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -205,20 +205,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -289,20 +289,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBetResult() : string
+    public function getBetResult() : ?string
     {
         return $this->betResult;
     }
     /**
      * 
      *
-     * @param string $betResult
+     * @param string|null $betResult
      *
      * @return self
      */
-    public function setBetResult(string $betResult) : self
+    public function setBetResult(?string $betResult) : self
     {
         $this->betResult = $betResult;
         return $this;
@@ -310,20 +310,20 @@ class PlayerProp
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStatResult() : float
+    public function getStatResult() : ?float
     {
         return $this->statResult;
     }
     /**
      * 
      *
-     * @param float $statResult
+     * @param float|null $statResult
      *
      * @return self
      */
-    public function setStatResult(float $statResult) : self
+    public function setStatResult(?float $statResult) : self
     {
         $this->statResult = $statResult;
         return $this;

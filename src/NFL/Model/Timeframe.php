@@ -19,49 +19,49 @@ class Timeframe
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $week;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shortName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $endDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstGameStart;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstGameEnd;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastGameEnd;
     /**
@@ -103,13 +103,13 @@ class Timeframe
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $apiSeason;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $apiWeek;
     /**
@@ -157,20 +157,20 @@ class Timeframe
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWeek() : int
+    public function getWeek() : ?int
     {
         return $this->week;
     }
     /**
      * 
      *
-     * @param int $week
+     * @param int|null $week
      *
      * @return self
      */
-    public function setWeek(int $week) : self
+    public function setWeek(?int $week) : self
     {
         $this->week = $week;
         return $this;
@@ -178,20 +178,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -199,20 +199,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShortName() : string
+    public function getShortName() : ?string
     {
         return $this->shortName;
     }
     /**
      * 
      *
-     * @param string $shortName
+     * @param string|null $shortName
      *
      * @return self
      */
-    public function setShortName(string $shortName) : self
+    public function setShortName(?string $shortName) : self
     {
         $this->shortName = $shortName;
         return $this;
@@ -220,20 +220,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -241,20 +241,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEndDate() : string
+    public function getEndDate() : ?string
     {
         return $this->endDate;
     }
     /**
      * 
      *
-     * @param string $endDate
+     * @param string|null $endDate
      *
      * @return self
      */
-    public function setEndDate(string $endDate) : self
+    public function setEndDate(?string $endDate) : self
     {
         $this->endDate = $endDate;
         return $this;
@@ -262,20 +262,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstGameStart() : string
+    public function getFirstGameStart() : ?string
     {
         return $this->firstGameStart;
     }
     /**
      * 
      *
-     * @param string $firstGameStart
+     * @param string|null $firstGameStart
      *
      * @return self
      */
-    public function setFirstGameStart(string $firstGameStart) : self
+    public function setFirstGameStart(?string $firstGameStart) : self
     {
         $this->firstGameStart = $firstGameStart;
         return $this;
@@ -283,20 +283,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstGameEnd() : string
+    public function getFirstGameEnd() : ?string
     {
         return $this->firstGameEnd;
     }
     /**
      * 
      *
-     * @param string $firstGameEnd
+     * @param string|null $firstGameEnd
      *
      * @return self
      */
-    public function setFirstGameEnd(string $firstGameEnd) : self
+    public function setFirstGameEnd(?string $firstGameEnd) : self
     {
         $this->firstGameEnd = $firstGameEnd;
         return $this;
@@ -304,20 +304,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastGameEnd() : string
+    public function getLastGameEnd() : ?string
     {
         return $this->lastGameEnd;
     }
     /**
      * 
      *
-     * @param string $lastGameEnd
+     * @param string|null $lastGameEnd
      *
      * @return self
      */
-    public function setLastGameEnd(string $lastGameEnd) : self
+    public function setLastGameEnd(?string $lastGameEnd) : self
     {
         $this->lastGameEnd = $lastGameEnd;
         return $this;
@@ -451,20 +451,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getApiSeason() : string
+    public function getApiSeason() : ?string
     {
         return $this->apiSeason;
     }
     /**
      * 
      *
-     * @param string $apiSeason
+     * @param string|null $apiSeason
      *
      * @return self
      */
-    public function setApiSeason(string $apiSeason) : self
+    public function setApiSeason(?string $apiSeason) : self
     {
         $this->apiSeason = $apiSeason;
         return $this;
@@ -472,20 +472,20 @@ class Timeframe
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getApiWeek() : string
+    public function getApiWeek() : ?string
     {
         return $this->apiWeek;
     }
     /**
      * 
      *
-     * @param string $apiWeek
+     * @param string|null $apiWeek
      *
      * @return self
      */
-    public function setApiWeek(string $apiWeek) : self
+    public function setApiWeek(?string $apiWeek) : self
     {
         $this->apiWeek = $apiWeek;
         return $this;

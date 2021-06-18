@@ -45,23 +45,41 @@ class QuarterNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('Number', $data)) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('AwayTeamScore', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] !== null) {
             $object->setAwayTeamScore($data['AwayTeamScore']);
         }
-        if (\array_key_exists('HomeTeamScore', $data)) {
+        elseif (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] === null) {
+            $object->setAwayTeamScore(null);
+        }
+        if (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] !== null) {
             $object->setHomeTeamScore($data['HomeTeamScore']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] === null) {
+            $object->setHomeTeamScore(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Created', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
+        }
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
         }
         return $object;
     }

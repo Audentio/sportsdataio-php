@@ -19,43 +19,43 @@ class Event
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shortName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $season;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $active;
     /**
@@ -103,20 +103,20 @@ class Event
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -124,20 +124,20 @@ class Event
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShortName() : string
+    public function getShortName() : ?string
     {
         return $this->shortName;
     }
     /**
      * 
      *
-     * @param string $shortName
+     * @param string|null $shortName
      *
      * @return self
      */
-    public function setShortName(string $shortName) : self
+    public function setShortName(?string $shortName) : self
     {
         $this->shortName = $shortName;
         return $this;
@@ -145,20 +145,20 @@ class Event
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSeason() : int
+    public function getSeason() : ?int
     {
         return $this->season;
     }
     /**
      * 
      *
-     * @param int $season
+     * @param int|null $season
      *
      * @return self
      */
-    public function setSeason(int $season) : self
+    public function setSeason(?int $season) : self
     {
         $this->season = $season;
         return $this;
@@ -166,20 +166,20 @@ class Event
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -187,20 +187,20 @@ class Event
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -208,20 +208,20 @@ class Event
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -229,20 +229,20 @@ class Event
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getActive() : bool
+    public function getActive() : ?bool
     {
         return $this->active;
     }
     /**
      * 
      *
-     * @param bool $active
+     * @param bool|null $active
      *
      * @return self
      */
-    public function setActive(bool $active) : self
+    public function setActive(?bool $active) : self
     {
         $this->active = $active;
         return $this;

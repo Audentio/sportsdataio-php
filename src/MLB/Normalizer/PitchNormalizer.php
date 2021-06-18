@@ -42,38 +42,71 @@ class PitchNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('PlayID', $data)) {
             $object->setPlayID($data['PlayID']);
         }
-        if (\array_key_exists('PitchNumberThisAtBat', $data)) {
+        if (\array_key_exists('PitchNumberThisAtBat', $data) && $data['PitchNumberThisAtBat'] !== null) {
             $object->setPitchNumberThisAtBat($data['PitchNumberThisAtBat']);
         }
-        if (\array_key_exists('PitcherID', $data)) {
+        elseif (\array_key_exists('PitchNumberThisAtBat', $data) && $data['PitchNumberThisAtBat'] === null) {
+            $object->setPitchNumberThisAtBat(null);
+        }
+        if (\array_key_exists('PitcherID', $data) && $data['PitcherID'] !== null) {
             $object->setPitcherID($data['PitcherID']);
         }
-        if (\array_key_exists('HitterID', $data)) {
+        elseif (\array_key_exists('PitcherID', $data) && $data['PitcherID'] === null) {
+            $object->setPitcherID(null);
+        }
+        if (\array_key_exists('HitterID', $data) && $data['HitterID'] !== null) {
             $object->setHitterID($data['HitterID']);
         }
-        if (\array_key_exists('Outs', $data)) {
+        elseif (\array_key_exists('HitterID', $data) && $data['HitterID'] === null) {
+            $object->setHitterID(null);
+        }
+        if (\array_key_exists('Outs', $data) && $data['Outs'] !== null) {
             $object->setOuts($data['Outs']);
         }
-        if (\array_key_exists('BallsBeforePitch', $data)) {
+        elseif (\array_key_exists('Outs', $data) && $data['Outs'] === null) {
+            $object->setOuts(null);
+        }
+        if (\array_key_exists('BallsBeforePitch', $data) && $data['BallsBeforePitch'] !== null) {
             $object->setBallsBeforePitch($data['BallsBeforePitch']);
         }
-        if (\array_key_exists('StrikesBeforePitch', $data)) {
+        elseif (\array_key_exists('BallsBeforePitch', $data) && $data['BallsBeforePitch'] === null) {
+            $object->setBallsBeforePitch(null);
+        }
+        if (\array_key_exists('StrikesBeforePitch', $data) && $data['StrikesBeforePitch'] !== null) {
             $object->setStrikesBeforePitch($data['StrikesBeforePitch']);
         }
-        if (\array_key_exists('Strike', $data)) {
+        elseif (\array_key_exists('StrikesBeforePitch', $data) && $data['StrikesBeforePitch'] === null) {
+            $object->setStrikesBeforePitch(null);
+        }
+        if (\array_key_exists('Strike', $data) && $data['Strike'] !== null) {
             $object->setStrike($data['Strike']);
         }
-        if (\array_key_exists('Ball', $data)) {
+        elseif (\array_key_exists('Strike', $data) && $data['Strike'] === null) {
+            $object->setStrike(null);
+        }
+        if (\array_key_exists('Ball', $data) && $data['Ball'] !== null) {
             $object->setBall($data['Ball']);
         }
-        if (\array_key_exists('Foul', $data)) {
+        elseif (\array_key_exists('Ball', $data) && $data['Ball'] === null) {
+            $object->setBall(null);
+        }
+        if (\array_key_exists('Foul', $data) && $data['Foul'] !== null) {
             $object->setFoul($data['Foul']);
         }
-        if (\array_key_exists('Swinging', $data)) {
+        elseif (\array_key_exists('Foul', $data) && $data['Foul'] === null) {
+            $object->setFoul(null);
+        }
+        if (\array_key_exists('Swinging', $data) && $data['Swinging'] !== null) {
             $object->setSwinging($data['Swinging']);
         }
-        if (\array_key_exists('Looking', $data)) {
+        elseif (\array_key_exists('Swinging', $data) && $data['Swinging'] === null) {
+            $object->setSwinging(null);
+        }
+        if (\array_key_exists('Looking', $data) && $data['Looking'] !== null) {
             $object->setLooking($data['Looking']);
+        }
+        elseif (\array_key_exists('Looking', $data) && $data['Looking'] === null) {
+            $object->setLooking(null);
         }
         return $object;
     }

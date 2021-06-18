@@ -39,11 +39,17 @@ class TeamLineNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('TeamID', $data)) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Key', $data)) {
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
         }
-        if (\array_key_exists('FullName', $data)) {
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
+        }
+        if (\array_key_exists('FullName', $data) && $data['FullName'] !== null) {
             $object->setFullName($data['FullName']);
+        }
+        elseif (\array_key_exists('FullName', $data) && $data['FullName'] === null) {
+            $object->setFullName(null);
         }
         if (\array_key_exists('EvenStrengthLines', $data)) {
             $values = array();

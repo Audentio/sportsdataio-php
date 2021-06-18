@@ -4,20 +4,21 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class TeamsBySeason extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $season;
+    protected $format;
     /**
-     * List of teams playing in a specified season.
-     *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $season 
-              Year of the season and the season type. If no season type is provided, then the default is regular season.
-              <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
+    * List of teams playing in a specified season.
+    *
+    * @param string $season 
+             Year of the season and the season type. If no season type is provided, then the default is regular season.
+             <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
+           
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format, string $season)
+    public function __construct(string $season, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -26,7 +27,7 @@ class TeamsBySeason extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint impl
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}'), array($this->format, $this->season), '/stats/{format}/Teams/{season}');
+        return str_replace(array('{season}', '{format}'), array($this->season, $this->format), '/scores/{format}/Teams/{season}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

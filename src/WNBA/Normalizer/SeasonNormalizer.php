@@ -39,20 +39,35 @@ class SeasonNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('Year', $data)) {
             $object->setYear($data['Year']);
         }
-        if (\array_key_exists('PreseasonStartDate', $data)) {
+        if (\array_key_exists('PreseasonStartDate', $data) && $data['PreseasonStartDate'] !== null) {
             $object->setPreseasonStartDate($data['PreseasonStartDate']);
         }
-        if (\array_key_exists('RegularSeasonStartDate', $data)) {
+        elseif (\array_key_exists('PreseasonStartDate', $data) && $data['PreseasonStartDate'] === null) {
+            $object->setPreseasonStartDate(null);
+        }
+        if (\array_key_exists('RegularSeasonStartDate', $data) && $data['RegularSeasonStartDate'] !== null) {
             $object->setRegularSeasonStartDate($data['RegularSeasonStartDate']);
         }
-        if (\array_key_exists('PostSeasonStartDate', $data)) {
+        elseif (\array_key_exists('RegularSeasonStartDate', $data) && $data['RegularSeasonStartDate'] === null) {
+            $object->setRegularSeasonStartDate(null);
+        }
+        if (\array_key_exists('PostSeasonStartDate', $data) && $data['PostSeasonStartDate'] !== null) {
             $object->setPostSeasonStartDate($data['PostSeasonStartDate']);
         }
-        if (\array_key_exists('CurrentSeasonType', $data)) {
+        elseif (\array_key_exists('PostSeasonStartDate', $data) && $data['PostSeasonStartDate'] === null) {
+            $object->setPostSeasonStartDate(null);
+        }
+        if (\array_key_exists('CurrentSeasonType', $data) && $data['CurrentSeasonType'] !== null) {
             $object->setCurrentSeasonType($data['CurrentSeasonType']);
         }
-        if (\array_key_exists('ApiSeason', $data)) {
+        elseif (\array_key_exists('CurrentSeasonType', $data) && $data['CurrentSeasonType'] === null) {
+            $object->setCurrentSeasonType(null);
+        }
+        if (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] !== null) {
             $object->setApiSeason($data['ApiSeason']);
+        }
+        elseif (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] === null) {
+            $object->setApiSeason(null);
         }
         return $object;
     }

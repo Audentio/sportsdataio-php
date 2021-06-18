@@ -48,29 +48,53 @@ class PlayerOwnershipNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('Week', $data)) {
             $object->setWeek($data['Week']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('OwnershipPercentage', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('OwnershipPercentage', $data) && $data['OwnershipPercentage'] !== null) {
             $object->setOwnershipPercentage($data['OwnershipPercentage']);
         }
-        if (\array_key_exists('DeltaOwnershipPercentage', $data)) {
+        elseif (\array_key_exists('OwnershipPercentage', $data) && $data['OwnershipPercentage'] === null) {
+            $object->setOwnershipPercentage(null);
+        }
+        if (\array_key_exists('DeltaOwnershipPercentage', $data) && $data['DeltaOwnershipPercentage'] !== null) {
             $object->setDeltaOwnershipPercentage($data['DeltaOwnershipPercentage']);
         }
-        if (\array_key_exists('StartPercentage', $data)) {
+        elseif (\array_key_exists('DeltaOwnershipPercentage', $data) && $data['DeltaOwnershipPercentage'] === null) {
+            $object->setDeltaOwnershipPercentage(null);
+        }
+        if (\array_key_exists('StartPercentage', $data) && $data['StartPercentage'] !== null) {
             $object->setStartPercentage($data['StartPercentage']);
         }
-        if (\array_key_exists('DeltaStartPercentage', $data)) {
+        elseif (\array_key_exists('StartPercentage', $data) && $data['StartPercentage'] === null) {
+            $object->setStartPercentage(null);
+        }
+        if (\array_key_exists('DeltaStartPercentage', $data) && $data['DeltaStartPercentage'] !== null) {
             $object->setDeltaStartPercentage($data['DeltaStartPercentage']);
+        }
+        elseif (\array_key_exists('DeltaStartPercentage', $data) && $data['DeltaStartPercentage'] === null) {
+            $object->setDeltaStartPercentage(null);
         }
         return $object;
     }

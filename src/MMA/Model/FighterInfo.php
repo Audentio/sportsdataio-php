@@ -7,80 +7,80 @@ class FighterInfo
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fighterId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $preFightWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $preFightLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $preFightDraws;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $preFightNoContests;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $winner;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $moneyline;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $active;
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFighterId() : int
+    public function getFighterId() : ?int
     {
         return $this->fighterId;
     }
     /**
      * 
      *
-     * @param int $fighterId
+     * @param int|null $fighterId
      *
      * @return self
      */
-    public function setFighterId(int $fighterId) : self
+    public function setFighterId(?int $fighterId) : self
     {
         $this->fighterId = $fighterId;
         return $this;
@@ -88,20 +88,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -109,20 +109,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -130,20 +130,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPreFightWins() : int
+    public function getPreFightWins() : ?int
     {
         return $this->preFightWins;
     }
     /**
      * 
      *
-     * @param int $preFightWins
+     * @param int|null $preFightWins
      *
      * @return self
      */
-    public function setPreFightWins(int $preFightWins) : self
+    public function setPreFightWins(?int $preFightWins) : self
     {
         $this->preFightWins = $preFightWins;
         return $this;
@@ -151,20 +151,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPreFightLosses() : int
+    public function getPreFightLosses() : ?int
     {
         return $this->preFightLosses;
     }
     /**
      * 
      *
-     * @param int $preFightLosses
+     * @param int|null $preFightLosses
      *
      * @return self
      */
-    public function setPreFightLosses(int $preFightLosses) : self
+    public function setPreFightLosses(?int $preFightLosses) : self
     {
         $this->preFightLosses = $preFightLosses;
         return $this;
@@ -172,20 +172,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPreFightDraws() : int
+    public function getPreFightDraws() : ?int
     {
         return $this->preFightDraws;
     }
     /**
      * 
      *
-     * @param int $preFightDraws
+     * @param int|null $preFightDraws
      *
      * @return self
      */
-    public function setPreFightDraws(int $preFightDraws) : self
+    public function setPreFightDraws(?int $preFightDraws) : self
     {
         $this->preFightDraws = $preFightDraws;
         return $this;
@@ -193,20 +193,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPreFightNoContests() : int
+    public function getPreFightNoContests() : ?int
     {
         return $this->preFightNoContests;
     }
     /**
      * 
      *
-     * @param int $preFightNoContests
+     * @param int|null $preFightNoContests
      *
      * @return self
      */
-    public function setPreFightNoContests(int $preFightNoContests) : self
+    public function setPreFightNoContests(?int $preFightNoContests) : self
     {
         $this->preFightNoContests = $preFightNoContests;
         return $this;
@@ -214,20 +214,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getWinner() : bool
+    public function getWinner() : ?bool
     {
         return $this->winner;
     }
     /**
      * 
      *
-     * @param bool $winner
+     * @param bool|null $winner
      *
      * @return self
      */
-    public function setWinner(bool $winner) : self
+    public function setWinner(?bool $winner) : self
     {
         $this->winner = $winner;
         return $this;
@@ -235,20 +235,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getMoneyline() : int
+    public function getMoneyline() : ?int
     {
         return $this->moneyline;
     }
     /**
      * 
      *
-     * @param int $moneyline
+     * @param int|null $moneyline
      *
      * @return self
      */
-    public function setMoneyline(int $moneyline) : self
+    public function setMoneyline(?int $moneyline) : self
     {
         $this->moneyline = $moneyline;
         return $this;
@@ -256,20 +256,20 @@ class FighterInfo
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getActive() : bool
+    public function getActive() : ?bool
     {
         return $this->active;
     }
     /**
      * 
      *
-     * @param bool $active
+     * @param bool|null $active
      *
      * @return self
      */
-    public function setActive(bool $active) : self
+    public function setActive(?bool $active) : self
     {
         $this->active = $active;
         return $this;

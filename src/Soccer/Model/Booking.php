@@ -19,7 +19,7 @@ class Booking
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -31,25 +31,25 @@ class Booking
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameMinute;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameMinuteExtra;
     /**
@@ -97,20 +97,20 @@ class Booking
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -139,20 +139,20 @@ class Booking
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerId() : int
+    public function getPlayerId() : ?int
     {
         return $this->playerId;
     }
     /**
      * 
      *
-     * @param int $playerId
+     * @param int|null $playerId
      *
      * @return self
      */
-    public function setPlayerId(int $playerId) : self
+    public function setPlayerId(?int $playerId) : self
     {
         $this->playerId = $playerId;
         return $this;
@@ -160,20 +160,20 @@ class Booking
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -181,20 +181,20 @@ class Booking
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameMinute() : int
+    public function getGameMinute() : ?int
     {
         return $this->gameMinute;
     }
     /**
      * 
      *
-     * @param int $gameMinute
+     * @param int|null $gameMinute
      *
      * @return self
      */
-    public function setGameMinute(int $gameMinute) : self
+    public function setGameMinute(?int $gameMinute) : self
     {
         $this->gameMinute = $gameMinute;
         return $this;
@@ -202,20 +202,20 @@ class Booking
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameMinuteExtra() : int
+    public function getGameMinuteExtra() : ?int
     {
         return $this->gameMinuteExtra;
     }
     /**
      * 
      *
-     * @param int $gameMinuteExtra
+     * @param int|null $gameMinuteExtra
      *
      * @return self
      */
-    public function setGameMinuteExtra(int $gameMinuteExtra) : self
+    public function setGameMinuteExtra(?int $gameMinuteExtra) : self
     {
         $this->gameMinuteExtra = $gameMinuteExtra;
         return $this;

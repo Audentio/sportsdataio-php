@@ -4,18 +4,18 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class PremiumNewsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $team;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $team Abbreviation of the team. Example: <code>WAS</code>.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'xml', string $team)
+    public function __construct(string $team, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->team = $team;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class PremiumNewsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint 
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{team}'), array($this->format, $this->team), '/news-rotoballer/{format}/RotoBallerPremiumNewsByTeam/{team}');
+        return str_replace(array('{team}', '{format}'), array($this->team, $this->format), '/news-rotoballer/{format}/RotoBallerPremiumNewsByTeam/{team}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

@@ -4,22 +4,22 @@ namespace Sportsdata\API\Soccer\Endpoint;
 
 class PreGameOddsByDateByCompetition extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Soccer\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $competition;
     protected $date;
+    protected $competition;
+    protected $format;
     /**
     * Gets the games, along with the latest pregame odds from each book, for a given competition and date.
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $competition An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: <code>EPL</code>, <code>1</code>, <code>MLS</code>, <code>8</code>, etc.
     * @param string $date The date of the game(s). 
     <br>Examples: <code>2017-02-27</code>, <code>2017-09-01</code>.
+    * @param string $competition An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: <code>EPL</code>, <code>1</code>, <code>MLS</code>, <code>8</code>, etc.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $competition, string $date)
+    public function __construct(string $date, string $competition, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->competition = $competition;
         $this->date = $date;
+        $this->competition = $competition;
+        $this->format = $format;
     }
     use \Sportsdata\API\Soccer\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -28,7 +28,7 @@ class PreGameOddsByDateByCompetition extends \Sportsdata\API\Soccer\Runtime\Clie
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{competition}', '{date}'), array($this->format, $this->competition, $this->date), '/odds/{format}/PreGameOddsByDateByCompetition/{competition}/{date}');
+        return str_replace(array('{date}', '{competition}', '{format}'), array($this->date, $this->competition, $this->format), '/odds/{format}/PreGameOddsByDateByCompetition/{competition}/{date}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

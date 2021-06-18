@@ -4,19 +4,20 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class LegacyBoxScoresDeltaCurrentWeek extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $minutes;
+    protected $format;
     /**
-     * 
-     *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $minutes Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:<br>
-              <code>1</code> or <code>2</code>.
+    * 
+    *
+    * @param string $minutes Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:<br>
+             <code>1</code> or <code>2</code>.
+           
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $minutes)
+    public function __construct(string $minutes, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->minutes = $minutes;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +26,7 @@ class LegacyBoxScoresDeltaCurrentWeek extends \Sportsdata\API\NFL\Runtime\Client
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{minutes}'), array($this->format, $this->minutes), '/stats/{format}/RecentlyUpdatedBoxScores/{minutes}');
+        return str_replace(array('{minutes}', '{format}'), array($this->minutes, $this->format), '/stats/{format}/RecentlyUpdatedBoxScores/{minutes}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

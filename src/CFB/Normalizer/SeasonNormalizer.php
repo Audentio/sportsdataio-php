@@ -45,14 +45,23 @@ class SeasonNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('EndYear', $data)) {
             $object->setEndYear($data['EndYear']);
         }
-        if (\array_key_exists('Description', $data)) {
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('ApiSeason', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] !== null) {
             $object->setApiSeason($data['ApiSeason']);
         }
-        if (\array_key_exists('ApiWeek', $data)) {
+        elseif (\array_key_exists('ApiSeason', $data) && $data['ApiSeason'] === null) {
+            $object->setApiSeason(null);
+        }
+        if (\array_key_exists('ApiWeek', $data) && $data['ApiWeek'] !== null) {
             $object->setApiWeek($data['ApiWeek']);
+        }
+        elseif (\array_key_exists('ApiWeek', $data) && $data['ApiWeek'] === null) {
+            $object->setApiWeek(null);
         }
         return $object;
     }

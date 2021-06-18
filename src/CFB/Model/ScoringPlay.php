@@ -19,55 +19,55 @@ class ScoringPlay
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $period;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingSeconds;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $driveSummary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $scoringTeamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $scoringType;
     /**
@@ -121,20 +121,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPeriod() : string
+    public function getPeriod() : ?string
     {
         return $this->period;
     }
     /**
      * 
      *
-     * @param string $period
+     * @param string|null $period
      *
      * @return self
      */
-    public function setPeriod(string $period) : self
+    public function setPeriod(?string $period) : self
     {
         $this->period = $period;
         return $this;
@@ -142,20 +142,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingMinutes() : int
+    public function getTimeRemainingMinutes() : ?int
     {
         return $this->timeRemainingMinutes;
     }
     /**
      * 
      *
-     * @param int $timeRemainingMinutes
+     * @param int|null $timeRemainingMinutes
      *
      * @return self
      */
-    public function setTimeRemainingMinutes(int $timeRemainingMinutes) : self
+    public function setTimeRemainingMinutes(?int $timeRemainingMinutes) : self
     {
         $this->timeRemainingMinutes = $timeRemainingMinutes;
         return $this;
@@ -163,20 +163,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingSeconds() : int
+    public function getTimeRemainingSeconds() : ?int
     {
         return $this->timeRemainingSeconds;
     }
     /**
      * 
      *
-     * @param int $timeRemainingSeconds
+     * @param int|null $timeRemainingSeconds
      *
      * @return self
      */
-    public function setTimeRemainingSeconds(int $timeRemainingSeconds) : self
+    public function setTimeRemainingSeconds(?int $timeRemainingSeconds) : self
     {
         $this->timeRemainingSeconds = $timeRemainingSeconds;
         return $this;
@@ -184,20 +184,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -205,20 +205,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDriveSummary() : string
+    public function getDriveSummary() : ?string
     {
         return $this->driveSummary;
     }
     /**
      * 
      *
-     * @param string $driveSummary
+     * @param string|null $driveSummary
      *
      * @return self
      */
-    public function setDriveSummary(string $driveSummary) : self
+    public function setDriveSummary(?string $driveSummary) : self
     {
         $this->driveSummary = $driveSummary;
         return $this;
@@ -226,20 +226,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamScore() : int
+    public function getHomeTeamScore() : ?int
     {
         return $this->homeTeamScore;
     }
     /**
      * 
      *
-     * @param int $homeTeamScore
+     * @param int|null $homeTeamScore
      *
      * @return self
      */
-    public function setHomeTeamScore(int $homeTeamScore) : self
+    public function setHomeTeamScore(?int $homeTeamScore) : self
     {
         $this->homeTeamScore = $homeTeamScore;
         return $this;
@@ -247,20 +247,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamScore() : int
+    public function getAwayTeamScore() : ?int
     {
         return $this->awayTeamScore;
     }
     /**
      * 
      *
-     * @param int $awayTeamScore
+     * @param int|null $awayTeamScore
      *
      * @return self
      */
-    public function setAwayTeamScore(int $awayTeamScore) : self
+    public function setAwayTeamScore(?int $awayTeamScore) : self
     {
         $this->awayTeamScore = $awayTeamScore;
         return $this;
@@ -268,20 +268,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getScoringTeamID() : int
+    public function getScoringTeamID() : ?int
     {
         return $this->scoringTeamID;
     }
     /**
      * 
      *
-     * @param int $scoringTeamID
+     * @param int|null $scoringTeamID
      *
      * @return self
      */
-    public function setScoringTeamID(int $scoringTeamID) : self
+    public function setScoringTeamID(?int $scoringTeamID) : self
     {
         $this->scoringTeamID = $scoringTeamID;
         return $this;
@@ -289,20 +289,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getScoringType() : string
+    public function getScoringType() : ?string
     {
         return $this->scoringType;
     }
     /**
      * 
      *
-     * @param string $scoringType
+     * @param string|null $scoringType
      *
      * @return self
      */
-    public function setScoringType(string $scoringType) : self
+    public function setScoringType(?string $scoringType) : self
     {
         $this->scoringType = $scoringType;
         return $this;

@@ -4,19 +4,19 @@ namespace Sportsdata\API\Nascar\Endpoint;
 
 class RaceResults extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Nascar\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $raceid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $raceid Unique FantasyData Race ID.
     Example:<code>1</code>, <code>2</code>, etc.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $raceid)
+    public function __construct(string $raceid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->raceid = $raceid;
+        $this->format = $format;
     }
     use \Sportsdata\API\Nascar\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class RaceResults extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint imp
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{raceid}'), array($this->format, $this->raceid), '/{format}/raceresult/{raceid}');
+        return str_replace(array('{raceid}', '{format}'), array($this->raceid, $this->format), '/{format}/raceresult/{raceid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

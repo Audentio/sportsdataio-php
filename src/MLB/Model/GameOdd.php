@@ -13,7 +13,7 @@ class GameOdd
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $sportsbook;
     /**
@@ -25,79 +25,79 @@ class GameOdd
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeMoneyLine;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayMoneyLine;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $homePointSpread;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $awayPointSpread;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homePointSpreadPayout;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayPointSpreadPayout;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $overUnder;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $overPayout;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $underPayout;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $sportsbookId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $sportsbookUrl;
     /**
@@ -124,20 +124,20 @@ class GameOdd
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSportsbook() : string
+    public function getSportsbook() : ?string
     {
         return $this->sportsbook;
     }
     /**
      * 
      *
-     * @param string $sportsbook
+     * @param string|null $sportsbook
      *
      * @return self
      */
-    public function setSportsbook(string $sportsbook) : self
+    public function setSportsbook(?string $sportsbook) : self
     {
         $this->sportsbook = $sportsbook;
         return $this;
@@ -166,20 +166,20 @@ class GameOdd
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -187,20 +187,20 @@ class GameOdd
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -208,20 +208,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeMoneyLine() : int
+    public function getHomeMoneyLine() : ?int
     {
         return $this->homeMoneyLine;
     }
     /**
      * 
      *
-     * @param int $homeMoneyLine
+     * @param int|null $homeMoneyLine
      *
      * @return self
      */
-    public function setHomeMoneyLine(int $homeMoneyLine) : self
+    public function setHomeMoneyLine(?int $homeMoneyLine) : self
     {
         $this->homeMoneyLine = $homeMoneyLine;
         return $this;
@@ -229,20 +229,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayMoneyLine() : int
+    public function getAwayMoneyLine() : ?int
     {
         return $this->awayMoneyLine;
     }
     /**
      * 
      *
-     * @param int $awayMoneyLine
+     * @param int|null $awayMoneyLine
      *
      * @return self
      */
-    public function setAwayMoneyLine(int $awayMoneyLine) : self
+    public function setAwayMoneyLine(?int $awayMoneyLine) : self
     {
         $this->awayMoneyLine = $awayMoneyLine;
         return $this;
@@ -250,20 +250,20 @@ class GameOdd
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getHomePointSpread() : float
+    public function getHomePointSpread() : ?float
     {
         return $this->homePointSpread;
     }
     /**
      * 
      *
-     * @param float $homePointSpread
+     * @param float|null $homePointSpread
      *
      * @return self
      */
-    public function setHomePointSpread(float $homePointSpread) : self
+    public function setHomePointSpread(?float $homePointSpread) : self
     {
         $this->homePointSpread = $homePointSpread;
         return $this;
@@ -271,20 +271,20 @@ class GameOdd
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAwayPointSpread() : float
+    public function getAwayPointSpread() : ?float
     {
         return $this->awayPointSpread;
     }
     /**
      * 
      *
-     * @param float $awayPointSpread
+     * @param float|null $awayPointSpread
      *
      * @return self
      */
-    public function setAwayPointSpread(float $awayPointSpread) : self
+    public function setAwayPointSpread(?float $awayPointSpread) : self
     {
         $this->awayPointSpread = $awayPointSpread;
         return $this;
@@ -292,20 +292,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomePointSpreadPayout() : int
+    public function getHomePointSpreadPayout() : ?int
     {
         return $this->homePointSpreadPayout;
     }
     /**
      * 
      *
-     * @param int $homePointSpreadPayout
+     * @param int|null $homePointSpreadPayout
      *
      * @return self
      */
-    public function setHomePointSpreadPayout(int $homePointSpreadPayout) : self
+    public function setHomePointSpreadPayout(?int $homePointSpreadPayout) : self
     {
         $this->homePointSpreadPayout = $homePointSpreadPayout;
         return $this;
@@ -313,20 +313,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayPointSpreadPayout() : int
+    public function getAwayPointSpreadPayout() : ?int
     {
         return $this->awayPointSpreadPayout;
     }
     /**
      * 
      *
-     * @param int $awayPointSpreadPayout
+     * @param int|null $awayPointSpreadPayout
      *
      * @return self
      */
-    public function setAwayPointSpreadPayout(int $awayPointSpreadPayout) : self
+    public function setAwayPointSpreadPayout(?int $awayPointSpreadPayout) : self
     {
         $this->awayPointSpreadPayout = $awayPointSpreadPayout;
         return $this;
@@ -334,20 +334,20 @@ class GameOdd
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getOverUnder() : float
+    public function getOverUnder() : ?float
     {
         return $this->overUnder;
     }
     /**
      * 
      *
-     * @param float $overUnder
+     * @param float|null $overUnder
      *
      * @return self
      */
-    public function setOverUnder(float $overUnder) : self
+    public function setOverUnder(?float $overUnder) : self
     {
         $this->overUnder = $overUnder;
         return $this;
@@ -355,20 +355,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOverPayout() : int
+    public function getOverPayout() : ?int
     {
         return $this->overPayout;
     }
     /**
      * 
      *
-     * @param int $overPayout
+     * @param int|null $overPayout
      *
      * @return self
      */
-    public function setOverPayout(int $overPayout) : self
+    public function setOverPayout(?int $overPayout) : self
     {
         $this->overPayout = $overPayout;
         return $this;
@@ -376,20 +376,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getUnderPayout() : int
+    public function getUnderPayout() : ?int
     {
         return $this->underPayout;
     }
     /**
      * 
      *
-     * @param int $underPayout
+     * @param int|null $underPayout
      *
      * @return self
      */
-    public function setUnderPayout(int $underPayout) : self
+    public function setUnderPayout(?int $underPayout) : self
     {
         $this->underPayout = $underPayout;
         return $this;
@@ -397,20 +397,20 @@ class GameOdd
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSportsbookId() : int
+    public function getSportsbookId() : ?int
     {
         return $this->sportsbookId;
     }
     /**
      * 
      *
-     * @param int $sportsbookId
+     * @param int|null $sportsbookId
      *
      * @return self
      */
-    public function setSportsbookId(int $sportsbookId) : self
+    public function setSportsbookId(?int $sportsbookId) : self
     {
         $this->sportsbookId = $sportsbookId;
         return $this;
@@ -418,20 +418,20 @@ class GameOdd
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSportsbookUrl() : string
+    public function getSportsbookUrl() : ?string
     {
         return $this->sportsbookUrl;
     }
     /**
      * 
      *
-     * @param string $sportsbookUrl
+     * @param string|null $sportsbookUrl
      *
      * @return self
      */
-    public function setSportsbookUrl(string $sportsbookUrl) : self
+    public function setSportsbookUrl(?string $sportsbookUrl) : self
     {
         $this->sportsbookUrl = $sportsbookUrl;
         return $this;

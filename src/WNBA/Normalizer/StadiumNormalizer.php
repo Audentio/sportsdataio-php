@@ -42,17 +42,29 @@ class StadiumNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('City', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('State', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('State', $data) && $data['State'] !== null) {
             $object->setState($data['State']);
         }
-        if (\array_key_exists('Country', $data)) {
+        elseif (\array_key_exists('State', $data) && $data['State'] === null) {
+            $object->setState(null);
+        }
+        if (\array_key_exists('Country', $data) && $data['Country'] !== null) {
             $object->setCountry($data['Country']);
+        }
+        elseif (\array_key_exists('Country', $data) && $data['Country'] === null) {
+            $object->setCountry(null);
         }
         return $object;
     }

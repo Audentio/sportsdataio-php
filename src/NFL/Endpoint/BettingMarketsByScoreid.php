@@ -4,18 +4,18 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class BettingMarketsByScoreid extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $scoreid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $scoreid The ScoreID of the desired game/score for which to pull all betting markets (includes outcomes/bets).
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $scoreid)
+    public function __construct(string $scoreid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->scoreid = $scoreid;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingMarketsByScoreid extends \Sportsdata\API\NFL\Runtime\Client\BaseEnd
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{scoreid}'), array($this->format, $this->scoreid), '/odds/{format}/BettingMarketsByScoreID/{scoreid}');
+        return str_replace(array('{scoreid}', '{format}'), array($this->scoreid, $this->format), '/odds/{format}/BettingMarketsByScoreID/{scoreid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

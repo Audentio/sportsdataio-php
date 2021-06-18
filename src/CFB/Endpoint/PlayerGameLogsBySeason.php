@@ -4,25 +4,25 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class PlayerGameLogsBySeason extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $playerid;
+    protected $season;
     protected $numberofgames;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $season Season to get games from. Example <code>2019POST</code>, <code>2020</code>
     * @param string $playerid Unique FantasyData Player ID.
     Example:<code>50036283</code>.
+    * @param string $season Season to get games from. Example <code>2019POST</code>, <code>2020</code>
     * @param string $numberofgames How many games to return. Example <code>all</code>, <code>10</code>, <code>25</code>
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format, string $season, string $playerid, string $numberofgames)
+    public function __construct(string $playerid, string $season, string $numberofgames, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->playerid = $playerid;
+        $this->season = $season;
         $this->numberofgames = $numberofgames;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -31,7 +31,7 @@ class PlayerGameLogsBySeason extends \Sportsdata\API\CFB\Runtime\Client\BaseEndp
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{playerid}', '{numberofgames}'), array($this->format, $this->season, $this->playerid, $this->numberofgames), '/stats/{format}/PlayerGameStatsBySeason/{season}/{playerid}/{numberofgames}');
+        return str_replace(array('{playerid}', '{season}', '{numberofgames}', '{format}'), array($this->playerid, $this->season, $this->numberofgames, $this->format), '/stats/{format}/PlayerGameStatsBySeason/{season}/{playerid}/{numberofgames}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

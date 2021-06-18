@@ -39,83 +39,158 @@ class TeamNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('AreaId', $data)) {
+        if (\array_key_exists('AreaId', $data) && $data['AreaId'] !== null) {
             $object->setAreaId($data['AreaId']);
         }
-        if (\array_key_exists('VenueId', $data)) {
+        elseif (\array_key_exists('AreaId', $data) && $data['AreaId'] === null) {
+            $object->setAreaId(null);
+        }
+        if (\array_key_exists('VenueId', $data) && $data['VenueId'] !== null) {
             $object->setVenueId($data['VenueId']);
         }
-        if (\array_key_exists('Key', $data)) {
+        elseif (\array_key_exists('VenueId', $data) && $data['VenueId'] === null) {
+            $object->setVenueId(null);
+        }
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('FullName', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('FullName', $data) && $data['FullName'] !== null) {
             $object->setFullName($data['FullName']);
+        }
+        elseif (\array_key_exists('FullName', $data) && $data['FullName'] === null) {
+            $object->setFullName(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('AreaName', $data)) {
+        if (\array_key_exists('AreaName', $data) && $data['AreaName'] !== null) {
             $object->setAreaName($data['AreaName']);
         }
-        if (\array_key_exists('VenueName', $data)) {
+        elseif (\array_key_exists('AreaName', $data) && $data['AreaName'] === null) {
+            $object->setAreaName(null);
+        }
+        if (\array_key_exists('VenueName', $data) && $data['VenueName'] !== null) {
             $object->setVenueName($data['VenueName']);
         }
-        if (\array_key_exists('Gender', $data)) {
+        elseif (\array_key_exists('VenueName', $data) && $data['VenueName'] === null) {
+            $object->setVenueName(null);
+        }
+        if (\array_key_exists('Gender', $data) && $data['Gender'] !== null) {
             $object->setGender($data['Gender']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Gender', $data) && $data['Gender'] === null) {
+            $object->setGender(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('Address', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('Address', $data) && $data['Address'] !== null) {
             $object->setAddress($data['Address']);
         }
-        if (\array_key_exists('City', $data)) {
+        elseif (\array_key_exists('Address', $data) && $data['Address'] === null) {
+            $object->setAddress(null);
+        }
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('Zip', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('Zip', $data) && $data['Zip'] !== null) {
             $object->setZip($data['Zip']);
         }
-        if (\array_key_exists('Phone', $data)) {
+        elseif (\array_key_exists('Zip', $data) && $data['Zip'] === null) {
+            $object->setZip(null);
+        }
+        if (\array_key_exists('Phone', $data) && $data['Phone'] !== null) {
             $object->setPhone($data['Phone']);
         }
-        if (\array_key_exists('Fax', $data)) {
+        elseif (\array_key_exists('Phone', $data) && $data['Phone'] === null) {
+            $object->setPhone(null);
+        }
+        if (\array_key_exists('Fax', $data) && $data['Fax'] !== null) {
             $object->setFax($data['Fax']);
         }
-        if (\array_key_exists('Website', $data)) {
+        elseif (\array_key_exists('Fax', $data) && $data['Fax'] === null) {
+            $object->setFax(null);
+        }
+        if (\array_key_exists('Website', $data) && $data['Website'] !== null) {
             $object->setWebsite($data['Website']);
         }
-        if (\array_key_exists('Email', $data)) {
+        elseif (\array_key_exists('Website', $data) && $data['Website'] === null) {
+            $object->setWebsite(null);
+        }
+        if (\array_key_exists('Email', $data) && $data['Email'] !== null) {
             $object->setEmail($data['Email']);
         }
-        if (\array_key_exists('Founded', $data)) {
+        elseif (\array_key_exists('Email', $data) && $data['Email'] === null) {
+            $object->setEmail(null);
+        }
+        if (\array_key_exists('Founded', $data) && $data['Founded'] !== null) {
             $object->setFounded($data['Founded']);
         }
-        if (\array_key_exists('ClubColor1', $data)) {
+        elseif (\array_key_exists('Founded', $data) && $data['Founded'] === null) {
+            $object->setFounded(null);
+        }
+        if (\array_key_exists('ClubColor1', $data) && $data['ClubColor1'] !== null) {
             $object->setClubColor1($data['ClubColor1']);
         }
-        if (\array_key_exists('ClubColor2', $data)) {
+        elseif (\array_key_exists('ClubColor1', $data) && $data['ClubColor1'] === null) {
+            $object->setClubColor1(null);
+        }
+        if (\array_key_exists('ClubColor2', $data) && $data['ClubColor2'] !== null) {
             $object->setClubColor2($data['ClubColor2']);
         }
-        if (\array_key_exists('ClubColor3', $data)) {
+        elseif (\array_key_exists('ClubColor2', $data) && $data['ClubColor2'] === null) {
+            $object->setClubColor2(null);
+        }
+        if (\array_key_exists('ClubColor3', $data) && $data['ClubColor3'] !== null) {
             $object->setClubColor3($data['ClubColor3']);
         }
-        if (\array_key_exists('Nickname1', $data)) {
+        elseif (\array_key_exists('ClubColor3', $data) && $data['ClubColor3'] === null) {
+            $object->setClubColor3(null);
+        }
+        if (\array_key_exists('Nickname1', $data) && $data['Nickname1'] !== null) {
             $object->setNickname1($data['Nickname1']);
         }
-        if (\array_key_exists('Nickname2', $data)) {
+        elseif (\array_key_exists('Nickname1', $data) && $data['Nickname1'] === null) {
+            $object->setNickname1(null);
+        }
+        if (\array_key_exists('Nickname2', $data) && $data['Nickname2'] !== null) {
             $object->setNickname2($data['Nickname2']);
         }
-        if (\array_key_exists('Nickname3', $data)) {
+        elseif (\array_key_exists('Nickname2', $data) && $data['Nickname2'] === null) {
+            $object->setNickname2(null);
+        }
+        if (\array_key_exists('Nickname3', $data) && $data['Nickname3'] !== null) {
             $object->setNickname3($data['Nickname3']);
         }
-        if (\array_key_exists('WikipediaLogoUrl', $data)) {
+        elseif (\array_key_exists('Nickname3', $data) && $data['Nickname3'] === null) {
+            $object->setNickname3(null);
+        }
+        if (\array_key_exists('WikipediaLogoUrl', $data) && $data['WikipediaLogoUrl'] !== null) {
             $object->setWikipediaLogoUrl($data['WikipediaLogoUrl']);
         }
-        if (\array_key_exists('WikipediaWordMarkUrl', $data)) {
+        elseif (\array_key_exists('WikipediaLogoUrl', $data) && $data['WikipediaLogoUrl'] === null) {
+            $object->setWikipediaLogoUrl(null);
+        }
+        if (\array_key_exists('WikipediaWordMarkUrl', $data) && $data['WikipediaWordMarkUrl'] !== null) {
             $object->setWikipediaWordMarkUrl($data['WikipediaWordMarkUrl']);
+        }
+        elseif (\array_key_exists('WikipediaWordMarkUrl', $data) && $data['WikipediaWordMarkUrl'] === null) {
+            $object->setWikipediaWordMarkUrl(null);
         }
         if (\array_key_exists('GlobalTeamId', $data)) {
             $object->setGlobalTeamId($data['GlobalTeamId']);

@@ -13,13 +13,13 @@ class League
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
@@ -46,20 +46,20 @@ class League
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -67,20 +67,20 @@ class League
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;

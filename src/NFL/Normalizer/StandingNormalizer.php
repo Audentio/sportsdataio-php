@@ -42,17 +42,29 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Conference', $data)) {
+        if (\array_key_exists('Conference', $data) && $data['Conference'] !== null) {
             $object->setConference($data['Conference']);
         }
-        if (\array_key_exists('Division', $data)) {
+        elseif (\array_key_exists('Conference', $data) && $data['Conference'] === null) {
+            $object->setConference(null);
+        }
+        if (\array_key_exists('Division', $data) && $data['Division'] !== null) {
             $object->setDivision($data['Division']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Division', $data) && $data['Division'] === null) {
+            $object->setDivision(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         if (\array_key_exists('Wins', $data)) {
             $object->setWins($data['Wins']);
@@ -75,8 +87,11 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('NetPoints', $data)) {
             $object->setNetPoints($data['NetPoints']);
         }
-        if (\array_key_exists('Touchdowns', $data)) {
+        if (\array_key_exists('Touchdowns', $data) && $data['Touchdowns'] !== null) {
             $object->setTouchdowns($data['Touchdowns']);
+        }
+        elseif (\array_key_exists('Touchdowns', $data) && $data['Touchdowns'] === null) {
+            $object->setTouchdowns(null);
         }
         if (\array_key_exists('DivisionWins', $data)) {
             $object->setDivisionWins($data['DivisionWins']);
@@ -99,8 +114,11 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('ConferenceTies', $data)) {
             $object->setConferenceTies($data['ConferenceTies']);
         }
-        if (\array_key_exists('GlobalTeamID', $data)) {
+        if (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] !== null) {
             $object->setGlobalTeamID($data['GlobalTeamID']);
+        }
+        elseif (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] === null) {
+            $object->setGlobalTeamID(null);
         }
         if (\array_key_exists('DivisionRank', $data)) {
             $object->setDivisionRank($data['DivisionRank']);

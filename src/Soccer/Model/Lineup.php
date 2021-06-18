@@ -19,7 +19,7 @@ class Lineup
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -37,49 +37,49 @@ class Lineup
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $replacedPlayerId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $replacedPlayerName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameMinute;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameMinuteExtra;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pitchPositionHorizontal;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pitchPositionVertical;
     /**
@@ -127,20 +127,20 @@ class Lineup
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -190,20 +190,20 @@ class Lineup
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -211,20 +211,20 @@ class Lineup
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -232,20 +232,20 @@ class Lineup
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getReplacedPlayerId() : int
+    public function getReplacedPlayerId() : ?int
     {
         return $this->replacedPlayerId;
     }
     /**
      * 
      *
-     * @param int $replacedPlayerId
+     * @param int|null $replacedPlayerId
      *
      * @return self
      */
-    public function setReplacedPlayerId(int $replacedPlayerId) : self
+    public function setReplacedPlayerId(?int $replacedPlayerId) : self
     {
         $this->replacedPlayerId = $replacedPlayerId;
         return $this;
@@ -253,20 +253,20 @@ class Lineup
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getReplacedPlayerName() : string
+    public function getReplacedPlayerName() : ?string
     {
         return $this->replacedPlayerName;
     }
     /**
      * 
      *
-     * @param string $replacedPlayerName
+     * @param string|null $replacedPlayerName
      *
      * @return self
      */
-    public function setReplacedPlayerName(string $replacedPlayerName) : self
+    public function setReplacedPlayerName(?string $replacedPlayerName) : self
     {
         $this->replacedPlayerName = $replacedPlayerName;
         return $this;
@@ -274,20 +274,20 @@ class Lineup
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameMinute() : int
+    public function getGameMinute() : ?int
     {
         return $this->gameMinute;
     }
     /**
      * 
      *
-     * @param int $gameMinute
+     * @param int|null $gameMinute
      *
      * @return self
      */
-    public function setGameMinute(int $gameMinute) : self
+    public function setGameMinute(?int $gameMinute) : self
     {
         $this->gameMinute = $gameMinute;
         return $this;
@@ -295,20 +295,20 @@ class Lineup
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameMinuteExtra() : int
+    public function getGameMinuteExtra() : ?int
     {
         return $this->gameMinuteExtra;
     }
     /**
      * 
      *
-     * @param int $gameMinuteExtra
+     * @param int|null $gameMinuteExtra
      *
      * @return self
      */
-    public function setGameMinuteExtra(int $gameMinuteExtra) : self
+    public function setGameMinuteExtra(?int $gameMinuteExtra) : self
     {
         $this->gameMinuteExtra = $gameMinuteExtra;
         return $this;
@@ -316,20 +316,20 @@ class Lineup
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPitchPositionHorizontal() : int
+    public function getPitchPositionHorizontal() : ?int
     {
         return $this->pitchPositionHorizontal;
     }
     /**
      * 
      *
-     * @param int $pitchPositionHorizontal
+     * @param int|null $pitchPositionHorizontal
      *
      * @return self
      */
-    public function setPitchPositionHorizontal(int $pitchPositionHorizontal) : self
+    public function setPitchPositionHorizontal(?int $pitchPositionHorizontal) : self
     {
         $this->pitchPositionHorizontal = $pitchPositionHorizontal;
         return $this;
@@ -337,20 +337,20 @@ class Lineup
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPitchPositionVertical() : int
+    public function getPitchPositionVertical() : ?int
     {
         return $this->pitchPositionVertical;
     }
     /**
      * 
      *
-     * @param int $pitchPositionVertical
+     * @param int|null $pitchPositionVertical
      *
      * @return self
      */
-    public function setPitchPositionVertical(int $pitchPositionVertical) : self
+    public function setPitchPositionVertical(?int $pitchPositionVertical) : self
     {
         $this->pitchPositionVertical = $pitchPositionVertical;
         return $this;

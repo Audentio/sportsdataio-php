@@ -10,7 +10,7 @@ class Champions extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implemen
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'xml')
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }

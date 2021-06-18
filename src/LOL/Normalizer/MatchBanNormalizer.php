@@ -42,8 +42,11 @@ class MatchBanNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('ChampionId', $data)) {
+        if (\array_key_exists('ChampionId', $data) && $data['ChampionId'] !== null) {
             $object->setChampionId($data['ChampionId']);
+        }
+        elseif (\array_key_exists('ChampionId', $data) && $data['ChampionId'] === null) {
+            $object->setChampionId(null);
         }
         if (\array_key_exists('Champion', $data)) {
             $object->setChampion($this->denormalizer->denormalize($data['Champion'], 'Sportsdata\\API\\LOL\\Model\\ChampionInfo', 'json', $context));

@@ -10,7 +10,7 @@ class Teams extends \Sportsdata\API\CWBB\Runtime\Client\BaseEndpoint implements 
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format)
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }

@@ -4,18 +4,18 @@ namespace Sportsdata\API\LOL\Endpoint;
 
 class CompetitionFixturesLeagueDetails extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\LOL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $competitionid;
+    protected $format;
     /**
      * Competition Fixtures (League Details)
      *
+     * @param string $competitionid A LoL competition/league unique CompetitionId. Possible values include: <code>100000009</code>, etc.
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $competitionid A LoL competition/league unique CompetitionId. Possible values include: <code>100000019</code>, etc.
      */
-    public function __construct(string $format = 'xml', string $competitionid)
+    public function __construct(string $competitionid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->competitionid = $competitionid;
+        $this->format = $format;
     }
     use \Sportsdata\API\LOL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class CompetitionFixturesLeagueDetails extends \Sportsdata\API\LOL\Runtime\Clien
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{competitionid}'), array($this->format, $this->competitionid), '/stats/{format}/CompetitionDetails/{competitionid}');
+        return str_replace(array('{competitionid}', '{format}'), array($this->competitionid, $this->format), '/scores/{format}/CompetitionDetails/{competitionid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

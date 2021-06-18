@@ -31,7 +31,7 @@ class CanceledMembership
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
@@ -121,20 +121,20 @@ class CanceledMembership
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;

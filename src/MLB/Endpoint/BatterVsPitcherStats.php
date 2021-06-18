@@ -4,23 +4,23 @@ namespace Sportsdata\API\MLB\Endpoint;
 
 class BatterVsPitcherStats extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\MLB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $hitterid;
     protected $pitcherid;
+    protected $hitterid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $hitterid Unique FantasyData Player ID.
-    Example:<code>10000031</code>.
     * @param string $pitcherid Unique FantasyData Player ID.
     Example:<code>10000618</code>.
+    * @param string $hitterid Unique FantasyData Player ID.
+    Example:<code>10000031</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $hitterid, string $pitcherid)
+    public function __construct(string $pitcherid, string $hitterid, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->hitterid = $hitterid;
         $this->pitcherid = $pitcherid;
+        $this->hitterid = $hitterid;
+        $this->format = $format;
     }
     use \Sportsdata\API\MLB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -29,7 +29,7 @@ class BatterVsPitcherStats extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoi
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{hitterid}', '{pitcherid}'), array($this->format, $this->hitterid, $this->pitcherid), '/stats/{format}/HitterVsPitcher/{hitterid}/{pitcherid}');
+        return str_replace(array('{pitcherid}', '{hitterid}', '{format}'), array($this->pitcherid, $this->hitterid, $this->format), '/stats/{format}/HitterVsPitcher/{hitterid}/{pitcherid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

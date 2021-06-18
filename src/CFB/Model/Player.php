@@ -13,115 +13,115 @@ class Player
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $jersey;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $positionCategory;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $class;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $height;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $weight;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthCity;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthState;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $injuryStatus;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $injuryBodyPart;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $injuryStartDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $injuryNotes;
     /**
@@ -148,20 +148,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -169,20 +169,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -190,20 +190,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -211,20 +211,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -232,20 +232,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getJersey() : int
+    public function getJersey() : ?int
     {
         return $this->jersey;
     }
     /**
      * 
      *
-     * @param int $jersey
+     * @param int|null $jersey
      *
      * @return self
      */
-    public function setJersey(int $jersey) : self
+    public function setJersey(?int $jersey) : self
     {
         $this->jersey = $jersey;
         return $this;
@@ -253,20 +253,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -274,20 +274,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPositionCategory() : string
+    public function getPositionCategory() : ?string
     {
         return $this->positionCategory;
     }
     /**
      * 
      *
-     * @param string $positionCategory
+     * @param string|null $positionCategory
      *
      * @return self
      */
-    public function setPositionCategory(string $positionCategory) : self
+    public function setPositionCategory(?string $positionCategory) : self
     {
         $this->positionCategory = $positionCategory;
         return $this;
@@ -295,20 +295,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getClass() : string
+    public function getClass() : ?string
     {
         return $this->class;
     }
     /**
      * 
      *
-     * @param string $class
+     * @param string|null $class
      *
      * @return self
      */
-    public function setClass(string $class) : self
+    public function setClass(?string $class) : self
     {
         $this->class = $class;
         return $this;
@@ -316,20 +316,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHeight() : int
+    public function getHeight() : ?int
     {
         return $this->height;
     }
     /**
      * 
      *
-     * @param int $height
+     * @param int|null $height
      *
      * @return self
      */
-    public function setHeight(int $height) : self
+    public function setHeight(?int $height) : self
     {
         $this->height = $height;
         return $this;
@@ -337,20 +337,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWeight() : int
+    public function getWeight() : ?int
     {
         return $this->weight;
     }
     /**
      * 
      *
-     * @param int $weight
+     * @param int|null $weight
      *
      * @return self
      */
-    public function setWeight(int $weight) : self
+    public function setWeight(?int $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -358,20 +358,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthCity() : string
+    public function getBirthCity() : ?string
     {
         return $this->birthCity;
     }
     /**
      * 
      *
-     * @param string $birthCity
+     * @param string|null $birthCity
      *
      * @return self
      */
-    public function setBirthCity(string $birthCity) : self
+    public function setBirthCity(?string $birthCity) : self
     {
         $this->birthCity = $birthCity;
         return $this;
@@ -379,20 +379,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthState() : string
+    public function getBirthState() : ?string
     {
         return $this->birthState;
     }
     /**
      * 
      *
-     * @param string $birthState
+     * @param string|null $birthState
      *
      * @return self
      */
-    public function setBirthState(string $birthState) : self
+    public function setBirthState(?string $birthState) : self
     {
         $this->birthState = $birthState;
         return $this;
@@ -400,20 +400,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -421,20 +421,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -442,20 +442,20 @@ class Player
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;
@@ -463,20 +463,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getInjuryStatus() : string
+    public function getInjuryStatus() : ?string
     {
         return $this->injuryStatus;
     }
     /**
      * 
      *
-     * @param string $injuryStatus
+     * @param string|null $injuryStatus
      *
      * @return self
      */
-    public function setInjuryStatus(string $injuryStatus) : self
+    public function setInjuryStatus(?string $injuryStatus) : self
     {
         $this->injuryStatus = $injuryStatus;
         return $this;
@@ -484,20 +484,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getInjuryBodyPart() : string
+    public function getInjuryBodyPart() : ?string
     {
         return $this->injuryBodyPart;
     }
     /**
      * 
      *
-     * @param string $injuryBodyPart
+     * @param string|null $injuryBodyPart
      *
      * @return self
      */
-    public function setInjuryBodyPart(string $injuryBodyPart) : self
+    public function setInjuryBodyPart(?string $injuryBodyPart) : self
     {
         $this->injuryBodyPart = $injuryBodyPart;
         return $this;
@@ -505,20 +505,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getInjuryStartDate() : string
+    public function getInjuryStartDate() : ?string
     {
         return $this->injuryStartDate;
     }
     /**
      * 
      *
-     * @param string $injuryStartDate
+     * @param string|null $injuryStartDate
      *
      * @return self
      */
-    public function setInjuryStartDate(string $injuryStartDate) : self
+    public function setInjuryStartDate(?string $injuryStartDate) : self
     {
         $this->injuryStartDate = $injuryStartDate;
         return $this;
@@ -526,20 +526,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getInjuryNotes() : string
+    public function getInjuryNotes() : ?string
     {
         return $this->injuryNotes;
     }
     /**
      * 
      *
-     * @param string $injuryNotes
+     * @param string|null $injuryNotes
      *
      * @return self
      */
-    public function setInjuryNotes(string $injuryNotes) : self
+    public function setInjuryNotes(?string $injuryNotes) : self
     {
         $this->injuryNotes = $injuryNotes;
         return $this;

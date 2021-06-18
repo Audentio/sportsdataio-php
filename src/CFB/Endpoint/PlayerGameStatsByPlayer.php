@@ -4,30 +4,33 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class PlayerGameStatsByPlayer extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $week;
+    protected $season;
     protected $playerid;
+    protected $format;
     /**
-     * 
-     *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $season 
-              Year of the season.
-              <br>Examples: <code>2015</code>, <code>2016</code>.
+    * 
+    *
     * @param string $week 
-              The week of the game(s).
-              <br>Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc.
+             The week of the game(s).
+             <br>Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc.
+           
+    * @param string $season 
+             Year of the season.
+             <br>Examples: <code>2015</code>, <code>2016</code>.
+           
     * @param string $playerid 
-              Unique FantasyData Player ID.
-              Example:<code>50002016</code>.
+             Unique FantasyData Player ID.
+             Example:<code>50002016</code>.
+           
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $season, string $week, string $playerid)
+    public function __construct(string $week, string $season, string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->week = $week;
+        $this->season = $season;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -36,7 +39,7 @@ class PlayerGameStatsByPlayer extends \Sportsdata\API\CFB\Runtime\Client\BaseEnd
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{week}', '{playerid}'), array($this->format, $this->season, $this->week, $this->playerid), '/stats/{format}/PlayerGameStatsByPlayer/{season}/{week}/{playerid}');
+        return str_replace(array('{week}', '{season}', '{playerid}', '{format}'), array($this->week, $this->season, $this->playerid, $this->format), '/stats/{format}/PlayerGameStatsByPlayer/{season}/{week}/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

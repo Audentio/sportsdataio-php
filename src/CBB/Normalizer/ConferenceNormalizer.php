@@ -39,8 +39,11 @@ class ConferenceNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('ConferenceID', $data)) {
             $object->setConferenceID($data['ConferenceID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         if (\array_key_exists('Teams', $data)) {
             $values = array();

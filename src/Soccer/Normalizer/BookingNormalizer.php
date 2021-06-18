@@ -42,23 +42,38 @@ class BookingNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('GameId', $data)) {
             $object->setGameId($data['GameId']);
         }
-        if (\array_key_exists('Type', $data)) {
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
+        }
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
         }
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('PlayerId', $data)) {
+        if (\array_key_exists('PlayerId', $data) && $data['PlayerId'] !== null) {
             $object->setPlayerId($data['PlayerId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('PlayerId', $data) && $data['PlayerId'] === null) {
+            $object->setPlayerId(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('GameMinute', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('GameMinute', $data) && $data['GameMinute'] !== null) {
             $object->setGameMinute($data['GameMinute']);
         }
-        if (\array_key_exists('GameMinuteExtra', $data)) {
+        elseif (\array_key_exists('GameMinute', $data) && $data['GameMinute'] === null) {
+            $object->setGameMinute(null);
+        }
+        if (\array_key_exists('GameMinuteExtra', $data) && $data['GameMinuteExtra'] !== null) {
             $object->setGameMinuteExtra($data['GameMinuteExtra']);
+        }
+        elseif (\array_key_exists('GameMinuteExtra', $data) && $data['GameMinuteExtra'] === null) {
+            $object->setGameMinuteExtra(null);
         }
         return $object;
     }

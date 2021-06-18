@@ -4,18 +4,18 @@ namespace Sportsdata\API\NBA\Endpoint;
 
 class BettingMarketsByEvent extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NBA\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $eventId;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $eventId The EventId of the desired event/game for which to pull all betting markets (includes outcomes/bets). Valid entries include: <code>134</code>, <code>155</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $eventId)
+    public function __construct(string $eventId, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->eventId = $eventId;
+        $this->format = $format;
     }
     use \Sportsdata\API\NBA\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingMarketsByEvent extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpo
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{eventId}'), array($this->format, $this->eventId), '/odds/{format}/BettingMarkets/{eventId}');
+        return str_replace(array('{eventId}', '{format}'), array($this->eventId, $this->format), '/odds/{format}/BettingMarkets/{eventId}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

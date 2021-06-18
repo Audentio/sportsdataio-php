@@ -13,7 +13,7 @@ class Item
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -58,20 +58,20 @@ class Item
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;

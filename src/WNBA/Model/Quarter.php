@@ -25,19 +25,19 @@ class Quarter
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScore;
     /**
@@ -106,20 +106,20 @@ class Quarter
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -127,20 +127,20 @@ class Quarter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScore() : int
+    public function getAwayScore() : ?int
     {
         return $this->awayScore;
     }
     /**
      * 
      *
-     * @param int $awayScore
+     * @param int|null $awayScore
      *
      * @return self
      */
-    public function setAwayScore(int $awayScore) : self
+    public function setAwayScore(?int $awayScore) : self
     {
         $this->awayScore = $awayScore;
         return $this;
@@ -148,20 +148,20 @@ class Quarter
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScore() : int
+    public function getHomeScore() : ?int
     {
         return $this->homeScore;
     }
     /**
      * 
      *
-     * @param int $homeScore
+     * @param int|null $homeScore
      *
      * @return self
      */
-    public function setHomeScore(int $homeScore) : self
+    public function setHomeScore(?int $homeScore) : self
     {
         $this->homeScore = $homeScore;
         return $this;

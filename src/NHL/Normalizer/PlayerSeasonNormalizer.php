@@ -39,146 +39,287 @@ class PlayerSeasonNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (\array_key_exists('StatID', $data)) {
             $object->setStatID($data['StatID']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('SeasonType', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('SeasonType', $data) && $data['SeasonType'] !== null) {
             $object->setSeasonType($data['SeasonType']);
         }
-        if (\array_key_exists('Season', $data)) {
+        elseif (\array_key_exists('SeasonType', $data) && $data['SeasonType'] === null) {
+            $object->setSeasonType(null);
+        }
+        if (\array_key_exists('Season', $data) && $data['Season'] !== null) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('Season', $data) && $data['Season'] === null) {
+            $object->setSeason(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('GlobalTeamID', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] !== null) {
             $object->setGlobalTeamID($data['GlobalTeamID']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('GlobalTeamID', $data) && $data['GlobalTeamID'] === null) {
+            $object->setGlobalTeamID(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Games', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Games', $data) && $data['Games'] !== null) {
             $object->setGames($data['Games']);
         }
-        if (\array_key_exists('FantasyPoints', $data)) {
+        elseif (\array_key_exists('Games', $data) && $data['Games'] === null) {
+            $object->setGames(null);
+        }
+        if (\array_key_exists('FantasyPoints', $data) && $data['FantasyPoints'] !== null) {
             $object->setFantasyPoints($data['FantasyPoints']);
         }
-        if (\array_key_exists('FantasyPointsFanDuel', $data)) {
+        elseif (\array_key_exists('FantasyPoints', $data) && $data['FantasyPoints'] === null) {
+            $object->setFantasyPoints(null);
+        }
+        if (\array_key_exists('FantasyPointsFanDuel', $data) && $data['FantasyPointsFanDuel'] !== null) {
             $object->setFantasyPointsFanDuel($data['FantasyPointsFanDuel']);
         }
-        if (\array_key_exists('FantasyPointsDraftKings', $data)) {
+        elseif (\array_key_exists('FantasyPointsFanDuel', $data) && $data['FantasyPointsFanDuel'] === null) {
+            $object->setFantasyPointsFanDuel(null);
+        }
+        if (\array_key_exists('FantasyPointsDraftKings', $data) && $data['FantasyPointsDraftKings'] !== null) {
             $object->setFantasyPointsDraftKings($data['FantasyPointsDraftKings']);
         }
-        if (\array_key_exists('FantasyPointsYahoo', $data)) {
+        elseif (\array_key_exists('FantasyPointsDraftKings', $data) && $data['FantasyPointsDraftKings'] === null) {
+            $object->setFantasyPointsDraftKings(null);
+        }
+        if (\array_key_exists('FantasyPointsYahoo', $data) && $data['FantasyPointsYahoo'] !== null) {
             $object->setFantasyPointsYahoo($data['FantasyPointsYahoo']);
         }
-        if (\array_key_exists('Minutes', $data)) {
+        elseif (\array_key_exists('FantasyPointsYahoo', $data) && $data['FantasyPointsYahoo'] === null) {
+            $object->setFantasyPointsYahoo(null);
+        }
+        if (\array_key_exists('Minutes', $data) && $data['Minutes'] !== null) {
             $object->setMinutes($data['Minutes']);
         }
-        if (\array_key_exists('Seconds', $data)) {
+        elseif (\array_key_exists('Minutes', $data) && $data['Minutes'] === null) {
+            $object->setMinutes(null);
+        }
+        if (\array_key_exists('Seconds', $data) && $data['Seconds'] !== null) {
             $object->setSeconds($data['Seconds']);
         }
-        if (\array_key_exists('Goals', $data)) {
+        elseif (\array_key_exists('Seconds', $data) && $data['Seconds'] === null) {
+            $object->setSeconds(null);
+        }
+        if (\array_key_exists('Goals', $data) && $data['Goals'] !== null) {
             $object->setGoals($data['Goals']);
         }
-        if (\array_key_exists('Assists', $data)) {
+        elseif (\array_key_exists('Goals', $data) && $data['Goals'] === null) {
+            $object->setGoals(null);
+        }
+        if (\array_key_exists('Assists', $data) && $data['Assists'] !== null) {
             $object->setAssists($data['Assists']);
         }
-        if (\array_key_exists('ShotsOnGoal', $data)) {
+        elseif (\array_key_exists('Assists', $data) && $data['Assists'] === null) {
+            $object->setAssists(null);
+        }
+        if (\array_key_exists('ShotsOnGoal', $data) && $data['ShotsOnGoal'] !== null) {
             $object->setShotsOnGoal($data['ShotsOnGoal']);
         }
-        if (\array_key_exists('PowerPlayGoals', $data)) {
+        elseif (\array_key_exists('ShotsOnGoal', $data) && $data['ShotsOnGoal'] === null) {
+            $object->setShotsOnGoal(null);
+        }
+        if (\array_key_exists('PowerPlayGoals', $data) && $data['PowerPlayGoals'] !== null) {
             $object->setPowerPlayGoals($data['PowerPlayGoals']);
         }
-        if (\array_key_exists('ShortHandedGoals', $data)) {
+        elseif (\array_key_exists('PowerPlayGoals', $data) && $data['PowerPlayGoals'] === null) {
+            $object->setPowerPlayGoals(null);
+        }
+        if (\array_key_exists('ShortHandedGoals', $data) && $data['ShortHandedGoals'] !== null) {
             $object->setShortHandedGoals($data['ShortHandedGoals']);
         }
-        if (\array_key_exists('EmptyNetGoals', $data)) {
+        elseif (\array_key_exists('ShortHandedGoals', $data) && $data['ShortHandedGoals'] === null) {
+            $object->setShortHandedGoals(null);
+        }
+        if (\array_key_exists('EmptyNetGoals', $data) && $data['EmptyNetGoals'] !== null) {
             $object->setEmptyNetGoals($data['EmptyNetGoals']);
         }
-        if (\array_key_exists('PowerPlayAssists', $data)) {
+        elseif (\array_key_exists('EmptyNetGoals', $data) && $data['EmptyNetGoals'] === null) {
+            $object->setEmptyNetGoals(null);
+        }
+        if (\array_key_exists('PowerPlayAssists', $data) && $data['PowerPlayAssists'] !== null) {
             $object->setPowerPlayAssists($data['PowerPlayAssists']);
         }
-        if (\array_key_exists('ShortHandedAssists', $data)) {
+        elseif (\array_key_exists('PowerPlayAssists', $data) && $data['PowerPlayAssists'] === null) {
+            $object->setPowerPlayAssists(null);
+        }
+        if (\array_key_exists('ShortHandedAssists', $data) && $data['ShortHandedAssists'] !== null) {
             $object->setShortHandedAssists($data['ShortHandedAssists']);
         }
-        if (\array_key_exists('HatTricks', $data)) {
+        elseif (\array_key_exists('ShortHandedAssists', $data) && $data['ShortHandedAssists'] === null) {
+            $object->setShortHandedAssists(null);
+        }
+        if (\array_key_exists('HatTricks', $data) && $data['HatTricks'] !== null) {
             $object->setHatTricks($data['HatTricks']);
         }
-        if (\array_key_exists('ShootoutGoals', $data)) {
+        elseif (\array_key_exists('HatTricks', $data) && $data['HatTricks'] === null) {
+            $object->setHatTricks(null);
+        }
+        if (\array_key_exists('ShootoutGoals', $data) && $data['ShootoutGoals'] !== null) {
             $object->setShootoutGoals($data['ShootoutGoals']);
         }
-        if (\array_key_exists('PlusMinus', $data)) {
+        elseif (\array_key_exists('ShootoutGoals', $data) && $data['ShootoutGoals'] === null) {
+            $object->setShootoutGoals(null);
+        }
+        if (\array_key_exists('PlusMinus', $data) && $data['PlusMinus'] !== null) {
             $object->setPlusMinus($data['PlusMinus']);
         }
-        if (\array_key_exists('PenaltyMinutes', $data)) {
+        elseif (\array_key_exists('PlusMinus', $data) && $data['PlusMinus'] === null) {
+            $object->setPlusMinus(null);
+        }
+        if (\array_key_exists('PenaltyMinutes', $data) && $data['PenaltyMinutes'] !== null) {
             $object->setPenaltyMinutes($data['PenaltyMinutes']);
         }
-        if (\array_key_exists('Blocks', $data)) {
+        elseif (\array_key_exists('PenaltyMinutes', $data) && $data['PenaltyMinutes'] === null) {
+            $object->setPenaltyMinutes(null);
+        }
+        if (\array_key_exists('Blocks', $data) && $data['Blocks'] !== null) {
             $object->setBlocks($data['Blocks']);
         }
-        if (\array_key_exists('Hits', $data)) {
+        elseif (\array_key_exists('Blocks', $data) && $data['Blocks'] === null) {
+            $object->setBlocks(null);
+        }
+        if (\array_key_exists('Hits', $data) && $data['Hits'] !== null) {
             $object->setHits($data['Hits']);
         }
-        if (\array_key_exists('Takeaways', $data)) {
+        elseif (\array_key_exists('Hits', $data) && $data['Hits'] === null) {
+            $object->setHits(null);
+        }
+        if (\array_key_exists('Takeaways', $data) && $data['Takeaways'] !== null) {
             $object->setTakeaways($data['Takeaways']);
         }
-        if (\array_key_exists('Giveaways', $data)) {
+        elseif (\array_key_exists('Takeaways', $data) && $data['Takeaways'] === null) {
+            $object->setTakeaways(null);
+        }
+        if (\array_key_exists('Giveaways', $data) && $data['Giveaways'] !== null) {
             $object->setGiveaways($data['Giveaways']);
         }
-        if (\array_key_exists('FaceoffsWon', $data)) {
+        elseif (\array_key_exists('Giveaways', $data) && $data['Giveaways'] === null) {
+            $object->setGiveaways(null);
+        }
+        if (\array_key_exists('FaceoffsWon', $data) && $data['FaceoffsWon'] !== null) {
             $object->setFaceoffsWon($data['FaceoffsWon']);
         }
-        if (\array_key_exists('FaceoffsLost', $data)) {
+        elseif (\array_key_exists('FaceoffsWon', $data) && $data['FaceoffsWon'] === null) {
+            $object->setFaceoffsWon(null);
+        }
+        if (\array_key_exists('FaceoffsLost', $data) && $data['FaceoffsLost'] !== null) {
             $object->setFaceoffsLost($data['FaceoffsLost']);
         }
-        if (\array_key_exists('Shifts', $data)) {
+        elseif (\array_key_exists('FaceoffsLost', $data) && $data['FaceoffsLost'] === null) {
+            $object->setFaceoffsLost(null);
+        }
+        if (\array_key_exists('Shifts', $data) && $data['Shifts'] !== null) {
             $object->setShifts($data['Shifts']);
         }
-        if (\array_key_exists('GoaltendingMinutes', $data)) {
+        elseif (\array_key_exists('Shifts', $data) && $data['Shifts'] === null) {
+            $object->setShifts(null);
+        }
+        if (\array_key_exists('GoaltendingMinutes', $data) && $data['GoaltendingMinutes'] !== null) {
             $object->setGoaltendingMinutes($data['GoaltendingMinutes']);
         }
-        if (\array_key_exists('GoaltendingSeconds', $data)) {
+        elseif (\array_key_exists('GoaltendingMinutes', $data) && $data['GoaltendingMinutes'] === null) {
+            $object->setGoaltendingMinutes(null);
+        }
+        if (\array_key_exists('GoaltendingSeconds', $data) && $data['GoaltendingSeconds'] !== null) {
             $object->setGoaltendingSeconds($data['GoaltendingSeconds']);
         }
-        if (\array_key_exists('GoaltendingShotsAgainst', $data)) {
+        elseif (\array_key_exists('GoaltendingSeconds', $data) && $data['GoaltendingSeconds'] === null) {
+            $object->setGoaltendingSeconds(null);
+        }
+        if (\array_key_exists('GoaltendingShotsAgainst', $data) && $data['GoaltendingShotsAgainst'] !== null) {
             $object->setGoaltendingShotsAgainst($data['GoaltendingShotsAgainst']);
         }
-        if (\array_key_exists('GoaltendingGoalsAgainst', $data)) {
+        elseif (\array_key_exists('GoaltendingShotsAgainst', $data) && $data['GoaltendingShotsAgainst'] === null) {
+            $object->setGoaltendingShotsAgainst(null);
+        }
+        if (\array_key_exists('GoaltendingGoalsAgainst', $data) && $data['GoaltendingGoalsAgainst'] !== null) {
             $object->setGoaltendingGoalsAgainst($data['GoaltendingGoalsAgainst']);
         }
-        if (\array_key_exists('GoaltendingSaves', $data)) {
+        elseif (\array_key_exists('GoaltendingGoalsAgainst', $data) && $data['GoaltendingGoalsAgainst'] === null) {
+            $object->setGoaltendingGoalsAgainst(null);
+        }
+        if (\array_key_exists('GoaltendingSaves', $data) && $data['GoaltendingSaves'] !== null) {
             $object->setGoaltendingSaves($data['GoaltendingSaves']);
         }
-        if (\array_key_exists('GoaltendingWins', $data)) {
+        elseif (\array_key_exists('GoaltendingSaves', $data) && $data['GoaltendingSaves'] === null) {
+            $object->setGoaltendingSaves(null);
+        }
+        if (\array_key_exists('GoaltendingWins', $data) && $data['GoaltendingWins'] !== null) {
             $object->setGoaltendingWins($data['GoaltendingWins']);
         }
-        if (\array_key_exists('GoaltendingLosses', $data)) {
+        elseif (\array_key_exists('GoaltendingWins', $data) && $data['GoaltendingWins'] === null) {
+            $object->setGoaltendingWins(null);
+        }
+        if (\array_key_exists('GoaltendingLosses', $data) && $data['GoaltendingLosses'] !== null) {
             $object->setGoaltendingLosses($data['GoaltendingLosses']);
         }
-        if (\array_key_exists('GoaltendingShutouts', $data)) {
+        elseif (\array_key_exists('GoaltendingLosses', $data) && $data['GoaltendingLosses'] === null) {
+            $object->setGoaltendingLosses(null);
+        }
+        if (\array_key_exists('GoaltendingShutouts', $data) && $data['GoaltendingShutouts'] !== null) {
             $object->setGoaltendingShutouts($data['GoaltendingShutouts']);
         }
-        if (\array_key_exists('Started', $data)) {
+        elseif (\array_key_exists('GoaltendingShutouts', $data) && $data['GoaltendingShutouts'] === null) {
+            $object->setGoaltendingShutouts(null);
+        }
+        if (\array_key_exists('Started', $data) && $data['Started'] !== null) {
             $object->setStarted($data['Started']);
         }
-        if (\array_key_exists('BenchPenaltyMinutes', $data)) {
+        elseif (\array_key_exists('Started', $data) && $data['Started'] === null) {
+            $object->setStarted(null);
+        }
+        if (\array_key_exists('BenchPenaltyMinutes', $data) && $data['BenchPenaltyMinutes'] !== null) {
             $object->setBenchPenaltyMinutes($data['BenchPenaltyMinutes']);
         }
-        if (\array_key_exists('GoaltendingOvertimeLosses', $data)) {
+        elseif (\array_key_exists('BenchPenaltyMinutes', $data) && $data['BenchPenaltyMinutes'] === null) {
+            $object->setBenchPenaltyMinutes(null);
+        }
+        if (\array_key_exists('GoaltendingOvertimeLosses', $data) && $data['GoaltendingOvertimeLosses'] !== null) {
             $object->setGoaltendingOvertimeLosses($data['GoaltendingOvertimeLosses']);
         }
-        if (\array_key_exists('FantasyPointsFantasyDraft', $data)) {
+        elseif (\array_key_exists('GoaltendingOvertimeLosses', $data) && $data['GoaltendingOvertimeLosses'] === null) {
+            $object->setGoaltendingOvertimeLosses(null);
+        }
+        if (\array_key_exists('FantasyPointsFantasyDraft', $data) && $data['FantasyPointsFantasyDraft'] !== null) {
             $object->setFantasyPointsFantasyDraft($data['FantasyPointsFantasyDraft']);
+        }
+        elseif (\array_key_exists('FantasyPointsFantasyDraft', $data) && $data['FantasyPointsFantasyDraft'] === null) {
+            $object->setFantasyPointsFantasyDraft(null);
         }
         return $object;
     }

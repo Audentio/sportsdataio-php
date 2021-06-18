@@ -4,23 +4,23 @@ namespace Sportsdata\API\LOL\Endpoint;
 
 class ProjectedPlayerGameStatsByPlayer extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\LOL\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $date;
     protected $playerid;
+    protected $date;
+    protected $format;
     /**
     * Projected Player Game Stats by Date
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $date The date of the game(s).
-    <br>Example: <code>2019-01-20</code>
     * @param string $playerid Unique FantasyData Player ID.
     Example:<code>100001500</code>.
+    * @param string $date The date of the game(s).
+    <br>Example: <code>2019-01-20</code>
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $date, string $playerid)
+    public function __construct(string $playerid, string $date, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->date = $date;
         $this->playerid = $playerid;
+        $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\LOL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -29,7 +29,7 @@ class ProjectedPlayerGameStatsByPlayer extends \Sportsdata\API\LOL\Runtime\Clien
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}', '{playerid}'), array($this->format, $this->date, $this->playerid), '/projections/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}');
+        return str_replace(array('{playerid}', '{date}', '{format}'), array($this->playerid, $this->date, $this->format), '/projections/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

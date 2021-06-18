@@ -39,17 +39,29 @@ class RefereeNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('RefereeId', $data)) {
             $object->setRefereeId($data['RefereeId']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('ShortName', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('ShortName', $data) && $data['ShortName'] !== null) {
             $object->setShortName($data['ShortName']);
         }
-        if (\array_key_exists('Nationality', $data)) {
+        elseif (\array_key_exists('ShortName', $data) && $data['ShortName'] === null) {
+            $object->setShortName(null);
+        }
+        if (\array_key_exists('Nationality', $data) && $data['Nationality'] !== null) {
             $object->setNationality($data['Nationality']);
+        }
+        elseif (\array_key_exists('Nationality', $data) && $data['Nationality'] === null) {
+            $object->setNationality(null);
         }
         return $object;
     }

@@ -4,21 +4,21 @@ namespace Sportsdata\API\NBA\Endpoint;
 
 class ProjectedPlayerSeasonStatsByPlayer extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NBA\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $playerid;
+    protected $season;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $season Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2019</code>, etc.
      * @param string $playerid Unique FantasyData Player ID. Example:<code>20000571</code>.
+     * @param string $season Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2019</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $season, string $playerid)
+    public function __construct(string $playerid, string $season, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->playerid = $playerid;
+        $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\NBA\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -27,7 +27,7 @@ class ProjectedPlayerSeasonStatsByPlayer extends \Sportsdata\API\NBA\Runtime\Cli
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{playerid}'), array($this->format, $this->season, $this->playerid), '/projections/{format}/PlayerSeasonProjectionStatsByPlayer/{season}/{playerid}');
+        return str_replace(array('{playerid}', '{season}', '{format}'), array($this->playerid, $this->season, $this->format), '/projections/{format}/PlayerSeasonProjectionStatsByPlayer/{season}/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

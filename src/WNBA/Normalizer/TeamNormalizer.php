@@ -39,23 +39,38 @@ class TeamNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('TeamID', $data)) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Key', $data)) {
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
+        }
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('City', $data)) {
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Conference', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Conference', $data) && $data['Conference'] !== null) {
             $object->setConference($data['Conference']);
         }
-        if (\array_key_exists('WikipediaLogoUrl', $data)) {
+        elseif (\array_key_exists('Conference', $data) && $data['Conference'] === null) {
+            $object->setConference(null);
+        }
+        if (\array_key_exists('WikipediaLogoUrl', $data) && $data['WikipediaLogoUrl'] !== null) {
             $object->setWikipediaLogoUrl($data['WikipediaLogoUrl']);
+        }
+        elseif (\array_key_exists('WikipediaLogoUrl', $data) && $data['WikipediaLogoUrl'] === null) {
+            $object->setWikipediaLogoUrl(null);
         }
         if (\array_key_exists('GlobalTeamID', $data)) {
             $object->setGlobalTeamID($data['GlobalTeamID']);

@@ -7,7 +7,7 @@ class Score
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gameKey;
     /**
@@ -31,157 +31,157 @@ class Score
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $date;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $awayTeam;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $homeTeam;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScore;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $channel;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $pointSpread;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $overUnder;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quarter;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $timeRemaining;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $possession;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $down;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $distance;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yardLine;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $yardLineTerritory;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $redZone;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScoreQuarter1;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScoreQuarter2;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScoreQuarter3;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScoreQuarter4;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayScoreOvertime;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScoreQuarter1;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScoreQuarter2;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScoreQuarter3;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScoreQuarter4;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeScoreOvertime;
     /**
@@ -235,151 +235,151 @@ class Score
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $downAndDistance;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quarterDescription;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $stadiumID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastUpdated;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLat;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $geoLong;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $forecastTempLow;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $forecastTempHigh;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $forecastDescription;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $forecastWindChill;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $forecastWindSpeed;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamMoneyLine;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamMoneyLine;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $canceled;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $closed;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastPlay;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalGameID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalAwayTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalHomeTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pointSpreadAwayTeamMoneyLine;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pointSpreadHomeTeamMoneyLine;
     /**
@@ -397,68 +397,68 @@ class Score
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gameEndDateTime;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeRotationNumber;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayRotationNumber;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $neutralVenue;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $refereeID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $overPayout;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $underPayout;
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGameKey() : string
+    public function getGameKey() : ?string
     {
         return $this->gameKey;
     }
     /**
      * 
      *
-     * @param string $gameKey
+     * @param string|null $gameKey
      *
      * @return self
      */
-    public function setGameKey(string $gameKey) : self
+    public function setGameKey(?string $gameKey) : self
     {
         $this->gameKey = $gameKey;
         return $this;
@@ -529,20 +529,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDate() : string
+    public function getDate() : ?string
     {
         return $this->date;
     }
     /**
      * 
      *
-     * @param string $date
+     * @param string|null $date
      *
      * @return self
      */
-    public function setDate(string $date) : self
+    public function setDate(?string $date) : self
     {
         $this->date = $date;
         return $this;
@@ -550,20 +550,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAwayTeam() : string
+    public function getAwayTeam() : ?string
     {
         return $this->awayTeam;
     }
     /**
      * 
      *
-     * @param string $awayTeam
+     * @param string|null $awayTeam
      *
      * @return self
      */
-    public function setAwayTeam(string $awayTeam) : self
+    public function setAwayTeam(?string $awayTeam) : self
     {
         $this->awayTeam = $awayTeam;
         return $this;
@@ -571,20 +571,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHomeTeam() : string
+    public function getHomeTeam() : ?string
     {
         return $this->homeTeam;
     }
     /**
      * 
      *
-     * @param string $homeTeam
+     * @param string|null $homeTeam
      *
      * @return self
      */
-    public function setHomeTeam(string $homeTeam) : self
+    public function setHomeTeam(?string $homeTeam) : self
     {
         $this->homeTeam = $homeTeam;
         return $this;
@@ -592,20 +592,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScore() : int
+    public function getAwayScore() : ?int
     {
         return $this->awayScore;
     }
     /**
      * 
      *
-     * @param int $awayScore
+     * @param int|null $awayScore
      *
      * @return self
      */
-    public function setAwayScore(int $awayScore) : self
+    public function setAwayScore(?int $awayScore) : self
     {
         $this->awayScore = $awayScore;
         return $this;
@@ -613,20 +613,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScore() : int
+    public function getHomeScore() : ?int
     {
         return $this->homeScore;
     }
     /**
      * 
      *
-     * @param int $homeScore
+     * @param int|null $homeScore
      *
      * @return self
      */
-    public function setHomeScore(int $homeScore) : self
+    public function setHomeScore(?int $homeScore) : self
     {
         $this->homeScore = $homeScore;
         return $this;
@@ -634,20 +634,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getChannel() : string
+    public function getChannel() : ?string
     {
         return $this->channel;
     }
     /**
      * 
      *
-     * @param string $channel
+     * @param string|null $channel
      *
      * @return self
      */
-    public function setChannel(string $channel) : self
+    public function setChannel(?string $channel) : self
     {
         $this->channel = $channel;
         return $this;
@@ -655,20 +655,20 @@ class Score
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPointSpread() : float
+    public function getPointSpread() : ?float
     {
         return $this->pointSpread;
     }
     /**
      * 
      *
-     * @param float $pointSpread
+     * @param float|null $pointSpread
      *
      * @return self
      */
-    public function setPointSpread(float $pointSpread) : self
+    public function setPointSpread(?float $pointSpread) : self
     {
         $this->pointSpread = $pointSpread;
         return $this;
@@ -676,20 +676,20 @@ class Score
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getOverUnder() : float
+    public function getOverUnder() : ?float
     {
         return $this->overUnder;
     }
     /**
      * 
      *
-     * @param float $overUnder
+     * @param float|null $overUnder
      *
      * @return self
      */
-    public function setOverUnder(float $overUnder) : self
+    public function setOverUnder(?float $overUnder) : self
     {
         $this->overUnder = $overUnder;
         return $this;
@@ -697,20 +697,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuarter() : string
+    public function getQuarter() : ?string
     {
         return $this->quarter;
     }
     /**
      * 
      *
-     * @param string $quarter
+     * @param string|null $quarter
      *
      * @return self
      */
-    public function setQuarter(string $quarter) : self
+    public function setQuarter(?string $quarter) : self
     {
         $this->quarter = $quarter;
         return $this;
@@ -718,20 +718,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTimeRemaining() : string
+    public function getTimeRemaining() : ?string
     {
         return $this->timeRemaining;
     }
     /**
      * 
      *
-     * @param string $timeRemaining
+     * @param string|null $timeRemaining
      *
      * @return self
      */
-    public function setTimeRemaining(string $timeRemaining) : self
+    public function setTimeRemaining(?string $timeRemaining) : self
     {
         $this->timeRemaining = $timeRemaining;
         return $this;
@@ -739,20 +739,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPossession() : string
+    public function getPossession() : ?string
     {
         return $this->possession;
     }
     /**
      * 
      *
-     * @param string $possession
+     * @param string|null $possession
      *
      * @return self
      */
-    public function setPossession(string $possession) : self
+    public function setPossession(?string $possession) : self
     {
         $this->possession = $possession;
         return $this;
@@ -760,20 +760,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDown() : int
+    public function getDown() : ?int
     {
         return $this->down;
     }
     /**
      * 
      *
-     * @param int $down
+     * @param int|null $down
      *
      * @return self
      */
-    public function setDown(int $down) : self
+    public function setDown(?int $down) : self
     {
         $this->down = $down;
         return $this;
@@ -781,20 +781,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDistance() : string
+    public function getDistance() : ?string
     {
         return $this->distance;
     }
     /**
      * 
      *
-     * @param string $distance
+     * @param string|null $distance
      *
      * @return self
      */
-    public function setDistance(string $distance) : self
+    public function setDistance(?string $distance) : self
     {
         $this->distance = $distance;
         return $this;
@@ -802,20 +802,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYardLine() : int
+    public function getYardLine() : ?int
     {
         return $this->yardLine;
     }
     /**
      * 
      *
-     * @param int $yardLine
+     * @param int|null $yardLine
      *
      * @return self
      */
-    public function setYardLine(int $yardLine) : self
+    public function setYardLine(?int $yardLine) : self
     {
         $this->yardLine = $yardLine;
         return $this;
@@ -823,20 +823,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getYardLineTerritory() : string
+    public function getYardLineTerritory() : ?string
     {
         return $this->yardLineTerritory;
     }
     /**
      * 
      *
-     * @param string $yardLineTerritory
+     * @param string|null $yardLineTerritory
      *
      * @return self
      */
-    public function setYardLineTerritory(string $yardLineTerritory) : self
+    public function setYardLineTerritory(?string $yardLineTerritory) : self
     {
         $this->yardLineTerritory = $yardLineTerritory;
         return $this;
@@ -844,20 +844,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getRedZone() : string
+    public function getRedZone() : ?string
     {
         return $this->redZone;
     }
     /**
      * 
      *
-     * @param string $redZone
+     * @param string|null $redZone
      *
      * @return self
      */
-    public function setRedZone(string $redZone) : self
+    public function setRedZone(?string $redZone) : self
     {
         $this->redZone = $redZone;
         return $this;
@@ -865,20 +865,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScoreQuarter1() : int
+    public function getAwayScoreQuarter1() : ?int
     {
         return $this->awayScoreQuarter1;
     }
     /**
      * 
      *
-     * @param int $awayScoreQuarter1
+     * @param int|null $awayScoreQuarter1
      *
      * @return self
      */
-    public function setAwayScoreQuarter1(int $awayScoreQuarter1) : self
+    public function setAwayScoreQuarter1(?int $awayScoreQuarter1) : self
     {
         $this->awayScoreQuarter1 = $awayScoreQuarter1;
         return $this;
@@ -886,20 +886,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScoreQuarter2() : int
+    public function getAwayScoreQuarter2() : ?int
     {
         return $this->awayScoreQuarter2;
     }
     /**
      * 
      *
-     * @param int $awayScoreQuarter2
+     * @param int|null $awayScoreQuarter2
      *
      * @return self
      */
-    public function setAwayScoreQuarter2(int $awayScoreQuarter2) : self
+    public function setAwayScoreQuarter2(?int $awayScoreQuarter2) : self
     {
         $this->awayScoreQuarter2 = $awayScoreQuarter2;
         return $this;
@@ -907,20 +907,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScoreQuarter3() : int
+    public function getAwayScoreQuarter3() : ?int
     {
         return $this->awayScoreQuarter3;
     }
     /**
      * 
      *
-     * @param int $awayScoreQuarter3
+     * @param int|null $awayScoreQuarter3
      *
      * @return self
      */
-    public function setAwayScoreQuarter3(int $awayScoreQuarter3) : self
+    public function setAwayScoreQuarter3(?int $awayScoreQuarter3) : self
     {
         $this->awayScoreQuarter3 = $awayScoreQuarter3;
         return $this;
@@ -928,20 +928,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScoreQuarter4() : int
+    public function getAwayScoreQuarter4() : ?int
     {
         return $this->awayScoreQuarter4;
     }
     /**
      * 
      *
-     * @param int $awayScoreQuarter4
+     * @param int|null $awayScoreQuarter4
      *
      * @return self
      */
-    public function setAwayScoreQuarter4(int $awayScoreQuarter4) : self
+    public function setAwayScoreQuarter4(?int $awayScoreQuarter4) : self
     {
         $this->awayScoreQuarter4 = $awayScoreQuarter4;
         return $this;
@@ -949,20 +949,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayScoreOvertime() : int
+    public function getAwayScoreOvertime() : ?int
     {
         return $this->awayScoreOvertime;
     }
     /**
      * 
      *
-     * @param int $awayScoreOvertime
+     * @param int|null $awayScoreOvertime
      *
      * @return self
      */
-    public function setAwayScoreOvertime(int $awayScoreOvertime) : self
+    public function setAwayScoreOvertime(?int $awayScoreOvertime) : self
     {
         $this->awayScoreOvertime = $awayScoreOvertime;
         return $this;
@@ -970,20 +970,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScoreQuarter1() : int
+    public function getHomeScoreQuarter1() : ?int
     {
         return $this->homeScoreQuarter1;
     }
     /**
      * 
      *
-     * @param int $homeScoreQuarter1
+     * @param int|null $homeScoreQuarter1
      *
      * @return self
      */
-    public function setHomeScoreQuarter1(int $homeScoreQuarter1) : self
+    public function setHomeScoreQuarter1(?int $homeScoreQuarter1) : self
     {
         $this->homeScoreQuarter1 = $homeScoreQuarter1;
         return $this;
@@ -991,20 +991,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScoreQuarter2() : int
+    public function getHomeScoreQuarter2() : ?int
     {
         return $this->homeScoreQuarter2;
     }
     /**
      * 
      *
-     * @param int $homeScoreQuarter2
+     * @param int|null $homeScoreQuarter2
      *
      * @return self
      */
-    public function setHomeScoreQuarter2(int $homeScoreQuarter2) : self
+    public function setHomeScoreQuarter2(?int $homeScoreQuarter2) : self
     {
         $this->homeScoreQuarter2 = $homeScoreQuarter2;
         return $this;
@@ -1012,20 +1012,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScoreQuarter3() : int
+    public function getHomeScoreQuarter3() : ?int
     {
         return $this->homeScoreQuarter3;
     }
     /**
      * 
      *
-     * @param int $homeScoreQuarter3
+     * @param int|null $homeScoreQuarter3
      *
      * @return self
      */
-    public function setHomeScoreQuarter3(int $homeScoreQuarter3) : self
+    public function setHomeScoreQuarter3(?int $homeScoreQuarter3) : self
     {
         $this->homeScoreQuarter3 = $homeScoreQuarter3;
         return $this;
@@ -1033,20 +1033,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScoreQuarter4() : int
+    public function getHomeScoreQuarter4() : ?int
     {
         return $this->homeScoreQuarter4;
     }
     /**
      * 
      *
-     * @param int $homeScoreQuarter4
+     * @param int|null $homeScoreQuarter4
      *
      * @return self
      */
-    public function setHomeScoreQuarter4(int $homeScoreQuarter4) : self
+    public function setHomeScoreQuarter4(?int $homeScoreQuarter4) : self
     {
         $this->homeScoreQuarter4 = $homeScoreQuarter4;
         return $this;
@@ -1054,20 +1054,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeScoreOvertime() : int
+    public function getHomeScoreOvertime() : ?int
     {
         return $this->homeScoreOvertime;
     }
     /**
      * 
      *
-     * @param int $homeScoreOvertime
+     * @param int|null $homeScoreOvertime
      *
      * @return self
      */
-    public function setHomeScoreOvertime(int $homeScoreOvertime) : self
+    public function setHomeScoreOvertime(?int $homeScoreOvertime) : self
     {
         $this->homeScoreOvertime = $homeScoreOvertime;
         return $this;
@@ -1243,20 +1243,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDownAndDistance() : string
+    public function getDownAndDistance() : ?string
     {
         return $this->downAndDistance;
     }
     /**
      * 
      *
-     * @param string $downAndDistance
+     * @param string|null $downAndDistance
      *
      * @return self
      */
-    public function setDownAndDistance(string $downAndDistance) : self
+    public function setDownAndDistance(?string $downAndDistance) : self
     {
         $this->downAndDistance = $downAndDistance;
         return $this;
@@ -1264,20 +1264,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuarterDescription() : string
+    public function getQuarterDescription() : ?string
     {
         return $this->quarterDescription;
     }
     /**
      * 
      *
-     * @param string $quarterDescription
+     * @param string|null $quarterDescription
      *
      * @return self
      */
-    public function setQuarterDescription(string $quarterDescription) : self
+    public function setQuarterDescription(?string $quarterDescription) : self
     {
         $this->quarterDescription = $quarterDescription;
         return $this;
@@ -1285,20 +1285,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getStadiumID() : int
+    public function getStadiumID() : ?int
     {
         return $this->stadiumID;
     }
     /**
      * 
      *
-     * @param int $stadiumID
+     * @param int|null $stadiumID
      *
      * @return self
      */
-    public function setStadiumID(int $stadiumID) : self
+    public function setStadiumID(?int $stadiumID) : self
     {
         $this->stadiumID = $stadiumID;
         return $this;
@@ -1306,20 +1306,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastUpdated() : string
+    public function getLastUpdated() : ?string
     {
         return $this->lastUpdated;
     }
     /**
      * 
      *
-     * @param string $lastUpdated
+     * @param string|null $lastUpdated
      *
      * @return self
      */
-    public function setLastUpdated(string $lastUpdated) : self
+    public function setLastUpdated(?string $lastUpdated) : self
     {
         $this->lastUpdated = $lastUpdated;
         return $this;
@@ -1327,20 +1327,20 @@ class Score
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLat() : float
+    public function getGeoLat() : ?float
     {
         return $this->geoLat;
     }
     /**
      * 
      *
-     * @param float $geoLat
+     * @param float|null $geoLat
      *
      * @return self
      */
-    public function setGeoLat(float $geoLat) : self
+    public function setGeoLat(?float $geoLat) : self
     {
         $this->geoLat = $geoLat;
         return $this;
@@ -1348,20 +1348,20 @@ class Score
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGeoLong() : float
+    public function getGeoLong() : ?float
     {
         return $this->geoLong;
     }
     /**
      * 
      *
-     * @param float $geoLong
+     * @param float|null $geoLong
      *
      * @return self
      */
-    public function setGeoLong(float $geoLong) : self
+    public function setGeoLong(?float $geoLong) : self
     {
         $this->geoLong = $geoLong;
         return $this;
@@ -1369,20 +1369,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getForecastTempLow() : int
+    public function getForecastTempLow() : ?int
     {
         return $this->forecastTempLow;
     }
     /**
      * 
      *
-     * @param int $forecastTempLow
+     * @param int|null $forecastTempLow
      *
      * @return self
      */
-    public function setForecastTempLow(int $forecastTempLow) : self
+    public function setForecastTempLow(?int $forecastTempLow) : self
     {
         $this->forecastTempLow = $forecastTempLow;
         return $this;
@@ -1390,20 +1390,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getForecastTempHigh() : int
+    public function getForecastTempHigh() : ?int
     {
         return $this->forecastTempHigh;
     }
     /**
      * 
      *
-     * @param int $forecastTempHigh
+     * @param int|null $forecastTempHigh
      *
      * @return self
      */
-    public function setForecastTempHigh(int $forecastTempHigh) : self
+    public function setForecastTempHigh(?int $forecastTempHigh) : self
     {
         $this->forecastTempHigh = $forecastTempHigh;
         return $this;
@@ -1411,20 +1411,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getForecastDescription() : string
+    public function getForecastDescription() : ?string
     {
         return $this->forecastDescription;
     }
     /**
      * 
      *
-     * @param string $forecastDescription
+     * @param string|null $forecastDescription
      *
      * @return self
      */
-    public function setForecastDescription(string $forecastDescription) : self
+    public function setForecastDescription(?string $forecastDescription) : self
     {
         $this->forecastDescription = $forecastDescription;
         return $this;
@@ -1432,20 +1432,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getForecastWindChill() : int
+    public function getForecastWindChill() : ?int
     {
         return $this->forecastWindChill;
     }
     /**
      * 
      *
-     * @param int $forecastWindChill
+     * @param int|null $forecastWindChill
      *
      * @return self
      */
-    public function setForecastWindChill(int $forecastWindChill) : self
+    public function setForecastWindChill(?int $forecastWindChill) : self
     {
         $this->forecastWindChill = $forecastWindChill;
         return $this;
@@ -1453,20 +1453,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getForecastWindSpeed() : int
+    public function getForecastWindSpeed() : ?int
     {
         return $this->forecastWindSpeed;
     }
     /**
      * 
      *
-     * @param int $forecastWindSpeed
+     * @param int|null $forecastWindSpeed
      *
      * @return self
      */
-    public function setForecastWindSpeed(int $forecastWindSpeed) : self
+    public function setForecastWindSpeed(?int $forecastWindSpeed) : self
     {
         $this->forecastWindSpeed = $forecastWindSpeed;
         return $this;
@@ -1474,20 +1474,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamMoneyLine() : int
+    public function getAwayTeamMoneyLine() : ?int
     {
         return $this->awayTeamMoneyLine;
     }
     /**
      * 
      *
-     * @param int $awayTeamMoneyLine
+     * @param int|null $awayTeamMoneyLine
      *
      * @return self
      */
-    public function setAwayTeamMoneyLine(int $awayTeamMoneyLine) : self
+    public function setAwayTeamMoneyLine(?int $awayTeamMoneyLine) : self
     {
         $this->awayTeamMoneyLine = $awayTeamMoneyLine;
         return $this;
@@ -1495,20 +1495,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamMoneyLine() : int
+    public function getHomeTeamMoneyLine() : ?int
     {
         return $this->homeTeamMoneyLine;
     }
     /**
      * 
      *
-     * @param int $homeTeamMoneyLine
+     * @param int|null $homeTeamMoneyLine
      *
      * @return self
      */
-    public function setHomeTeamMoneyLine(int $homeTeamMoneyLine) : self
+    public function setHomeTeamMoneyLine(?int $homeTeamMoneyLine) : self
     {
         $this->homeTeamMoneyLine = $homeTeamMoneyLine;
         return $this;
@@ -1516,20 +1516,20 @@ class Score
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCanceled() : bool
+    public function getCanceled() : ?bool
     {
         return $this->canceled;
     }
     /**
      * 
      *
-     * @param bool $canceled
+     * @param bool|null $canceled
      *
      * @return self
      */
-    public function setCanceled(bool $canceled) : self
+    public function setCanceled(?bool $canceled) : self
     {
         $this->canceled = $canceled;
         return $this;
@@ -1537,20 +1537,20 @@ class Score
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getClosed() : bool
+    public function getClosed() : ?bool
     {
         return $this->closed;
     }
     /**
      * 
      *
-     * @param bool $closed
+     * @param bool|null $closed
      *
      * @return self
      */
-    public function setClosed(bool $closed) : self
+    public function setClosed(?bool $closed) : self
     {
         $this->closed = $closed;
         return $this;
@@ -1558,20 +1558,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastPlay() : string
+    public function getLastPlay() : ?string
     {
         return $this->lastPlay;
     }
     /**
      * 
      *
-     * @param string $lastPlay
+     * @param string|null $lastPlay
      *
      * @return self
      */
-    public function setLastPlay(string $lastPlay) : self
+    public function setLastPlay(?string $lastPlay) : self
     {
         $this->lastPlay = $lastPlay;
         return $this;
@@ -1579,20 +1579,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -1600,20 +1600,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -1621,20 +1621,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamID() : int
+    public function getAwayTeamID() : ?int
     {
         return $this->awayTeamID;
     }
     /**
      * 
      *
-     * @param int $awayTeamID
+     * @param int|null $awayTeamID
      *
      * @return self
      */
-    public function setAwayTeamID(int $awayTeamID) : self
+    public function setAwayTeamID(?int $awayTeamID) : self
     {
         $this->awayTeamID = $awayTeamID;
         return $this;
@@ -1642,20 +1642,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamID() : int
+    public function getHomeTeamID() : ?int
     {
         return $this->homeTeamID;
     }
     /**
      * 
      *
-     * @param int $homeTeamID
+     * @param int|null $homeTeamID
      *
      * @return self
      */
-    public function setHomeTeamID(int $homeTeamID) : self
+    public function setHomeTeamID(?int $homeTeamID) : self
     {
         $this->homeTeamID = $homeTeamID;
         return $this;
@@ -1663,20 +1663,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalGameID() : int
+    public function getGlobalGameID() : ?int
     {
         return $this->globalGameID;
     }
     /**
      * 
      *
-     * @param int $globalGameID
+     * @param int|null $globalGameID
      *
      * @return self
      */
-    public function setGlobalGameID(int $globalGameID) : self
+    public function setGlobalGameID(?int $globalGameID) : self
     {
         $this->globalGameID = $globalGameID;
         return $this;
@@ -1684,20 +1684,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalAwayTeamID() : int
+    public function getGlobalAwayTeamID() : ?int
     {
         return $this->globalAwayTeamID;
     }
     /**
      * 
      *
-     * @param int $globalAwayTeamID
+     * @param int|null $globalAwayTeamID
      *
      * @return self
      */
-    public function setGlobalAwayTeamID(int $globalAwayTeamID) : self
+    public function setGlobalAwayTeamID(?int $globalAwayTeamID) : self
     {
         $this->globalAwayTeamID = $globalAwayTeamID;
         return $this;
@@ -1705,20 +1705,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalHomeTeamID() : int
+    public function getGlobalHomeTeamID() : ?int
     {
         return $this->globalHomeTeamID;
     }
     /**
      * 
      *
-     * @param int $globalHomeTeamID
+     * @param int|null $globalHomeTeamID
      *
      * @return self
      */
-    public function setGlobalHomeTeamID(int $globalHomeTeamID) : self
+    public function setGlobalHomeTeamID(?int $globalHomeTeamID) : self
     {
         $this->globalHomeTeamID = $globalHomeTeamID;
         return $this;
@@ -1726,20 +1726,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPointSpreadAwayTeamMoneyLine() : int
+    public function getPointSpreadAwayTeamMoneyLine() : ?int
     {
         return $this->pointSpreadAwayTeamMoneyLine;
     }
     /**
      * 
      *
-     * @param int $pointSpreadAwayTeamMoneyLine
+     * @param int|null $pointSpreadAwayTeamMoneyLine
      *
      * @return self
      */
-    public function setPointSpreadAwayTeamMoneyLine(int $pointSpreadAwayTeamMoneyLine) : self
+    public function setPointSpreadAwayTeamMoneyLine(?int $pointSpreadAwayTeamMoneyLine) : self
     {
         $this->pointSpreadAwayTeamMoneyLine = $pointSpreadAwayTeamMoneyLine;
         return $this;
@@ -1747,20 +1747,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPointSpreadHomeTeamMoneyLine() : int
+    public function getPointSpreadHomeTeamMoneyLine() : ?int
     {
         return $this->pointSpreadHomeTeamMoneyLine;
     }
     /**
      * 
      *
-     * @param int $pointSpreadHomeTeamMoneyLine
+     * @param int|null $pointSpreadHomeTeamMoneyLine
      *
      * @return self
      */
-    public function setPointSpreadHomeTeamMoneyLine(int $pointSpreadHomeTeamMoneyLine) : self
+    public function setPointSpreadHomeTeamMoneyLine(?int $pointSpreadHomeTeamMoneyLine) : self
     {
         $this->pointSpreadHomeTeamMoneyLine = $pointSpreadHomeTeamMoneyLine;
         return $this;
@@ -1810,20 +1810,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -1831,20 +1831,20 @@ class Score
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGameEndDateTime() : string
+    public function getGameEndDateTime() : ?string
     {
         return $this->gameEndDateTime;
     }
     /**
      * 
      *
-     * @param string $gameEndDateTime
+     * @param string|null $gameEndDateTime
      *
      * @return self
      */
-    public function setGameEndDateTime(string $gameEndDateTime) : self
+    public function setGameEndDateTime(?string $gameEndDateTime) : self
     {
         $this->gameEndDateTime = $gameEndDateTime;
         return $this;
@@ -1852,20 +1852,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeRotationNumber() : int
+    public function getHomeRotationNumber() : ?int
     {
         return $this->homeRotationNumber;
     }
     /**
      * 
      *
-     * @param int $homeRotationNumber
+     * @param int|null $homeRotationNumber
      *
      * @return self
      */
-    public function setHomeRotationNumber(int $homeRotationNumber) : self
+    public function setHomeRotationNumber(?int $homeRotationNumber) : self
     {
         $this->homeRotationNumber = $homeRotationNumber;
         return $this;
@@ -1873,20 +1873,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayRotationNumber() : int
+    public function getAwayRotationNumber() : ?int
     {
         return $this->awayRotationNumber;
     }
     /**
      * 
      *
-     * @param int $awayRotationNumber
+     * @param int|null $awayRotationNumber
      *
      * @return self
      */
-    public function setAwayRotationNumber(int $awayRotationNumber) : self
+    public function setAwayRotationNumber(?int $awayRotationNumber) : self
     {
         $this->awayRotationNumber = $awayRotationNumber;
         return $this;
@@ -1894,20 +1894,20 @@ class Score
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getNeutralVenue() : bool
+    public function getNeutralVenue() : ?bool
     {
         return $this->neutralVenue;
     }
     /**
      * 
      *
-     * @param bool $neutralVenue
+     * @param bool|null $neutralVenue
      *
      * @return self
      */
-    public function setNeutralVenue(bool $neutralVenue) : self
+    public function setNeutralVenue(?bool $neutralVenue) : self
     {
         $this->neutralVenue = $neutralVenue;
         return $this;
@@ -1915,20 +1915,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRefereeID() : int
+    public function getRefereeID() : ?int
     {
         return $this->refereeID;
     }
     /**
      * 
      *
-     * @param int $refereeID
+     * @param int|null $refereeID
      *
      * @return self
      */
-    public function setRefereeID(int $refereeID) : self
+    public function setRefereeID(?int $refereeID) : self
     {
         $this->refereeID = $refereeID;
         return $this;
@@ -1936,20 +1936,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOverPayout() : int
+    public function getOverPayout() : ?int
     {
         return $this->overPayout;
     }
     /**
      * 
      *
-     * @param int $overPayout
+     * @param int|null $overPayout
      *
      * @return self
      */
-    public function setOverPayout(int $overPayout) : self
+    public function setOverPayout(?int $overPayout) : self
     {
         $this->overPayout = $overPayout;
         return $this;
@@ -1957,20 +1957,20 @@ class Score
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getUnderPayout() : int
+    public function getUnderPayout() : ?int
     {
         return $this->underPayout;
     }
     /**
      * 
      *
-     * @param int $underPayout
+     * @param int|null $underPayout
      *
      * @return self
      */
-    public function setUnderPayout(int $underPayout) : self
+    public function setUnderPayout(?int $underPayout) : self
     {
         $this->underPayout = $underPayout;
         return $this;

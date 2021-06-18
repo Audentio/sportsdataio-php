@@ -4,21 +4,21 @@ namespace Sportsdata\API\MLB\Endpoint;
 
 class PlayerPropsByPlayer extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\MLB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $date;
     protected $playerid;
+    protected $date;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $date The date of the game(s). <br>Examples: <code>2018-06-20</code>, <code>2018-06-23</code>.
      * @param string $playerid Unique FantasyData Player ID. Example:<code>10000507</code>
+     * @param string $date The date of the game(s). <br>Examples: <code>2018-06-20</code>, <code>2018-06-23</code>.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $date, string $playerid)
+    public function __construct(string $playerid, string $date, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->date = $date;
         $this->playerid = $playerid;
+        $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\MLB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -27,7 +27,7 @@ class PlayerPropsByPlayer extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoin
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}', '{playerid}'), array($this->format, $this->date, $this->playerid), '/odds/{format}/PlayerPropsByPlayerID/{date}/{playerid}');
+        return str_replace(array('{playerid}', '{date}', '{format}'), array($this->playerid, $this->date, $this->format), '/odds/{format}/PlayerPropsByPlayerID/{date}/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

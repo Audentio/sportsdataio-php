@@ -10,7 +10,7 @@ class CurrentSeasonDetails extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoi
      *
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      */
-    public function __construct(string $format)
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class CurrentSeasonDetails extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoi
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/CurrentSeasonDetails');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/CurrentSeasonDetails');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

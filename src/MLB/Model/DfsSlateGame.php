@@ -19,7 +19,7 @@ class DfsSlateGame
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameID;
     /**
@@ -31,13 +31,13 @@ class DfsSlateGame
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $operatorGameID;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $removedByOperator;
     /**
@@ -85,20 +85,20 @@ class DfsSlateGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameID() : int
+    public function getGameID() : ?int
     {
         return $this->gameID;
     }
     /**
      * 
      *
-     * @param int $gameID
+     * @param int|null $gameID
      *
      * @return self
      */
-    public function setGameID(int $gameID) : self
+    public function setGameID(?int $gameID) : self
     {
         $this->gameID = $gameID;
         return $this;
@@ -127,20 +127,20 @@ class DfsSlateGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOperatorGameID() : int
+    public function getOperatorGameID() : ?int
     {
         return $this->operatorGameID;
     }
     /**
      * 
      *
-     * @param int $operatorGameID
+     * @param int|null $operatorGameID
      *
      * @return self
      */
-    public function setOperatorGameID(int $operatorGameID) : self
+    public function setOperatorGameID(?int $operatorGameID) : self
     {
         $this->operatorGameID = $operatorGameID;
         return $this;
@@ -148,20 +148,20 @@ class DfsSlateGame
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRemovedByOperator() : bool
+    public function getRemovedByOperator() : ?bool
     {
         return $this->removedByOperator;
     }
     /**
      * 
      *
-     * @param bool $removedByOperator
+     * @param bool|null $removedByOperator
      *
      * @return self
      */
-    public function setRemovedByOperator(bool $removedByOperator) : self
+    public function setRemovedByOperator(?bool $removedByOperator) : self
     {
         $this->removedByOperator = $removedByOperator;
         return $this;

@@ -42,44 +42,83 @@ class BettingMarketNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('BettingEventID', $data)) {
             $object->setBettingEventID($data['BettingEventID']);
         }
-        if (\array_key_exists('BettingMarketTypeID', $data)) {
+        if (\array_key_exists('BettingMarketTypeID', $data) && $data['BettingMarketTypeID'] !== null) {
             $object->setBettingMarketTypeID($data['BettingMarketTypeID']);
         }
-        if (\array_key_exists('BettingMarketType', $data)) {
+        elseif (\array_key_exists('BettingMarketTypeID', $data) && $data['BettingMarketTypeID'] === null) {
+            $object->setBettingMarketTypeID(null);
+        }
+        if (\array_key_exists('BettingMarketType', $data) && $data['BettingMarketType'] !== null) {
             $object->setBettingMarketType($data['BettingMarketType']);
         }
-        if (\array_key_exists('BettingBetTypeID', $data)) {
+        elseif (\array_key_exists('BettingMarketType', $data) && $data['BettingMarketType'] === null) {
+            $object->setBettingMarketType(null);
+        }
+        if (\array_key_exists('BettingBetTypeID', $data) && $data['BettingBetTypeID'] !== null) {
             $object->setBettingBetTypeID($data['BettingBetTypeID']);
         }
-        if (\array_key_exists('BettingBetType', $data)) {
+        elseif (\array_key_exists('BettingBetTypeID', $data) && $data['BettingBetTypeID'] === null) {
+            $object->setBettingBetTypeID(null);
+        }
+        if (\array_key_exists('BettingBetType', $data) && $data['BettingBetType'] !== null) {
             $object->setBettingBetType($data['BettingBetType']);
         }
-        if (\array_key_exists('BettingPeriodTypeID', $data)) {
+        elseif (\array_key_exists('BettingBetType', $data) && $data['BettingBetType'] === null) {
+            $object->setBettingBetType(null);
+        }
+        if (\array_key_exists('BettingPeriodTypeID', $data) && $data['BettingPeriodTypeID'] !== null) {
             $object->setBettingPeriodTypeID($data['BettingPeriodTypeID']);
         }
-        if (\array_key_exists('BettingPeriodType', $data)) {
+        elseif (\array_key_exists('BettingPeriodTypeID', $data) && $data['BettingPeriodTypeID'] === null) {
+            $object->setBettingPeriodTypeID(null);
+        }
+        if (\array_key_exists('BettingPeriodType', $data) && $data['BettingPeriodType'] !== null) {
             $object->setBettingPeriodType($data['BettingPeriodType']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('BettingPeriodType', $data) && $data['BettingPeriodType'] === null) {
+            $object->setBettingPeriodType(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('TeamKey', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('TeamKey', $data) && $data['TeamKey'] !== null) {
             $object->setTeamKey($data['TeamKey']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        elseif (\array_key_exists('TeamKey', $data) && $data['TeamKey'] === null) {
+            $object->setTeamKey(null);
+        }
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('PlayerName', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('PlayerName', $data) && $data['PlayerName'] !== null) {
             $object->setPlayerName($data['PlayerName']);
         }
-        if (\array_key_exists('Created', $data)) {
+        elseif (\array_key_exists('PlayerName', $data) && $data['PlayerName'] === null) {
+            $object->setPlayerName(null);
+        }
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
+        }
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
         }
         if (\array_key_exists('AvailableSportsbooks', $data)) {
             $values = array();
@@ -88,8 +127,11 @@ class BettingMarketNormalizer implements DenormalizerInterface, NormalizerInterf
             }
             $object->setAvailableSportsbooks($values);
         }
-        if (\array_key_exists('AnyBetsAvailable', $data)) {
+        if (\array_key_exists('AnyBetsAvailable', $data) && $data['AnyBetsAvailable'] !== null) {
             $object->setAnyBetsAvailable($data['AnyBetsAvailable']);
+        }
+        elseif (\array_key_exists('AnyBetsAvailable', $data) && $data['AnyBetsAvailable'] === null) {
+            $object->setAnyBetsAvailable(null);
         }
         if (\array_key_exists('BettingOutcomes', $data)) {
             $values_1 = array();

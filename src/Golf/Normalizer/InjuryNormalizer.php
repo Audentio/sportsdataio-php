@@ -42,23 +42,38 @@ class InjuryNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('Status', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('Status', $data) && $data['Status'] !== null) {
             $object->setStatus($data['Status']);
         }
-        if (\array_key_exists('BodyPart', $data)) {
+        elseif (\array_key_exists('Status', $data) && $data['Status'] === null) {
+            $object->setStatus(null);
+        }
+        if (\array_key_exists('BodyPart', $data) && $data['BodyPart'] !== null) {
             $object->setBodyPart($data['BodyPart']);
         }
-        if (\array_key_exists('ExpectedReturn', $data)) {
+        elseif (\array_key_exists('BodyPart', $data) && $data['BodyPart'] === null) {
+            $object->setBodyPart(null);
+        }
+        if (\array_key_exists('ExpectedReturn', $data) && $data['ExpectedReturn'] !== null) {
             $object->setExpectedReturn($data['ExpectedReturn']);
+        }
+        elseif (\array_key_exists('ExpectedReturn', $data) && $data['ExpectedReturn'] === null) {
+            $object->setExpectedReturn(null);
         }
         return $object;
     }

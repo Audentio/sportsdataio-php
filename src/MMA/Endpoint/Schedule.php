@@ -4,21 +4,21 @@ namespace Sportsdata\API\MMA\Endpoint;
 
 class Schedule extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implements \Sportsdata\API\MMA\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $league;
     protected $season;
+    protected $league;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $league The name of the league.<br>Examples: <code>UFC</code>, etc
      * @param string $season Year of the season.<br>Examples: <code>2019</code>, <code>2020</code>, etc.
+     * @param string $league The name of the league.<br>Examples: <code>UFC</code>, etc
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $league, string $season)
+    public function __construct(string $season, string $league, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->league = $league;
         $this->season = $season;
+        $this->league = $league;
+        $this->format = $format;
     }
     use \Sportsdata\API\MMA\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -27,7 +27,7 @@ class Schedule extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implement
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{league}', '{season}'), array($this->format, $this->league, $this->season), '/stats/{format}/Schedule/{league}/{season}');
+        return str_replace(array('{season}', '{league}', '{format}'), array($this->season, $this->league, $this->format), '/scores/{format}/Schedule/{league}/{season}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

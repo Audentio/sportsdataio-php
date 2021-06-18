@@ -19,7 +19,7 @@ class MatchBan
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $championId;
     /**
@@ -73,20 +73,20 @@ class MatchBan
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getChampionId() : int
+    public function getChampionId() : ?int
     {
         return $this->championId;
     }
     /**
      * 
      *
-     * @param int $championId
+     * @param int|null $championId
      *
      * @return self
      */
-    public function setChampionId(int $championId) : self
+    public function setChampionId(?int $championId) : self
     {
         $this->championId = $championId;
         return $this;

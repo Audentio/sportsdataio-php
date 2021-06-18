@@ -13,43 +13,43 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $date;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shortName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $homeOrAway;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
@@ -61,73 +61,73 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $lastGameFantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $projectedFantasyPoints;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opponentRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opponentPositionRank;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $statusCode;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $statusColor;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fanDuelSalary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $draftKingsSalary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yahooSalary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fantasyDataSalary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fantasyDraftSalary;
     /**
@@ -154,20 +154,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDate() : string
+    public function getDate() : ?string
     {
         return $this->date;
     }
     /**
      * 
      *
-     * @param string $date
+     * @param string|null $date
      *
      * @return self
      */
-    public function setDate(string $date) : self
+    public function setDate(?string $date) : self
     {
         $this->date = $date;
         return $this;
@@ -175,20 +175,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShortName() : string
+    public function getShortName() : ?string
     {
         return $this->shortName;
     }
     /**
      * 
      *
-     * @param string $shortName
+     * @param string|null $shortName
      *
      * @return self
      */
-    public function setShortName(string $shortName) : self
+    public function setShortName(?string $shortName) : self
     {
         $this->shortName = $shortName;
         return $this;
@@ -196,20 +196,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -217,20 +217,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -238,20 +238,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -259,20 +259,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHomeOrAway() : string
+    public function getHomeOrAway() : ?string
     {
         return $this->homeOrAway;
     }
     /**
      * 
      *
-     * @param string $homeOrAway
+     * @param string|null $homeOrAway
      *
      * @return self
      */
-    public function setHomeOrAway(string $homeOrAway) : self
+    public function setHomeOrAway(?string $homeOrAway) : self
     {
         $this->homeOrAway = $homeOrAway;
         return $this;
@@ -280,20 +280,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -322,20 +322,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLastGameFantasyPoints() : float
+    public function getLastGameFantasyPoints() : ?float
     {
         return $this->lastGameFantasyPoints;
     }
     /**
      * 
      *
-     * @param float $lastGameFantasyPoints
+     * @param float|null $lastGameFantasyPoints
      *
      * @return self
      */
-    public function setLastGameFantasyPoints(float $lastGameFantasyPoints) : self
+    public function setLastGameFantasyPoints(?float $lastGameFantasyPoints) : self
     {
         $this->lastGameFantasyPoints = $lastGameFantasyPoints;
         return $this;
@@ -343,20 +343,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getProjectedFantasyPoints() : float
+    public function getProjectedFantasyPoints() : ?float
     {
         return $this->projectedFantasyPoints;
     }
     /**
      * 
      *
-     * @param float $projectedFantasyPoints
+     * @param float|null $projectedFantasyPoints
      *
      * @return self
      */
-    public function setProjectedFantasyPoints(float $projectedFantasyPoints) : self
+    public function setProjectedFantasyPoints(?float $projectedFantasyPoints) : self
     {
         $this->projectedFantasyPoints = $projectedFantasyPoints;
         return $this;
@@ -364,20 +364,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpponentRank() : int
+    public function getOpponentRank() : ?int
     {
         return $this->opponentRank;
     }
     /**
      * 
      *
-     * @param int $opponentRank
+     * @param int|null $opponentRank
      *
      * @return self
      */
-    public function setOpponentRank(int $opponentRank) : self
+    public function setOpponentRank(?int $opponentRank) : self
     {
         $this->opponentRank = $opponentRank;
         return $this;
@@ -385,20 +385,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpponentPositionRank() : int
+    public function getOpponentPositionRank() : ?int
     {
         return $this->opponentPositionRank;
     }
     /**
      * 
      *
-     * @param int $opponentPositionRank
+     * @param int|null $opponentPositionRank
      *
      * @return self
      */
-    public function setOpponentPositionRank(int $opponentPositionRank) : self
+    public function setOpponentPositionRank(?int $opponentPositionRank) : self
     {
         $this->opponentPositionRank = $opponentPositionRank;
         return $this;
@@ -406,20 +406,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -427,20 +427,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatusCode() : string
+    public function getStatusCode() : ?string
     {
         return $this->statusCode;
     }
     /**
      * 
      *
-     * @param string $statusCode
+     * @param string|null $statusCode
      *
      * @return self
      */
-    public function setStatusCode(string $statusCode) : self
+    public function setStatusCode(?string $statusCode) : self
     {
         $this->statusCode = $statusCode;
         return $this;
@@ -448,20 +448,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatusColor() : string
+    public function getStatusColor() : ?string
     {
         return $this->statusColor;
     }
     /**
      * 
      *
-     * @param string $statusColor
+     * @param string|null $statusColor
      *
      * @return self
      */
-    public function setStatusColor(string $statusColor) : self
+    public function setStatusColor(?string $statusColor) : self
     {
         $this->statusColor = $statusColor;
         return $this;
@@ -469,20 +469,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFanDuelSalary() : int
+    public function getFanDuelSalary() : ?int
     {
         return $this->fanDuelSalary;
     }
     /**
      * 
      *
-     * @param int $fanDuelSalary
+     * @param int|null $fanDuelSalary
      *
      * @return self
      */
-    public function setFanDuelSalary(int $fanDuelSalary) : self
+    public function setFanDuelSalary(?int $fanDuelSalary) : self
     {
         $this->fanDuelSalary = $fanDuelSalary;
         return $this;
@@ -490,20 +490,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDraftKingsSalary() : int
+    public function getDraftKingsSalary() : ?int
     {
         return $this->draftKingsSalary;
     }
     /**
      * 
      *
-     * @param int $draftKingsSalary
+     * @param int|null $draftKingsSalary
      *
      * @return self
      */
-    public function setDraftKingsSalary(int $draftKingsSalary) : self
+    public function setDraftKingsSalary(?int $draftKingsSalary) : self
     {
         $this->draftKingsSalary = $draftKingsSalary;
         return $this;
@@ -511,20 +511,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYahooSalary() : int
+    public function getYahooSalary() : ?int
     {
         return $this->yahooSalary;
     }
     /**
      * 
      *
-     * @param int $yahooSalary
+     * @param int|null $yahooSalary
      *
      * @return self
      */
-    public function setYahooSalary(int $yahooSalary) : self
+    public function setYahooSalary(?int $yahooSalary) : self
     {
         $this->yahooSalary = $yahooSalary;
         return $this;
@@ -532,20 +532,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFantasyDataSalary() : int
+    public function getFantasyDataSalary() : ?int
     {
         return $this->fantasyDataSalary;
     }
     /**
      * 
      *
-     * @param int $fantasyDataSalary
+     * @param int|null $fantasyDataSalary
      *
      * @return self
      */
-    public function setFantasyDataSalary(int $fantasyDataSalary) : self
+    public function setFantasyDataSalary(?int $fantasyDataSalary) : self
     {
         $this->fantasyDataSalary = $fantasyDataSalary;
         return $this;
@@ -553,20 +553,20 @@ class DailyFantasyPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFantasyDraftSalary() : int
+    public function getFantasyDraftSalary() : ?int
     {
         return $this->fantasyDraftSalary;
     }
     /**
      * 
      *
-     * @param int $fantasyDraftSalary
+     * @param int|null $fantasyDraftSalary
      *
      * @return self
      */
-    public function setFantasyDraftSalary(int $fantasyDraftSalary) : self
+    public function setFantasyDraftSalary(?int $fantasyDraftSalary) : self
     {
         $this->fantasyDraftSalary = $fantasyDraftSalary;
         return $this;

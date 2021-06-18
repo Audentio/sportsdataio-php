@@ -4,22 +4,22 @@ namespace Sportsdata\API\CBB\Endpoint;
 
 class TeamSchedule extends \Sportsdata\API\CBB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CBB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $team;
+    protected $season;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $season Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2018PRE</code>, <code>2018POST</code>, <code>2018STAR</code>, <code>2019</code>, etc.
     * @param string $team The abbreviation of the requested team.
     Examples: <code>SF</code>, <code>NYY</code>.
+    * @param string $season Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2018PRE</code>, <code>2018POST</code>, <code>2018STAR</code>, <code>2019</code>, etc.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $season, string $team)
+    public function __construct(string $team, string $season, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->team = $team;
+        $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\CBB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -28,7 +28,7 @@ class TeamSchedule extends \Sportsdata\API\CBB\Runtime\Client\BaseEndpoint imple
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{team}'), array($this->format, $this->season, $this->team), '/scores/{format}/TeamSchedule/{season}/{team}');
+        return str_replace(array('{team}', '{season}', '{format}'), array($this->team, $this->season, $this->format), '/scores/{format}/TeamSchedule/{season}/{team}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

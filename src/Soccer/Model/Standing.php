@@ -25,85 +25,85 @@ class Standing
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shortName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $scope;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $order;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $games;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $losses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $draws;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $goalsScored;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $goalsAgainst;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $goalsDifferential;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $points;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $group;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
@@ -172,20 +172,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -193,20 +193,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShortName() : string
+    public function getShortName() : ?string
     {
         return $this->shortName;
     }
     /**
      * 
      *
-     * @param string $shortName
+     * @param string|null $shortName
      *
      * @return self
      */
-    public function setShortName(string $shortName) : self
+    public function setShortName(?string $shortName) : self
     {
         $this->shortName = $shortName;
         return $this;
@@ -214,20 +214,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getScope() : string
+    public function getScope() : ?string
     {
         return $this->scope;
     }
     /**
      * 
      *
-     * @param string $scope
+     * @param string|null $scope
      *
      * @return self
      */
-    public function setScope(string $scope) : self
+    public function setScope(?string $scope) : self
     {
         $this->scope = $scope;
         return $this;
@@ -235,20 +235,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrder() : int
+    public function getOrder() : ?int
     {
         return $this->order;
     }
     /**
      * 
      *
-     * @param int $order
+     * @param int|null $order
      *
      * @return self
      */
-    public function setOrder(int $order) : self
+    public function setOrder(?int $order) : self
     {
         $this->order = $order;
         return $this;
@@ -256,20 +256,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGames() : int
+    public function getGames() : ?int
     {
         return $this->games;
     }
     /**
      * 
      *
-     * @param int $games
+     * @param int|null $games
      *
      * @return self
      */
-    public function setGames(int $games) : self
+    public function setGames(?int $games) : self
     {
         $this->games = $games;
         return $this;
@@ -277,20 +277,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWins() : int
+    public function getWins() : ?int
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param int $wins
+     * @param int|null $wins
      *
      * @return self
      */
-    public function setWins(int $wins) : self
+    public function setWins(?int $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -298,20 +298,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLosses() : int
+    public function getLosses() : ?int
     {
         return $this->losses;
     }
     /**
      * 
      *
-     * @param int $losses
+     * @param int|null $losses
      *
      * @return self
      */
-    public function setLosses(int $losses) : self
+    public function setLosses(?int $losses) : self
     {
         $this->losses = $losses;
         return $this;
@@ -319,20 +319,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDraws() : int
+    public function getDraws() : ?int
     {
         return $this->draws;
     }
     /**
      * 
      *
-     * @param int $draws
+     * @param int|null $draws
      *
      * @return self
      */
-    public function setDraws(int $draws) : self
+    public function setDraws(?int $draws) : self
     {
         $this->draws = $draws;
         return $this;
@@ -340,20 +340,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGoalsScored() : int
+    public function getGoalsScored() : ?int
     {
         return $this->goalsScored;
     }
     /**
      * 
      *
-     * @param int $goalsScored
+     * @param int|null $goalsScored
      *
      * @return self
      */
-    public function setGoalsScored(int $goalsScored) : self
+    public function setGoalsScored(?int $goalsScored) : self
     {
         $this->goalsScored = $goalsScored;
         return $this;
@@ -361,20 +361,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGoalsAgainst() : int
+    public function getGoalsAgainst() : ?int
     {
         return $this->goalsAgainst;
     }
     /**
      * 
      *
-     * @param int $goalsAgainst
+     * @param int|null $goalsAgainst
      *
      * @return self
      */
-    public function setGoalsAgainst(int $goalsAgainst) : self
+    public function setGoalsAgainst(?int $goalsAgainst) : self
     {
         $this->goalsAgainst = $goalsAgainst;
         return $this;
@@ -382,20 +382,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGoalsDifferential() : int
+    public function getGoalsDifferential() : ?int
     {
         return $this->goalsDifferential;
     }
     /**
      * 
      *
-     * @param int $goalsDifferential
+     * @param int|null $goalsDifferential
      *
      * @return self
      */
-    public function setGoalsDifferential(int $goalsDifferential) : self
+    public function setGoalsDifferential(?int $goalsDifferential) : self
     {
         $this->goalsDifferential = $goalsDifferential;
         return $this;
@@ -403,20 +403,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPoints() : int
+    public function getPoints() : ?int
     {
         return $this->points;
     }
     /**
      * 
      *
-     * @param int $points
+     * @param int|null $points
      *
      * @return self
      */
-    public function setPoints(int $points) : self
+    public function setPoints(?int $points) : self
     {
         $this->points = $points;
         return $this;
@@ -424,20 +424,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGroup() : string
+    public function getGroup() : ?string
     {
         return $this->group;
     }
     /**
      * 
      *
-     * @param string $group
+     * @param string|null $group
      *
      * @return self
      */
-    public function setGroup(string $group) : self
+    public function setGroup(?string $group) : self
     {
         $this->group = $group;
         return $this;
@@ -445,20 +445,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;

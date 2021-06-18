@@ -19,7 +19,7 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
@@ -169,367 +169,367 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $blockedKickReturnTouchdowns;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fieldGoalReturnTouchdowns;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $quarterbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $runningbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $wideReceiverFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $tightEndFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $kickerFantasyPointsAllowed;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $games;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $blockedKickReturnYards;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fieldGoalReturnYards;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $quarterbackHits;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $tacklesForLoss;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $defensiveTouchdowns;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $specialTeamsTouchdowns;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $temperature;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $humidity;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $windSpeed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $thirdDownAttempts;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $thirdDownConversions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fourthDownAttempts;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fourthDownConversions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $pointsAllowedByDefenseSpecialTeams;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $auctionValue;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $auctionValuePPR;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $twoPointConversionReturns;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFanDuel;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsDraftKings;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $offensiveYardsAllowed;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerID;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsYahoo;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageDraftPosition;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageDraftPositionPPR;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fanDuelFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fanDuelQuarterbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fanDuelRunningbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fanDuelWideReceiverFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fanDuelTightEndFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fanDuelKickerFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $draftKingsFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $draftKingsQuarterbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $draftKingsRunningbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $draftKingsWideReceiverFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $draftKingsTightEndFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $draftKingsKickerFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $yahooFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $yahooQuarterbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $yahooRunningbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $yahooWideReceiverFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $yahooTightEndFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $yahooKickerFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFantasyDraft;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyDraftFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyDraftQuarterbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyDraftRunningbackFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyDraftWideReceiverFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyDraftTightEndFantasyPointsAllowed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyDraftKickerFantasyPointsAllowed;
     /**
@@ -541,13 +541,13 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageDraftPositionDynasty;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averageDraftPosition2QB;
     /**
@@ -595,20 +595,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -1120,20 +1120,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBlockedKickReturnTouchdowns() : float
+    public function getBlockedKickReturnTouchdowns() : ?float
     {
         return $this->blockedKickReturnTouchdowns;
     }
     /**
      * 
      *
-     * @param float $blockedKickReturnTouchdowns
+     * @param float|null $blockedKickReturnTouchdowns
      *
      * @return self
      */
-    public function setBlockedKickReturnTouchdowns(float $blockedKickReturnTouchdowns) : self
+    public function setBlockedKickReturnTouchdowns(?float $blockedKickReturnTouchdowns) : self
     {
         $this->blockedKickReturnTouchdowns = $blockedKickReturnTouchdowns;
         return $this;
@@ -1141,20 +1141,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFieldGoalReturnTouchdowns() : float
+    public function getFieldGoalReturnTouchdowns() : ?float
     {
         return $this->fieldGoalReturnTouchdowns;
     }
     /**
      * 
      *
-     * @param float $fieldGoalReturnTouchdowns
+     * @param float|null $fieldGoalReturnTouchdowns
      *
      * @return self
      */
-    public function setFieldGoalReturnTouchdowns(float $fieldGoalReturnTouchdowns) : self
+    public function setFieldGoalReturnTouchdowns(?float $fieldGoalReturnTouchdowns) : self
     {
         $this->fieldGoalReturnTouchdowns = $fieldGoalReturnTouchdowns;
         return $this;
@@ -1162,20 +1162,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsAllowed() : float
+    public function getFantasyPointsAllowed() : ?float
     {
         return $this->fantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsAllowed
+     * @param float|null $fantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyPointsAllowed(float $fantasyPointsAllowed) : self
+    public function setFantasyPointsAllowed(?float $fantasyPointsAllowed) : self
     {
         $this->fantasyPointsAllowed = $fantasyPointsAllowed;
         return $this;
@@ -1183,20 +1183,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getQuarterbackFantasyPointsAllowed() : float
+    public function getQuarterbackFantasyPointsAllowed() : ?float
     {
         return $this->quarterbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $quarterbackFantasyPointsAllowed
+     * @param float|null $quarterbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setQuarterbackFantasyPointsAllowed(float $quarterbackFantasyPointsAllowed) : self
+    public function setQuarterbackFantasyPointsAllowed(?float $quarterbackFantasyPointsAllowed) : self
     {
         $this->quarterbackFantasyPointsAllowed = $quarterbackFantasyPointsAllowed;
         return $this;
@@ -1204,20 +1204,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getRunningbackFantasyPointsAllowed() : float
+    public function getRunningbackFantasyPointsAllowed() : ?float
     {
         return $this->runningbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $runningbackFantasyPointsAllowed
+     * @param float|null $runningbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setRunningbackFantasyPointsAllowed(float $runningbackFantasyPointsAllowed) : self
+    public function setRunningbackFantasyPointsAllowed(?float $runningbackFantasyPointsAllowed) : self
     {
         $this->runningbackFantasyPointsAllowed = $runningbackFantasyPointsAllowed;
         return $this;
@@ -1225,20 +1225,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWideReceiverFantasyPointsAllowed() : float
+    public function getWideReceiverFantasyPointsAllowed() : ?float
     {
         return $this->wideReceiverFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $wideReceiverFantasyPointsAllowed
+     * @param float|null $wideReceiverFantasyPointsAllowed
      *
      * @return self
      */
-    public function setWideReceiverFantasyPointsAllowed(float $wideReceiverFantasyPointsAllowed) : self
+    public function setWideReceiverFantasyPointsAllowed(?float $wideReceiverFantasyPointsAllowed) : self
     {
         $this->wideReceiverFantasyPointsAllowed = $wideReceiverFantasyPointsAllowed;
         return $this;
@@ -1246,20 +1246,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTightEndFantasyPointsAllowed() : float
+    public function getTightEndFantasyPointsAllowed() : ?float
     {
         return $this->tightEndFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $tightEndFantasyPointsAllowed
+     * @param float|null $tightEndFantasyPointsAllowed
      *
      * @return self
      */
-    public function setTightEndFantasyPointsAllowed(float $tightEndFantasyPointsAllowed) : self
+    public function setTightEndFantasyPointsAllowed(?float $tightEndFantasyPointsAllowed) : self
     {
         $this->tightEndFantasyPointsAllowed = $tightEndFantasyPointsAllowed;
         return $this;
@@ -1267,20 +1267,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKickerFantasyPointsAllowed() : float
+    public function getKickerFantasyPointsAllowed() : ?float
     {
         return $this->kickerFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $kickerFantasyPointsAllowed
+     * @param float|null $kickerFantasyPointsAllowed
      *
      * @return self
      */
-    public function setKickerFantasyPointsAllowed(float $kickerFantasyPointsAllowed) : self
+    public function setKickerFantasyPointsAllowed(?float $kickerFantasyPointsAllowed) : self
     {
         $this->kickerFantasyPointsAllowed = $kickerFantasyPointsAllowed;
         return $this;
@@ -1288,20 +1288,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGames() : int
+    public function getGames() : ?int
     {
         return $this->games;
     }
     /**
      * 
      *
-     * @param int $games
+     * @param int|null $games
      *
      * @return self
      */
-    public function setGames(int $games) : self
+    public function setGames(?int $games) : self
     {
         $this->games = $games;
         return $this;
@@ -1309,20 +1309,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBlockedKickReturnYards() : float
+    public function getBlockedKickReturnYards() : ?float
     {
         return $this->blockedKickReturnYards;
     }
     /**
      * 
      *
-     * @param float $blockedKickReturnYards
+     * @param float|null $blockedKickReturnYards
      *
      * @return self
      */
-    public function setBlockedKickReturnYards(float $blockedKickReturnYards) : self
+    public function setBlockedKickReturnYards(?float $blockedKickReturnYards) : self
     {
         $this->blockedKickReturnYards = $blockedKickReturnYards;
         return $this;
@@ -1330,20 +1330,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFieldGoalReturnYards() : float
+    public function getFieldGoalReturnYards() : ?float
     {
         return $this->fieldGoalReturnYards;
     }
     /**
      * 
      *
-     * @param float $fieldGoalReturnYards
+     * @param float|null $fieldGoalReturnYards
      *
      * @return self
      */
-    public function setFieldGoalReturnYards(float $fieldGoalReturnYards) : self
+    public function setFieldGoalReturnYards(?float $fieldGoalReturnYards) : self
     {
         $this->fieldGoalReturnYards = $fieldGoalReturnYards;
         return $this;
@@ -1351,20 +1351,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getQuarterbackHits() : float
+    public function getQuarterbackHits() : ?float
     {
         return $this->quarterbackHits;
     }
     /**
      * 
      *
-     * @param float $quarterbackHits
+     * @param float|null $quarterbackHits
      *
      * @return self
      */
-    public function setQuarterbackHits(float $quarterbackHits) : self
+    public function setQuarterbackHits(?float $quarterbackHits) : self
     {
         $this->quarterbackHits = $quarterbackHits;
         return $this;
@@ -1372,20 +1372,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTacklesForLoss() : float
+    public function getTacklesForLoss() : ?float
     {
         return $this->tacklesForLoss;
     }
     /**
      * 
      *
-     * @param float $tacklesForLoss
+     * @param float|null $tacklesForLoss
      *
      * @return self
      */
-    public function setTacklesForLoss(float $tacklesForLoss) : self
+    public function setTacklesForLoss(?float $tacklesForLoss) : self
     {
         $this->tacklesForLoss = $tacklesForLoss;
         return $this;
@@ -1393,20 +1393,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDefensiveTouchdowns() : float
+    public function getDefensiveTouchdowns() : ?float
     {
         return $this->defensiveTouchdowns;
     }
     /**
      * 
      *
-     * @param float $defensiveTouchdowns
+     * @param float|null $defensiveTouchdowns
      *
      * @return self
      */
-    public function setDefensiveTouchdowns(float $defensiveTouchdowns) : self
+    public function setDefensiveTouchdowns(?float $defensiveTouchdowns) : self
     {
         $this->defensiveTouchdowns = $defensiveTouchdowns;
         return $this;
@@ -1414,20 +1414,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSpecialTeamsTouchdowns() : float
+    public function getSpecialTeamsTouchdowns() : ?float
     {
         return $this->specialTeamsTouchdowns;
     }
     /**
      * 
      *
-     * @param float $specialTeamsTouchdowns
+     * @param float|null $specialTeamsTouchdowns
      *
      * @return self
      */
-    public function setSpecialTeamsTouchdowns(float $specialTeamsTouchdowns) : self
+    public function setSpecialTeamsTouchdowns(?float $specialTeamsTouchdowns) : self
     {
         $this->specialTeamsTouchdowns = $specialTeamsTouchdowns;
         return $this;
@@ -1435,20 +1435,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -1456,20 +1456,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTemperature() : int
+    public function getTemperature() : ?int
     {
         return $this->temperature;
     }
     /**
      * 
      *
-     * @param int $temperature
+     * @param int|null $temperature
      *
      * @return self
      */
-    public function setTemperature(int $temperature) : self
+    public function setTemperature(?int $temperature) : self
     {
         $this->temperature = $temperature;
         return $this;
@@ -1477,20 +1477,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHumidity() : int
+    public function getHumidity() : ?int
     {
         return $this->humidity;
     }
     /**
      * 
      *
-     * @param int $humidity
+     * @param int|null $humidity
      *
      * @return self
      */
-    public function setHumidity(int $humidity) : self
+    public function setHumidity(?int $humidity) : self
     {
         $this->humidity = $humidity;
         return $this;
@@ -1498,20 +1498,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWindSpeed() : int
+    public function getWindSpeed() : ?int
     {
         return $this->windSpeed;
     }
     /**
      * 
      *
-     * @param int $windSpeed
+     * @param int|null $windSpeed
      *
      * @return self
      */
-    public function setWindSpeed(int $windSpeed) : self
+    public function setWindSpeed(?int $windSpeed) : self
     {
         $this->windSpeed = $windSpeed;
         return $this;
@@ -1519,20 +1519,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getThirdDownAttempts() : float
+    public function getThirdDownAttempts() : ?float
     {
         return $this->thirdDownAttempts;
     }
     /**
      * 
      *
-     * @param float $thirdDownAttempts
+     * @param float|null $thirdDownAttempts
      *
      * @return self
      */
-    public function setThirdDownAttempts(float $thirdDownAttempts) : self
+    public function setThirdDownAttempts(?float $thirdDownAttempts) : self
     {
         $this->thirdDownAttempts = $thirdDownAttempts;
         return $this;
@@ -1540,20 +1540,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getThirdDownConversions() : float
+    public function getThirdDownConversions() : ?float
     {
         return $this->thirdDownConversions;
     }
     /**
      * 
      *
-     * @param float $thirdDownConversions
+     * @param float|null $thirdDownConversions
      *
      * @return self
      */
-    public function setThirdDownConversions(float $thirdDownConversions) : self
+    public function setThirdDownConversions(?float $thirdDownConversions) : self
     {
         $this->thirdDownConversions = $thirdDownConversions;
         return $this;
@@ -1561,20 +1561,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFourthDownAttempts() : float
+    public function getFourthDownAttempts() : ?float
     {
         return $this->fourthDownAttempts;
     }
     /**
      * 
      *
-     * @param float $fourthDownAttempts
+     * @param float|null $fourthDownAttempts
      *
      * @return self
      */
-    public function setFourthDownAttempts(float $fourthDownAttempts) : self
+    public function setFourthDownAttempts(?float $fourthDownAttempts) : self
     {
         $this->fourthDownAttempts = $fourthDownAttempts;
         return $this;
@@ -1582,20 +1582,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFourthDownConversions() : float
+    public function getFourthDownConversions() : ?float
     {
         return $this->fourthDownConversions;
     }
     /**
      * 
      *
-     * @param float $fourthDownConversions
+     * @param float|null $fourthDownConversions
      *
      * @return self
      */
-    public function setFourthDownConversions(float $fourthDownConversions) : self
+    public function setFourthDownConversions(?float $fourthDownConversions) : self
     {
         $this->fourthDownConversions = $fourthDownConversions;
         return $this;
@@ -1603,20 +1603,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPointsAllowedByDefenseSpecialTeams() : float
+    public function getPointsAllowedByDefenseSpecialTeams() : ?float
     {
         return $this->pointsAllowedByDefenseSpecialTeams;
     }
     /**
      * 
      *
-     * @param float $pointsAllowedByDefenseSpecialTeams
+     * @param float|null $pointsAllowedByDefenseSpecialTeams
      *
      * @return self
      */
-    public function setPointsAllowedByDefenseSpecialTeams(float $pointsAllowedByDefenseSpecialTeams) : self
+    public function setPointsAllowedByDefenseSpecialTeams(?float $pointsAllowedByDefenseSpecialTeams) : self
     {
         $this->pointsAllowedByDefenseSpecialTeams = $pointsAllowedByDefenseSpecialTeams;
         return $this;
@@ -1624,20 +1624,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAuctionValue() : float
+    public function getAuctionValue() : ?float
     {
         return $this->auctionValue;
     }
     /**
      * 
      *
-     * @param float $auctionValue
+     * @param float|null $auctionValue
      *
      * @return self
      */
-    public function setAuctionValue(float $auctionValue) : self
+    public function setAuctionValue(?float $auctionValue) : self
     {
         $this->auctionValue = $auctionValue;
         return $this;
@@ -1645,20 +1645,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAuctionValuePPR() : float
+    public function getAuctionValuePPR() : ?float
     {
         return $this->auctionValuePPR;
     }
     /**
      * 
      *
-     * @param float $auctionValuePPR
+     * @param float|null $auctionValuePPR
      *
      * @return self
      */
-    public function setAuctionValuePPR(float $auctionValuePPR) : self
+    public function setAuctionValuePPR(?float $auctionValuePPR) : self
     {
         $this->auctionValuePPR = $auctionValuePPR;
         return $this;
@@ -1666,20 +1666,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTwoPointConversionReturns() : float
+    public function getTwoPointConversionReturns() : ?float
     {
         return $this->twoPointConversionReturns;
     }
     /**
      * 
      *
-     * @param float $twoPointConversionReturns
+     * @param float|null $twoPointConversionReturns
      *
      * @return self
      */
-    public function setTwoPointConversionReturns(float $twoPointConversionReturns) : self
+    public function setTwoPointConversionReturns(?float $twoPointConversionReturns) : self
     {
         $this->twoPointConversionReturns = $twoPointConversionReturns;
         return $this;
@@ -1687,20 +1687,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFanDuel() : float
+    public function getFantasyPointsFanDuel() : ?float
     {
         return $this->fantasyPointsFanDuel;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFanDuel
+     * @param float|null $fantasyPointsFanDuel
      *
      * @return self
      */
-    public function setFantasyPointsFanDuel(float $fantasyPointsFanDuel) : self
+    public function setFantasyPointsFanDuel(?float $fantasyPointsFanDuel) : self
     {
         $this->fantasyPointsFanDuel = $fantasyPointsFanDuel;
         return $this;
@@ -1708,20 +1708,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsDraftKings() : float
+    public function getFantasyPointsDraftKings() : ?float
     {
         return $this->fantasyPointsDraftKings;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsDraftKings
+     * @param float|null $fantasyPointsDraftKings
      *
      * @return self
      */
-    public function setFantasyPointsDraftKings(float $fantasyPointsDraftKings) : self
+    public function setFantasyPointsDraftKings(?float $fantasyPointsDraftKings) : self
     {
         $this->fantasyPointsDraftKings = $fantasyPointsDraftKings;
         return $this;
@@ -1729,20 +1729,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getOffensiveYardsAllowed() : float
+    public function getOffensiveYardsAllowed() : ?float
     {
         return $this->offensiveYardsAllowed;
     }
     /**
      * 
      *
-     * @param float $offensiveYardsAllowed
+     * @param float|null $offensiveYardsAllowed
      *
      * @return self
      */
-    public function setOffensiveYardsAllowed(float $offensiveYardsAllowed) : self
+    public function setOffensiveYardsAllowed(?float $offensiveYardsAllowed) : self
     {
         $this->offensiveYardsAllowed = $offensiveYardsAllowed;
         return $this;
@@ -1750,20 +1750,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerID() : int
+    public function getPlayerID() : ?int
     {
         return $this->playerID;
     }
     /**
      * 
      *
-     * @param int $playerID
+     * @param int|null $playerID
      *
      * @return self
      */
-    public function setPlayerID(int $playerID) : self
+    public function setPlayerID(?int $playerID) : self
     {
         $this->playerID = $playerID;
         return $this;
@@ -1771,20 +1771,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsYahoo() : float
+    public function getFantasyPointsYahoo() : ?float
     {
         return $this->fantasyPointsYahoo;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsYahoo
+     * @param float|null $fantasyPointsYahoo
      *
      * @return self
      */
-    public function setFantasyPointsYahoo(float $fantasyPointsYahoo) : self
+    public function setFantasyPointsYahoo(?float $fantasyPointsYahoo) : self
     {
         $this->fantasyPointsYahoo = $fantasyPointsYahoo;
         return $this;
@@ -1792,20 +1792,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageDraftPosition() : float
+    public function getAverageDraftPosition() : ?float
     {
         return $this->averageDraftPosition;
     }
     /**
      * 
      *
-     * @param float $averageDraftPosition
+     * @param float|null $averageDraftPosition
      *
      * @return self
      */
-    public function setAverageDraftPosition(float $averageDraftPosition) : self
+    public function setAverageDraftPosition(?float $averageDraftPosition) : self
     {
         $this->averageDraftPosition = $averageDraftPosition;
         return $this;
@@ -1813,20 +1813,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageDraftPositionPPR() : float
+    public function getAverageDraftPositionPPR() : ?float
     {
         return $this->averageDraftPositionPPR;
     }
     /**
      * 
      *
-     * @param float $averageDraftPositionPPR
+     * @param float|null $averageDraftPositionPPR
      *
      * @return self
      */
-    public function setAverageDraftPositionPPR(float $averageDraftPositionPPR) : self
+    public function setAverageDraftPositionPPR(?float $averageDraftPositionPPR) : self
     {
         $this->averageDraftPositionPPR = $averageDraftPositionPPR;
         return $this;
@@ -1834,20 +1834,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -1855,20 +1855,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;
@@ -1876,20 +1876,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFanDuelFantasyPointsAllowed() : float
+    public function getFanDuelFantasyPointsAllowed() : ?float
     {
         return $this->fanDuelFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fanDuelFantasyPointsAllowed
+     * @param float|null $fanDuelFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFanDuelFantasyPointsAllowed(float $fanDuelFantasyPointsAllowed) : self
+    public function setFanDuelFantasyPointsAllowed(?float $fanDuelFantasyPointsAllowed) : self
     {
         $this->fanDuelFantasyPointsAllowed = $fanDuelFantasyPointsAllowed;
         return $this;
@@ -1897,20 +1897,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFanDuelQuarterbackFantasyPointsAllowed() : float
+    public function getFanDuelQuarterbackFantasyPointsAllowed() : ?float
     {
         return $this->fanDuelQuarterbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fanDuelQuarterbackFantasyPointsAllowed
+     * @param float|null $fanDuelQuarterbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFanDuelQuarterbackFantasyPointsAllowed(float $fanDuelQuarterbackFantasyPointsAllowed) : self
+    public function setFanDuelQuarterbackFantasyPointsAllowed(?float $fanDuelQuarterbackFantasyPointsAllowed) : self
     {
         $this->fanDuelQuarterbackFantasyPointsAllowed = $fanDuelQuarterbackFantasyPointsAllowed;
         return $this;
@@ -1918,20 +1918,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFanDuelRunningbackFantasyPointsAllowed() : float
+    public function getFanDuelRunningbackFantasyPointsAllowed() : ?float
     {
         return $this->fanDuelRunningbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fanDuelRunningbackFantasyPointsAllowed
+     * @param float|null $fanDuelRunningbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFanDuelRunningbackFantasyPointsAllowed(float $fanDuelRunningbackFantasyPointsAllowed) : self
+    public function setFanDuelRunningbackFantasyPointsAllowed(?float $fanDuelRunningbackFantasyPointsAllowed) : self
     {
         $this->fanDuelRunningbackFantasyPointsAllowed = $fanDuelRunningbackFantasyPointsAllowed;
         return $this;
@@ -1939,20 +1939,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFanDuelWideReceiverFantasyPointsAllowed() : float
+    public function getFanDuelWideReceiverFantasyPointsAllowed() : ?float
     {
         return $this->fanDuelWideReceiverFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fanDuelWideReceiverFantasyPointsAllowed
+     * @param float|null $fanDuelWideReceiverFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFanDuelWideReceiverFantasyPointsAllowed(float $fanDuelWideReceiverFantasyPointsAllowed) : self
+    public function setFanDuelWideReceiverFantasyPointsAllowed(?float $fanDuelWideReceiverFantasyPointsAllowed) : self
     {
         $this->fanDuelWideReceiverFantasyPointsAllowed = $fanDuelWideReceiverFantasyPointsAllowed;
         return $this;
@@ -1960,20 +1960,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFanDuelTightEndFantasyPointsAllowed() : float
+    public function getFanDuelTightEndFantasyPointsAllowed() : ?float
     {
         return $this->fanDuelTightEndFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fanDuelTightEndFantasyPointsAllowed
+     * @param float|null $fanDuelTightEndFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFanDuelTightEndFantasyPointsAllowed(float $fanDuelTightEndFantasyPointsAllowed) : self
+    public function setFanDuelTightEndFantasyPointsAllowed(?float $fanDuelTightEndFantasyPointsAllowed) : self
     {
         $this->fanDuelTightEndFantasyPointsAllowed = $fanDuelTightEndFantasyPointsAllowed;
         return $this;
@@ -1981,20 +1981,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFanDuelKickerFantasyPointsAllowed() : float
+    public function getFanDuelKickerFantasyPointsAllowed() : ?float
     {
         return $this->fanDuelKickerFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fanDuelKickerFantasyPointsAllowed
+     * @param float|null $fanDuelKickerFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFanDuelKickerFantasyPointsAllowed(float $fanDuelKickerFantasyPointsAllowed) : self
+    public function setFanDuelKickerFantasyPointsAllowed(?float $fanDuelKickerFantasyPointsAllowed) : self
     {
         $this->fanDuelKickerFantasyPointsAllowed = $fanDuelKickerFantasyPointsAllowed;
         return $this;
@@ -2002,20 +2002,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDraftKingsFantasyPointsAllowed() : float
+    public function getDraftKingsFantasyPointsAllowed() : ?float
     {
         return $this->draftKingsFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $draftKingsFantasyPointsAllowed
+     * @param float|null $draftKingsFantasyPointsAllowed
      *
      * @return self
      */
-    public function setDraftKingsFantasyPointsAllowed(float $draftKingsFantasyPointsAllowed) : self
+    public function setDraftKingsFantasyPointsAllowed(?float $draftKingsFantasyPointsAllowed) : self
     {
         $this->draftKingsFantasyPointsAllowed = $draftKingsFantasyPointsAllowed;
         return $this;
@@ -2023,20 +2023,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDraftKingsQuarterbackFantasyPointsAllowed() : float
+    public function getDraftKingsQuarterbackFantasyPointsAllowed() : ?float
     {
         return $this->draftKingsQuarterbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $draftKingsQuarterbackFantasyPointsAllowed
+     * @param float|null $draftKingsQuarterbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setDraftKingsQuarterbackFantasyPointsAllowed(float $draftKingsQuarterbackFantasyPointsAllowed) : self
+    public function setDraftKingsQuarterbackFantasyPointsAllowed(?float $draftKingsQuarterbackFantasyPointsAllowed) : self
     {
         $this->draftKingsQuarterbackFantasyPointsAllowed = $draftKingsQuarterbackFantasyPointsAllowed;
         return $this;
@@ -2044,20 +2044,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDraftKingsRunningbackFantasyPointsAllowed() : float
+    public function getDraftKingsRunningbackFantasyPointsAllowed() : ?float
     {
         return $this->draftKingsRunningbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $draftKingsRunningbackFantasyPointsAllowed
+     * @param float|null $draftKingsRunningbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setDraftKingsRunningbackFantasyPointsAllowed(float $draftKingsRunningbackFantasyPointsAllowed) : self
+    public function setDraftKingsRunningbackFantasyPointsAllowed(?float $draftKingsRunningbackFantasyPointsAllowed) : self
     {
         $this->draftKingsRunningbackFantasyPointsAllowed = $draftKingsRunningbackFantasyPointsAllowed;
         return $this;
@@ -2065,20 +2065,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDraftKingsWideReceiverFantasyPointsAllowed() : float
+    public function getDraftKingsWideReceiverFantasyPointsAllowed() : ?float
     {
         return $this->draftKingsWideReceiverFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $draftKingsWideReceiverFantasyPointsAllowed
+     * @param float|null $draftKingsWideReceiverFantasyPointsAllowed
      *
      * @return self
      */
-    public function setDraftKingsWideReceiverFantasyPointsAllowed(float $draftKingsWideReceiverFantasyPointsAllowed) : self
+    public function setDraftKingsWideReceiverFantasyPointsAllowed(?float $draftKingsWideReceiverFantasyPointsAllowed) : self
     {
         $this->draftKingsWideReceiverFantasyPointsAllowed = $draftKingsWideReceiverFantasyPointsAllowed;
         return $this;
@@ -2086,20 +2086,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDraftKingsTightEndFantasyPointsAllowed() : float
+    public function getDraftKingsTightEndFantasyPointsAllowed() : ?float
     {
         return $this->draftKingsTightEndFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $draftKingsTightEndFantasyPointsAllowed
+     * @param float|null $draftKingsTightEndFantasyPointsAllowed
      *
      * @return self
      */
-    public function setDraftKingsTightEndFantasyPointsAllowed(float $draftKingsTightEndFantasyPointsAllowed) : self
+    public function setDraftKingsTightEndFantasyPointsAllowed(?float $draftKingsTightEndFantasyPointsAllowed) : self
     {
         $this->draftKingsTightEndFantasyPointsAllowed = $draftKingsTightEndFantasyPointsAllowed;
         return $this;
@@ -2107,20 +2107,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDraftKingsKickerFantasyPointsAllowed() : float
+    public function getDraftKingsKickerFantasyPointsAllowed() : ?float
     {
         return $this->draftKingsKickerFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $draftKingsKickerFantasyPointsAllowed
+     * @param float|null $draftKingsKickerFantasyPointsAllowed
      *
      * @return self
      */
-    public function setDraftKingsKickerFantasyPointsAllowed(float $draftKingsKickerFantasyPointsAllowed) : self
+    public function setDraftKingsKickerFantasyPointsAllowed(?float $draftKingsKickerFantasyPointsAllowed) : self
     {
         $this->draftKingsKickerFantasyPointsAllowed = $draftKingsKickerFantasyPointsAllowed;
         return $this;
@@ -2128,20 +2128,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getYahooFantasyPointsAllowed() : float
+    public function getYahooFantasyPointsAllowed() : ?float
     {
         return $this->yahooFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $yahooFantasyPointsAllowed
+     * @param float|null $yahooFantasyPointsAllowed
      *
      * @return self
      */
-    public function setYahooFantasyPointsAllowed(float $yahooFantasyPointsAllowed) : self
+    public function setYahooFantasyPointsAllowed(?float $yahooFantasyPointsAllowed) : self
     {
         $this->yahooFantasyPointsAllowed = $yahooFantasyPointsAllowed;
         return $this;
@@ -2149,20 +2149,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getYahooQuarterbackFantasyPointsAllowed() : float
+    public function getYahooQuarterbackFantasyPointsAllowed() : ?float
     {
         return $this->yahooQuarterbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $yahooQuarterbackFantasyPointsAllowed
+     * @param float|null $yahooQuarterbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setYahooQuarterbackFantasyPointsAllowed(float $yahooQuarterbackFantasyPointsAllowed) : self
+    public function setYahooQuarterbackFantasyPointsAllowed(?float $yahooQuarterbackFantasyPointsAllowed) : self
     {
         $this->yahooQuarterbackFantasyPointsAllowed = $yahooQuarterbackFantasyPointsAllowed;
         return $this;
@@ -2170,20 +2170,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getYahooRunningbackFantasyPointsAllowed() : float
+    public function getYahooRunningbackFantasyPointsAllowed() : ?float
     {
         return $this->yahooRunningbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $yahooRunningbackFantasyPointsAllowed
+     * @param float|null $yahooRunningbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setYahooRunningbackFantasyPointsAllowed(float $yahooRunningbackFantasyPointsAllowed) : self
+    public function setYahooRunningbackFantasyPointsAllowed(?float $yahooRunningbackFantasyPointsAllowed) : self
     {
         $this->yahooRunningbackFantasyPointsAllowed = $yahooRunningbackFantasyPointsAllowed;
         return $this;
@@ -2191,20 +2191,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getYahooWideReceiverFantasyPointsAllowed() : float
+    public function getYahooWideReceiverFantasyPointsAllowed() : ?float
     {
         return $this->yahooWideReceiverFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $yahooWideReceiverFantasyPointsAllowed
+     * @param float|null $yahooWideReceiverFantasyPointsAllowed
      *
      * @return self
      */
-    public function setYahooWideReceiverFantasyPointsAllowed(float $yahooWideReceiverFantasyPointsAllowed) : self
+    public function setYahooWideReceiverFantasyPointsAllowed(?float $yahooWideReceiverFantasyPointsAllowed) : self
     {
         $this->yahooWideReceiverFantasyPointsAllowed = $yahooWideReceiverFantasyPointsAllowed;
         return $this;
@@ -2212,20 +2212,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getYahooTightEndFantasyPointsAllowed() : float
+    public function getYahooTightEndFantasyPointsAllowed() : ?float
     {
         return $this->yahooTightEndFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $yahooTightEndFantasyPointsAllowed
+     * @param float|null $yahooTightEndFantasyPointsAllowed
      *
      * @return self
      */
-    public function setYahooTightEndFantasyPointsAllowed(float $yahooTightEndFantasyPointsAllowed) : self
+    public function setYahooTightEndFantasyPointsAllowed(?float $yahooTightEndFantasyPointsAllowed) : self
     {
         $this->yahooTightEndFantasyPointsAllowed = $yahooTightEndFantasyPointsAllowed;
         return $this;
@@ -2233,20 +2233,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getYahooKickerFantasyPointsAllowed() : float
+    public function getYahooKickerFantasyPointsAllowed() : ?float
     {
         return $this->yahooKickerFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $yahooKickerFantasyPointsAllowed
+     * @param float|null $yahooKickerFantasyPointsAllowed
      *
      * @return self
      */
-    public function setYahooKickerFantasyPointsAllowed(float $yahooKickerFantasyPointsAllowed) : self
+    public function setYahooKickerFantasyPointsAllowed(?float $yahooKickerFantasyPointsAllowed) : self
     {
         $this->yahooKickerFantasyPointsAllowed = $yahooKickerFantasyPointsAllowed;
         return $this;
@@ -2254,20 +2254,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFantasyDraft() : float
+    public function getFantasyPointsFantasyDraft() : ?float
     {
         return $this->fantasyPointsFantasyDraft;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFantasyDraft
+     * @param float|null $fantasyPointsFantasyDraft
      *
      * @return self
      */
-    public function setFantasyPointsFantasyDraft(float $fantasyPointsFantasyDraft) : self
+    public function setFantasyPointsFantasyDraft(?float $fantasyPointsFantasyDraft) : self
     {
         $this->fantasyPointsFantasyDraft = $fantasyPointsFantasyDraft;
         return $this;
@@ -2275,20 +2275,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyDraftFantasyPointsAllowed() : float
+    public function getFantasyDraftFantasyPointsAllowed() : ?float
     {
         return $this->fantasyDraftFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyDraftFantasyPointsAllowed
+     * @param float|null $fantasyDraftFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyDraftFantasyPointsAllowed(float $fantasyDraftFantasyPointsAllowed) : self
+    public function setFantasyDraftFantasyPointsAllowed(?float $fantasyDraftFantasyPointsAllowed) : self
     {
         $this->fantasyDraftFantasyPointsAllowed = $fantasyDraftFantasyPointsAllowed;
         return $this;
@@ -2296,20 +2296,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyDraftQuarterbackFantasyPointsAllowed() : float
+    public function getFantasyDraftQuarterbackFantasyPointsAllowed() : ?float
     {
         return $this->fantasyDraftQuarterbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyDraftQuarterbackFantasyPointsAllowed
+     * @param float|null $fantasyDraftQuarterbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyDraftQuarterbackFantasyPointsAllowed(float $fantasyDraftQuarterbackFantasyPointsAllowed) : self
+    public function setFantasyDraftQuarterbackFantasyPointsAllowed(?float $fantasyDraftQuarterbackFantasyPointsAllowed) : self
     {
         $this->fantasyDraftQuarterbackFantasyPointsAllowed = $fantasyDraftQuarterbackFantasyPointsAllowed;
         return $this;
@@ -2317,20 +2317,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyDraftRunningbackFantasyPointsAllowed() : float
+    public function getFantasyDraftRunningbackFantasyPointsAllowed() : ?float
     {
         return $this->fantasyDraftRunningbackFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyDraftRunningbackFantasyPointsAllowed
+     * @param float|null $fantasyDraftRunningbackFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyDraftRunningbackFantasyPointsAllowed(float $fantasyDraftRunningbackFantasyPointsAllowed) : self
+    public function setFantasyDraftRunningbackFantasyPointsAllowed(?float $fantasyDraftRunningbackFantasyPointsAllowed) : self
     {
         $this->fantasyDraftRunningbackFantasyPointsAllowed = $fantasyDraftRunningbackFantasyPointsAllowed;
         return $this;
@@ -2338,20 +2338,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyDraftWideReceiverFantasyPointsAllowed() : float
+    public function getFantasyDraftWideReceiverFantasyPointsAllowed() : ?float
     {
         return $this->fantasyDraftWideReceiverFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyDraftWideReceiverFantasyPointsAllowed
+     * @param float|null $fantasyDraftWideReceiverFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyDraftWideReceiverFantasyPointsAllowed(float $fantasyDraftWideReceiverFantasyPointsAllowed) : self
+    public function setFantasyDraftWideReceiverFantasyPointsAllowed(?float $fantasyDraftWideReceiverFantasyPointsAllowed) : self
     {
         $this->fantasyDraftWideReceiverFantasyPointsAllowed = $fantasyDraftWideReceiverFantasyPointsAllowed;
         return $this;
@@ -2359,20 +2359,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyDraftTightEndFantasyPointsAllowed() : float
+    public function getFantasyDraftTightEndFantasyPointsAllowed() : ?float
     {
         return $this->fantasyDraftTightEndFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyDraftTightEndFantasyPointsAllowed
+     * @param float|null $fantasyDraftTightEndFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyDraftTightEndFantasyPointsAllowed(float $fantasyDraftTightEndFantasyPointsAllowed) : self
+    public function setFantasyDraftTightEndFantasyPointsAllowed(?float $fantasyDraftTightEndFantasyPointsAllowed) : self
     {
         $this->fantasyDraftTightEndFantasyPointsAllowed = $fantasyDraftTightEndFantasyPointsAllowed;
         return $this;
@@ -2380,20 +2380,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyDraftKickerFantasyPointsAllowed() : float
+    public function getFantasyDraftKickerFantasyPointsAllowed() : ?float
     {
         return $this->fantasyDraftKickerFantasyPointsAllowed;
     }
     /**
      * 
      *
-     * @param float $fantasyDraftKickerFantasyPointsAllowed
+     * @param float|null $fantasyDraftKickerFantasyPointsAllowed
      *
      * @return self
      */
-    public function setFantasyDraftKickerFantasyPointsAllowed(float $fantasyDraftKickerFantasyPointsAllowed) : self
+    public function setFantasyDraftKickerFantasyPointsAllowed(?float $fantasyDraftKickerFantasyPointsAllowed) : self
     {
         $this->fantasyDraftKickerFantasyPointsAllowed = $fantasyDraftKickerFantasyPointsAllowed;
         return $this;
@@ -2422,20 +2422,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageDraftPositionDynasty() : float
+    public function getAverageDraftPositionDynasty() : ?float
     {
         return $this->averageDraftPositionDynasty;
     }
     /**
      * 
      *
-     * @param float $averageDraftPositionDynasty
+     * @param float|null $averageDraftPositionDynasty
      *
      * @return self
      */
-    public function setAverageDraftPositionDynasty(float $averageDraftPositionDynasty) : self
+    public function setAverageDraftPositionDynasty(?float $averageDraftPositionDynasty) : self
     {
         $this->averageDraftPositionDynasty = $averageDraftPositionDynasty;
         return $this;
@@ -2443,20 +2443,20 @@ class FantasyDefenseSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAverageDraftPosition2QB() : float
+    public function getAverageDraftPosition2QB() : ?float
     {
         return $this->averageDraftPosition2QB;
     }
     /**
      * 
      *
-     * @param float $averageDraftPosition2QB
+     * @param float|null $averageDraftPosition2QB
      *
      * @return self
      */
-    public function setAverageDraftPosition2QB(float $averageDraftPosition2QB) : self
+    public function setAverageDraftPosition2QB(?float $averageDraftPosition2QB) : self
     {
         $this->averageDraftPosition2QB = $averageDraftPosition2QB;
         return $this;

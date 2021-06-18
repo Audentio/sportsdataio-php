@@ -4,22 +4,22 @@ namespace Sportsdata\API\MLB\Endpoint;
 
 class PlayerSeasonSplitStats extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\MLB\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $season;
     protected $split;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $season Year of the season.
     <br>Examples: <code>2017</code>, <code>2018</code>.
     * @param string $split The desired split of stats. Currently, we support vs. Left/Right/Switch handed pitchers/hitters. Possible values are: <code>L</code>, <code>R</code> and <code>S</code>
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $season, string $split = 'L')
+    public function __construct(string $season, string $split = 'L', string $format = 'JSON')
     {
-        $this->format = $format;
         $this->season = $season;
         $this->split = $split;
+        $this->format = $format;
     }
     use \Sportsdata\API\MLB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -28,7 +28,7 @@ class PlayerSeasonSplitStats extends \Sportsdata\API\MLB\Runtime\Client\BaseEndp
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{split}'), array($this->format, $this->season, $this->split), '/stats/{format}/PlayerSeasonSplitStats/{season}/{split}');
+        return str_replace(array('{season}', '{split}', '{format}'), array($this->season, $this->split, $this->format), '/stats/{format}/PlayerSeasonSplitStats/{season}/{split}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

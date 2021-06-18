@@ -102,11 +102,17 @@ class ChampionNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('ChampionId', $data)) {
             $object->setChampionId($data['ChampionId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Title', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Title', $data) && $data['Title'] !== null) {
             $object->setTitle($data['Title']);
+        }
+        elseif (\array_key_exists('Title', $data) && $data['Title'] === null) {
+            $object->setTitle(null);
         }
         return $object;
     }

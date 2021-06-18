@@ -4,19 +4,19 @@ namespace Sportsdata\API\LOL\Endpoint;
 
 class MembershipsByTeamActive extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\LOL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $teamid;
+    protected $format;
     /**
     * Memberships by Team (Active)
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $teamid Unique FantasyData Team ID. 
-    Example:<code>100000165</code>.
+    Example:<code>100000001</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $teamid)
+    public function __construct(string $teamid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->teamid = $teamid;
+        $this->format = $format;
     }
     use \Sportsdata\API\LOL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class MembershipsByTeamActive extends \Sportsdata\API\LOL\Runtime\Client\BaseEnd
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{teamid}'), array($this->format, $this->teamid), '/stats/{format}/MembershipsByTeam/{teamid}');
+        return str_replace(array('{teamid}', '{format}'), array($this->teamid, $this->format), '/scores/{format}/MembershipsByTeam/{teamid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

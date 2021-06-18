@@ -4,19 +4,19 @@ namespace Sportsdata\API\Golf\Endpoint;
 
 class NewsByPlayer extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Golf\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $playerid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $playerid Unique FantasyData Player ID.
     Example:<code>40000019</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $playerid)
+    public function __construct(string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\Golf\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class NewsByPlayer extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint impl
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{playerid}'), array($this->format, $this->playerid), '/{format}/NewsByPlayerID/{playerid}');
+        return str_replace(array('{playerid}', '{format}'), array($this->playerid, $this->format), '/{format}/NewsByPlayerID/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

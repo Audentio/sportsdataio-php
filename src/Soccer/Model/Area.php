@@ -13,13 +13,13 @@ class Area
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $countryCode;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -52,20 +52,20 @@ class Area
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountryCode() : string
+    public function getCountryCode() : ?string
     {
         return $this->countryCode;
     }
     /**
      * 
      *
-     * @param string $countryCode
+     * @param string|null $countryCode
      *
      * @return self
      */
-    public function setCountryCode(string $countryCode) : self
+    public function setCountryCode(?string $countryCode) : self
     {
         $this->countryCode = $countryCode;
         return $this;
@@ -73,20 +73,20 @@ class Area
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;

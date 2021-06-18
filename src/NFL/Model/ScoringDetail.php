@@ -7,7 +7,7 @@ class ScoringDetail
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gameKey;
     /**
@@ -19,13 +19,13 @@ class ScoringDetail
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
@@ -43,7 +43,7 @@ class ScoringDetail
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $scoringType;
     /**
@@ -67,26 +67,26 @@ class ScoringDetail
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $scoreID;
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGameKey() : string
+    public function getGameKey() : ?string
     {
         return $this->gameKey;
     }
     /**
      * 
      *
-     * @param string $gameKey
+     * @param string|null $gameKey
      *
      * @return self
      */
-    public function setGameKey(string $gameKey) : self
+    public function setGameKey(?string $gameKey) : self
     {
         $this->gameKey = $gameKey;
         return $this;
@@ -115,20 +115,20 @@ class ScoringDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerID() : int
+    public function getPlayerID() : ?int
     {
         return $this->playerID;
     }
     /**
      * 
      *
-     * @param int $playerID
+     * @param int|null $playerID
      *
      * @return self
      */
-    public function setPlayerID(int $playerID) : self
+    public function setPlayerID(?int $playerID) : self
     {
         $this->playerID = $playerID;
         return $this;
@@ -136,20 +136,20 @@ class ScoringDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -199,20 +199,20 @@ class ScoringDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getScoringType() : string
+    public function getScoringType() : ?string
     {
         return $this->scoringType;
     }
     /**
      * 
      *
-     * @param string $scoringType
+     * @param string|null $scoringType
      *
      * @return self
      */
-    public function setScoringType(string $scoringType) : self
+    public function setScoringType(?string $scoringType) : self
     {
         $this->scoringType = $scoringType;
         return $this;
@@ -283,20 +283,20 @@ class ScoringDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getScoreID() : int
+    public function getScoreID() : ?int
     {
         return $this->scoreID;
     }
     /**
      * 
      *
-     * @param int $scoreID
+     * @param int|null $scoreID
      *
      * @return self
      */
-    public function setScoreID(int $scoreID) : self
+    public function setScoreID(?int $scoreID) : self
     {
         $this->scoreID = $scoreID;
         return $this;

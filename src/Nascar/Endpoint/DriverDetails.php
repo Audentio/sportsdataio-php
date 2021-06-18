@@ -4,19 +4,19 @@ namespace Sportsdata\API\Nascar\Endpoint;
 
 class DriverDetails extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Nascar\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $driverid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $driverid Unique FantasyData Driver ID.
     Example:<code>80000268</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $driverid)
+    public function __construct(string $driverid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->driverid = $driverid;
+        $this->format = $format;
     }
     use \Sportsdata\API\Nascar\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class DriverDetails extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint i
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{driverid}'), array($this->format, $this->driverid), '/{format}/driver/{driverid}');
+        return str_replace(array('{driverid}', '{format}'), array($this->driverid, $this->format), '/{format}/driver/{driverid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

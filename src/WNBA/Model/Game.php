@@ -25,31 +25,31 @@ class Game
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $awayTeam;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $homeTeam;
     /**
@@ -67,43 +67,43 @@ class Game
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $stadiumID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamScore;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quarter;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingSeconds;
     /**
@@ -196,20 +196,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -217,20 +217,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -238,20 +238,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -259,20 +259,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAwayTeam() : string
+    public function getAwayTeam() : ?string
     {
         return $this->awayTeam;
     }
     /**
      * 
      *
-     * @param string $awayTeam
+     * @param string|null $awayTeam
      *
      * @return self
      */
-    public function setAwayTeam(string $awayTeam) : self
+    public function setAwayTeam(?string $awayTeam) : self
     {
         $this->awayTeam = $awayTeam;
         return $this;
@@ -280,20 +280,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHomeTeam() : string
+    public function getHomeTeam() : ?string
     {
         return $this->homeTeam;
     }
     /**
      * 
      *
-     * @param string $homeTeam
+     * @param string|null $homeTeam
      *
      * @return self
      */
-    public function setHomeTeam(string $homeTeam) : self
+    public function setHomeTeam(?string $homeTeam) : self
     {
         $this->homeTeam = $homeTeam;
         return $this;
@@ -343,20 +343,20 @@ class Game
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getStadiumID() : int
+    public function getStadiumID() : ?int
     {
         return $this->stadiumID;
     }
     /**
      * 
      *
-     * @param int $stadiumID
+     * @param int|null $stadiumID
      *
      * @return self
      */
-    public function setStadiumID(int $stadiumID) : self
+    public function setStadiumID(?int $stadiumID) : self
     {
         $this->stadiumID = $stadiumID;
         return $this;
@@ -364,20 +364,20 @@ class Game
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamScore() : int
+    public function getAwayTeamScore() : ?int
     {
         return $this->awayTeamScore;
     }
     /**
      * 
      *
-     * @param int $awayTeamScore
+     * @param int|null $awayTeamScore
      *
      * @return self
      */
-    public function setAwayTeamScore(int $awayTeamScore) : self
+    public function setAwayTeamScore(?int $awayTeamScore) : self
     {
         $this->awayTeamScore = $awayTeamScore;
         return $this;
@@ -385,20 +385,20 @@ class Game
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamScore() : int
+    public function getHomeTeamScore() : ?int
     {
         return $this->homeTeamScore;
     }
     /**
      * 
      *
-     * @param int $homeTeamScore
+     * @param int|null $homeTeamScore
      *
      * @return self
      */
-    public function setHomeTeamScore(int $homeTeamScore) : self
+    public function setHomeTeamScore(?int $homeTeamScore) : self
     {
         $this->homeTeamScore = $homeTeamScore;
         return $this;
@@ -406,20 +406,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -427,20 +427,20 @@ class Game
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuarter() : string
+    public function getQuarter() : ?string
     {
         return $this->quarter;
     }
     /**
      * 
      *
-     * @param string $quarter
+     * @param string|null $quarter
      *
      * @return self
      */
-    public function setQuarter(string $quarter) : self
+    public function setQuarter(?string $quarter) : self
     {
         $this->quarter = $quarter;
         return $this;
@@ -448,20 +448,20 @@ class Game
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingMinutes() : int
+    public function getTimeRemainingMinutes() : ?int
     {
         return $this->timeRemainingMinutes;
     }
     /**
      * 
      *
-     * @param int $timeRemainingMinutes
+     * @param int|null $timeRemainingMinutes
      *
      * @return self
      */
-    public function setTimeRemainingMinutes(int $timeRemainingMinutes) : self
+    public function setTimeRemainingMinutes(?int $timeRemainingMinutes) : self
     {
         $this->timeRemainingMinutes = $timeRemainingMinutes;
         return $this;
@@ -469,20 +469,20 @@ class Game
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingSeconds() : int
+    public function getTimeRemainingSeconds() : ?int
     {
         return $this->timeRemainingSeconds;
     }
     /**
      * 
      *
-     * @param int $timeRemainingSeconds
+     * @param int|null $timeRemainingSeconds
      *
      * @return self
      */
-    public function setTimeRemainingSeconds(int $timeRemainingSeconds) : self
+    public function setTimeRemainingSeconds(?int $timeRemainingSeconds) : self
     {
         $this->timeRemainingSeconds = $timeRemainingSeconds;
         return $this;

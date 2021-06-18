@@ -25,151 +25,151 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $number;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $numberDisplay;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $manufacturer;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $draftKingsSalary;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $raceID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsDraftKings;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $qualifyingSpeed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $poleFinalPosition;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $startPosition;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $finalPosition;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $positionDifferential;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $laps;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $lapsLed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fastestLaps;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $points;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $bonus;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $penalty;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $poles;
     /**
@@ -238,20 +238,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -259,20 +259,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumber() : int
+    public function getNumber() : ?int
     {
         return $this->number;
     }
     /**
      * 
      *
-     * @param int $number
+     * @param int|null $number
      *
      * @return self
      */
-    public function setNumber(int $number) : self
+    public function setNumber(?int $number) : self
     {
         $this->number = $number;
         return $this;
@@ -280,20 +280,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNumberDisplay() : string
+    public function getNumberDisplay() : ?string
     {
         return $this->numberDisplay;
     }
     /**
      * 
      *
-     * @param string $numberDisplay
+     * @param string|null $numberDisplay
      *
      * @return self
      */
-    public function setNumberDisplay(string $numberDisplay) : self
+    public function setNumberDisplay(?string $numberDisplay) : self
     {
         $this->numberDisplay = $numberDisplay;
         return $this;
@@ -301,20 +301,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getManufacturer() : string
+    public function getManufacturer() : ?string
     {
         return $this->manufacturer;
     }
     /**
      * 
      *
-     * @param string $manufacturer
+     * @param string|null $manufacturer
      *
      * @return self
      */
-    public function setManufacturer(string $manufacturer) : self
+    public function setManufacturer(?string $manufacturer) : self
     {
         $this->manufacturer = $manufacturer;
         return $this;
@@ -322,20 +322,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDraftKingsSalary() : int
+    public function getDraftKingsSalary() : ?int
     {
         return $this->draftKingsSalary;
     }
     /**
      * 
      *
-     * @param int $draftKingsSalary
+     * @param int|null $draftKingsSalary
      *
      * @return self
      */
-    public function setDraftKingsSalary(int $draftKingsSalary) : self
+    public function setDraftKingsSalary(?int $draftKingsSalary) : self
     {
         $this->draftKingsSalary = $draftKingsSalary;
         return $this;
@@ -343,20 +343,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRaceID() : int
+    public function getRaceID() : ?int
     {
         return $this->raceID;
     }
     /**
      * 
      *
-     * @param int $raceID
+     * @param int|null $raceID
      *
      * @return self
      */
-    public function setRaceID(int $raceID) : self
+    public function setRaceID(?int $raceID) : self
     {
         $this->raceID = $raceID;
         return $this;
@@ -364,20 +364,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -385,20 +385,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -406,20 +406,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -427,20 +427,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -448,20 +448,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -469,20 +469,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsDraftKings() : float
+    public function getFantasyPointsDraftKings() : ?float
     {
         return $this->fantasyPointsDraftKings;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsDraftKings
+     * @param float|null $fantasyPointsDraftKings
      *
      * @return self
      */
-    public function setFantasyPointsDraftKings(float $fantasyPointsDraftKings) : self
+    public function setFantasyPointsDraftKings(?float $fantasyPointsDraftKings) : self
     {
         $this->fantasyPointsDraftKings = $fantasyPointsDraftKings;
         return $this;
@@ -490,20 +490,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getQualifyingSpeed() : float
+    public function getQualifyingSpeed() : ?float
     {
         return $this->qualifyingSpeed;
     }
     /**
      * 
      *
-     * @param float $qualifyingSpeed
+     * @param float|null $qualifyingSpeed
      *
      * @return self
      */
-    public function setQualifyingSpeed(float $qualifyingSpeed) : self
+    public function setQualifyingSpeed(?float $qualifyingSpeed) : self
     {
         $this->qualifyingSpeed = $qualifyingSpeed;
         return $this;
@@ -511,20 +511,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPoleFinalPosition() : float
+    public function getPoleFinalPosition() : ?float
     {
         return $this->poleFinalPosition;
     }
     /**
      * 
      *
-     * @param float $poleFinalPosition
+     * @param float|null $poleFinalPosition
      *
      * @return self
      */
-    public function setPoleFinalPosition(float $poleFinalPosition) : self
+    public function setPoleFinalPosition(?float $poleFinalPosition) : self
     {
         $this->poleFinalPosition = $poleFinalPosition;
         return $this;
@@ -532,20 +532,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStartPosition() : float
+    public function getStartPosition() : ?float
     {
         return $this->startPosition;
     }
     /**
      * 
      *
-     * @param float $startPosition
+     * @param float|null $startPosition
      *
      * @return self
      */
-    public function setStartPosition(float $startPosition) : self
+    public function setStartPosition(?float $startPosition) : self
     {
         $this->startPosition = $startPosition;
         return $this;
@@ -553,20 +553,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFinalPosition() : float
+    public function getFinalPosition() : ?float
     {
         return $this->finalPosition;
     }
     /**
      * 
      *
-     * @param float $finalPosition
+     * @param float|null $finalPosition
      *
      * @return self
      */
-    public function setFinalPosition(float $finalPosition) : self
+    public function setFinalPosition(?float $finalPosition) : self
     {
         $this->finalPosition = $finalPosition;
         return $this;
@@ -574,20 +574,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPositionDifferential() : float
+    public function getPositionDifferential() : ?float
     {
         return $this->positionDifferential;
     }
     /**
      * 
      *
-     * @param float $positionDifferential
+     * @param float|null $positionDifferential
      *
      * @return self
      */
-    public function setPositionDifferential(float $positionDifferential) : self
+    public function setPositionDifferential(?float $positionDifferential) : self
     {
         $this->positionDifferential = $positionDifferential;
         return $this;
@@ -595,20 +595,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLaps() : float
+    public function getLaps() : ?float
     {
         return $this->laps;
     }
     /**
      * 
      *
-     * @param float $laps
+     * @param float|null $laps
      *
      * @return self
      */
-    public function setLaps(float $laps) : self
+    public function setLaps(?float $laps) : self
     {
         $this->laps = $laps;
         return $this;
@@ -616,20 +616,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLapsLed() : float
+    public function getLapsLed() : ?float
     {
         return $this->lapsLed;
     }
     /**
      * 
      *
-     * @param float $lapsLed
+     * @param float|null $lapsLed
      *
      * @return self
      */
-    public function setLapsLed(float $lapsLed) : self
+    public function setLapsLed(?float $lapsLed) : self
     {
         $this->lapsLed = $lapsLed;
         return $this;
@@ -637,20 +637,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFastestLaps() : float
+    public function getFastestLaps() : ?float
     {
         return $this->fastestLaps;
     }
     /**
      * 
      *
-     * @param float $fastestLaps
+     * @param float|null $fastestLaps
      *
      * @return self
      */
-    public function setFastestLaps(float $fastestLaps) : self
+    public function setFastestLaps(?float $fastestLaps) : self
     {
         $this->fastestLaps = $fastestLaps;
         return $this;
@@ -658,20 +658,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPoints() : float
+    public function getPoints() : ?float
     {
         return $this->points;
     }
     /**
      * 
      *
-     * @param float $points
+     * @param float|null $points
      *
      * @return self
      */
-    public function setPoints(float $points) : self
+    public function setPoints(?float $points) : self
     {
         $this->points = $points;
         return $this;
@@ -679,20 +679,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBonus() : float
+    public function getBonus() : ?float
     {
         return $this->bonus;
     }
     /**
      * 
      *
-     * @param float $bonus
+     * @param float|null $bonus
      *
      * @return self
      */
-    public function setBonus(float $bonus) : self
+    public function setBonus(?float $bonus) : self
     {
         $this->bonus = $bonus;
         return $this;
@@ -700,20 +700,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPenalty() : float
+    public function getPenalty() : ?float
     {
         return $this->penalty;
     }
     /**
      * 
      *
-     * @param float $penalty
+     * @param float|null $penalty
      *
      * @return self
      */
-    public function setPenalty(float $penalty) : self
+    public function setPenalty(?float $penalty) : self
     {
         $this->penalty = $penalty;
         return $this;
@@ -721,20 +721,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWins() : float
+    public function getWins() : ?float
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param float $wins
+     * @param float|null $wins
      *
      * @return self
      */
-    public function setWins(float $wins) : self
+    public function setWins(?float $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -742,20 +742,20 @@ class DriverRaceProjection
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPoles() : float
+    public function getPoles() : ?float
     {
         return $this->poles;
     }
     /**
      * 
      *
-     * @param float $poles
+     * @param float|null $poles
      *
      * @return self
      */
-    public function setPoles(float $poles) : self
+    public function setPoles(?float $poles) : self
     {
         $this->poles = $poles;
         return $this;

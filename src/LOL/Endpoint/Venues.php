@@ -10,7 +10,7 @@ class Venues extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements 
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'xml')
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class Venues extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements 
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/Venues');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/Venues');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

@@ -39,62 +39,119 @@ class FighterNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('FighterId', $data)) {
             $object->setFighterId($data['FighterId']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('Nickname', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('Nickname', $data) && $data['Nickname'] !== null) {
             $object->setNickname($data['Nickname']);
         }
-        if (\array_key_exists('WeightClass', $data)) {
+        elseif (\array_key_exists('Nickname', $data) && $data['Nickname'] === null) {
+            $object->setNickname(null);
+        }
+        if (\array_key_exists('WeightClass', $data) && $data['WeightClass'] !== null) {
             $object->setWeightClass($data['WeightClass']);
         }
-        if (\array_key_exists('BirthDate', $data)) {
+        elseif (\array_key_exists('WeightClass', $data) && $data['WeightClass'] === null) {
+            $object->setWeightClass(null);
+        }
+        if (\array_key_exists('BirthDate', $data) && $data['BirthDate'] !== null) {
             $object->setBirthDate($data['BirthDate']);
         }
-        if (\array_key_exists('Height', $data)) {
+        elseif (\array_key_exists('BirthDate', $data) && $data['BirthDate'] === null) {
+            $object->setBirthDate(null);
+        }
+        if (\array_key_exists('Height', $data) && $data['Height'] !== null) {
             $object->setHeight($data['Height']);
         }
-        if (\array_key_exists('Weight', $data)) {
+        elseif (\array_key_exists('Height', $data) && $data['Height'] === null) {
+            $object->setHeight(null);
+        }
+        if (\array_key_exists('Weight', $data) && $data['Weight'] !== null) {
             $object->setWeight($data['Weight']);
         }
-        if (\array_key_exists('Reach', $data)) {
+        elseif (\array_key_exists('Weight', $data) && $data['Weight'] === null) {
+            $object->setWeight(null);
+        }
+        if (\array_key_exists('Reach', $data) && $data['Reach'] !== null) {
             $object->setReach($data['Reach']);
         }
-        if (\array_key_exists('Wins', $data)) {
+        elseif (\array_key_exists('Reach', $data) && $data['Reach'] === null) {
+            $object->setReach(null);
+        }
+        if (\array_key_exists('Wins', $data) && $data['Wins'] !== null) {
             $object->setWins($data['Wins']);
         }
-        if (\array_key_exists('Losses', $data)) {
+        elseif (\array_key_exists('Wins', $data) && $data['Wins'] === null) {
+            $object->setWins(null);
+        }
+        if (\array_key_exists('Losses', $data) && $data['Losses'] !== null) {
             $object->setLosses($data['Losses']);
         }
-        if (\array_key_exists('Draws', $data)) {
+        elseif (\array_key_exists('Losses', $data) && $data['Losses'] === null) {
+            $object->setLosses(null);
+        }
+        if (\array_key_exists('Draws', $data) && $data['Draws'] !== null) {
             $object->setDraws($data['Draws']);
         }
-        if (\array_key_exists('NoContests', $data)) {
+        elseif (\array_key_exists('Draws', $data) && $data['Draws'] === null) {
+            $object->setDraws(null);
+        }
+        if (\array_key_exists('NoContests', $data) && $data['NoContests'] !== null) {
             $object->setNoContests($data['NoContests']);
         }
-        if (\array_key_exists('TechnicalKnockouts', $data)) {
+        elseif (\array_key_exists('NoContests', $data) && $data['NoContests'] === null) {
+            $object->setNoContests(null);
+        }
+        if (\array_key_exists('TechnicalKnockouts', $data) && $data['TechnicalKnockouts'] !== null) {
             $object->setTechnicalKnockouts($data['TechnicalKnockouts']);
         }
-        if (\array_key_exists('TechnicalKnockoutLosses', $data)) {
+        elseif (\array_key_exists('TechnicalKnockouts', $data) && $data['TechnicalKnockouts'] === null) {
+            $object->setTechnicalKnockouts(null);
+        }
+        if (\array_key_exists('TechnicalKnockoutLosses', $data) && $data['TechnicalKnockoutLosses'] !== null) {
             $object->setTechnicalKnockoutLosses($data['TechnicalKnockoutLosses']);
         }
-        if (\array_key_exists('Submissions', $data)) {
+        elseif (\array_key_exists('TechnicalKnockoutLosses', $data) && $data['TechnicalKnockoutLosses'] === null) {
+            $object->setTechnicalKnockoutLosses(null);
+        }
+        if (\array_key_exists('Submissions', $data) && $data['Submissions'] !== null) {
             $object->setSubmissions($data['Submissions']);
         }
-        if (\array_key_exists('SubmissionLosses', $data)) {
+        elseif (\array_key_exists('Submissions', $data) && $data['Submissions'] === null) {
+            $object->setSubmissions(null);
+        }
+        if (\array_key_exists('SubmissionLosses', $data) && $data['SubmissionLosses'] !== null) {
             $object->setSubmissionLosses($data['SubmissionLosses']);
         }
-        if (\array_key_exists('TitleWins', $data)) {
+        elseif (\array_key_exists('SubmissionLosses', $data) && $data['SubmissionLosses'] === null) {
+            $object->setSubmissionLosses(null);
+        }
+        if (\array_key_exists('TitleWins', $data) && $data['TitleWins'] !== null) {
             $object->setTitleWins($data['TitleWins']);
         }
-        if (\array_key_exists('TitleLosses', $data)) {
+        elseif (\array_key_exists('TitleWins', $data) && $data['TitleWins'] === null) {
+            $object->setTitleWins(null);
+        }
+        if (\array_key_exists('TitleLosses', $data) && $data['TitleLosses'] !== null) {
             $object->setTitleLosses($data['TitleLosses']);
         }
-        if (\array_key_exists('TitleDraws', $data)) {
+        elseif (\array_key_exists('TitleLosses', $data) && $data['TitleLosses'] === null) {
+            $object->setTitleLosses(null);
+        }
+        if (\array_key_exists('TitleDraws', $data) && $data['TitleDraws'] !== null) {
             $object->setTitleDraws($data['TitleDraws']);
+        }
+        elseif (\array_key_exists('TitleDraws', $data) && $data['TitleDraws'] === null) {
+            $object->setTitleDraws(null);
         }
         if (\array_key_exists('CareerStats', $data)) {
             $object->setCareerStats($this->denormalizer->denormalize($data['CareerStats'], 'Sportsdata\\API\\MMA\\Model\\CareerStat', 'json', $context));

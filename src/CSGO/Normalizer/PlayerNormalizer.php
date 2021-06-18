@@ -39,38 +39,71 @@ class PlayerNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('PlayerId', $data)) {
             $object->setPlayerId($data['PlayerId']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('CommonName', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('CommonName', $data) && $data['CommonName'] !== null) {
             $object->setCommonName($data['CommonName']);
         }
-        if (\array_key_exists('MatchName', $data)) {
+        elseif (\array_key_exists('CommonName', $data) && $data['CommonName'] === null) {
+            $object->setCommonName(null);
+        }
+        if (\array_key_exists('MatchName', $data) && $data['MatchName'] !== null) {
             $object->setMatchName($data['MatchName']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('MatchName', $data) && $data['MatchName'] === null) {
+            $object->setMatchName(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('Gender', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('Gender', $data) && $data['Gender'] !== null) {
             $object->setGender($data['Gender']);
         }
-        if (\array_key_exists('BirthDate', $data)) {
+        elseif (\array_key_exists('Gender', $data) && $data['Gender'] === null) {
+            $object->setGender(null);
+        }
+        if (\array_key_exists('BirthDate', $data) && $data['BirthDate'] !== null) {
             $object->setBirthDate($data['BirthDate']);
         }
-        if (\array_key_exists('BirthCity', $data)) {
+        elseif (\array_key_exists('BirthDate', $data) && $data['BirthDate'] === null) {
+            $object->setBirthDate(null);
+        }
+        if (\array_key_exists('BirthCity', $data) && $data['BirthCity'] !== null) {
             $object->setBirthCity($data['BirthCity']);
         }
-        if (\array_key_exists('BirthCountry', $data)) {
+        elseif (\array_key_exists('BirthCity', $data) && $data['BirthCity'] === null) {
+            $object->setBirthCity(null);
+        }
+        if (\array_key_exists('BirthCountry', $data) && $data['BirthCountry'] !== null) {
             $object->setBirthCountry($data['BirthCountry']);
         }
-        if (\array_key_exists('Nationality', $data)) {
+        elseif (\array_key_exists('BirthCountry', $data) && $data['BirthCountry'] === null) {
+            $object->setBirthCountry(null);
+        }
+        if (\array_key_exists('Nationality', $data) && $data['Nationality'] !== null) {
             $object->setNationality($data['Nationality']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('Nationality', $data) && $data['Nationality'] === null) {
+            $object->setNationality(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
+        }
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
         }
         return $object;
     }

@@ -13,43 +13,43 @@ class Article
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $source;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $content;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $url;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $termsOfUse;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $author;
     /**
@@ -82,20 +82,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle() : string
+    public function getTitle() : ?string
     {
         return $this->title;
     }
     /**
      * 
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title) : self
+    public function setTitle(?string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -103,20 +103,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSource() : string
+    public function getSource() : ?string
     {
         return $this->source;
     }
     /**
      * 
      *
-     * @param string $source
+     * @param string|null $source
      *
      * @return self
      */
-    public function setSource(string $source) : self
+    public function setSource(?string $source) : self
     {
         $this->source = $source;
         return $this;
@@ -124,20 +124,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -145,20 +145,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getContent() : string
+    public function getContent() : ?string
     {
         return $this->content;
     }
     /**
      * 
      *
-     * @param string $content
+     * @param string|null $content
      *
      * @return self
      */
-    public function setContent(string $content) : self
+    public function setContent(?string $content) : self
     {
         $this->content = $content;
         return $this;
@@ -166,20 +166,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUrl() : string
+    public function getUrl() : ?string
     {
         return $this->url;
     }
     /**
      * 
      *
-     * @param string $url
+     * @param string|null $url
      *
      * @return self
      */
-    public function setUrl(string $url) : self
+    public function setUrl(?string $url) : self
     {
         $this->url = $url;
         return $this;
@@ -187,20 +187,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTermsOfUse() : string
+    public function getTermsOfUse() : ?string
     {
         return $this->termsOfUse;
     }
     /**
      * 
      *
-     * @param string $termsOfUse
+     * @param string|null $termsOfUse
      *
      * @return self
      */
-    public function setTermsOfUse(string $termsOfUse) : self
+    public function setTermsOfUse(?string $termsOfUse) : self
     {
         $this->termsOfUse = $termsOfUse;
         return $this;
@@ -208,20 +208,20 @@ class Article
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAuthor() : string
+    public function getAuthor() : ?string
     {
         return $this->author;
     }
     /**
      * 
      *
-     * @param string $author
+     * @param string|null $author
      *
      * @return self
      */
-    public function setAuthor(string $author) : self
+    public function setAuthor(?string $author) : self
     {
         $this->author = $author;
         return $this;

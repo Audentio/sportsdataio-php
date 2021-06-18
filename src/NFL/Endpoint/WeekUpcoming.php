@@ -10,7 +10,7 @@ class WeekUpcoming extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint imple
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format)
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class WeekUpcoming extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint imple
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/UpcomingWeek');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/UpcomingWeek');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

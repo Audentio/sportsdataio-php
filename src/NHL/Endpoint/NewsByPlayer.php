@@ -4,19 +4,20 @@ namespace Sportsdata\API\NHL\Endpoint;
 
 class NewsByPlayer extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NHL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $playerid;
+    protected $format;
     /**
-     * 
-     *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $playerid Unique FantasyData Player ID.
-     Example:<code>10000507</code>.
+    * 
+    *
+    * @param string $playerid Unique FantasyData Player ID.
+    Example:<code>10000507</code>.
+    
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $playerid)
+    public function __construct(string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\NHL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +26,7 @@ class NewsByPlayer extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint imple
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{playerid}'), array($this->format, $this->playerid), '/stats/{format}/NewsByPlayerID/{playerid}');
+        return str_replace(array('{playerid}', '{format}'), array($this->playerid, $this->format), '/scores/{format}/NewsByPlayerID/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

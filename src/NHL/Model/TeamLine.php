@@ -13,13 +13,13 @@ class TeamLine
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $fullName;
     /**
@@ -58,20 +58,20 @@ class TeamLine
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -79,20 +79,20 @@ class TeamLine
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFullName() : string
+    public function getFullName() : ?string
     {
         return $this->fullName;
     }
     /**
      * 
      *
-     * @param string $fullName
+     * @param string|null $fullName
      *
      * @return self
      */
-    public function setFullName(string $fullName) : self
+    public function setFullName(?string $fullName) : self
     {
         $this->fullName = $fullName;
         return $this;

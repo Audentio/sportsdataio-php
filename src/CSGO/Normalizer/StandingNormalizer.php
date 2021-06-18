@@ -45,11 +45,17 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Order', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Order', $data) && $data['Order'] !== null) {
             $object->setOrder($data['Order']);
+        }
+        elseif (\array_key_exists('Order', $data) && $data['Order'] === null) {
+            $object->setOrder(null);
         }
         if (\array_key_exists('Games', $data)) {
             $object->setGames($data['Games']);
@@ -72,8 +78,11 @@ class StandingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('ScoreDifference', $data)) {
             $object->setScoreDifference($data['ScoreDifference']);
         }
-        if (\array_key_exists('Group', $data)) {
+        if (\array_key_exists('Group', $data) && $data['Group'] !== null) {
             $object->setGroup($data['Group']);
+        }
+        elseif (\array_key_exists('Group', $data) && $data['Group'] === null) {
+            $object->setGroup(null);
         }
         return $object;
     }

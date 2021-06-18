@@ -39,56 +39,104 @@ class GameOddNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('GameOddId', $data)) {
             $object->setGameOddId($data['GameOddId']);
         }
-        if (\array_key_exists('Sportsbook', $data)) {
+        if (\array_key_exists('Sportsbook', $data) && $data['Sportsbook'] !== null) {
             $object->setSportsbook($data['Sportsbook']);
+        }
+        elseif (\array_key_exists('Sportsbook', $data) && $data['Sportsbook'] === null) {
+            $object->setSportsbook(null);
         }
         if (\array_key_exists('ScoreId', $data)) {
             $object->setScoreId($data['ScoreId']);
         }
-        if (\array_key_exists('Created', $data)) {
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('HomeMoneyLine', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('HomeMoneyLine', $data) && $data['HomeMoneyLine'] !== null) {
             $object->setHomeMoneyLine($data['HomeMoneyLine']);
         }
-        if (\array_key_exists('AwayMoneyLine', $data)) {
+        elseif (\array_key_exists('HomeMoneyLine', $data) && $data['HomeMoneyLine'] === null) {
+            $object->setHomeMoneyLine(null);
+        }
+        if (\array_key_exists('AwayMoneyLine', $data) && $data['AwayMoneyLine'] !== null) {
             $object->setAwayMoneyLine($data['AwayMoneyLine']);
         }
-        if (\array_key_exists('DrawMoneyLine', $data)) {
+        elseif (\array_key_exists('AwayMoneyLine', $data) && $data['AwayMoneyLine'] === null) {
+            $object->setAwayMoneyLine(null);
+        }
+        if (\array_key_exists('DrawMoneyLine', $data) && $data['DrawMoneyLine'] !== null) {
             $object->setDrawMoneyLine($data['DrawMoneyLine']);
         }
-        if (\array_key_exists('HomePointSpread', $data)) {
+        elseif (\array_key_exists('DrawMoneyLine', $data) && $data['DrawMoneyLine'] === null) {
+            $object->setDrawMoneyLine(null);
+        }
+        if (\array_key_exists('HomePointSpread', $data) && $data['HomePointSpread'] !== null) {
             $object->setHomePointSpread($data['HomePointSpread']);
         }
-        if (\array_key_exists('AwayPointSpread', $data)) {
+        elseif (\array_key_exists('HomePointSpread', $data) && $data['HomePointSpread'] === null) {
+            $object->setHomePointSpread(null);
+        }
+        if (\array_key_exists('AwayPointSpread', $data) && $data['AwayPointSpread'] !== null) {
             $object->setAwayPointSpread($data['AwayPointSpread']);
         }
-        if (\array_key_exists('HomePointSpreadPayout', $data)) {
+        elseif (\array_key_exists('AwayPointSpread', $data) && $data['AwayPointSpread'] === null) {
+            $object->setAwayPointSpread(null);
+        }
+        if (\array_key_exists('HomePointSpreadPayout', $data) && $data['HomePointSpreadPayout'] !== null) {
             $object->setHomePointSpreadPayout($data['HomePointSpreadPayout']);
         }
-        if (\array_key_exists('AwayPointSpreadPayout', $data)) {
+        elseif (\array_key_exists('HomePointSpreadPayout', $data) && $data['HomePointSpreadPayout'] === null) {
+            $object->setHomePointSpreadPayout(null);
+        }
+        if (\array_key_exists('AwayPointSpreadPayout', $data) && $data['AwayPointSpreadPayout'] !== null) {
             $object->setAwayPointSpreadPayout($data['AwayPointSpreadPayout']);
         }
-        if (\array_key_exists('OverUnder', $data)) {
+        elseif (\array_key_exists('AwayPointSpreadPayout', $data) && $data['AwayPointSpreadPayout'] === null) {
+            $object->setAwayPointSpreadPayout(null);
+        }
+        if (\array_key_exists('OverUnder', $data) && $data['OverUnder'] !== null) {
             $object->setOverUnder($data['OverUnder']);
         }
-        if (\array_key_exists('OverPayout', $data)) {
+        elseif (\array_key_exists('OverUnder', $data) && $data['OverUnder'] === null) {
+            $object->setOverUnder(null);
+        }
+        if (\array_key_exists('OverPayout', $data) && $data['OverPayout'] !== null) {
             $object->setOverPayout($data['OverPayout']);
         }
-        if (\array_key_exists('UnderPayout', $data)) {
+        elseif (\array_key_exists('OverPayout', $data) && $data['OverPayout'] === null) {
+            $object->setOverPayout(null);
+        }
+        if (\array_key_exists('UnderPayout', $data) && $data['UnderPayout'] !== null) {
             $object->setUnderPayout($data['UnderPayout']);
         }
-        if (\array_key_exists('SportsbookId', $data)) {
+        elseif (\array_key_exists('UnderPayout', $data) && $data['UnderPayout'] === null) {
+            $object->setUnderPayout(null);
+        }
+        if (\array_key_exists('SportsbookId', $data) && $data['SportsbookId'] !== null) {
             $object->setSportsbookId($data['SportsbookId']);
         }
-        if (\array_key_exists('OddType', $data)) {
+        elseif (\array_key_exists('SportsbookId', $data) && $data['SportsbookId'] === null) {
+            $object->setSportsbookId(null);
+        }
+        if (\array_key_exists('OddType', $data) && $data['OddType'] !== null) {
             $object->setOddType($data['OddType']);
         }
-        if (\array_key_exists('SportsbookUrl', $data)) {
+        elseif (\array_key_exists('OddType', $data) && $data['OddType'] === null) {
+            $object->setOddType(null);
+        }
+        if (\array_key_exists('SportsbookUrl', $data) && $data['SportsbookUrl'] !== null) {
             $object->setSportsbookUrl($data['SportsbookUrl']);
+        }
+        elseif (\array_key_exists('SportsbookUrl', $data) && $data['SportsbookUrl'] === null) {
+            $object->setSportsbookUrl(null);
         }
         return $object;
     }

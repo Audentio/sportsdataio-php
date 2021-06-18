@@ -39,26 +39,47 @@ class HeadshotNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('PreferredHostedHeadshotUrl', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('PreferredHostedHeadshotUrl', $data) && $data['PreferredHostedHeadshotUrl'] !== null) {
             $object->setPreferredHostedHeadshotUrl($data['PreferredHostedHeadshotUrl']);
         }
-        if (\array_key_exists('PreferredHostedHeadshotUpdated', $data)) {
+        elseif (\array_key_exists('PreferredHostedHeadshotUrl', $data) && $data['PreferredHostedHeadshotUrl'] === null) {
+            $object->setPreferredHostedHeadshotUrl(null);
+        }
+        if (\array_key_exists('PreferredHostedHeadshotUpdated', $data) && $data['PreferredHostedHeadshotUpdated'] !== null) {
             $object->setPreferredHostedHeadshotUpdated($data['PreferredHostedHeadshotUpdated']);
         }
-        if (\array_key_exists('HostedHeadshotWithBackgroundUrl', $data)) {
+        elseif (\array_key_exists('PreferredHostedHeadshotUpdated', $data) && $data['PreferredHostedHeadshotUpdated'] === null) {
+            $object->setPreferredHostedHeadshotUpdated(null);
+        }
+        if (\array_key_exists('HostedHeadshotWithBackgroundUrl', $data) && $data['HostedHeadshotWithBackgroundUrl'] !== null) {
             $object->setHostedHeadshotWithBackgroundUrl($data['HostedHeadshotWithBackgroundUrl']);
         }
-        if (\array_key_exists('HostedHeadshotWithBackgroundUpdated', $data)) {
+        elseif (\array_key_exists('HostedHeadshotWithBackgroundUrl', $data) && $data['HostedHeadshotWithBackgroundUrl'] === null) {
+            $object->setHostedHeadshotWithBackgroundUrl(null);
+        }
+        if (\array_key_exists('HostedHeadshotWithBackgroundUpdated', $data) && $data['HostedHeadshotWithBackgroundUpdated'] !== null) {
             $object->setHostedHeadshotWithBackgroundUpdated($data['HostedHeadshotWithBackgroundUpdated']);
         }
-        if (\array_key_exists('HostedHeadshotNoBackgroundUrl', $data)) {
+        elseif (\array_key_exists('HostedHeadshotWithBackgroundUpdated', $data) && $data['HostedHeadshotWithBackgroundUpdated'] === null) {
+            $object->setHostedHeadshotWithBackgroundUpdated(null);
+        }
+        if (\array_key_exists('HostedHeadshotNoBackgroundUrl', $data) && $data['HostedHeadshotNoBackgroundUrl'] !== null) {
             $object->setHostedHeadshotNoBackgroundUrl($data['HostedHeadshotNoBackgroundUrl']);
         }
-        if (\array_key_exists('HostedHeadshotNoBackgroundUpdated', $data)) {
+        elseif (\array_key_exists('HostedHeadshotNoBackgroundUrl', $data) && $data['HostedHeadshotNoBackgroundUrl'] === null) {
+            $object->setHostedHeadshotNoBackgroundUrl(null);
+        }
+        if (\array_key_exists('HostedHeadshotNoBackgroundUpdated', $data) && $data['HostedHeadshotNoBackgroundUpdated'] !== null) {
             $object->setHostedHeadshotNoBackgroundUpdated($data['HostedHeadshotNoBackgroundUpdated']);
+        }
+        elseif (\array_key_exists('HostedHeadshotNoBackgroundUpdated', $data) && $data['HostedHeadshotNoBackgroundUpdated'] === null) {
+            $object->setHostedHeadshotNoBackgroundUpdated(null);
         }
         return $object;
     }

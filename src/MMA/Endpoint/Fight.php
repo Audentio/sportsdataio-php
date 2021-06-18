@@ -4,18 +4,18 @@ namespace Sportsdata\API\MMA\Endpoint;
 
 class Fight extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implements \Sportsdata\API\MMA\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $fightid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fightid The unique ID of this fight. <br> Examples: <code>1100</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $fightid)
+    public function __construct(string $fightid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->fightid = $fightid;
+        $this->format = $format;
     }
     use \Sportsdata\API\MMA\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class Fight extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implements \
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{fightid}'), array($this->format, $this->fightid), '/stats/{format}/Fight/{fightid}');
+        return str_replace(array('{fightid}', '{format}'), array($this->fightid, $this->format), '/stats/{format}/Fight/{fightid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

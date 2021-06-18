@@ -59,20 +59,35 @@ class CompetitionDetailNormalizer implements DenormalizerInterface, NormalizerIn
         if (\array_key_exists('AreaId', $data)) {
             $object->setAreaId($data['AreaId']);
         }
-        if (\array_key_exists('AreaName', $data)) {
+        if (\array_key_exists('AreaName', $data) && $data['AreaName'] !== null) {
             $object->setAreaName($data['AreaName']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('AreaName', $data) && $data['AreaName'] === null) {
+            $object->setAreaName(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Gender', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Gender', $data) && $data['Gender'] !== null) {
             $object->setGender($data['Gender']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Gender', $data) && $data['Gender'] === null) {
+            $object->setGender(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('Format', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('Format', $data) && $data['Format'] !== null) {
             $object->setFormat($data['Format']);
+        }
+        elseif (\array_key_exists('Format', $data) && $data['Format'] === null) {
+            $object->setFormat(null);
         }
         if (\array_key_exists('Seasons', $data)) {
             $values_2 = array();
@@ -81,8 +96,11 @@ class CompetitionDetailNormalizer implements DenormalizerInterface, NormalizerIn
             }
             $object->setSeasons($values_2);
         }
-        if (\array_key_exists('Key', $data)) {
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
+        }
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
         }
         return $object;
     }

@@ -13,7 +13,7 @@ class Team
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
@@ -25,43 +25,43 @@ class Team
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $school;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $apRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $losses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceLosses;
     /**
@@ -73,25 +73,25 @@ class Team
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $conference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teamLogoUrl;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shortDisplayName;
     /**
@@ -118,20 +118,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -160,20 +160,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSchool() : string
+    public function getSchool() : ?string
     {
         return $this->school;
     }
     /**
      * 
      *
-     * @param string $school
+     * @param string|null $school
      *
      * @return self
      */
-    public function setSchool(string $school) : self
+    public function setSchool(?string $school) : self
     {
         $this->school = $school;
         return $this;
@@ -181,20 +181,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -202,20 +202,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getApRank() : int
+    public function getApRank() : ?int
     {
         return $this->apRank;
     }
     /**
      * 
      *
-     * @param int $apRank
+     * @param int|null $apRank
      *
      * @return self
      */
-    public function setApRank(int $apRank) : self
+    public function setApRank(?int $apRank) : self
     {
         $this->apRank = $apRank;
         return $this;
@@ -223,20 +223,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWins() : int
+    public function getWins() : ?int
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param int $wins
+     * @param int|null $wins
      *
      * @return self
      */
-    public function setWins(int $wins) : self
+    public function setWins(?int $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -244,20 +244,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLosses() : int
+    public function getLosses() : ?int
     {
         return $this->losses;
     }
     /**
      * 
      *
-     * @param int $losses
+     * @param int|null $losses
      *
      * @return self
      */
-    public function setLosses(int $losses) : self
+    public function setLosses(?int $losses) : self
     {
         $this->losses = $losses;
         return $this;
@@ -265,20 +265,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceWins() : int
+    public function getConferenceWins() : ?int
     {
         return $this->conferenceWins;
     }
     /**
      * 
      *
-     * @param int $conferenceWins
+     * @param int|null $conferenceWins
      *
      * @return self
      */
-    public function setConferenceWins(int $conferenceWins) : self
+    public function setConferenceWins(?int $conferenceWins) : self
     {
         $this->conferenceWins = $conferenceWins;
         return $this;
@@ -286,20 +286,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceLosses() : int
+    public function getConferenceLosses() : ?int
     {
         return $this->conferenceLosses;
     }
     /**
      * 
      *
-     * @param int $conferenceLosses
+     * @param int|null $conferenceLosses
      *
      * @return self
      */
-    public function setConferenceLosses(int $conferenceLosses) : self
+    public function setConferenceLosses(?int $conferenceLosses) : self
     {
         $this->conferenceLosses = $conferenceLosses;
         return $this;
@@ -328,20 +328,20 @@ class Team
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceID() : int
+    public function getConferenceID() : ?int
     {
         return $this->conferenceID;
     }
     /**
      * 
      *
-     * @param int $conferenceID
+     * @param int|null $conferenceID
      *
      * @return self
      */
-    public function setConferenceID(int $conferenceID) : self
+    public function setConferenceID(?int $conferenceID) : self
     {
         $this->conferenceID = $conferenceID;
         return $this;
@@ -349,20 +349,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getConference() : string
+    public function getConference() : ?string
     {
         return $this->conference;
     }
     /**
      * 
      *
-     * @param string $conference
+     * @param string|null $conference
      *
      * @return self
      */
-    public function setConference(string $conference) : self
+    public function setConference(?string $conference) : self
     {
         $this->conference = $conference;
         return $this;
@@ -370,20 +370,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeamLogoUrl() : string
+    public function getTeamLogoUrl() : ?string
     {
         return $this->teamLogoUrl;
     }
     /**
      * 
      *
-     * @param string $teamLogoUrl
+     * @param string|null $teamLogoUrl
      *
      * @return self
      */
-    public function setTeamLogoUrl(string $teamLogoUrl) : self
+    public function setTeamLogoUrl(?string $teamLogoUrl) : self
     {
         $this->teamLogoUrl = $teamLogoUrl;
         return $this;
@@ -391,20 +391,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShortDisplayName() : string
+    public function getShortDisplayName() : ?string
     {
         return $this->shortDisplayName;
     }
     /**
      * 
      *
-     * @param string $shortDisplayName
+     * @param string|null $shortDisplayName
      *
      * @return self
      */
-    public function setShortDisplayName(string $shortDisplayName) : self
+    public function setShortDisplayName(?string $shortDisplayName) : self
     {
         $this->shortDisplayName = $shortDisplayName;
         return $this;

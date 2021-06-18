@@ -13,103 +13,103 @@ class TeamGame
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $seasonType;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $season;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $losses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $possessions;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $opponentID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $homeOrAway;
     /**
@@ -121,253 +121,253 @@ class TeamGame
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalGameID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalOpponentID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $games;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $minutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fieldGoalsMade;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fieldGoalsAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fieldGoalsPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $effectiveFieldGoalsPercentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $twoPointersMade;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $twoPointersAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $twoPointersPercentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $threePointersMade;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $threePointersAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $threePointersPercentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $freeThrowsMade;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $freeThrowsAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $freeThrowsPercentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $offensiveRebounds;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $defensiveRebounds;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rebounds;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $offensiveReboundsPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $defensiveReboundsPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalReboundsPercentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $assists;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $steals;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $blockedShots;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $turnovers;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $personalFouls;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $points;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $trueShootingAttempts;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $trueShootingPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $playerEfficiencyRating;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $assistsPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $stealsPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $blocksPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $turnOversPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $usageRatePercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsFanDuel;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsDraftKings;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsYahoo;
     /**
@@ -394,20 +394,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -415,20 +415,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSeasonType() : int
+    public function getSeasonType() : ?int
     {
         return $this->seasonType;
     }
     /**
      * 
      *
-     * @param int $seasonType
+     * @param int|null $seasonType
      *
      * @return self
      */
-    public function setSeasonType(int $seasonType) : self
+    public function setSeasonType(?int $seasonType) : self
     {
         $this->seasonType = $seasonType;
         return $this;
@@ -436,20 +436,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSeason() : int
+    public function getSeason() : ?int
     {
         return $this->season;
     }
     /**
      * 
      *
-     * @param int $season
+     * @param int|null $season
      *
      * @return self
      */
-    public function setSeason(int $season) : self
+    public function setSeason(?int $season) : self
     {
         $this->season = $season;
         return $this;
@@ -457,20 +457,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -478,20 +478,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -499,20 +499,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWins() : int
+    public function getWins() : ?int
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param int $wins
+     * @param int|null $wins
      *
      * @return self
      */
-    public function setWins(int $wins) : self
+    public function setWins(?int $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -520,20 +520,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLosses() : int
+    public function getLosses() : ?int
     {
         return $this->losses;
     }
     /**
      * 
      *
-     * @param int $losses
+     * @param int|null $losses
      *
      * @return self
      */
-    public function setLosses(int $losses) : self
+    public function setLosses(?int $losses) : self
     {
         $this->losses = $losses;
         return $this;
@@ -541,20 +541,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceWins() : int
+    public function getConferenceWins() : ?int
     {
         return $this->conferenceWins;
     }
     /**
      * 
      *
-     * @param int $conferenceWins
+     * @param int|null $conferenceWins
      *
      * @return self
      */
-    public function setConferenceWins(int $conferenceWins) : self
+    public function setConferenceWins(?int $conferenceWins) : self
     {
         $this->conferenceWins = $conferenceWins;
         return $this;
@@ -562,20 +562,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceLosses() : int
+    public function getConferenceLosses() : ?int
     {
         return $this->conferenceLosses;
     }
     /**
      * 
      *
-     * @param int $conferenceLosses
+     * @param int|null $conferenceLosses
      *
      * @return self
      */
-    public function setConferenceLosses(int $conferenceLosses) : self
+    public function setConferenceLosses(?int $conferenceLosses) : self
     {
         $this->conferenceLosses = $conferenceLosses;
         return $this;
@@ -583,20 +583,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;
@@ -604,20 +604,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPossessions() : float
+    public function getPossessions() : ?float
     {
         return $this->possessions;
     }
     /**
      * 
      *
-     * @param float $possessions
+     * @param float|null $possessions
      *
      * @return self
      */
-    public function setPossessions(float $possessions) : self
+    public function setPossessions(?float $possessions) : self
     {
         $this->possessions = $possessions;
         return $this;
@@ -625,20 +625,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameID() : int
+    public function getGameID() : ?int
     {
         return $this->gameID;
     }
     /**
      * 
      *
-     * @param int $gameID
+     * @param int|null $gameID
      *
      * @return self
      */
-    public function setGameID(int $gameID) : self
+    public function setGameID(?int $gameID) : self
     {
         $this->gameID = $gameID;
         return $this;
@@ -646,20 +646,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOpponentID() : int
+    public function getOpponentID() : ?int
     {
         return $this->opponentID;
     }
     /**
      * 
      *
-     * @param int $opponentID
+     * @param int|null $opponentID
      *
      * @return self
      */
-    public function setOpponentID(int $opponentID) : self
+    public function setOpponentID(?int $opponentID) : self
     {
         $this->opponentID = $opponentID;
         return $this;
@@ -667,20 +667,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -688,20 +688,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -709,20 +709,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -730,20 +730,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHomeOrAway() : string
+    public function getHomeOrAway() : ?string
     {
         return $this->homeOrAway;
     }
     /**
      * 
      *
-     * @param string $homeOrAway
+     * @param string|null $homeOrAway
      *
      * @return self
      */
-    public function setHomeOrAway(string $homeOrAway) : self
+    public function setHomeOrAway(?string $homeOrAway) : self
     {
         $this->homeOrAway = $homeOrAway;
         return $this;
@@ -772,20 +772,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalGameID() : int
+    public function getGlobalGameID() : ?int
     {
         return $this->globalGameID;
     }
     /**
      * 
      *
-     * @param int $globalGameID
+     * @param int|null $globalGameID
      *
      * @return self
      */
-    public function setGlobalGameID(int $globalGameID) : self
+    public function setGlobalGameID(?int $globalGameID) : self
     {
         $this->globalGameID = $globalGameID;
         return $this;
@@ -793,20 +793,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalOpponentID() : int
+    public function getGlobalOpponentID() : ?int
     {
         return $this->globalOpponentID;
     }
     /**
      * 
      *
-     * @param int $globalOpponentID
+     * @param int|null $globalOpponentID
      *
      * @return self
      */
-    public function setGlobalOpponentID(int $globalOpponentID) : self
+    public function setGlobalOpponentID(?int $globalOpponentID) : self
     {
         $this->globalOpponentID = $globalOpponentID;
         return $this;
@@ -814,20 +814,20 @@ class TeamGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -835,20 +835,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGames() : int
+    public function getGames() : ?int
     {
         return $this->games;
     }
     /**
      * 
      *
-     * @param int $games
+     * @param int|null $games
      *
      * @return self
      */
-    public function setGames(int $games) : self
+    public function setGames(?int $games) : self
     {
         $this->games = $games;
         return $this;
@@ -856,20 +856,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -877,20 +877,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getMinutes() : int
+    public function getMinutes() : ?int
     {
         return $this->minutes;
     }
     /**
      * 
      *
-     * @param int $minutes
+     * @param int|null $minutes
      *
      * @return self
      */
-    public function setMinutes(int $minutes) : self
+    public function setMinutes(?int $minutes) : self
     {
         $this->minutes = $minutes;
         return $this;
@@ -898,20 +898,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFieldGoalsMade() : int
+    public function getFieldGoalsMade() : ?int
     {
         return $this->fieldGoalsMade;
     }
     /**
      * 
      *
-     * @param int $fieldGoalsMade
+     * @param int|null $fieldGoalsMade
      *
      * @return self
      */
-    public function setFieldGoalsMade(int $fieldGoalsMade) : self
+    public function setFieldGoalsMade(?int $fieldGoalsMade) : self
     {
         $this->fieldGoalsMade = $fieldGoalsMade;
         return $this;
@@ -919,20 +919,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFieldGoalsAttempted() : int
+    public function getFieldGoalsAttempted() : ?int
     {
         return $this->fieldGoalsAttempted;
     }
     /**
      * 
      *
-     * @param int $fieldGoalsAttempted
+     * @param int|null $fieldGoalsAttempted
      *
      * @return self
      */
-    public function setFieldGoalsAttempted(int $fieldGoalsAttempted) : self
+    public function setFieldGoalsAttempted(?int $fieldGoalsAttempted) : self
     {
         $this->fieldGoalsAttempted = $fieldGoalsAttempted;
         return $this;
@@ -940,20 +940,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFieldGoalsPercentage() : float
+    public function getFieldGoalsPercentage() : ?float
     {
         return $this->fieldGoalsPercentage;
     }
     /**
      * 
      *
-     * @param float $fieldGoalsPercentage
+     * @param float|null $fieldGoalsPercentage
      *
      * @return self
      */
-    public function setFieldGoalsPercentage(float $fieldGoalsPercentage) : self
+    public function setFieldGoalsPercentage(?float $fieldGoalsPercentage) : self
     {
         $this->fieldGoalsPercentage = $fieldGoalsPercentage;
         return $this;
@@ -961,20 +961,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getEffectiveFieldGoalsPercentage() : float
+    public function getEffectiveFieldGoalsPercentage() : ?float
     {
         return $this->effectiveFieldGoalsPercentage;
     }
     /**
      * 
      *
-     * @param float $effectiveFieldGoalsPercentage
+     * @param float|null $effectiveFieldGoalsPercentage
      *
      * @return self
      */
-    public function setEffectiveFieldGoalsPercentage(float $effectiveFieldGoalsPercentage) : self
+    public function setEffectiveFieldGoalsPercentage(?float $effectiveFieldGoalsPercentage) : self
     {
         $this->effectiveFieldGoalsPercentage = $effectiveFieldGoalsPercentage;
         return $this;
@@ -982,20 +982,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTwoPointersMade() : int
+    public function getTwoPointersMade() : ?int
     {
         return $this->twoPointersMade;
     }
     /**
      * 
      *
-     * @param int $twoPointersMade
+     * @param int|null $twoPointersMade
      *
      * @return self
      */
-    public function setTwoPointersMade(int $twoPointersMade) : self
+    public function setTwoPointersMade(?int $twoPointersMade) : self
     {
         $this->twoPointersMade = $twoPointersMade;
         return $this;
@@ -1003,20 +1003,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTwoPointersAttempted() : int
+    public function getTwoPointersAttempted() : ?int
     {
         return $this->twoPointersAttempted;
     }
     /**
      * 
      *
-     * @param int $twoPointersAttempted
+     * @param int|null $twoPointersAttempted
      *
      * @return self
      */
-    public function setTwoPointersAttempted(int $twoPointersAttempted) : self
+    public function setTwoPointersAttempted(?int $twoPointersAttempted) : self
     {
         $this->twoPointersAttempted = $twoPointersAttempted;
         return $this;
@@ -1024,20 +1024,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTwoPointersPercentage() : float
+    public function getTwoPointersPercentage() : ?float
     {
         return $this->twoPointersPercentage;
     }
     /**
      * 
      *
-     * @param float $twoPointersPercentage
+     * @param float|null $twoPointersPercentage
      *
      * @return self
      */
-    public function setTwoPointersPercentage(float $twoPointersPercentage) : self
+    public function setTwoPointersPercentage(?float $twoPointersPercentage) : self
     {
         $this->twoPointersPercentage = $twoPointersPercentage;
         return $this;
@@ -1045,20 +1045,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getThreePointersMade() : int
+    public function getThreePointersMade() : ?int
     {
         return $this->threePointersMade;
     }
     /**
      * 
      *
-     * @param int $threePointersMade
+     * @param int|null $threePointersMade
      *
      * @return self
      */
-    public function setThreePointersMade(int $threePointersMade) : self
+    public function setThreePointersMade(?int $threePointersMade) : self
     {
         $this->threePointersMade = $threePointersMade;
         return $this;
@@ -1066,20 +1066,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getThreePointersAttempted() : int
+    public function getThreePointersAttempted() : ?int
     {
         return $this->threePointersAttempted;
     }
     /**
      * 
      *
-     * @param int $threePointersAttempted
+     * @param int|null $threePointersAttempted
      *
      * @return self
      */
-    public function setThreePointersAttempted(int $threePointersAttempted) : self
+    public function setThreePointersAttempted(?int $threePointersAttempted) : self
     {
         $this->threePointersAttempted = $threePointersAttempted;
         return $this;
@@ -1087,20 +1087,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getThreePointersPercentage() : float
+    public function getThreePointersPercentage() : ?float
     {
         return $this->threePointersPercentage;
     }
     /**
      * 
      *
-     * @param float $threePointersPercentage
+     * @param float|null $threePointersPercentage
      *
      * @return self
      */
-    public function setThreePointersPercentage(float $threePointersPercentage) : self
+    public function setThreePointersPercentage(?float $threePointersPercentage) : self
     {
         $this->threePointersPercentage = $threePointersPercentage;
         return $this;
@@ -1108,20 +1108,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFreeThrowsMade() : int
+    public function getFreeThrowsMade() : ?int
     {
         return $this->freeThrowsMade;
     }
     /**
      * 
      *
-     * @param int $freeThrowsMade
+     * @param int|null $freeThrowsMade
      *
      * @return self
      */
-    public function setFreeThrowsMade(int $freeThrowsMade) : self
+    public function setFreeThrowsMade(?int $freeThrowsMade) : self
     {
         $this->freeThrowsMade = $freeThrowsMade;
         return $this;
@@ -1129,20 +1129,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFreeThrowsAttempted() : int
+    public function getFreeThrowsAttempted() : ?int
     {
         return $this->freeThrowsAttempted;
     }
     /**
      * 
      *
-     * @param int $freeThrowsAttempted
+     * @param int|null $freeThrowsAttempted
      *
      * @return self
      */
-    public function setFreeThrowsAttempted(int $freeThrowsAttempted) : self
+    public function setFreeThrowsAttempted(?int $freeThrowsAttempted) : self
     {
         $this->freeThrowsAttempted = $freeThrowsAttempted;
         return $this;
@@ -1150,20 +1150,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFreeThrowsPercentage() : float
+    public function getFreeThrowsPercentage() : ?float
     {
         return $this->freeThrowsPercentage;
     }
     /**
      * 
      *
-     * @param float $freeThrowsPercentage
+     * @param float|null $freeThrowsPercentage
      *
      * @return self
      */
-    public function setFreeThrowsPercentage(float $freeThrowsPercentage) : self
+    public function setFreeThrowsPercentage(?float $freeThrowsPercentage) : self
     {
         $this->freeThrowsPercentage = $freeThrowsPercentage;
         return $this;
@@ -1171,20 +1171,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOffensiveRebounds() : int
+    public function getOffensiveRebounds() : ?int
     {
         return $this->offensiveRebounds;
     }
     /**
      * 
      *
-     * @param int $offensiveRebounds
+     * @param int|null $offensiveRebounds
      *
      * @return self
      */
-    public function setOffensiveRebounds(int $offensiveRebounds) : self
+    public function setOffensiveRebounds(?int $offensiveRebounds) : self
     {
         $this->offensiveRebounds = $offensiveRebounds;
         return $this;
@@ -1192,20 +1192,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDefensiveRebounds() : int
+    public function getDefensiveRebounds() : ?int
     {
         return $this->defensiveRebounds;
     }
     /**
      * 
      *
-     * @param int $defensiveRebounds
+     * @param int|null $defensiveRebounds
      *
      * @return self
      */
-    public function setDefensiveRebounds(int $defensiveRebounds) : self
+    public function setDefensiveRebounds(?int $defensiveRebounds) : self
     {
         $this->defensiveRebounds = $defensiveRebounds;
         return $this;
@@ -1213,20 +1213,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRebounds() : int
+    public function getRebounds() : ?int
     {
         return $this->rebounds;
     }
     /**
      * 
      *
-     * @param int $rebounds
+     * @param int|null $rebounds
      *
      * @return self
      */
-    public function setRebounds(int $rebounds) : self
+    public function setRebounds(?int $rebounds) : self
     {
         $this->rebounds = $rebounds;
         return $this;
@@ -1234,20 +1234,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getOffensiveReboundsPercentage() : float
+    public function getOffensiveReboundsPercentage() : ?float
     {
         return $this->offensiveReboundsPercentage;
     }
     /**
      * 
      *
-     * @param float $offensiveReboundsPercentage
+     * @param float|null $offensiveReboundsPercentage
      *
      * @return self
      */
-    public function setOffensiveReboundsPercentage(float $offensiveReboundsPercentage) : self
+    public function setOffensiveReboundsPercentage(?float $offensiveReboundsPercentage) : self
     {
         $this->offensiveReboundsPercentage = $offensiveReboundsPercentage;
         return $this;
@@ -1255,20 +1255,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDefensiveReboundsPercentage() : float
+    public function getDefensiveReboundsPercentage() : ?float
     {
         return $this->defensiveReboundsPercentage;
     }
     /**
      * 
      *
-     * @param float $defensiveReboundsPercentage
+     * @param float|null $defensiveReboundsPercentage
      *
      * @return self
      */
-    public function setDefensiveReboundsPercentage(float $defensiveReboundsPercentage) : self
+    public function setDefensiveReboundsPercentage(?float $defensiveReboundsPercentage) : self
     {
         $this->defensiveReboundsPercentage = $defensiveReboundsPercentage;
         return $this;
@@ -1276,20 +1276,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalReboundsPercentage() : float
+    public function getTotalReboundsPercentage() : ?float
     {
         return $this->totalReboundsPercentage;
     }
     /**
      * 
      *
-     * @param float $totalReboundsPercentage
+     * @param float|null $totalReboundsPercentage
      *
      * @return self
      */
-    public function setTotalReboundsPercentage(float $totalReboundsPercentage) : self
+    public function setTotalReboundsPercentage(?float $totalReboundsPercentage) : self
     {
         $this->totalReboundsPercentage = $totalReboundsPercentage;
         return $this;
@@ -1297,20 +1297,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssists() : int
+    public function getAssists() : ?int
     {
         return $this->assists;
     }
     /**
      * 
      *
-     * @param int $assists
+     * @param int|null $assists
      *
      * @return self
      */
-    public function setAssists(int $assists) : self
+    public function setAssists(?int $assists) : self
     {
         $this->assists = $assists;
         return $this;
@@ -1318,20 +1318,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSteals() : int
+    public function getSteals() : ?int
     {
         return $this->steals;
     }
     /**
      * 
      *
-     * @param int $steals
+     * @param int|null $steals
      *
      * @return self
      */
-    public function setSteals(int $steals) : self
+    public function setSteals(?int $steals) : self
     {
         $this->steals = $steals;
         return $this;
@@ -1339,20 +1339,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBlockedShots() : int
+    public function getBlockedShots() : ?int
     {
         return $this->blockedShots;
     }
     /**
      * 
      *
-     * @param int $blockedShots
+     * @param int|null $blockedShots
      *
      * @return self
      */
-    public function setBlockedShots(int $blockedShots) : self
+    public function setBlockedShots(?int $blockedShots) : self
     {
         $this->blockedShots = $blockedShots;
         return $this;
@@ -1360,20 +1360,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTurnovers() : int
+    public function getTurnovers() : ?int
     {
         return $this->turnovers;
     }
     /**
      * 
      *
-     * @param int $turnovers
+     * @param int|null $turnovers
      *
      * @return self
      */
-    public function setTurnovers(int $turnovers) : self
+    public function setTurnovers(?int $turnovers) : self
     {
         $this->turnovers = $turnovers;
         return $this;
@@ -1381,20 +1381,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPersonalFouls() : int
+    public function getPersonalFouls() : ?int
     {
         return $this->personalFouls;
     }
     /**
      * 
      *
-     * @param int $personalFouls
+     * @param int|null $personalFouls
      *
      * @return self
      */
-    public function setPersonalFouls(int $personalFouls) : self
+    public function setPersonalFouls(?int $personalFouls) : self
     {
         $this->personalFouls = $personalFouls;
         return $this;
@@ -1402,20 +1402,20 @@ class TeamGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPoints() : int
+    public function getPoints() : ?int
     {
         return $this->points;
     }
     /**
      * 
      *
-     * @param int $points
+     * @param int|null $points
      *
      * @return self
      */
-    public function setPoints(int $points) : self
+    public function setPoints(?int $points) : self
     {
         $this->points = $points;
         return $this;
@@ -1423,20 +1423,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTrueShootingAttempts() : float
+    public function getTrueShootingAttempts() : ?float
     {
         return $this->trueShootingAttempts;
     }
     /**
      * 
      *
-     * @param float $trueShootingAttempts
+     * @param float|null $trueShootingAttempts
      *
      * @return self
      */
-    public function setTrueShootingAttempts(float $trueShootingAttempts) : self
+    public function setTrueShootingAttempts(?float $trueShootingAttempts) : self
     {
         $this->trueShootingAttempts = $trueShootingAttempts;
         return $this;
@@ -1444,20 +1444,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTrueShootingPercentage() : float
+    public function getTrueShootingPercentage() : ?float
     {
         return $this->trueShootingPercentage;
     }
     /**
      * 
      *
-     * @param float $trueShootingPercentage
+     * @param float|null $trueShootingPercentage
      *
      * @return self
      */
-    public function setTrueShootingPercentage(float $trueShootingPercentage) : self
+    public function setTrueShootingPercentage(?float $trueShootingPercentage) : self
     {
         $this->trueShootingPercentage = $trueShootingPercentage;
         return $this;
@@ -1465,20 +1465,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPlayerEfficiencyRating() : float
+    public function getPlayerEfficiencyRating() : ?float
     {
         return $this->playerEfficiencyRating;
     }
     /**
      * 
      *
-     * @param float $playerEfficiencyRating
+     * @param float|null $playerEfficiencyRating
      *
      * @return self
      */
-    public function setPlayerEfficiencyRating(float $playerEfficiencyRating) : self
+    public function setPlayerEfficiencyRating(?float $playerEfficiencyRating) : self
     {
         $this->playerEfficiencyRating = $playerEfficiencyRating;
         return $this;
@@ -1486,20 +1486,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAssistsPercentage() : float
+    public function getAssistsPercentage() : ?float
     {
         return $this->assistsPercentage;
     }
     /**
      * 
      *
-     * @param float $assistsPercentage
+     * @param float|null $assistsPercentage
      *
      * @return self
      */
-    public function setAssistsPercentage(float $assistsPercentage) : self
+    public function setAssistsPercentage(?float $assistsPercentage) : self
     {
         $this->assistsPercentage = $assistsPercentage;
         return $this;
@@ -1507,20 +1507,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getStealsPercentage() : float
+    public function getStealsPercentage() : ?float
     {
         return $this->stealsPercentage;
     }
     /**
      * 
      *
-     * @param float $stealsPercentage
+     * @param float|null $stealsPercentage
      *
      * @return self
      */
-    public function setStealsPercentage(float $stealsPercentage) : self
+    public function setStealsPercentage(?float $stealsPercentage) : self
     {
         $this->stealsPercentage = $stealsPercentage;
         return $this;
@@ -1528,20 +1528,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBlocksPercentage() : float
+    public function getBlocksPercentage() : ?float
     {
         return $this->blocksPercentage;
     }
     /**
      * 
      *
-     * @param float $blocksPercentage
+     * @param float|null $blocksPercentage
      *
      * @return self
      */
-    public function setBlocksPercentage(float $blocksPercentage) : self
+    public function setBlocksPercentage(?float $blocksPercentage) : self
     {
         $this->blocksPercentage = $blocksPercentage;
         return $this;
@@ -1549,20 +1549,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTurnOversPercentage() : float
+    public function getTurnOversPercentage() : ?float
     {
         return $this->turnOversPercentage;
     }
     /**
      * 
      *
-     * @param float $turnOversPercentage
+     * @param float|null $turnOversPercentage
      *
      * @return self
      */
-    public function setTurnOversPercentage(float $turnOversPercentage) : self
+    public function setTurnOversPercentage(?float $turnOversPercentage) : self
     {
         $this->turnOversPercentage = $turnOversPercentage;
         return $this;
@@ -1570,20 +1570,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getUsageRatePercentage() : float
+    public function getUsageRatePercentage() : ?float
     {
         return $this->usageRatePercentage;
     }
     /**
      * 
      *
-     * @param float $usageRatePercentage
+     * @param float|null $usageRatePercentage
      *
      * @return self
      */
-    public function setUsageRatePercentage(float $usageRatePercentage) : self
+    public function setUsageRatePercentage(?float $usageRatePercentage) : self
     {
         $this->usageRatePercentage = $usageRatePercentage;
         return $this;
@@ -1591,20 +1591,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsFanDuel() : float
+    public function getFantasyPointsFanDuel() : ?float
     {
         return $this->fantasyPointsFanDuel;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsFanDuel
+     * @param float|null $fantasyPointsFanDuel
      *
      * @return self
      */
-    public function setFantasyPointsFanDuel(float $fantasyPointsFanDuel) : self
+    public function setFantasyPointsFanDuel(?float $fantasyPointsFanDuel) : self
     {
         $this->fantasyPointsFanDuel = $fantasyPointsFanDuel;
         return $this;
@@ -1612,20 +1612,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsDraftKings() : float
+    public function getFantasyPointsDraftKings() : ?float
     {
         return $this->fantasyPointsDraftKings;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsDraftKings
+     * @param float|null $fantasyPointsDraftKings
      *
      * @return self
      */
-    public function setFantasyPointsDraftKings(float $fantasyPointsDraftKings) : self
+    public function setFantasyPointsDraftKings(?float $fantasyPointsDraftKings) : self
     {
         $this->fantasyPointsDraftKings = $fantasyPointsDraftKings;
         return $this;
@@ -1633,20 +1633,20 @@ class TeamGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsYahoo() : float
+    public function getFantasyPointsYahoo() : ?float
     {
         return $this->fantasyPointsYahoo;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsYahoo
+     * @param float|null $fantasyPointsYahoo
      *
      * @return self
      */
-    public function setFantasyPointsYahoo(float $fantasyPointsYahoo) : self
+    public function setFantasyPointsYahoo(?float $fantasyPointsYahoo) : self
     {
         $this->fantasyPointsYahoo = $fantasyPointsYahoo;
         return $this;

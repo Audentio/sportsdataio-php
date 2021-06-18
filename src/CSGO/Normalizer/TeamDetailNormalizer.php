@@ -46,62 +46,116 @@ class TeamDetailNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('AreaId', $data)) {
+        if (\array_key_exists('AreaId', $data) && $data['AreaId'] !== null) {
             $object->setAreaId($data['AreaId']);
         }
-        if (\array_key_exists('AreaName', $data)) {
+        elseif (\array_key_exists('AreaId', $data) && $data['AreaId'] === null) {
+            $object->setAreaId(null);
+        }
+        if (\array_key_exists('AreaName', $data) && $data['AreaName'] !== null) {
             $object->setAreaName($data['AreaName']);
         }
-        if (\array_key_exists('Key', $data)) {
+        elseif (\array_key_exists('AreaName', $data) && $data['AreaName'] === null) {
+            $object->setAreaName(null);
+        }
+        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
             $object->setKey($data['Key']);
         }
-        if (\array_key_exists('Name', $data)) {
+        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+            $object->setKey(null);
+        }
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('ShortName', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('ShortName', $data) && $data['ShortName'] !== null) {
             $object->setShortName($data['ShortName']);
+        }
+        elseif (\array_key_exists('ShortName', $data) && $data['ShortName'] === null) {
+            $object->setShortName(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('Gender', $data)) {
+        if (\array_key_exists('Gender', $data) && $data['Gender'] !== null) {
             $object->setGender($data['Gender']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Gender', $data) && $data['Gender'] === null) {
+            $object->setGender(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('Website', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('Website', $data) && $data['Website'] !== null) {
             $object->setWebsite($data['Website']);
         }
-        if (\array_key_exists('Email', $data)) {
+        elseif (\array_key_exists('Website', $data) && $data['Website'] === null) {
+            $object->setWebsite(null);
+        }
+        if (\array_key_exists('Email', $data) && $data['Email'] !== null) {
             $object->setEmail($data['Email']);
         }
-        if (\array_key_exists('Founded', $data)) {
+        elseif (\array_key_exists('Email', $data) && $data['Email'] === null) {
+            $object->setEmail(null);
+        }
+        if (\array_key_exists('Founded', $data) && $data['Founded'] !== null) {
             $object->setFounded($data['Founded']);
         }
-        if (\array_key_exists('PrimaryColor', $data)) {
+        elseif (\array_key_exists('Founded', $data) && $data['Founded'] === null) {
+            $object->setFounded(null);
+        }
+        if (\array_key_exists('PrimaryColor', $data) && $data['PrimaryColor'] !== null) {
             $object->setPrimaryColor($data['PrimaryColor']);
         }
-        if (\array_key_exists('SecondaryColor', $data)) {
+        elseif (\array_key_exists('PrimaryColor', $data) && $data['PrimaryColor'] === null) {
+            $object->setPrimaryColor(null);
+        }
+        if (\array_key_exists('SecondaryColor', $data) && $data['SecondaryColor'] !== null) {
             $object->setSecondaryColor($data['SecondaryColor']);
         }
-        if (\array_key_exists('TertiaryColor', $data)) {
+        elseif (\array_key_exists('SecondaryColor', $data) && $data['SecondaryColor'] === null) {
+            $object->setSecondaryColor(null);
+        }
+        if (\array_key_exists('TertiaryColor', $data) && $data['TertiaryColor'] !== null) {
             $object->setTertiaryColor($data['TertiaryColor']);
         }
-        if (\array_key_exists('QuaternaryColor', $data)) {
+        elseif (\array_key_exists('TertiaryColor', $data) && $data['TertiaryColor'] === null) {
+            $object->setTertiaryColor(null);
+        }
+        if (\array_key_exists('QuaternaryColor', $data) && $data['QuaternaryColor'] !== null) {
             $object->setQuaternaryColor($data['QuaternaryColor']);
         }
-        if (\array_key_exists('Facebook', $data)) {
+        elseif (\array_key_exists('QuaternaryColor', $data) && $data['QuaternaryColor'] === null) {
+            $object->setQuaternaryColor(null);
+        }
+        if (\array_key_exists('Facebook', $data) && $data['Facebook'] !== null) {
             $object->setFacebook($data['Facebook']);
         }
-        if (\array_key_exists('Twitter', $data)) {
+        elseif (\array_key_exists('Facebook', $data) && $data['Facebook'] === null) {
+            $object->setFacebook(null);
+        }
+        if (\array_key_exists('Twitter', $data) && $data['Twitter'] !== null) {
             $object->setTwitter($data['Twitter']);
         }
-        if (\array_key_exists('YouTube', $data)) {
+        elseif (\array_key_exists('Twitter', $data) && $data['Twitter'] === null) {
+            $object->setTwitter(null);
+        }
+        if (\array_key_exists('YouTube', $data) && $data['YouTube'] !== null) {
             $object->setYouTube($data['YouTube']);
         }
-        if (\array_key_exists('Instagram', $data)) {
+        elseif (\array_key_exists('YouTube', $data) && $data['YouTube'] === null) {
+            $object->setYouTube(null);
+        }
+        if (\array_key_exists('Instagram', $data) && $data['Instagram'] !== null) {
             $object->setInstagram($data['Instagram']);
+        }
+        elseif (\array_key_exists('Instagram', $data) && $data['Instagram'] === null) {
+            $object->setInstagram(null);
         }
         return $object;
     }

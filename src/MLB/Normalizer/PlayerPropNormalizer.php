@@ -42,20 +42,35 @@ class PlayerPropNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('GameID', $data)) {
             $object->setGameID($data['GameID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Opponent', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Opponent', $data) && $data['Opponent'] !== null) {
             $object->setOpponent($data['Opponent']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Opponent', $data) && $data['Opponent'] === null) {
+            $object->setOpponent(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('DateTime', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('DateTime', $data) && $data['DateTime'] !== null) {
             $object->setDateTime($data['DateTime']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('DateTime', $data) && $data['DateTime'] === null) {
+            $object->setDateTime(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
+        }
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
         }
         if (\array_key_exists('OverUnder', $data)) {
             $object->setOverUnder($data['OverUnder']);
@@ -66,11 +81,17 @@ class PlayerPropNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('UnderPayout', $data)) {
             $object->setUnderPayout($data['UnderPayout']);
         }
-        if (\array_key_exists('BetResult', $data)) {
+        if (\array_key_exists('BetResult', $data) && $data['BetResult'] !== null) {
             $object->setBetResult($data['BetResult']);
         }
-        if (\array_key_exists('StatResult', $data)) {
+        elseif (\array_key_exists('BetResult', $data) && $data['BetResult'] === null) {
+            $object->setBetResult(null);
+        }
+        if (\array_key_exists('StatResult', $data) && $data['StatResult'] !== null) {
             $object->setStatResult($data['StatResult']);
+        }
+        elseif (\array_key_exists('StatResult', $data) && $data['StatResult'] === null) {
+            $object->setStatResult(null);
         }
         return $object;
     }

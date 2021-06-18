@@ -39,26 +39,47 @@ class ArticleNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('ArticleID', $data)) {
             $object->setArticleID($data['ArticleID']);
         }
-        if (\array_key_exists('Title', $data)) {
+        if (\array_key_exists('Title', $data) && $data['Title'] !== null) {
             $object->setTitle($data['Title']);
         }
-        if (\array_key_exists('Source', $data)) {
+        elseif (\array_key_exists('Title', $data) && $data['Title'] === null) {
+            $object->setTitle(null);
+        }
+        if (\array_key_exists('Source', $data) && $data['Source'] !== null) {
             $object->setSource($data['Source']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('Source', $data) && $data['Source'] === null) {
+            $object->setSource(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Content', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Content', $data) && $data['Content'] !== null) {
             $object->setContent($data['Content']);
         }
-        if (\array_key_exists('Url', $data)) {
+        elseif (\array_key_exists('Content', $data) && $data['Content'] === null) {
+            $object->setContent(null);
+        }
+        if (\array_key_exists('Url', $data) && $data['Url'] !== null) {
             $object->setUrl($data['Url']);
         }
-        if (\array_key_exists('TermsOfUse', $data)) {
+        elseif (\array_key_exists('Url', $data) && $data['Url'] === null) {
+            $object->setUrl(null);
+        }
+        if (\array_key_exists('TermsOfUse', $data) && $data['TermsOfUse'] !== null) {
             $object->setTermsOfUse($data['TermsOfUse']);
         }
-        if (\array_key_exists('Author', $data)) {
+        elseif (\array_key_exists('TermsOfUse', $data) && $data['TermsOfUse'] === null) {
+            $object->setTermsOfUse(null);
+        }
+        if (\array_key_exists('Author', $data) && $data['Author'] !== null) {
             $object->setAuthor($data['Author']);
+        }
+        elseif (\array_key_exists('Author', $data) && $data['Author'] === null) {
+            $object->setAuthor(null);
         }
         if (\array_key_exists('Players', $data)) {
             $values = array();

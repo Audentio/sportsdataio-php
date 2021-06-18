@@ -45,17 +45,26 @@ class SeasonTeamNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
         }
-        if (\array_key_exists('TeamName', $data)) {
+        if (\array_key_exists('TeamName', $data) && $data['TeamName'] !== null) {
             $object->setTeamName($data['TeamName']);
+        }
+        elseif (\array_key_exists('TeamName', $data) && $data['TeamName'] === null) {
+            $object->setTeamName(null);
         }
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('Gender', $data)) {
+        if (\array_key_exists('Gender', $data) && $data['Gender'] !== null) {
             $object->setGender($data['Gender']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Gender', $data) && $data['Gender'] === null) {
+            $object->setGender(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
+        }
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
         }
         if (\array_key_exists('Team', $data)) {
             $object->setTeam($this->denormalizer->denormalize($data['Team'], 'Sportsdata\\API\\Soccer\\Model\\Team', 'json', $context));

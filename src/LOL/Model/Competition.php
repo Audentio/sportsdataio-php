@@ -19,31 +19,31 @@ class Competition
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $areaName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gender;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $format;
     /**
@@ -55,7 +55,7 @@ class Competition
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $playerStatsCoverage;
     /**
@@ -103,20 +103,20 @@ class Competition
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAreaName() : string
+    public function getAreaName() : ?string
     {
         return $this->areaName;
     }
     /**
      * 
      *
-     * @param string $areaName
+     * @param string|null $areaName
      *
      * @return self
      */
-    public function setAreaName(string $areaName) : self
+    public function setAreaName(?string $areaName) : self
     {
         $this->areaName = $areaName;
         return $this;
@@ -124,20 +124,20 @@ class Competition
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -145,20 +145,20 @@ class Competition
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGender() : string
+    public function getGender() : ?string
     {
         return $this->gender;
     }
     /**
      * 
      *
-     * @param string $gender
+     * @param string|null $gender
      *
      * @return self
      */
-    public function setGender(string $gender) : self
+    public function setGender(?string $gender) : self
     {
         $this->gender = $gender;
         return $this;
@@ -166,20 +166,20 @@ class Competition
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -187,20 +187,20 @@ class Competition
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFormat() : string
+    public function getFormat() : ?string
     {
         return $this->format;
     }
     /**
      * 
      *
-     * @param string $format
+     * @param string|null $format
      *
      * @return self
      */
-    public function setFormat(string $format) : self
+    public function setFormat(?string $format) : self
     {
         $this->format = $format;
         return $this;
@@ -229,20 +229,20 @@ class Competition
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getPlayerStatsCoverage() : bool
+    public function getPlayerStatsCoverage() : ?bool
     {
         return $this->playerStatsCoverage;
     }
     /**
      * 
      *
-     * @param bool $playerStatsCoverage
+     * @param bool|null $playerStatsCoverage
      *
      * @return self
      */
-    public function setPlayerStatsCoverage(bool $playerStatsCoverage) : self
+    public function setPlayerStatsCoverage(?bool $playerStatsCoverage) : self
     {
         $this->playerStatsCoverage = $playerStatsCoverage;
         return $this;

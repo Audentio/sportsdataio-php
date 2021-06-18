@@ -4,19 +4,19 @@ namespace Sportsdata\API\Soccer\Endpoint;
 
 class Player extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Soccer\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $playerid;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $playerid Unique FantasyData Player ID.
     Example:<code>90026231</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $playerid)
+    public function __construct(string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\Soccer\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class Player extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implemen
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{playerid}'), array($this->format, $this->playerid), '/stats/{format}/Player/{playerid}');
+        return str_replace(array('{playerid}', '{format}'), array($this->playerid, $this->format), '/scores/{format}/Player/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

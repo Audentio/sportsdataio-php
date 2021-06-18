@@ -4,19 +4,19 @@ namespace Sportsdata\API\LOL\Endpoint;
 
 class Schedule extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\LOL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $roundid;
+    protected $format;
     /**
     * Schedule
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $roundid Unique FantasyData Round ID. RoundIDs can be found in the Competitions and Competition Details endpoints. 
-    Example: <code>100000278</code>, etc
+    Examples: <code>100000138</code>, <code>1000001412</code>, etc
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'xml', string $roundid)
+    public function __construct(string $roundid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->roundid = $roundid;
+        $this->format = $format;
     }
     use \Sportsdata\API\LOL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +25,7 @@ class Schedule extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implement
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{roundid}'), array($this->format, $this->roundid), '/stats/{format}/Schedule/{roundid}');
+        return str_replace(array('{roundid}', '{format}'), array($this->roundid, $this->format), '/scores/{format}/Schedule/{roundid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

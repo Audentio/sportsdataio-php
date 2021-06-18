@@ -4,19 +4,20 @@ namespace Sportsdata\API\Soccer\Endpoint;
 
 class DfsSlatesByDate extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implements \Sportsdata\API\Soccer\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $date;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $date The date of the game(s).
-    <br>Examples: <code>2020-02-18</code>.
+    <br>Examples: <code>2020-02-18</code>
+    
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format, string $date)
+    public function __construct(string $date, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->date = $date;
+        $this->format = $format;
     }
     use \Sportsdata\API\Soccer\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -25,7 +26,7 @@ class DfsSlatesByDate extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{date}'), array($this->format, $this->date), '/stats/{format}/DfsSlatesByDate/{date}');
+        return str_replace(array('{date}', '{format}'), array($this->date, $this->format), '/projections/{format}/DfsSlatesByDate/{date}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

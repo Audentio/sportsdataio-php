@@ -19,79 +19,79 @@ class BettingMarket
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $bettingMarketTypeID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $bettingMarketType;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $bettingBetTypeID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $bettingBetType;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $bettingPeriodTypeID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $bettingPeriodType;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teamKey;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $playerName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
@@ -103,7 +103,7 @@ class BettingMarket
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $anyBetsAvailable;
     /**
@@ -163,20 +163,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBettingMarketTypeID() : int
+    public function getBettingMarketTypeID() : ?int
     {
         return $this->bettingMarketTypeID;
     }
     /**
      * 
      *
-     * @param int $bettingMarketTypeID
+     * @param int|null $bettingMarketTypeID
      *
      * @return self
      */
-    public function setBettingMarketTypeID(int $bettingMarketTypeID) : self
+    public function setBettingMarketTypeID(?int $bettingMarketTypeID) : self
     {
         $this->bettingMarketTypeID = $bettingMarketTypeID;
         return $this;
@@ -184,20 +184,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBettingMarketType() : string
+    public function getBettingMarketType() : ?string
     {
         return $this->bettingMarketType;
     }
     /**
      * 
      *
-     * @param string $bettingMarketType
+     * @param string|null $bettingMarketType
      *
      * @return self
      */
-    public function setBettingMarketType(string $bettingMarketType) : self
+    public function setBettingMarketType(?string $bettingMarketType) : self
     {
         $this->bettingMarketType = $bettingMarketType;
         return $this;
@@ -205,20 +205,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBettingBetTypeID() : int
+    public function getBettingBetTypeID() : ?int
     {
         return $this->bettingBetTypeID;
     }
     /**
      * 
      *
-     * @param int $bettingBetTypeID
+     * @param int|null $bettingBetTypeID
      *
      * @return self
      */
-    public function setBettingBetTypeID(int $bettingBetTypeID) : self
+    public function setBettingBetTypeID(?int $bettingBetTypeID) : self
     {
         $this->bettingBetTypeID = $bettingBetTypeID;
         return $this;
@@ -226,20 +226,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBettingBetType() : string
+    public function getBettingBetType() : ?string
     {
         return $this->bettingBetType;
     }
     /**
      * 
      *
-     * @param string $bettingBetType
+     * @param string|null $bettingBetType
      *
      * @return self
      */
-    public function setBettingBetType(string $bettingBetType) : self
+    public function setBettingBetType(?string $bettingBetType) : self
     {
         $this->bettingBetType = $bettingBetType;
         return $this;
@@ -247,20 +247,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBettingPeriodTypeID() : int
+    public function getBettingPeriodTypeID() : ?int
     {
         return $this->bettingPeriodTypeID;
     }
     /**
      * 
      *
-     * @param int $bettingPeriodTypeID
+     * @param int|null $bettingPeriodTypeID
      *
      * @return self
      */
-    public function setBettingPeriodTypeID(int $bettingPeriodTypeID) : self
+    public function setBettingPeriodTypeID(?int $bettingPeriodTypeID) : self
     {
         $this->bettingPeriodTypeID = $bettingPeriodTypeID;
         return $this;
@@ -268,20 +268,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBettingPeriodType() : string
+    public function getBettingPeriodType() : ?string
     {
         return $this->bettingPeriodType;
     }
     /**
      * 
      *
-     * @param string $bettingPeriodType
+     * @param string|null $bettingPeriodType
      *
      * @return self
      */
-    public function setBettingPeriodType(string $bettingPeriodType) : self
+    public function setBettingPeriodType(?string $bettingPeriodType) : self
     {
         $this->bettingPeriodType = $bettingPeriodType;
         return $this;
@@ -289,20 +289,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -310,20 +310,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -331,20 +331,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeamKey() : string
+    public function getTeamKey() : ?string
     {
         return $this->teamKey;
     }
     /**
      * 
      *
-     * @param string $teamKey
+     * @param string|null $teamKey
      *
      * @return self
      */
-    public function setTeamKey(string $teamKey) : self
+    public function setTeamKey(?string $teamKey) : self
     {
         $this->teamKey = $teamKey;
         return $this;
@@ -352,20 +352,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerID() : int
+    public function getPlayerID() : ?int
     {
         return $this->playerID;
     }
     /**
      * 
      *
-     * @param int $playerID
+     * @param int|null $playerID
      *
      * @return self
      */
-    public function setPlayerID(int $playerID) : self
+    public function setPlayerID(?int $playerID) : self
     {
         $this->playerID = $playerID;
         return $this;
@@ -373,20 +373,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPlayerName() : string
+    public function getPlayerName() : ?string
     {
         return $this->playerName;
     }
     /**
      * 
      *
-     * @param string $playerName
+     * @param string|null $playerName
      *
      * @return self
      */
-    public function setPlayerName(string $playerName) : self
+    public function setPlayerName(?string $playerName) : self
     {
         $this->playerName = $playerName;
         return $this;
@@ -394,20 +394,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -415,20 +415,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -457,20 +457,20 @@ class BettingMarket
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getAnyBetsAvailable() : bool
+    public function getAnyBetsAvailable() : ?bool
     {
         return $this->anyBetsAvailable;
     }
     /**
      * 
      *
-     * @param bool $anyBetsAvailable
+     * @param bool|null $anyBetsAvailable
      *
      * @return self
      */
-    public function setAnyBetsAvailable(bool $anyBetsAvailable) : self
+    public function setAnyBetsAvailable(?bool $anyBetsAvailable) : self
     {
         $this->anyBetsAvailable = $anyBetsAvailable;
         return $this;

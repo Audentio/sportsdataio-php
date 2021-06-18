@@ -42,98 +42,191 @@ class PlayNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('InningID', $data)) {
             $object->setInningID($data['InningID']);
         }
-        if (\array_key_exists('InningNumber', $data)) {
+        if (\array_key_exists('InningNumber', $data) && $data['InningNumber'] !== null) {
             $object->setInningNumber($data['InningNumber']);
         }
-        if (\array_key_exists('InningHalf', $data)) {
+        elseif (\array_key_exists('InningNumber', $data) && $data['InningNumber'] === null) {
+            $object->setInningNumber(null);
+        }
+        if (\array_key_exists('InningHalf', $data) && $data['InningHalf'] !== null) {
             $object->setInningHalf($data['InningHalf']);
         }
-        if (\array_key_exists('PlayNumber', $data)) {
+        elseif (\array_key_exists('InningHalf', $data) && $data['InningHalf'] === null) {
+            $object->setInningHalf(null);
+        }
+        if (\array_key_exists('PlayNumber', $data) && $data['PlayNumber'] !== null) {
             $object->setPlayNumber($data['PlayNumber']);
         }
-        if (\array_key_exists('InningBatterNumber', $data)) {
+        elseif (\array_key_exists('PlayNumber', $data) && $data['PlayNumber'] === null) {
+            $object->setPlayNumber(null);
+        }
+        if (\array_key_exists('InningBatterNumber', $data) && $data['InningBatterNumber'] !== null) {
             $object->setInningBatterNumber($data['InningBatterNumber']);
         }
-        if (\array_key_exists('AwayTeamRuns', $data)) {
+        elseif (\array_key_exists('InningBatterNumber', $data) && $data['InningBatterNumber'] === null) {
+            $object->setInningBatterNumber(null);
+        }
+        if (\array_key_exists('AwayTeamRuns', $data) && $data['AwayTeamRuns'] !== null) {
             $object->setAwayTeamRuns($data['AwayTeamRuns']);
         }
-        if (\array_key_exists('HomeTeamRuns', $data)) {
+        elseif (\array_key_exists('AwayTeamRuns', $data) && $data['AwayTeamRuns'] === null) {
+            $object->setAwayTeamRuns(null);
+        }
+        if (\array_key_exists('HomeTeamRuns', $data) && $data['HomeTeamRuns'] !== null) {
             $object->setHomeTeamRuns($data['HomeTeamRuns']);
         }
-        if (\array_key_exists('HitterID', $data)) {
+        elseif (\array_key_exists('HomeTeamRuns', $data) && $data['HomeTeamRuns'] === null) {
+            $object->setHomeTeamRuns(null);
+        }
+        if (\array_key_exists('HitterID', $data) && $data['HitterID'] !== null) {
             $object->setHitterID($data['HitterID']);
         }
-        if (\array_key_exists('PitcherID', $data)) {
+        elseif (\array_key_exists('HitterID', $data) && $data['HitterID'] === null) {
+            $object->setHitterID(null);
+        }
+        if (\array_key_exists('PitcherID', $data) && $data['PitcherID'] !== null) {
             $object->setPitcherID($data['PitcherID']);
         }
-        if (\array_key_exists('HitterTeamID', $data)) {
+        elseif (\array_key_exists('PitcherID', $data) && $data['PitcherID'] === null) {
+            $object->setPitcherID(null);
+        }
+        if (\array_key_exists('HitterTeamID', $data) && $data['HitterTeamID'] !== null) {
             $object->setHitterTeamID($data['HitterTeamID']);
         }
-        if (\array_key_exists('PitcherTeamID', $data)) {
+        elseif (\array_key_exists('HitterTeamID', $data) && $data['HitterTeamID'] === null) {
+            $object->setHitterTeamID(null);
+        }
+        if (\array_key_exists('PitcherTeamID', $data) && $data['PitcherTeamID'] !== null) {
             $object->setPitcherTeamID($data['PitcherTeamID']);
         }
-        if (\array_key_exists('HitterName', $data)) {
+        elseif (\array_key_exists('PitcherTeamID', $data) && $data['PitcherTeamID'] === null) {
+            $object->setPitcherTeamID(null);
+        }
+        if (\array_key_exists('HitterName', $data) && $data['HitterName'] !== null) {
             $object->setHitterName($data['HitterName']);
         }
-        if (\array_key_exists('PitcherName', $data)) {
+        elseif (\array_key_exists('HitterName', $data) && $data['HitterName'] === null) {
+            $object->setHitterName(null);
+        }
+        if (\array_key_exists('PitcherName', $data) && $data['PitcherName'] !== null) {
             $object->setPitcherName($data['PitcherName']);
         }
-        if (\array_key_exists('PitcherThrowHand', $data)) {
+        elseif (\array_key_exists('PitcherName', $data) && $data['PitcherName'] === null) {
+            $object->setPitcherName(null);
+        }
+        if (\array_key_exists('PitcherThrowHand', $data) && $data['PitcherThrowHand'] !== null) {
             $object->setPitcherThrowHand($data['PitcherThrowHand']);
         }
-        if (\array_key_exists('HitterBatHand', $data)) {
+        elseif (\array_key_exists('PitcherThrowHand', $data) && $data['PitcherThrowHand'] === null) {
+            $object->setPitcherThrowHand(null);
+        }
+        if (\array_key_exists('HitterBatHand', $data) && $data['HitterBatHand'] !== null) {
             $object->setHitterBatHand($data['HitterBatHand']);
         }
-        if (\array_key_exists('HitterPosition', $data)) {
+        elseif (\array_key_exists('HitterBatHand', $data) && $data['HitterBatHand'] === null) {
+            $object->setHitterBatHand(null);
+        }
+        if (\array_key_exists('HitterPosition', $data) && $data['HitterPosition'] !== null) {
             $object->setHitterPosition($data['HitterPosition']);
         }
-        if (\array_key_exists('Outs', $data)) {
+        elseif (\array_key_exists('HitterPosition', $data) && $data['HitterPosition'] === null) {
+            $object->setHitterPosition(null);
+        }
+        if (\array_key_exists('Outs', $data) && $data['Outs'] !== null) {
             $object->setOuts($data['Outs']);
         }
-        if (\array_key_exists('Balls', $data)) {
+        elseif (\array_key_exists('Outs', $data) && $data['Outs'] === null) {
+            $object->setOuts(null);
+        }
+        if (\array_key_exists('Balls', $data) && $data['Balls'] !== null) {
             $object->setBalls($data['Balls']);
         }
-        if (\array_key_exists('Strikes', $data)) {
+        elseif (\array_key_exists('Balls', $data) && $data['Balls'] === null) {
+            $object->setBalls(null);
+        }
+        if (\array_key_exists('Strikes', $data) && $data['Strikes'] !== null) {
             $object->setStrikes($data['Strikes']);
         }
-        if (\array_key_exists('PitchNumberThisAtBat', $data)) {
+        elseif (\array_key_exists('Strikes', $data) && $data['Strikes'] === null) {
+            $object->setStrikes(null);
+        }
+        if (\array_key_exists('PitchNumberThisAtBat', $data) && $data['PitchNumberThisAtBat'] !== null) {
             $object->setPitchNumberThisAtBat($data['PitchNumberThisAtBat']);
         }
-        if (\array_key_exists('Result', $data)) {
+        elseif (\array_key_exists('PitchNumberThisAtBat', $data) && $data['PitchNumberThisAtBat'] === null) {
+            $object->setPitchNumberThisAtBat(null);
+        }
+        if (\array_key_exists('Result', $data) && $data['Result'] !== null) {
             $object->setResult($data['Result']);
         }
-        if (\array_key_exists('NumberOfOutsOnPlay', $data)) {
+        elseif (\array_key_exists('Result', $data) && $data['Result'] === null) {
+            $object->setResult(null);
+        }
+        if (\array_key_exists('NumberOfOutsOnPlay', $data) && $data['NumberOfOutsOnPlay'] !== null) {
             $object->setNumberOfOutsOnPlay($data['NumberOfOutsOnPlay']);
         }
-        if (\array_key_exists('RunsBattedIn', $data)) {
+        elseif (\array_key_exists('NumberOfOutsOnPlay', $data) && $data['NumberOfOutsOnPlay'] === null) {
+            $object->setNumberOfOutsOnPlay(null);
+        }
+        if (\array_key_exists('RunsBattedIn', $data) && $data['RunsBattedIn'] !== null) {
             $object->setRunsBattedIn($data['RunsBattedIn']);
         }
-        if (\array_key_exists('AtBat', $data)) {
+        elseif (\array_key_exists('RunsBattedIn', $data) && $data['RunsBattedIn'] === null) {
+            $object->setRunsBattedIn(null);
+        }
+        if (\array_key_exists('AtBat', $data) && $data['AtBat'] !== null) {
             $object->setAtBat($data['AtBat']);
         }
-        if (\array_key_exists('Strikeout', $data)) {
+        elseif (\array_key_exists('AtBat', $data) && $data['AtBat'] === null) {
+            $object->setAtBat(null);
+        }
+        if (\array_key_exists('Strikeout', $data) && $data['Strikeout'] !== null) {
             $object->setStrikeout($data['Strikeout']);
         }
-        if (\array_key_exists('Walk', $data)) {
+        elseif (\array_key_exists('Strikeout', $data) && $data['Strikeout'] === null) {
+            $object->setStrikeout(null);
+        }
+        if (\array_key_exists('Walk', $data) && $data['Walk'] !== null) {
             $object->setWalk($data['Walk']);
         }
-        if (\array_key_exists('Hit', $data)) {
+        elseif (\array_key_exists('Walk', $data) && $data['Walk'] === null) {
+            $object->setWalk(null);
+        }
+        if (\array_key_exists('Hit', $data) && $data['Hit'] !== null) {
             $object->setHit($data['Hit']);
         }
-        if (\array_key_exists('Out', $data)) {
+        elseif (\array_key_exists('Hit', $data) && $data['Hit'] === null) {
+            $object->setHit(null);
+        }
+        if (\array_key_exists('Out', $data) && $data['Out'] !== null) {
             $object->setOut($data['Out']);
         }
-        if (\array_key_exists('Sacrifice', $data)) {
+        elseif (\array_key_exists('Out', $data) && $data['Out'] === null) {
+            $object->setOut(null);
+        }
+        if (\array_key_exists('Sacrifice', $data) && $data['Sacrifice'] !== null) {
             $object->setSacrifice($data['Sacrifice']);
         }
-        if (\array_key_exists('Error', $data)) {
+        elseif (\array_key_exists('Sacrifice', $data) && $data['Sacrifice'] === null) {
+            $object->setSacrifice(null);
+        }
+        if (\array_key_exists('Error', $data) && $data['Error'] !== null) {
             $object->setError($data['Error']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('Error', $data) && $data['Error'] === null) {
+            $object->setError(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
+        }
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
         }
         if (\array_key_exists('Pitches', $data)) {
             $values = array();
@@ -142,14 +235,23 @@ class PlayNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             }
             $object->setPitches($values);
         }
-        if (\array_key_exists('Runner1ID', $data)) {
+        if (\array_key_exists('Runner1ID', $data) && $data['Runner1ID'] !== null) {
             $object->setRunner1ID($data['Runner1ID']);
         }
-        if (\array_key_exists('Runner2ID', $data)) {
+        elseif (\array_key_exists('Runner1ID', $data) && $data['Runner1ID'] === null) {
+            $object->setRunner1ID(null);
+        }
+        if (\array_key_exists('Runner2ID', $data) && $data['Runner2ID'] !== null) {
             $object->setRunner2ID($data['Runner2ID']);
         }
-        if (\array_key_exists('Runner3ID', $data)) {
+        elseif (\array_key_exists('Runner2ID', $data) && $data['Runner2ID'] === null) {
+            $object->setRunner2ID(null);
+        }
+        if (\array_key_exists('Runner3ID', $data) && $data['Runner3ID'] !== null) {
             $object->setRunner3ID($data['Runner3ID']);
+        }
+        elseif (\array_key_exists('Runner3ID', $data) && $data['Runner3ID'] === null) {
+            $object->setRunner3ID(null);
         }
         return $object;
     }

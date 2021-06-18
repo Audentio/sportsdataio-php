@@ -42,11 +42,17 @@ class TournamentNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Location', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Location', $data) && $data['Location'] !== null) {
             $object->setLocation($data['Location']);
+        }
+        elseif (\array_key_exists('Location', $data) && $data['Location'] === null) {
+            $object->setLocation(null);
         }
         if (\array_key_exists('Games', $data)) {
             $values = array();
@@ -55,17 +61,29 @@ class TournamentNormalizer implements DenormalizerInterface, NormalizerInterface
             }
             $object->setGames($values);
         }
-        if (\array_key_exists('LeftTopBracketConference', $data)) {
+        if (\array_key_exists('LeftTopBracketConference', $data) && $data['LeftTopBracketConference'] !== null) {
             $object->setLeftTopBracketConference($data['LeftTopBracketConference']);
         }
-        if (\array_key_exists('LeftBottomBracketConference', $data)) {
+        elseif (\array_key_exists('LeftTopBracketConference', $data) && $data['LeftTopBracketConference'] === null) {
+            $object->setLeftTopBracketConference(null);
+        }
+        if (\array_key_exists('LeftBottomBracketConference', $data) && $data['LeftBottomBracketConference'] !== null) {
             $object->setLeftBottomBracketConference($data['LeftBottomBracketConference']);
         }
-        if (\array_key_exists('RightTopBracketConference', $data)) {
+        elseif (\array_key_exists('LeftBottomBracketConference', $data) && $data['LeftBottomBracketConference'] === null) {
+            $object->setLeftBottomBracketConference(null);
+        }
+        if (\array_key_exists('RightTopBracketConference', $data) && $data['RightTopBracketConference'] !== null) {
             $object->setRightTopBracketConference($data['RightTopBracketConference']);
         }
-        if (\array_key_exists('RightBottomBracketConference', $data)) {
+        elseif (\array_key_exists('RightTopBracketConference', $data) && $data['RightTopBracketConference'] === null) {
+            $object->setRightTopBracketConference(null);
+        }
+        if (\array_key_exists('RightBottomBracketConference', $data) && $data['RightBottomBracketConference'] !== null) {
             $object->setRightBottomBracketConference($data['RightBottomBracketConference']);
+        }
+        elseif (\array_key_exists('RightBottomBracketConference', $data) && $data['RightBottomBracketConference'] === null) {
+            $object->setRightBottomBracketConference(null);
         }
         return $object;
     }

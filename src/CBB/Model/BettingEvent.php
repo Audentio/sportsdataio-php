@@ -13,13 +13,13 @@ class BettingEvent
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $season;
     /**
@@ -31,109 +31,109 @@ class BettingEvent
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $bettingEventType;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $gameID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalGameID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gameStatus;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $awayTeam;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $homeTeam;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalAwayTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalHomeTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $totalScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayRotationNumber;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeRotationNumber;
     /**
@@ -166,20 +166,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -187,20 +187,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSeason() : int
+    public function getSeason() : ?int
     {
         return $this->season;
     }
     /**
      * 
      *
-     * @param int $season
+     * @param int|null $season
      *
      * @return self
      */
-    public function setSeason(int $season) : self
+    public function setSeason(?int $season) : self
     {
         $this->season = $season;
         return $this;
@@ -229,20 +229,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBettingEventType() : string
+    public function getBettingEventType() : ?string
     {
         return $this->bettingEventType;
     }
     /**
      * 
      *
-     * @param string $bettingEventType
+     * @param string|null $bettingEventType
      *
      * @return self
      */
-    public function setBettingEventType(string $bettingEventType) : self
+    public function setBettingEventType(?string $bettingEventType) : self
     {
         $this->bettingEventType = $bettingEventType;
         return $this;
@@ -250,20 +250,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -271,20 +271,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -292,20 +292,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -313,20 +313,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGameID() : int
+    public function getGameID() : ?int
     {
         return $this->gameID;
     }
     /**
      * 
      *
-     * @param int $gameID
+     * @param int|null $gameID
      *
      * @return self
      */
-    public function setGameID(int $gameID) : self
+    public function setGameID(?int $gameID) : self
     {
         $this->gameID = $gameID;
         return $this;
@@ -334,20 +334,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalGameID() : int
+    public function getGlobalGameID() : ?int
     {
         return $this->globalGameID;
     }
     /**
      * 
      *
-     * @param int $globalGameID
+     * @param int|null $globalGameID
      *
      * @return self
      */
-    public function setGlobalGameID(int $globalGameID) : self
+    public function setGlobalGameID(?int $globalGameID) : self
     {
         $this->globalGameID = $globalGameID;
         return $this;
@@ -355,20 +355,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGameStatus() : string
+    public function getGameStatus() : ?string
     {
         return $this->gameStatus;
     }
     /**
      * 
      *
-     * @param string $gameStatus
+     * @param string|null $gameStatus
      *
      * @return self
      */
-    public function setGameStatus(string $gameStatus) : self
+    public function setGameStatus(?string $gameStatus) : self
     {
         $this->gameStatus = $gameStatus;
         return $this;
@@ -376,20 +376,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAwayTeam() : string
+    public function getAwayTeam() : ?string
     {
         return $this->awayTeam;
     }
     /**
      * 
      *
-     * @param string $awayTeam
+     * @param string|null $awayTeam
      *
      * @return self
      */
-    public function setAwayTeam(string $awayTeam) : self
+    public function setAwayTeam(?string $awayTeam) : self
     {
         $this->awayTeam = $awayTeam;
         return $this;
@@ -397,20 +397,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHomeTeam() : string
+    public function getHomeTeam() : ?string
     {
         return $this->homeTeam;
     }
     /**
      * 
      *
-     * @param string $homeTeam
+     * @param string|null $homeTeam
      *
      * @return self
      */
-    public function setHomeTeam(string $homeTeam) : self
+    public function setHomeTeam(?string $homeTeam) : self
     {
         $this->homeTeam = $homeTeam;
         return $this;
@@ -418,20 +418,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamID() : int
+    public function getAwayTeamID() : ?int
     {
         return $this->awayTeamID;
     }
     /**
      * 
      *
-     * @param int $awayTeamID
+     * @param int|null $awayTeamID
      *
      * @return self
      */
-    public function setAwayTeamID(int $awayTeamID) : self
+    public function setAwayTeamID(?int $awayTeamID) : self
     {
         $this->awayTeamID = $awayTeamID;
         return $this;
@@ -439,20 +439,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamID() : int
+    public function getHomeTeamID() : ?int
     {
         return $this->homeTeamID;
     }
     /**
      * 
      *
-     * @param int $homeTeamID
+     * @param int|null $homeTeamID
      *
      * @return self
      */
-    public function setHomeTeamID(int $homeTeamID) : self
+    public function setHomeTeamID(?int $homeTeamID) : self
     {
         $this->homeTeamID = $homeTeamID;
         return $this;
@@ -460,20 +460,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalAwayTeamID() : int
+    public function getGlobalAwayTeamID() : ?int
     {
         return $this->globalAwayTeamID;
     }
     /**
      * 
      *
-     * @param int $globalAwayTeamID
+     * @param int|null $globalAwayTeamID
      *
      * @return self
      */
-    public function setGlobalAwayTeamID(int $globalAwayTeamID) : self
+    public function setGlobalAwayTeamID(?int $globalAwayTeamID) : self
     {
         $this->globalAwayTeamID = $globalAwayTeamID;
         return $this;
@@ -481,20 +481,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalHomeTeamID() : int
+    public function getGlobalHomeTeamID() : ?int
     {
         return $this->globalHomeTeamID;
     }
     /**
      * 
      *
-     * @param int $globalHomeTeamID
+     * @param int|null $globalHomeTeamID
      *
      * @return self
      */
-    public function setGlobalHomeTeamID(int $globalHomeTeamID) : self
+    public function setGlobalHomeTeamID(?int $globalHomeTeamID) : self
     {
         $this->globalHomeTeamID = $globalHomeTeamID;
         return $this;
@@ -502,20 +502,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamScore() : int
+    public function getAwayTeamScore() : ?int
     {
         return $this->awayTeamScore;
     }
     /**
      * 
      *
-     * @param int $awayTeamScore
+     * @param int|null $awayTeamScore
      *
      * @return self
      */
-    public function setAwayTeamScore(int $awayTeamScore) : self
+    public function setAwayTeamScore(?int $awayTeamScore) : self
     {
         $this->awayTeamScore = $awayTeamScore;
         return $this;
@@ -523,20 +523,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamScore() : int
+    public function getHomeTeamScore() : ?int
     {
         return $this->homeTeamScore;
     }
     /**
      * 
      *
-     * @param int $homeTeamScore
+     * @param int|null $homeTeamScore
      *
      * @return self
      */
-    public function setHomeTeamScore(int $homeTeamScore) : self
+    public function setHomeTeamScore(?int $homeTeamScore) : self
     {
         $this->homeTeamScore = $homeTeamScore;
         return $this;
@@ -544,20 +544,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTotalScore() : int
+    public function getTotalScore() : ?int
     {
         return $this->totalScore;
     }
     /**
      * 
      *
-     * @param int $totalScore
+     * @param int|null $totalScore
      *
      * @return self
      */
-    public function setTotalScore(int $totalScore) : self
+    public function setTotalScore(?int $totalScore) : self
     {
         $this->totalScore = $totalScore;
         return $this;
@@ -565,20 +565,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayRotationNumber() : int
+    public function getAwayRotationNumber() : ?int
     {
         return $this->awayRotationNumber;
     }
     /**
      * 
      *
-     * @param int $awayRotationNumber
+     * @param int|null $awayRotationNumber
      *
      * @return self
      */
-    public function setAwayRotationNumber(int $awayRotationNumber) : self
+    public function setAwayRotationNumber(?int $awayRotationNumber) : self
     {
         $this->awayRotationNumber = $awayRotationNumber;
         return $this;
@@ -586,20 +586,20 @@ class BettingEvent
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeRotationNumber() : int
+    public function getHomeRotationNumber() : ?int
     {
         return $this->homeRotationNumber;
     }
     /**
      * 
      *
-     * @param int $homeRotationNumber
+     * @param int|null $homeRotationNumber
      *
      * @return self
      */
-    public function setHomeRotationNumber(int $homeRotationNumber) : self
+    public function setHomeRotationNumber(?int $homeRotationNumber) : self
     {
         $this->homeRotationNumber = $homeRotationNumber;
         return $this;

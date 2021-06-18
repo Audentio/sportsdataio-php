@@ -45,17 +45,29 @@ class SeasonNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('CompetitionName', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('CompetitionName', $data) && $data['CompetitionName'] !== null) {
             $object->setCompetitionName($data['CompetitionName']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        elseif (\array_key_exists('CompetitionName', $data) && $data['CompetitionName'] === null) {
+            $object->setCompetitionName(null);
+        }
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('EndDate', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('EndDate', $data) && $data['EndDate'] !== null) {
             $object->setEndDate($data['EndDate']);
+        }
+        elseif (\array_key_exists('EndDate', $data) && $data['EndDate'] === null) {
+            $object->setEndDate(null);
         }
         if (\array_key_exists('CurrentSeason', $data)) {
             $object->setCurrentSeason($data['CurrentSeason']);

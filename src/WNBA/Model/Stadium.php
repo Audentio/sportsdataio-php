@@ -19,25 +19,25 @@ class Stadium
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $state;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
@@ -85,20 +85,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -106,20 +106,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -127,20 +127,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getState() : string
+    public function getState() : ?string
     {
         return $this->state;
     }
     /**
      * 
      *
-     * @param string $state
+     * @param string|null $state
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(?string $state) : self
     {
         $this->state = $state;
         return $this;
@@ -148,20 +148,20 @@ class Stadium
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry() : string
+    public function getCountry() : ?string
     {
         return $this->country;
     }
     /**
      * 
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(?string $country) : self
     {
         $this->country = $country;
         return $this;

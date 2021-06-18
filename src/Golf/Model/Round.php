@@ -19,13 +19,13 @@ class Round
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $number;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
@@ -73,20 +73,20 @@ class Round
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumber() : int
+    public function getNumber() : ?int
     {
         return $this->number;
     }
     /**
      * 
      *
-     * @param int $number
+     * @param int|null $number
      *
      * @return self
      */
-    public function setNumber(int $number) : self
+    public function setNumber(?int $number) : self
     {
         $this->number = $number;
         return $this;
@@ -94,20 +94,20 @@ class Round
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;

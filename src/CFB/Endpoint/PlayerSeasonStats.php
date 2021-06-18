@@ -4,18 +4,18 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class PlayerSeasonStats extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $season;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $season Year of the season (with optional season type).<br>Examples: <code>2017</code>, <code>2017POST</code>, <code>2018</code>.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $season)
+    public function __construct(string $season, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class PlayerSeasonStats extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint 
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}'), array($this->format, $this->season), '/stats/{format}/PlayerSeasonStats/{season}');
+        return str_replace(array('{season}', '{format}'), array($this->season, $this->format), '/stats/{format}/PlayerSeasonStats/{season}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

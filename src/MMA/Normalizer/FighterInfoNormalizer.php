@@ -36,35 +36,65 @@ class FighterInfoNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('FighterId', $data)) {
+        if (\array_key_exists('FighterId', $data) && $data['FighterId'] !== null) {
             $object->setFighterId($data['FighterId']);
         }
-        if (\array_key_exists('FirstName', $data)) {
+        elseif (\array_key_exists('FighterId', $data) && $data['FighterId'] === null) {
+            $object->setFighterId(null);
+        }
+        if (\array_key_exists('FirstName', $data) && $data['FirstName'] !== null) {
             $object->setFirstName($data['FirstName']);
         }
-        if (\array_key_exists('LastName', $data)) {
+        elseif (\array_key_exists('FirstName', $data) && $data['FirstName'] === null) {
+            $object->setFirstName(null);
+        }
+        if (\array_key_exists('LastName', $data) && $data['LastName'] !== null) {
             $object->setLastName($data['LastName']);
         }
-        if (\array_key_exists('PreFightWins', $data)) {
+        elseif (\array_key_exists('LastName', $data) && $data['LastName'] === null) {
+            $object->setLastName(null);
+        }
+        if (\array_key_exists('PreFightWins', $data) && $data['PreFightWins'] !== null) {
             $object->setPreFightWins($data['PreFightWins']);
         }
-        if (\array_key_exists('PreFightLosses', $data)) {
+        elseif (\array_key_exists('PreFightWins', $data) && $data['PreFightWins'] === null) {
+            $object->setPreFightWins(null);
+        }
+        if (\array_key_exists('PreFightLosses', $data) && $data['PreFightLosses'] !== null) {
             $object->setPreFightLosses($data['PreFightLosses']);
         }
-        if (\array_key_exists('PreFightDraws', $data)) {
+        elseif (\array_key_exists('PreFightLosses', $data) && $data['PreFightLosses'] === null) {
+            $object->setPreFightLosses(null);
+        }
+        if (\array_key_exists('PreFightDraws', $data) && $data['PreFightDraws'] !== null) {
             $object->setPreFightDraws($data['PreFightDraws']);
         }
-        if (\array_key_exists('PreFightNoContests', $data)) {
+        elseif (\array_key_exists('PreFightDraws', $data) && $data['PreFightDraws'] === null) {
+            $object->setPreFightDraws(null);
+        }
+        if (\array_key_exists('PreFightNoContests', $data) && $data['PreFightNoContests'] !== null) {
             $object->setPreFightNoContests($data['PreFightNoContests']);
         }
-        if (\array_key_exists('Winner', $data)) {
+        elseif (\array_key_exists('PreFightNoContests', $data) && $data['PreFightNoContests'] === null) {
+            $object->setPreFightNoContests(null);
+        }
+        if (\array_key_exists('Winner', $data) && $data['Winner'] !== null) {
             $object->setWinner($data['Winner']);
         }
-        if (\array_key_exists('Moneyline', $data)) {
+        elseif (\array_key_exists('Winner', $data) && $data['Winner'] === null) {
+            $object->setWinner(null);
+        }
+        if (\array_key_exists('Moneyline', $data) && $data['Moneyline'] !== null) {
             $object->setMoneyline($data['Moneyline']);
         }
-        if (\array_key_exists('Active', $data)) {
+        elseif (\array_key_exists('Moneyline', $data) && $data['Moneyline'] === null) {
+            $object->setMoneyline(null);
+        }
+        if (\array_key_exists('Active', $data) && $data['Active'] !== null) {
             $object->setActive($data['Active']);
+        }
+        elseif (\array_key_exists('Active', $data) && $data['Active'] === null) {
+            $object->setActive(null);
         }
         return $object;
     }

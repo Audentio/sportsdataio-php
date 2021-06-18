@@ -4,18 +4,18 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class BettingMarket extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $marketId;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $marketId The MarketId of the desired market for which to pull all outcomes/bets.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $marketId)
+    public function __construct(string $marketId, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->marketId = $marketId;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class BettingMarket extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint impl
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{marketId}'), array($this->format, $this->marketId), '/odds/{format}/BettingMarket/{marketId}');
+        return str_replace(array('{marketId}', '{format}'), array($this->marketId, $this->format), '/odds/{format}/BettingMarket/{marketId}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

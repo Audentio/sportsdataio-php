@@ -39,8 +39,11 @@ class ConferenceNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('ConferenceID', $data)) {
             $object->setConferenceID($data['ConferenceID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         if (\array_key_exists('Teams', $data)) {
             $values = array();
@@ -49,11 +52,17 @@ class ConferenceNormalizer implements DenormalizerInterface, NormalizerInterface
             }
             $object->setTeams($values);
         }
-        if (\array_key_exists('ConferenceName', $data)) {
+        if (\array_key_exists('ConferenceName', $data) && $data['ConferenceName'] !== null) {
             $object->setConferenceName($data['ConferenceName']);
         }
-        if (\array_key_exists('DivisionName', $data)) {
+        elseif (\array_key_exists('ConferenceName', $data) && $data['ConferenceName'] === null) {
+            $object->setConferenceName(null);
+        }
+        if (\array_key_exists('DivisionName', $data) && $data['DivisionName'] !== null) {
             $object->setDivisionName($data['DivisionName']);
+        }
+        elseif (\array_key_exists('DivisionName', $data) && $data['DivisionName'] === null) {
+            $object->setDivisionName(null);
         }
         return $object;
     }

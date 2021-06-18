@@ -39,32 +39,59 @@ class DfsSlateNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('SlateID', $data)) {
             $object->setSlateID($data['SlateID']);
         }
-        if (\array_key_exists('Operator', $data)) {
+        if (\array_key_exists('Operator', $data) && $data['Operator'] !== null) {
             $object->setOperator($data['Operator']);
         }
-        if (\array_key_exists('OperatorSlateID', $data)) {
+        elseif (\array_key_exists('Operator', $data) && $data['Operator'] === null) {
+            $object->setOperator(null);
+        }
+        if (\array_key_exists('OperatorSlateID', $data) && $data['OperatorSlateID'] !== null) {
             $object->setOperatorSlateID($data['OperatorSlateID']);
         }
-        if (\array_key_exists('OperatorName', $data)) {
+        elseif (\array_key_exists('OperatorSlateID', $data) && $data['OperatorSlateID'] === null) {
+            $object->setOperatorSlateID(null);
+        }
+        if (\array_key_exists('OperatorName', $data) && $data['OperatorName'] !== null) {
             $object->setOperatorName($data['OperatorName']);
         }
-        if (\array_key_exists('OperatorDay', $data)) {
+        elseif (\array_key_exists('OperatorName', $data) && $data['OperatorName'] === null) {
+            $object->setOperatorName(null);
+        }
+        if (\array_key_exists('OperatorDay', $data) && $data['OperatorDay'] !== null) {
             $object->setOperatorDay($data['OperatorDay']);
         }
-        if (\array_key_exists('OperatorStartTime', $data)) {
+        elseif (\array_key_exists('OperatorDay', $data) && $data['OperatorDay'] === null) {
+            $object->setOperatorDay(null);
+        }
+        if (\array_key_exists('OperatorStartTime', $data) && $data['OperatorStartTime'] !== null) {
             $object->setOperatorStartTime($data['OperatorStartTime']);
         }
-        if (\array_key_exists('NumberOfTournaments', $data)) {
+        elseif (\array_key_exists('OperatorStartTime', $data) && $data['OperatorStartTime'] === null) {
+            $object->setOperatorStartTime(null);
+        }
+        if (\array_key_exists('NumberOfTournaments', $data) && $data['NumberOfTournaments'] !== null) {
             $object->setNumberOfTournaments($data['NumberOfTournaments']);
         }
-        if (\array_key_exists('IsMultiDaySlate', $data)) {
+        elseif (\array_key_exists('NumberOfTournaments', $data) && $data['NumberOfTournaments'] === null) {
+            $object->setNumberOfTournaments(null);
+        }
+        if (\array_key_exists('IsMultiDaySlate', $data) && $data['IsMultiDaySlate'] !== null) {
             $object->setIsMultiDaySlate($data['IsMultiDaySlate']);
         }
-        if (\array_key_exists('RemovedByOperator', $data)) {
+        elseif (\array_key_exists('IsMultiDaySlate', $data) && $data['IsMultiDaySlate'] === null) {
+            $object->setIsMultiDaySlate(null);
+        }
+        if (\array_key_exists('RemovedByOperator', $data) && $data['RemovedByOperator'] !== null) {
             $object->setRemovedByOperator($data['RemovedByOperator']);
         }
-        if (\array_key_exists('OperatorGameType', $data)) {
+        elseif (\array_key_exists('RemovedByOperator', $data) && $data['RemovedByOperator'] === null) {
+            $object->setRemovedByOperator(null);
+        }
+        if (\array_key_exists('OperatorGameType', $data) && $data['OperatorGameType'] !== null) {
             $object->setOperatorGameType($data['OperatorGameType']);
+        }
+        elseif (\array_key_exists('OperatorGameType', $data) && $data['OperatorGameType'] === null) {
+            $object->setOperatorGameType(null);
         }
         if (\array_key_exists('DfsSlateTournaments', $data)) {
             $values = array();

@@ -13,61 +13,61 @@ class Fight
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $order;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $weightClass;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $cardSegment;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $referee;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $rounds;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $resultClock;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $resultRound;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $resultType;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $winnerId;
     /**
@@ -79,7 +79,7 @@ class Fight
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $active;
     /**
@@ -106,20 +106,20 @@ class Fight
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrder() : int
+    public function getOrder() : ?int
     {
         return $this->order;
     }
     /**
      * 
      *
-     * @param int $order
+     * @param int|null $order
      *
      * @return self
      */
-    public function setOrder(int $order) : self
+    public function setOrder(?int $order) : self
     {
         $this->order = $order;
         return $this;
@@ -127,20 +127,20 @@ class Fight
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -148,20 +148,20 @@ class Fight
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWeightClass() : string
+    public function getWeightClass() : ?string
     {
         return $this->weightClass;
     }
     /**
      * 
      *
-     * @param string $weightClass
+     * @param string|null $weightClass
      *
      * @return self
      */
-    public function setWeightClass(string $weightClass) : self
+    public function setWeightClass(?string $weightClass) : self
     {
         $this->weightClass = $weightClass;
         return $this;
@@ -169,20 +169,20 @@ class Fight
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCardSegment() : string
+    public function getCardSegment() : ?string
     {
         return $this->cardSegment;
     }
     /**
      * 
      *
-     * @param string $cardSegment
+     * @param string|null $cardSegment
      *
      * @return self
      */
-    public function setCardSegment(string $cardSegment) : self
+    public function setCardSegment(?string $cardSegment) : self
     {
         $this->cardSegment = $cardSegment;
         return $this;
@@ -190,20 +190,20 @@ class Fight
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getReferee() : string
+    public function getReferee() : ?string
     {
         return $this->referee;
     }
     /**
      * 
      *
-     * @param string $referee
+     * @param string|null $referee
      *
      * @return self
      */
-    public function setReferee(string $referee) : self
+    public function setReferee(?string $referee) : self
     {
         $this->referee = $referee;
         return $this;
@@ -211,20 +211,20 @@ class Fight
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getRounds() : int
+    public function getRounds() : ?int
     {
         return $this->rounds;
     }
     /**
      * 
      *
-     * @param int $rounds
+     * @param int|null $rounds
      *
      * @return self
      */
-    public function setRounds(int $rounds) : self
+    public function setRounds(?int $rounds) : self
     {
         $this->rounds = $rounds;
         return $this;
@@ -232,20 +232,20 @@ class Fight
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getResultClock() : int
+    public function getResultClock() : ?int
     {
         return $this->resultClock;
     }
     /**
      * 
      *
-     * @param int $resultClock
+     * @param int|null $resultClock
      *
      * @return self
      */
-    public function setResultClock(int $resultClock) : self
+    public function setResultClock(?int $resultClock) : self
     {
         $this->resultClock = $resultClock;
         return $this;
@@ -253,20 +253,20 @@ class Fight
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getResultRound() : int
+    public function getResultRound() : ?int
     {
         return $this->resultRound;
     }
     /**
      * 
      *
-     * @param int $resultRound
+     * @param int|null $resultRound
      *
      * @return self
      */
-    public function setResultRound(int $resultRound) : self
+    public function setResultRound(?int $resultRound) : self
     {
         $this->resultRound = $resultRound;
         return $this;
@@ -274,20 +274,20 @@ class Fight
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getResultType() : string
+    public function getResultType() : ?string
     {
         return $this->resultType;
     }
     /**
      * 
      *
-     * @param string $resultType
+     * @param string|null $resultType
      *
      * @return self
      */
-    public function setResultType(string $resultType) : self
+    public function setResultType(?string $resultType) : self
     {
         $this->resultType = $resultType;
         return $this;
@@ -295,20 +295,20 @@ class Fight
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWinnerId() : int
+    public function getWinnerId() : ?int
     {
         return $this->winnerId;
     }
     /**
      * 
      *
-     * @param int $winnerId
+     * @param int|null $winnerId
      *
      * @return self
      */
-    public function setWinnerId(int $winnerId) : self
+    public function setWinnerId(?int $winnerId) : self
     {
         $this->winnerId = $winnerId;
         return $this;
@@ -337,20 +337,20 @@ class Fight
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getActive() : bool
+    public function getActive() : ?bool
     {
         return $this->active;
     }
     /**
      * 
      *
-     * @param bool $active
+     * @param bool|null $active
      *
      * @return self
      */
-    public function setActive(bool $active) : self
+    public function setActive(?bool $active) : self
     {
         $this->active = $active;
         return $this;

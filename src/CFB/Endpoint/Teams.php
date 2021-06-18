@@ -10,7 +10,7 @@ class Teams extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \
      *
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      */
-    public function __construct(string $format)
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class Teams extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/Teams');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/Teams');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

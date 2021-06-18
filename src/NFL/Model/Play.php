@@ -19,109 +19,109 @@ class Play
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quarterName;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $sequence;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingSeconds;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $playTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $created;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $down;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $distance;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yardLine;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $yardLineTerritory;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yardsToEndZone;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $yardsGained;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isScoringPlay;
     /**
@@ -181,20 +181,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuarterName() : string
+    public function getQuarterName() : ?string
     {
         return $this->quarterName;
     }
     /**
      * 
      *
-     * @param string $quarterName
+     * @param string|null $quarterName
      *
      * @return self
      */
-    public function setQuarterName(string $quarterName) : self
+    public function setQuarterName(?string $quarterName) : self
     {
         $this->quarterName = $quarterName;
         return $this;
@@ -202,20 +202,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSequence() : int
+    public function getSequence() : ?int
     {
         return $this->sequence;
     }
     /**
      * 
      *
-     * @param int $sequence
+     * @param int|null $sequence
      *
      * @return self
      */
-    public function setSequence(int $sequence) : self
+    public function setSequence(?int $sequence) : self
     {
         $this->sequence = $sequence;
         return $this;
@@ -223,20 +223,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingMinutes() : int
+    public function getTimeRemainingMinutes() : ?int
     {
         return $this->timeRemainingMinutes;
     }
     /**
      * 
      *
-     * @param int $timeRemainingMinutes
+     * @param int|null $timeRemainingMinutes
      *
      * @return self
      */
-    public function setTimeRemainingMinutes(int $timeRemainingMinutes) : self
+    public function setTimeRemainingMinutes(?int $timeRemainingMinutes) : self
     {
         $this->timeRemainingMinutes = $timeRemainingMinutes;
         return $this;
@@ -244,20 +244,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingSeconds() : int
+    public function getTimeRemainingSeconds() : ?int
     {
         return $this->timeRemainingSeconds;
     }
     /**
      * 
      *
-     * @param int $timeRemainingSeconds
+     * @param int|null $timeRemainingSeconds
      *
      * @return self
      */
-    public function setTimeRemainingSeconds(int $timeRemainingSeconds) : self
+    public function setTimeRemainingSeconds(?int $timeRemainingSeconds) : self
     {
         $this->timeRemainingSeconds = $timeRemainingSeconds;
         return $this;
@@ -265,20 +265,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPlayTime() : string
+    public function getPlayTime() : ?string
     {
         return $this->playTime;
     }
     /**
      * 
      *
-     * @param string $playTime
+     * @param string|null $playTime
      *
      * @return self
      */
-    public function setPlayTime(string $playTime) : self
+    public function setPlayTime(?string $playTime) : self
     {
         $this->playTime = $playTime;
         return $this;
@@ -286,20 +286,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;
@@ -307,20 +307,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreated() : string
+    public function getCreated() : ?string
     {
         return $this->created;
     }
     /**
      * 
      *
-     * @param string $created
+     * @param string|null $created
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(?string $created) : self
     {
         $this->created = $created;
         return $this;
@@ -328,20 +328,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -349,20 +349,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -370,20 +370,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDown() : int
+    public function getDown() : ?int
     {
         return $this->down;
     }
     /**
      * 
      *
-     * @param int $down
+     * @param int|null $down
      *
      * @return self
      */
-    public function setDown(int $down) : self
+    public function setDown(?int $down) : self
     {
         $this->down = $down;
         return $this;
@@ -391,20 +391,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDistance() : int
+    public function getDistance() : ?int
     {
         return $this->distance;
     }
     /**
      * 
      *
-     * @param int $distance
+     * @param int|null $distance
      *
      * @return self
      */
-    public function setDistance(int $distance) : self
+    public function setDistance(?int $distance) : self
     {
         $this->distance = $distance;
         return $this;
@@ -412,20 +412,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYardLine() : int
+    public function getYardLine() : ?int
     {
         return $this->yardLine;
     }
     /**
      * 
      *
-     * @param int $yardLine
+     * @param int|null $yardLine
      *
      * @return self
      */
-    public function setYardLine(int $yardLine) : self
+    public function setYardLine(?int $yardLine) : self
     {
         $this->yardLine = $yardLine;
         return $this;
@@ -433,20 +433,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getYardLineTerritory() : string
+    public function getYardLineTerritory() : ?string
     {
         return $this->yardLineTerritory;
     }
     /**
      * 
      *
-     * @param string $yardLineTerritory
+     * @param string|null $yardLineTerritory
      *
      * @return self
      */
-    public function setYardLineTerritory(string $yardLineTerritory) : self
+    public function setYardLineTerritory(?string $yardLineTerritory) : self
     {
         $this->yardLineTerritory = $yardLineTerritory;
         return $this;
@@ -454,20 +454,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYardsToEndZone() : int
+    public function getYardsToEndZone() : ?int
     {
         return $this->yardsToEndZone;
     }
     /**
      * 
      *
-     * @param int $yardsToEndZone
+     * @param int|null $yardsToEndZone
      *
      * @return self
      */
-    public function setYardsToEndZone(int $yardsToEndZone) : self
+    public function setYardsToEndZone(?int $yardsToEndZone) : self
     {
         $this->yardsToEndZone = $yardsToEndZone;
         return $this;
@@ -475,20 +475,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -496,20 +496,20 @@ class Play
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getYardsGained() : int
+    public function getYardsGained() : ?int
     {
         return $this->yardsGained;
     }
     /**
      * 
      *
-     * @param int $yardsGained
+     * @param int|null $yardsGained
      *
      * @return self
      */
-    public function setYardsGained(int $yardsGained) : self
+    public function setYardsGained(?int $yardsGained) : self
     {
         $this->yardsGained = $yardsGained;
         return $this;
@@ -517,20 +517,20 @@ class Play
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -538,20 +538,20 @@ class Play
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsScoringPlay() : bool
+    public function getIsScoringPlay() : ?bool
     {
         return $this->isScoringPlay;
     }
     /**
      * 
      *
-     * @param bool $isScoringPlay
+     * @param bool|null $isScoringPlay
      *
      * @return self
      */
-    public function setIsScoringPlay(bool $isScoringPlay) : self
+    public function setIsScoringPlay(?bool $isScoringPlay) : self
     {
         $this->isScoringPlay = $isScoringPlay;
         return $this;

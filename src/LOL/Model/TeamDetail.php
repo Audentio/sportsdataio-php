@@ -19,31 +19,31 @@ class TeamDetail
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $areaId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $areaName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shortName;
     /**
@@ -55,79 +55,79 @@ class TeamDetail
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gender;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $website;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $email;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $founded;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $primaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $secondaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $tertiaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $quaternaryColor;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $facebook;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $twitter;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $youTube;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $instagram;
     /**
@@ -175,20 +175,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAreaId() : int
+    public function getAreaId() : ?int
     {
         return $this->areaId;
     }
     /**
      * 
      *
-     * @param int $areaId
+     * @param int|null $areaId
      *
      * @return self
      */
-    public function setAreaId(int $areaId) : self
+    public function setAreaId(?int $areaId) : self
     {
         $this->areaId = $areaId;
         return $this;
@@ -196,20 +196,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getAreaName() : string
+    public function getAreaName() : ?string
     {
         return $this->areaName;
     }
     /**
      * 
      *
-     * @param string $areaName
+     * @param string|null $areaName
      *
      * @return self
      */
-    public function setAreaName(string $areaName) : self
+    public function setAreaName(?string $areaName) : self
     {
         $this->areaName = $areaName;
         return $this;
@@ -217,20 +217,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -238,20 +238,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -259,20 +259,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShortName() : string
+    public function getShortName() : ?string
     {
         return $this->shortName;
     }
     /**
      * 
      *
-     * @param string $shortName
+     * @param string|null $shortName
      *
      * @return self
      */
-    public function setShortName(string $shortName) : self
+    public function setShortName(?string $shortName) : self
     {
         $this->shortName = $shortName;
         return $this;
@@ -301,20 +301,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGender() : string
+    public function getGender() : ?string
     {
         return $this->gender;
     }
     /**
      * 
      *
-     * @param string $gender
+     * @param string|null $gender
      *
      * @return self
      */
-    public function setGender(string $gender) : self
+    public function setGender(?string $gender) : self
     {
         $this->gender = $gender;
         return $this;
@@ -322,20 +322,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -343,20 +343,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWebsite() : string
+    public function getWebsite() : ?string
     {
         return $this->website;
     }
     /**
      * 
      *
-     * @param string $website
+     * @param string|null $website
      *
      * @return self
      */
-    public function setWebsite(string $website) : self
+    public function setWebsite(?string $website) : self
     {
         $this->website = $website;
         return $this;
@@ -364,20 +364,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmail() : string
+    public function getEmail() : ?string
     {
         return $this->email;
     }
     /**
      * 
      *
-     * @param string $email
+     * @param string|null $email
      *
      * @return self
      */
-    public function setEmail(string $email) : self
+    public function setEmail(?string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -385,20 +385,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFounded() : int
+    public function getFounded() : ?int
     {
         return $this->founded;
     }
     /**
      * 
      *
-     * @param int $founded
+     * @param int|null $founded
      *
      * @return self
      */
-    public function setFounded(int $founded) : self
+    public function setFounded(?int $founded) : self
     {
         $this->founded = $founded;
         return $this;
@@ -406,20 +406,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPrimaryColor() : string
+    public function getPrimaryColor() : ?string
     {
         return $this->primaryColor;
     }
     /**
      * 
      *
-     * @param string $primaryColor
+     * @param string|null $primaryColor
      *
      * @return self
      */
-    public function setPrimaryColor(string $primaryColor) : self
+    public function setPrimaryColor(?string $primaryColor) : self
     {
         $this->primaryColor = $primaryColor;
         return $this;
@@ -427,20 +427,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getSecondaryColor() : string
+    public function getSecondaryColor() : ?string
     {
         return $this->secondaryColor;
     }
     /**
      * 
      *
-     * @param string $secondaryColor
+     * @param string|null $secondaryColor
      *
      * @return self
      */
-    public function setSecondaryColor(string $secondaryColor) : self
+    public function setSecondaryColor(?string $secondaryColor) : self
     {
         $this->secondaryColor = $secondaryColor;
         return $this;
@@ -448,20 +448,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTertiaryColor() : string
+    public function getTertiaryColor() : ?string
     {
         return $this->tertiaryColor;
     }
     /**
      * 
      *
-     * @param string $tertiaryColor
+     * @param string|null $tertiaryColor
      *
      * @return self
      */
-    public function setTertiaryColor(string $tertiaryColor) : self
+    public function setTertiaryColor(?string $tertiaryColor) : self
     {
         $this->tertiaryColor = $tertiaryColor;
         return $this;
@@ -469,20 +469,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuaternaryColor() : string
+    public function getQuaternaryColor() : ?string
     {
         return $this->quaternaryColor;
     }
     /**
      * 
      *
-     * @param string $quaternaryColor
+     * @param string|null $quaternaryColor
      *
      * @return self
      */
-    public function setQuaternaryColor(string $quaternaryColor) : self
+    public function setQuaternaryColor(?string $quaternaryColor) : self
     {
         $this->quaternaryColor = $quaternaryColor;
         return $this;
@@ -490,20 +490,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFacebook() : string
+    public function getFacebook() : ?string
     {
         return $this->facebook;
     }
     /**
      * 
      *
-     * @param string $facebook
+     * @param string|null $facebook
      *
      * @return self
      */
-    public function setFacebook(string $facebook) : self
+    public function setFacebook(?string $facebook) : self
     {
         $this->facebook = $facebook;
         return $this;
@@ -511,20 +511,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTwitter() : string
+    public function getTwitter() : ?string
     {
         return $this->twitter;
     }
     /**
      * 
      *
-     * @param string $twitter
+     * @param string|null $twitter
      *
      * @return self
      */
-    public function setTwitter(string $twitter) : self
+    public function setTwitter(?string $twitter) : self
     {
         $this->twitter = $twitter;
         return $this;
@@ -532,20 +532,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getYouTube() : string
+    public function getYouTube() : ?string
     {
         return $this->youTube;
     }
     /**
      * 
      *
-     * @param string $youTube
+     * @param string|null $youTube
      *
      * @return self
      */
-    public function setYouTube(string $youTube) : self
+    public function setYouTube(?string $youTube) : self
     {
         $this->youTube = $youTube;
         return $this;
@@ -553,20 +553,20 @@ class TeamDetail
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getInstagram() : string
+    public function getInstagram() : ?string
     {
         return $this->instagram;
     }
     /**
      * 
      *
-     * @param string $instagram
+     * @param string|null $instagram
      *
      * @return self
      */
-    public function setInstagram(string $instagram) : self
+    public function setInstagram(?string $instagram) : self
     {
         $this->instagram = $instagram;
         return $this;

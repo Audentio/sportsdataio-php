@@ -42,32 +42,59 @@ class ScoringPlayNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('GameID', $data)) {
             $object->setGameID($data['GameID']);
         }
-        if (\array_key_exists('Period', $data)) {
+        if (\array_key_exists('Period', $data) && $data['Period'] !== null) {
             $object->setPeriod($data['Period']);
         }
-        if (\array_key_exists('TimeRemainingMinutes', $data)) {
+        elseif (\array_key_exists('Period', $data) && $data['Period'] === null) {
+            $object->setPeriod(null);
+        }
+        if (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] !== null) {
             $object->setTimeRemainingMinutes($data['TimeRemainingMinutes']);
         }
-        if (\array_key_exists('TimeRemainingSeconds', $data)) {
+        elseif (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] === null) {
+            $object->setTimeRemainingMinutes(null);
+        }
+        if (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] !== null) {
             $object->setTimeRemainingSeconds($data['TimeRemainingSeconds']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] === null) {
+            $object->setTimeRemainingSeconds(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('DriveSummary', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('DriveSummary', $data) && $data['DriveSummary'] !== null) {
             $object->setDriveSummary($data['DriveSummary']);
         }
-        if (\array_key_exists('HomeTeamScore', $data)) {
+        elseif (\array_key_exists('DriveSummary', $data) && $data['DriveSummary'] === null) {
+            $object->setDriveSummary(null);
+        }
+        if (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] !== null) {
             $object->setHomeTeamScore($data['HomeTeamScore']);
         }
-        if (\array_key_exists('AwayTeamScore', $data)) {
+        elseif (\array_key_exists('HomeTeamScore', $data) && $data['HomeTeamScore'] === null) {
+            $object->setHomeTeamScore(null);
+        }
+        if (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] !== null) {
             $object->setAwayTeamScore($data['AwayTeamScore']);
         }
-        if (\array_key_exists('ScoringTeamID', $data)) {
+        elseif (\array_key_exists('AwayTeamScore', $data) && $data['AwayTeamScore'] === null) {
+            $object->setAwayTeamScore(null);
+        }
+        if (\array_key_exists('ScoringTeamID', $data) && $data['ScoringTeamID'] !== null) {
             $object->setScoringTeamID($data['ScoringTeamID']);
         }
-        if (\array_key_exists('ScoringType', $data)) {
+        elseif (\array_key_exists('ScoringTeamID', $data) && $data['ScoringTeamID'] === null) {
+            $object->setScoringTeamID(null);
+        }
+        if (\array_key_exists('ScoringType', $data) && $data['ScoringType'] !== null) {
             $object->setScoringType($data['ScoringType']);
+        }
+        elseif (\array_key_exists('ScoringType', $data) && $data['ScoringType'] === null) {
+            $object->setScoringType(null);
         }
         if (\array_key_exists('Sequence', $data)) {
             $object->setSequence($data['Sequence']);

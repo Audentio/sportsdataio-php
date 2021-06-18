@@ -19,7 +19,7 @@ class PenaltyShootout
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -31,19 +31,19 @@ class PenaltyShootout
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
@@ -97,20 +97,20 @@ class PenaltyShootout
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -139,20 +139,20 @@ class PenaltyShootout
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerId() : int
+    public function getPlayerId() : ?int
     {
         return $this->playerId;
     }
     /**
      * 
      *
-     * @param int $playerId
+     * @param int|null $playerId
      *
      * @return self
      */
-    public function setPlayerId(int $playerId) : self
+    public function setPlayerId(?int $playerId) : self
     {
         $this->playerId = $playerId;
         return $this;
@@ -160,20 +160,20 @@ class PenaltyShootout
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -181,20 +181,20 @@ class PenaltyShootout
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;

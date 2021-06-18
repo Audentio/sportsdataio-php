@@ -19,25 +19,25 @@ class PlayerGame
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $opponent;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $dateTime;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
@@ -49,301 +49,301 @@ class PlayerGame
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $matchName;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $kills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $assists;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $deaths;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $largestKillingSpree;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $largestMultiKill;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $killingSpree;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $longestTimeSpentLiving;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $doubleKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $tripleKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $quadraKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $pentaKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $unrealKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalDamageDealt;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $magicDamageDealt;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $physicalDamageDealt;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $trueDamageDealt;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $largestCriticalStrike;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalDamageDealtToChampions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $magicDamageDealtToChampions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $physicalDamageDealtToChampions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $trueDamageDealtToChampions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalHeal;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalUnitsHealed;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalDamageTaken;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $magicDamageTaken;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $physicalDamageTaken;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $trueDamageTaken;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $goldEarned;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $goldSpent;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $turretKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $inhibitorKills;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalMinionsKilled;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $neutralMinionsKIlled;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $neutralMinionsKIlledTeamJungle;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $neutralMinionsKilledEnemyJungle;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalTimeCrowdControlDealt;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $visionWardsBoughtInGame;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sightWardsBoughtInGame;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $wardsPlaced;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $wardsKilled;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $combatPlayerScore;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $objectivePlayerScore;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalPlayerScore;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $tenKillsOrAssists;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
@@ -409,20 +409,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOpponent() : string
+    public function getOpponent() : ?string
     {
         return $this->opponent;
     }
     /**
      * 
      *
-     * @param string $opponent
+     * @param string|null $opponent
      *
      * @return self
      */
-    public function setOpponent(string $opponent) : self
+    public function setOpponent(?string $opponent) : self
     {
         $this->opponent = $opponent;
         return $this;
@@ -430,20 +430,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -451,20 +451,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateTime() : string
+    public function getDateTime() : ?string
     {
         return $this->dateTime;
     }
     /**
      * 
      *
-     * @param string $dateTime
+     * @param string|null $dateTime
      *
      * @return self
      */
-    public function setDateTime(string $dateTime) : self
+    public function setDateTime(?string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -472,20 +472,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -514,20 +514,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamId() : int
+    public function getTeamId() : ?int
     {
         return $this->teamId;
     }
     /**
      * 
      *
-     * @param int $teamId
+     * @param int|null $teamId
      *
      * @return self
      */
-    public function setTeamId(int $teamId) : self
+    public function setTeamId(?int $teamId) : self
     {
         $this->teamId = $teamId;
         return $this;
@@ -535,20 +535,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -556,20 +556,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -577,20 +577,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getMatchName() : string
+    public function getMatchName() : ?string
     {
         return $this->matchName;
     }
     /**
      * 
      *
-     * @param string $matchName
+     * @param string|null $matchName
      *
      * @return self
      */
-    public function setMatchName(string $matchName) : self
+    public function setMatchName(?string $matchName) : self
     {
         $this->matchName = $matchName;
         return $this;
@@ -598,20 +598,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKills() : float
+    public function getKills() : ?float
     {
         return $this->kills;
     }
     /**
      * 
      *
-     * @param float $kills
+     * @param float|null $kills
      *
      * @return self
      */
-    public function setKills(float $kills) : self
+    public function setKills(?float $kills) : self
     {
         $this->kills = $kills;
         return $this;
@@ -619,20 +619,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAssists() : float
+    public function getAssists() : ?float
     {
         return $this->assists;
     }
     /**
      * 
      *
-     * @param float $assists
+     * @param float|null $assists
      *
      * @return self
      */
-    public function setAssists(float $assists) : self
+    public function setAssists(?float $assists) : self
     {
         $this->assists = $assists;
         return $this;
@@ -640,20 +640,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDeaths() : float
+    public function getDeaths() : ?float
     {
         return $this->deaths;
     }
     /**
      * 
      *
-     * @param float $deaths
+     * @param float|null $deaths
      *
      * @return self
      */
-    public function setDeaths(float $deaths) : self
+    public function setDeaths(?float $deaths) : self
     {
         $this->deaths = $deaths;
         return $this;
@@ -661,20 +661,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLargestKillingSpree() : float
+    public function getLargestKillingSpree() : ?float
     {
         return $this->largestKillingSpree;
     }
     /**
      * 
      *
-     * @param float $largestKillingSpree
+     * @param float|null $largestKillingSpree
      *
      * @return self
      */
-    public function setLargestKillingSpree(float $largestKillingSpree) : self
+    public function setLargestKillingSpree(?float $largestKillingSpree) : self
     {
         $this->largestKillingSpree = $largestKillingSpree;
         return $this;
@@ -682,20 +682,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLargestMultiKill() : float
+    public function getLargestMultiKill() : ?float
     {
         return $this->largestMultiKill;
     }
     /**
      * 
      *
-     * @param float $largestMultiKill
+     * @param float|null $largestMultiKill
      *
      * @return self
      */
-    public function setLargestMultiKill(float $largestMultiKill) : self
+    public function setLargestMultiKill(?float $largestMultiKill) : self
     {
         $this->largestMultiKill = $largestMultiKill;
         return $this;
@@ -703,20 +703,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKillingSpree() : float
+    public function getKillingSpree() : ?float
     {
         return $this->killingSpree;
     }
     /**
      * 
      *
-     * @param float $killingSpree
+     * @param float|null $killingSpree
      *
      * @return self
      */
-    public function setKillingSpree(float $killingSpree) : self
+    public function setKillingSpree(?float $killingSpree) : self
     {
         $this->killingSpree = $killingSpree;
         return $this;
@@ -724,20 +724,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLongestTimeSpentLiving() : float
+    public function getLongestTimeSpentLiving() : ?float
     {
         return $this->longestTimeSpentLiving;
     }
     /**
      * 
      *
-     * @param float $longestTimeSpentLiving
+     * @param float|null $longestTimeSpentLiving
      *
      * @return self
      */
-    public function setLongestTimeSpentLiving(float $longestTimeSpentLiving) : self
+    public function setLongestTimeSpentLiving(?float $longestTimeSpentLiving) : self
     {
         $this->longestTimeSpentLiving = $longestTimeSpentLiving;
         return $this;
@@ -745,20 +745,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDoubleKills() : float
+    public function getDoubleKills() : ?float
     {
         return $this->doubleKills;
     }
     /**
      * 
      *
-     * @param float $doubleKills
+     * @param float|null $doubleKills
      *
      * @return self
      */
-    public function setDoubleKills(float $doubleKills) : self
+    public function setDoubleKills(?float $doubleKills) : self
     {
         $this->doubleKills = $doubleKills;
         return $this;
@@ -766,20 +766,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTripleKills() : float
+    public function getTripleKills() : ?float
     {
         return $this->tripleKills;
     }
     /**
      * 
      *
-     * @param float $tripleKills
+     * @param float|null $tripleKills
      *
      * @return self
      */
-    public function setTripleKills(float $tripleKills) : self
+    public function setTripleKills(?float $tripleKills) : self
     {
         $this->tripleKills = $tripleKills;
         return $this;
@@ -787,20 +787,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getQuadraKills() : float
+    public function getQuadraKills() : ?float
     {
         return $this->quadraKills;
     }
     /**
      * 
      *
-     * @param float $quadraKills
+     * @param float|null $quadraKills
      *
      * @return self
      */
-    public function setQuadraKills(float $quadraKills) : self
+    public function setQuadraKills(?float $quadraKills) : self
     {
         $this->quadraKills = $quadraKills;
         return $this;
@@ -808,20 +808,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPentaKills() : float
+    public function getPentaKills() : ?float
     {
         return $this->pentaKills;
     }
     /**
      * 
      *
-     * @param float $pentaKills
+     * @param float|null $pentaKills
      *
      * @return self
      */
-    public function setPentaKills(float $pentaKills) : self
+    public function setPentaKills(?float $pentaKills) : self
     {
         $this->pentaKills = $pentaKills;
         return $this;
@@ -829,20 +829,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getUnrealKills() : float
+    public function getUnrealKills() : ?float
     {
         return $this->unrealKills;
     }
     /**
      * 
      *
-     * @param float $unrealKills
+     * @param float|null $unrealKills
      *
      * @return self
      */
-    public function setUnrealKills(float $unrealKills) : self
+    public function setUnrealKills(?float $unrealKills) : self
     {
         $this->unrealKills = $unrealKills;
         return $this;
@@ -850,20 +850,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalDamageDealt() : float
+    public function getTotalDamageDealt() : ?float
     {
         return $this->totalDamageDealt;
     }
     /**
      * 
      *
-     * @param float $totalDamageDealt
+     * @param float|null $totalDamageDealt
      *
      * @return self
      */
-    public function setTotalDamageDealt(float $totalDamageDealt) : self
+    public function setTotalDamageDealt(?float $totalDamageDealt) : self
     {
         $this->totalDamageDealt = $totalDamageDealt;
         return $this;
@@ -871,20 +871,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getMagicDamageDealt() : float
+    public function getMagicDamageDealt() : ?float
     {
         return $this->magicDamageDealt;
     }
     /**
      * 
      *
-     * @param float $magicDamageDealt
+     * @param float|null $magicDamageDealt
      *
      * @return self
      */
-    public function setMagicDamageDealt(float $magicDamageDealt) : self
+    public function setMagicDamageDealt(?float $magicDamageDealt) : self
     {
         $this->magicDamageDealt = $magicDamageDealt;
         return $this;
@@ -892,20 +892,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPhysicalDamageDealt() : float
+    public function getPhysicalDamageDealt() : ?float
     {
         return $this->physicalDamageDealt;
     }
     /**
      * 
      *
-     * @param float $physicalDamageDealt
+     * @param float|null $physicalDamageDealt
      *
      * @return self
      */
-    public function setPhysicalDamageDealt(float $physicalDamageDealt) : self
+    public function setPhysicalDamageDealt(?float $physicalDamageDealt) : self
     {
         $this->physicalDamageDealt = $physicalDamageDealt;
         return $this;
@@ -913,20 +913,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTrueDamageDealt() : float
+    public function getTrueDamageDealt() : ?float
     {
         return $this->trueDamageDealt;
     }
     /**
      * 
      *
-     * @param float $trueDamageDealt
+     * @param float|null $trueDamageDealt
      *
      * @return self
      */
-    public function setTrueDamageDealt(float $trueDamageDealt) : self
+    public function setTrueDamageDealt(?float $trueDamageDealt) : self
     {
         $this->trueDamageDealt = $trueDamageDealt;
         return $this;
@@ -934,20 +934,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLargestCriticalStrike() : float
+    public function getLargestCriticalStrike() : ?float
     {
         return $this->largestCriticalStrike;
     }
     /**
      * 
      *
-     * @param float $largestCriticalStrike
+     * @param float|null $largestCriticalStrike
      *
      * @return self
      */
-    public function setLargestCriticalStrike(float $largestCriticalStrike) : self
+    public function setLargestCriticalStrike(?float $largestCriticalStrike) : self
     {
         $this->largestCriticalStrike = $largestCriticalStrike;
         return $this;
@@ -955,20 +955,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalDamageDealtToChampions() : float
+    public function getTotalDamageDealtToChampions() : ?float
     {
         return $this->totalDamageDealtToChampions;
     }
     /**
      * 
      *
-     * @param float $totalDamageDealtToChampions
+     * @param float|null $totalDamageDealtToChampions
      *
      * @return self
      */
-    public function setTotalDamageDealtToChampions(float $totalDamageDealtToChampions) : self
+    public function setTotalDamageDealtToChampions(?float $totalDamageDealtToChampions) : self
     {
         $this->totalDamageDealtToChampions = $totalDamageDealtToChampions;
         return $this;
@@ -976,20 +976,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getMagicDamageDealtToChampions() : float
+    public function getMagicDamageDealtToChampions() : ?float
     {
         return $this->magicDamageDealtToChampions;
     }
     /**
      * 
      *
-     * @param float $magicDamageDealtToChampions
+     * @param float|null $magicDamageDealtToChampions
      *
      * @return self
      */
-    public function setMagicDamageDealtToChampions(float $magicDamageDealtToChampions) : self
+    public function setMagicDamageDealtToChampions(?float $magicDamageDealtToChampions) : self
     {
         $this->magicDamageDealtToChampions = $magicDamageDealtToChampions;
         return $this;
@@ -997,20 +997,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPhysicalDamageDealtToChampions() : float
+    public function getPhysicalDamageDealtToChampions() : ?float
     {
         return $this->physicalDamageDealtToChampions;
     }
     /**
      * 
      *
-     * @param float $physicalDamageDealtToChampions
+     * @param float|null $physicalDamageDealtToChampions
      *
      * @return self
      */
-    public function setPhysicalDamageDealtToChampions(float $physicalDamageDealtToChampions) : self
+    public function setPhysicalDamageDealtToChampions(?float $physicalDamageDealtToChampions) : self
     {
         $this->physicalDamageDealtToChampions = $physicalDamageDealtToChampions;
         return $this;
@@ -1018,20 +1018,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTrueDamageDealtToChampions() : float
+    public function getTrueDamageDealtToChampions() : ?float
     {
         return $this->trueDamageDealtToChampions;
     }
     /**
      * 
      *
-     * @param float $trueDamageDealtToChampions
+     * @param float|null $trueDamageDealtToChampions
      *
      * @return self
      */
-    public function setTrueDamageDealtToChampions(float $trueDamageDealtToChampions) : self
+    public function setTrueDamageDealtToChampions(?float $trueDamageDealtToChampions) : self
     {
         $this->trueDamageDealtToChampions = $trueDamageDealtToChampions;
         return $this;
@@ -1039,20 +1039,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalHeal() : float
+    public function getTotalHeal() : ?float
     {
         return $this->totalHeal;
     }
     /**
      * 
      *
-     * @param float $totalHeal
+     * @param float|null $totalHeal
      *
      * @return self
      */
-    public function setTotalHeal(float $totalHeal) : self
+    public function setTotalHeal(?float $totalHeal) : self
     {
         $this->totalHeal = $totalHeal;
         return $this;
@@ -1060,20 +1060,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalUnitsHealed() : float
+    public function getTotalUnitsHealed() : ?float
     {
         return $this->totalUnitsHealed;
     }
     /**
      * 
      *
-     * @param float $totalUnitsHealed
+     * @param float|null $totalUnitsHealed
      *
      * @return self
      */
-    public function setTotalUnitsHealed(float $totalUnitsHealed) : self
+    public function setTotalUnitsHealed(?float $totalUnitsHealed) : self
     {
         $this->totalUnitsHealed = $totalUnitsHealed;
         return $this;
@@ -1081,20 +1081,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalDamageTaken() : float
+    public function getTotalDamageTaken() : ?float
     {
         return $this->totalDamageTaken;
     }
     /**
      * 
      *
-     * @param float $totalDamageTaken
+     * @param float|null $totalDamageTaken
      *
      * @return self
      */
-    public function setTotalDamageTaken(float $totalDamageTaken) : self
+    public function setTotalDamageTaken(?float $totalDamageTaken) : self
     {
         $this->totalDamageTaken = $totalDamageTaken;
         return $this;
@@ -1102,20 +1102,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getMagicDamageTaken() : float
+    public function getMagicDamageTaken() : ?float
     {
         return $this->magicDamageTaken;
     }
     /**
      * 
      *
-     * @param float $magicDamageTaken
+     * @param float|null $magicDamageTaken
      *
      * @return self
      */
-    public function setMagicDamageTaken(float $magicDamageTaken) : self
+    public function setMagicDamageTaken(?float $magicDamageTaken) : self
     {
         $this->magicDamageTaken = $magicDamageTaken;
         return $this;
@@ -1123,20 +1123,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPhysicalDamageTaken() : float
+    public function getPhysicalDamageTaken() : ?float
     {
         return $this->physicalDamageTaken;
     }
     /**
      * 
      *
-     * @param float $physicalDamageTaken
+     * @param float|null $physicalDamageTaken
      *
      * @return self
      */
-    public function setPhysicalDamageTaken(float $physicalDamageTaken) : self
+    public function setPhysicalDamageTaken(?float $physicalDamageTaken) : self
     {
         $this->physicalDamageTaken = $physicalDamageTaken;
         return $this;
@@ -1144,20 +1144,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTrueDamageTaken() : float
+    public function getTrueDamageTaken() : ?float
     {
         return $this->trueDamageTaken;
     }
     /**
      * 
      *
-     * @param float $trueDamageTaken
+     * @param float|null $trueDamageTaken
      *
      * @return self
      */
-    public function setTrueDamageTaken(float $trueDamageTaken) : self
+    public function setTrueDamageTaken(?float $trueDamageTaken) : self
     {
         $this->trueDamageTaken = $trueDamageTaken;
         return $this;
@@ -1165,20 +1165,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGoldEarned() : float
+    public function getGoldEarned() : ?float
     {
         return $this->goldEarned;
     }
     /**
      * 
      *
-     * @param float $goldEarned
+     * @param float|null $goldEarned
      *
      * @return self
      */
-    public function setGoldEarned(float $goldEarned) : self
+    public function setGoldEarned(?float $goldEarned) : self
     {
         $this->goldEarned = $goldEarned;
         return $this;
@@ -1186,20 +1186,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getGoldSpent() : float
+    public function getGoldSpent() : ?float
     {
         return $this->goldSpent;
     }
     /**
      * 
      *
-     * @param float $goldSpent
+     * @param float|null $goldSpent
      *
      * @return self
      */
-    public function setGoldSpent(float $goldSpent) : self
+    public function setGoldSpent(?float $goldSpent) : self
     {
         $this->goldSpent = $goldSpent;
         return $this;
@@ -1207,20 +1207,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTurretKills() : float
+    public function getTurretKills() : ?float
     {
         return $this->turretKills;
     }
     /**
      * 
      *
-     * @param float $turretKills
+     * @param float|null $turretKills
      *
      * @return self
      */
-    public function setTurretKills(float $turretKills) : self
+    public function setTurretKills(?float $turretKills) : self
     {
         $this->turretKills = $turretKills;
         return $this;
@@ -1228,20 +1228,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getInhibitorKills() : float
+    public function getInhibitorKills() : ?float
     {
         return $this->inhibitorKills;
     }
     /**
      * 
      *
-     * @param float $inhibitorKills
+     * @param float|null $inhibitorKills
      *
      * @return self
      */
-    public function setInhibitorKills(float $inhibitorKills) : self
+    public function setInhibitorKills(?float $inhibitorKills) : self
     {
         $this->inhibitorKills = $inhibitorKills;
         return $this;
@@ -1249,20 +1249,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalMinionsKilled() : float
+    public function getTotalMinionsKilled() : ?float
     {
         return $this->totalMinionsKilled;
     }
     /**
      * 
      *
-     * @param float $totalMinionsKilled
+     * @param float|null $totalMinionsKilled
      *
      * @return self
      */
-    public function setTotalMinionsKilled(float $totalMinionsKilled) : self
+    public function setTotalMinionsKilled(?float $totalMinionsKilled) : self
     {
         $this->totalMinionsKilled = $totalMinionsKilled;
         return $this;
@@ -1270,20 +1270,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getNeutralMinionsKIlled() : float
+    public function getNeutralMinionsKIlled() : ?float
     {
         return $this->neutralMinionsKIlled;
     }
     /**
      * 
      *
-     * @param float $neutralMinionsKIlled
+     * @param float|null $neutralMinionsKIlled
      *
      * @return self
      */
-    public function setNeutralMinionsKIlled(float $neutralMinionsKIlled) : self
+    public function setNeutralMinionsKIlled(?float $neutralMinionsKIlled) : self
     {
         $this->neutralMinionsKIlled = $neutralMinionsKIlled;
         return $this;
@@ -1291,20 +1291,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getNeutralMinionsKIlledTeamJungle() : float
+    public function getNeutralMinionsKIlledTeamJungle() : ?float
     {
         return $this->neutralMinionsKIlledTeamJungle;
     }
     /**
      * 
      *
-     * @param float $neutralMinionsKIlledTeamJungle
+     * @param float|null $neutralMinionsKIlledTeamJungle
      *
      * @return self
      */
-    public function setNeutralMinionsKIlledTeamJungle(float $neutralMinionsKIlledTeamJungle) : self
+    public function setNeutralMinionsKIlledTeamJungle(?float $neutralMinionsKIlledTeamJungle) : self
     {
         $this->neutralMinionsKIlledTeamJungle = $neutralMinionsKIlledTeamJungle;
         return $this;
@@ -1312,20 +1312,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getNeutralMinionsKilledEnemyJungle() : float
+    public function getNeutralMinionsKilledEnemyJungle() : ?float
     {
         return $this->neutralMinionsKilledEnemyJungle;
     }
     /**
      * 
      *
-     * @param float $neutralMinionsKilledEnemyJungle
+     * @param float|null $neutralMinionsKilledEnemyJungle
      *
      * @return self
      */
-    public function setNeutralMinionsKilledEnemyJungle(float $neutralMinionsKilledEnemyJungle) : self
+    public function setNeutralMinionsKilledEnemyJungle(?float $neutralMinionsKilledEnemyJungle) : self
     {
         $this->neutralMinionsKilledEnemyJungle = $neutralMinionsKilledEnemyJungle;
         return $this;
@@ -1333,20 +1333,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalTimeCrowdControlDealt() : float
+    public function getTotalTimeCrowdControlDealt() : ?float
     {
         return $this->totalTimeCrowdControlDealt;
     }
     /**
      * 
      *
-     * @param float $totalTimeCrowdControlDealt
+     * @param float|null $totalTimeCrowdControlDealt
      *
      * @return self
      */
-    public function setTotalTimeCrowdControlDealt(float $totalTimeCrowdControlDealt) : self
+    public function setTotalTimeCrowdControlDealt(?float $totalTimeCrowdControlDealt) : self
     {
         $this->totalTimeCrowdControlDealt = $totalTimeCrowdControlDealt;
         return $this;
@@ -1354,20 +1354,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getVisionWardsBoughtInGame() : float
+    public function getVisionWardsBoughtInGame() : ?float
     {
         return $this->visionWardsBoughtInGame;
     }
     /**
      * 
      *
-     * @param float $visionWardsBoughtInGame
+     * @param float|null $visionWardsBoughtInGame
      *
      * @return self
      */
-    public function setVisionWardsBoughtInGame(float $visionWardsBoughtInGame) : self
+    public function setVisionWardsBoughtInGame(?float $visionWardsBoughtInGame) : self
     {
         $this->visionWardsBoughtInGame = $visionWardsBoughtInGame;
         return $this;
@@ -1375,20 +1375,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSightWardsBoughtInGame() : float
+    public function getSightWardsBoughtInGame() : ?float
     {
         return $this->sightWardsBoughtInGame;
     }
     /**
      * 
      *
-     * @param float $sightWardsBoughtInGame
+     * @param float|null $sightWardsBoughtInGame
      *
      * @return self
      */
-    public function setSightWardsBoughtInGame(float $sightWardsBoughtInGame) : self
+    public function setSightWardsBoughtInGame(?float $sightWardsBoughtInGame) : self
     {
         $this->sightWardsBoughtInGame = $sightWardsBoughtInGame;
         return $this;
@@ -1396,20 +1396,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWardsPlaced() : float
+    public function getWardsPlaced() : ?float
     {
         return $this->wardsPlaced;
     }
     /**
      * 
      *
-     * @param float $wardsPlaced
+     * @param float|null $wardsPlaced
      *
      * @return self
      */
-    public function setWardsPlaced(float $wardsPlaced) : self
+    public function setWardsPlaced(?float $wardsPlaced) : self
     {
         $this->wardsPlaced = $wardsPlaced;
         return $this;
@@ -1417,20 +1417,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWardsKilled() : float
+    public function getWardsKilled() : ?float
     {
         return $this->wardsKilled;
     }
     /**
      * 
      *
-     * @param float $wardsKilled
+     * @param float|null $wardsKilled
      *
      * @return self
      */
-    public function setWardsKilled(float $wardsKilled) : self
+    public function setWardsKilled(?float $wardsKilled) : self
     {
         $this->wardsKilled = $wardsKilled;
         return $this;
@@ -1438,20 +1438,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getCombatPlayerScore() : float
+    public function getCombatPlayerScore() : ?float
     {
         return $this->combatPlayerScore;
     }
     /**
      * 
      *
-     * @param float $combatPlayerScore
+     * @param float|null $combatPlayerScore
      *
      * @return self
      */
-    public function setCombatPlayerScore(float $combatPlayerScore) : self
+    public function setCombatPlayerScore(?float $combatPlayerScore) : self
     {
         $this->combatPlayerScore = $combatPlayerScore;
         return $this;
@@ -1459,20 +1459,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getObjectivePlayerScore() : float
+    public function getObjectivePlayerScore() : ?float
     {
         return $this->objectivePlayerScore;
     }
     /**
      * 
      *
-     * @param float $objectivePlayerScore
+     * @param float|null $objectivePlayerScore
      *
      * @return self
      */
-    public function setObjectivePlayerScore(float $objectivePlayerScore) : self
+    public function setObjectivePlayerScore(?float $objectivePlayerScore) : self
     {
         $this->objectivePlayerScore = $objectivePlayerScore;
         return $this;
@@ -1480,20 +1480,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalPlayerScore() : float
+    public function getTotalPlayerScore() : ?float
     {
         return $this->totalPlayerScore;
     }
     /**
      * 
      *
-     * @param float $totalPlayerScore
+     * @param float|null $totalPlayerScore
      *
      * @return self
      */
-    public function setTotalPlayerScore(float $totalPlayerScore) : self
+    public function setTotalPlayerScore(?float $totalPlayerScore) : self
     {
         $this->totalPlayerScore = $totalPlayerScore;
         return $this;
@@ -1501,20 +1501,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -1522,20 +1522,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTenKillsOrAssists() : float
+    public function getTenKillsOrAssists() : ?float
     {
         return $this->tenKillsOrAssists;
     }
     /**
      * 
      *
-     * @param float $tenKillsOrAssists
+     * @param float|null $tenKillsOrAssists
      *
      * @return self
      */
-    public function setTenKillsOrAssists(float $tenKillsOrAssists) : self
+    public function setTenKillsOrAssists(?float $tenKillsOrAssists) : self
     {
         $this->tenKillsOrAssists = $tenKillsOrAssists;
         return $this;
@@ -1543,20 +1543,20 @@ class PlayerGame
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;

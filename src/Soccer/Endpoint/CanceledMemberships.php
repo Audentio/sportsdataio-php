@@ -10,7 +10,7 @@ class CanceledMemberships extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndp
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format)
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }

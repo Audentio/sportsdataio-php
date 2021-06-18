@@ -42,32 +42,59 @@ class StadiumNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('Active', $data)) {
             $object->setActive($data['Active']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Address', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Address', $data) && $data['Address'] !== null) {
             $object->setAddress($data['Address']);
         }
-        if (\array_key_exists('City', $data)) {
+        elseif (\array_key_exists('Address', $data) && $data['Address'] === null) {
+            $object->setAddress(null);
+        }
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('State', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('State', $data) && $data['State'] !== null) {
             $object->setState($data['State']);
         }
-        if (\array_key_exists('Zip', $data)) {
+        elseif (\array_key_exists('State', $data) && $data['State'] === null) {
+            $object->setState(null);
+        }
+        if (\array_key_exists('Zip', $data) && $data['Zip'] !== null) {
             $object->setZip($data['Zip']);
         }
-        if (\array_key_exists('Country', $data)) {
+        elseif (\array_key_exists('Zip', $data) && $data['Zip'] === null) {
+            $object->setZip(null);
+        }
+        if (\array_key_exists('Country', $data) && $data['Country'] !== null) {
             $object->setCountry($data['Country']);
         }
-        if (\array_key_exists('Capacity', $data)) {
+        elseif (\array_key_exists('Country', $data) && $data['Country'] === null) {
+            $object->setCountry(null);
+        }
+        if (\array_key_exists('Capacity', $data) && $data['Capacity'] !== null) {
             $object->setCapacity($data['Capacity']);
         }
-        if (\array_key_exists('GeoLat', $data)) {
+        elseif (\array_key_exists('Capacity', $data) && $data['Capacity'] === null) {
+            $object->setCapacity(null);
+        }
+        if (\array_key_exists('GeoLat', $data) && $data['GeoLat'] !== null) {
             $object->setGeoLat($data['GeoLat']);
         }
-        if (\array_key_exists('GeoLong', $data)) {
+        elseif (\array_key_exists('GeoLat', $data) && $data['GeoLat'] === null) {
+            $object->setGeoLat(null);
+        }
+        if (\array_key_exists('GeoLong', $data) && $data['GeoLong'] !== null) {
             $object->setGeoLong($data['GeoLong']);
+        }
+        elseif (\array_key_exists('GeoLong', $data) && $data['GeoLong'] === null) {
+            $object->setGeoLong(null);
         }
         return $object;
     }

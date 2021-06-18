@@ -42,59 +42,113 @@ class PlayNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('QuarterID', $data)) {
             $object->setQuarterID($data['QuarterID']);
         }
-        if (\array_key_exists('QuarterName', $data)) {
+        if (\array_key_exists('QuarterName', $data) && $data['QuarterName'] !== null) {
             $object->setQuarterName($data['QuarterName']);
         }
-        if (\array_key_exists('Sequence', $data)) {
+        elseif (\array_key_exists('QuarterName', $data) && $data['QuarterName'] === null) {
+            $object->setQuarterName(null);
+        }
+        if (\array_key_exists('Sequence', $data) && $data['Sequence'] !== null) {
             $object->setSequence($data['Sequence']);
         }
-        if (\array_key_exists('TimeRemainingMinutes', $data)) {
+        elseif (\array_key_exists('Sequence', $data) && $data['Sequence'] === null) {
+            $object->setSequence(null);
+        }
+        if (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] !== null) {
             $object->setTimeRemainingMinutes($data['TimeRemainingMinutes']);
         }
-        if (\array_key_exists('TimeRemainingSeconds', $data)) {
+        elseif (\array_key_exists('TimeRemainingMinutes', $data) && $data['TimeRemainingMinutes'] === null) {
+            $object->setTimeRemainingMinutes(null);
+        }
+        if (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] !== null) {
             $object->setTimeRemainingSeconds($data['TimeRemainingSeconds']);
         }
-        if (\array_key_exists('PlayTime', $data)) {
+        elseif (\array_key_exists('TimeRemainingSeconds', $data) && $data['TimeRemainingSeconds'] === null) {
+            $object->setTimeRemainingSeconds(null);
+        }
+        if (\array_key_exists('PlayTime', $data) && $data['PlayTime'] !== null) {
             $object->setPlayTime($data['PlayTime']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('PlayTime', $data) && $data['PlayTime'] === null) {
+            $object->setPlayTime(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
         }
-        if (\array_key_exists('Created', $data)) {
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
+        }
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Opponent', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Opponent', $data) && $data['Opponent'] !== null) {
             $object->setOpponent($data['Opponent']);
         }
-        if (\array_key_exists('Down', $data)) {
+        elseif (\array_key_exists('Opponent', $data) && $data['Opponent'] === null) {
+            $object->setOpponent(null);
+        }
+        if (\array_key_exists('Down', $data) && $data['Down'] !== null) {
             $object->setDown($data['Down']);
         }
-        if (\array_key_exists('Distance', $data)) {
+        elseif (\array_key_exists('Down', $data) && $data['Down'] === null) {
+            $object->setDown(null);
+        }
+        if (\array_key_exists('Distance', $data) && $data['Distance'] !== null) {
             $object->setDistance($data['Distance']);
         }
-        if (\array_key_exists('YardLine', $data)) {
+        elseif (\array_key_exists('Distance', $data) && $data['Distance'] === null) {
+            $object->setDistance(null);
+        }
+        if (\array_key_exists('YardLine', $data) && $data['YardLine'] !== null) {
             $object->setYardLine($data['YardLine']);
         }
-        if (\array_key_exists('YardLineTerritory', $data)) {
+        elseif (\array_key_exists('YardLine', $data) && $data['YardLine'] === null) {
+            $object->setYardLine(null);
+        }
+        if (\array_key_exists('YardLineTerritory', $data) && $data['YardLineTerritory'] !== null) {
             $object->setYardLineTerritory($data['YardLineTerritory']);
         }
-        if (\array_key_exists('YardsToEndZone', $data)) {
+        elseif (\array_key_exists('YardLineTerritory', $data) && $data['YardLineTerritory'] === null) {
+            $object->setYardLineTerritory(null);
+        }
+        if (\array_key_exists('YardsToEndZone', $data) && $data['YardsToEndZone'] !== null) {
             $object->setYardsToEndZone($data['YardsToEndZone']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('YardsToEndZone', $data) && $data['YardsToEndZone'] === null) {
+            $object->setYardsToEndZone(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('YardsGained', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('YardsGained', $data) && $data['YardsGained'] !== null) {
             $object->setYardsGained($data['YardsGained']);
         }
-        if (\array_key_exists('Description', $data)) {
+        elseif (\array_key_exists('YardsGained', $data) && $data['YardsGained'] === null) {
+            $object->setYardsGained(null);
+        }
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('IsScoringPlay', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('IsScoringPlay', $data) && $data['IsScoringPlay'] !== null) {
             $object->setIsScoringPlay($data['IsScoringPlay']);
+        }
+        elseif (\array_key_exists('IsScoringPlay', $data) && $data['IsScoringPlay'] === null) {
+            $object->setIsScoringPlay(null);
         }
         if (\array_key_exists('ScoringPlay', $data)) {
             $object->setScoringPlay($this->denormalizer->denormalize($data['ScoringPlay'], 'Sportsdata\\API\\NFL\\Model\\ScoringPlay', 'json', $context));

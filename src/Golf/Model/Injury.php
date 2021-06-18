@@ -19,7 +19,7 @@ class Injury
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -31,25 +31,25 @@ class Injury
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $bodyPart;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $expectedReturn;
     /**
@@ -97,20 +97,20 @@ class Injury
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -139,20 +139,20 @@ class Injury
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -160,20 +160,20 @@ class Injury
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -181,20 +181,20 @@ class Injury
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBodyPart() : string
+    public function getBodyPart() : ?string
     {
         return $this->bodyPart;
     }
     /**
      * 
      *
-     * @param string $bodyPart
+     * @param string|null $bodyPart
      *
      * @return self
      */
-    public function setBodyPart(string $bodyPart) : self
+    public function setBodyPart(?string $bodyPart) : self
     {
         $this->bodyPart = $bodyPart;
         return $this;
@@ -202,20 +202,20 @@ class Injury
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getExpectedReturn() : string
+    public function getExpectedReturn() : ?string
     {
         return $this->expectedReturn;
     }
     /**
      * 
      *
-     * @param string $expectedReturn
+     * @param string|null $expectedReturn
      *
      * @return self
      */
-    public function setExpectedReturn(string $expectedReturn) : self
+    public function setExpectedReturn(?string $expectedReturn) : self
     {
         $this->expectedReturn = $expectedReturn;
         return $this;

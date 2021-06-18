@@ -25,7 +25,7 @@ class SeasonTeam
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teamName;
     /**
@@ -37,13 +37,13 @@ class SeasonTeam
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gender;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -118,20 +118,20 @@ class SeasonTeam
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeamName() : string
+    public function getTeamName() : ?string
     {
         return $this->teamName;
     }
     /**
      * 
      *
-     * @param string $teamName
+     * @param string|null $teamName
      *
      * @return self
      */
-    public function setTeamName(string $teamName) : self
+    public function setTeamName(?string $teamName) : self
     {
         $this->teamName = $teamName;
         return $this;
@@ -160,20 +160,20 @@ class SeasonTeam
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGender() : string
+    public function getGender() : ?string
     {
         return $this->gender;
     }
     /**
      * 
      *
-     * @param string $gender
+     * @param string|null $gender
      *
      * @return self
      */
-    public function setGender(string $gender) : self
+    public function setGender(?string $gender) : self
     {
         $this->gender = $gender;
         return $this;
@@ -181,20 +181,20 @@ class SeasonTeam
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;

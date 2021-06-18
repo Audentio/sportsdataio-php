@@ -10,7 +10,7 @@ class ConferenceHierarchyWithTeams extends \Sportsdata\API\CFB\Runtime\Client\Ba
      *
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      */
-    public function __construct(string $format)
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class ConferenceHierarchyWithTeams extends \Sportsdata\API\CFB\Runtime\Client\Ba
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/LeagueHierarchy');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/LeagueHierarchy');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

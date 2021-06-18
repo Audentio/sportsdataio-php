@@ -31,31 +31,31 @@ class Round
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $startDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $endDate;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $currentWeek;
     /**
@@ -151,20 +151,20 @@ class Round
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -172,20 +172,20 @@ class Round
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getType() : string
+    public function getType() : ?string
     {
         return $this->type;
     }
     /**
      * 
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(?string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -193,20 +193,20 @@ class Round
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartDate() : string
+    public function getStartDate() : ?string
     {
         return $this->startDate;
     }
     /**
      * 
      *
-     * @param string $startDate
+     * @param string|null $startDate
      *
      * @return self
      */
-    public function setStartDate(string $startDate) : self
+    public function setStartDate(?string $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -214,20 +214,20 @@ class Round
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getEndDate() : string
+    public function getEndDate() : ?string
     {
         return $this->endDate;
     }
     /**
      * 
      *
-     * @param string $endDate
+     * @param string|null $endDate
      *
      * @return self
      */
-    public function setEndDate(string $endDate) : self
+    public function setEndDate(?string $endDate) : self
     {
         $this->endDate = $endDate;
         return $this;
@@ -235,20 +235,20 @@ class Round
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCurrentWeek() : int
+    public function getCurrentWeek() : ?int
     {
         return $this->currentWeek;
     }
     /**
      * 
      *
-     * @param int $currentWeek
+     * @param int|null $currentWeek
      *
      * @return self
      */
-    public function setCurrentWeek(int $currentWeek) : self
+    public function setCurrentWeek(?int $currentWeek) : self
     {
         $this->currentWeek = $currentWeek;
         return $this;

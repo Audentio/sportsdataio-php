@@ -39,8 +39,11 @@ class ItemNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('ItemId', $data)) {
             $object->setItemId($data['ItemId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         if (\array_key_exists('GoldBase', $data)) {
             $object->setGoldBase($data['GoldBase']);

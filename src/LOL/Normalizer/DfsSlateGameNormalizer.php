@@ -42,17 +42,26 @@ class DfsSlateGameNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (\array_key_exists('SlateID', $data)) {
             $object->setSlateID($data['SlateID']);
         }
-        if (\array_key_exists('GameID', $data)) {
+        if (\array_key_exists('GameID', $data) && $data['GameID'] !== null) {
             $object->setGameID($data['GameID']);
+        }
+        elseif (\array_key_exists('GameID', $data) && $data['GameID'] === null) {
+            $object->setGameID(null);
         }
         if (\array_key_exists('Game', $data)) {
             $object->setGame($this->denormalizer->denormalize($data['Game'], 'Sportsdata\\API\\LOL\\Model\\Game', 'json', $context));
         }
-        if (\array_key_exists('OperatorGameID', $data)) {
+        if (\array_key_exists('OperatorGameID', $data) && $data['OperatorGameID'] !== null) {
             $object->setOperatorGameID($data['OperatorGameID']);
         }
-        if (\array_key_exists('RemovedByOperator', $data)) {
+        elseif (\array_key_exists('OperatorGameID', $data) && $data['OperatorGameID'] === null) {
+            $object->setOperatorGameID(null);
+        }
+        if (\array_key_exists('RemovedByOperator', $data) && $data['RemovedByOperator'] !== null) {
             $object->setRemovedByOperator($data['RemovedByOperator']);
+        }
+        elseif (\array_key_exists('RemovedByOperator', $data) && $data['RemovedByOperator'] === null) {
+            $object->setRemovedByOperator(null);
         }
         return $object;
     }

@@ -19,25 +19,25 @@ class PlayerRound
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $number;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $day;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $par;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $score;
     /**
@@ -55,61 +55,61 @@ class PlayerRound
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $doubleEagles;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $eagles;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $birdies;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $pars;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $bogeys;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $doubleBogeys;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $worseThanDoubleBogey;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $holeInOnes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $tripleBogeys;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $worseThanTripleBogey;
     /**
@@ -121,19 +121,19 @@ class PlayerRound
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $longestBirdieOrBetterStreak;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $consecutiveBirdieOrBetterCount;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $bounceBackCount;
     /**
@@ -163,7 +163,7 @@ class PlayerRound
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $teeTime;
     /**
@@ -211,20 +211,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumber() : int
+    public function getNumber() : ?int
     {
         return $this->number;
     }
     /**
      * 
      *
-     * @param int $number
+     * @param int|null $number
      *
      * @return self
      */
-    public function setNumber(int $number) : self
+    public function setNumber(?int $number) : self
     {
         $this->number = $number;
         return $this;
@@ -232,20 +232,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDay() : string
+    public function getDay() : ?string
     {
         return $this->day;
     }
     /**
      * 
      *
-     * @param string $day
+     * @param string|null $day
      *
      * @return self
      */
-    public function setDay(string $day) : self
+    public function setDay(?string $day) : self
     {
         $this->day = $day;
         return $this;
@@ -253,20 +253,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPar() : int
+    public function getPar() : ?int
     {
         return $this->par;
     }
     /**
      * 
      *
-     * @param int $par
+     * @param int|null $par
      *
      * @return self
      */
-    public function setPar(int $par) : self
+    public function setPar(?int $par) : self
     {
         $this->par = $par;
         return $this;
@@ -274,20 +274,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getScore() : int
+    public function getScore() : ?int
     {
         return $this->score;
     }
     /**
      * 
      *
-     * @param int $score
+     * @param int|null $score
      *
      * @return self
      */
-    public function setScore(int $score) : self
+    public function setScore(?int $score) : self
     {
         $this->score = $score;
         return $this;
@@ -337,20 +337,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDoubleEagles() : int
+    public function getDoubleEagles() : ?int
     {
         return $this->doubleEagles;
     }
     /**
      * 
      *
-     * @param int $doubleEagles
+     * @param int|null $doubleEagles
      *
      * @return self
      */
-    public function setDoubleEagles(int $doubleEagles) : self
+    public function setDoubleEagles(?int $doubleEagles) : self
     {
         $this->doubleEagles = $doubleEagles;
         return $this;
@@ -358,20 +358,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getEagles() : int
+    public function getEagles() : ?int
     {
         return $this->eagles;
     }
     /**
      * 
      *
-     * @param int $eagles
+     * @param int|null $eagles
      *
      * @return self
      */
-    public function setEagles(int $eagles) : self
+    public function setEagles(?int $eagles) : self
     {
         $this->eagles = $eagles;
         return $this;
@@ -379,20 +379,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBirdies() : int
+    public function getBirdies() : ?int
     {
         return $this->birdies;
     }
     /**
      * 
      *
-     * @param int $birdies
+     * @param int|null $birdies
      *
      * @return self
      */
-    public function setBirdies(int $birdies) : self
+    public function setBirdies(?int $birdies) : self
     {
         $this->birdies = $birdies;
         return $this;
@@ -400,20 +400,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPars() : int
+    public function getPars() : ?int
     {
         return $this->pars;
     }
     /**
      * 
      *
-     * @param int $pars
+     * @param int|null $pars
      *
      * @return self
      */
-    public function setPars(int $pars) : self
+    public function setPars(?int $pars) : self
     {
         $this->pars = $pars;
         return $this;
@@ -421,20 +421,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBogeys() : int
+    public function getBogeys() : ?int
     {
         return $this->bogeys;
     }
     /**
      * 
      *
-     * @param int $bogeys
+     * @param int|null $bogeys
      *
      * @return self
      */
-    public function setBogeys(int $bogeys) : self
+    public function setBogeys(?int $bogeys) : self
     {
         $this->bogeys = $bogeys;
         return $this;
@@ -442,20 +442,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDoubleBogeys() : int
+    public function getDoubleBogeys() : ?int
     {
         return $this->doubleBogeys;
     }
     /**
      * 
      *
-     * @param int $doubleBogeys
+     * @param int|null $doubleBogeys
      *
      * @return self
      */
-    public function setDoubleBogeys(int $doubleBogeys) : self
+    public function setDoubleBogeys(?int $doubleBogeys) : self
     {
         $this->doubleBogeys = $doubleBogeys;
         return $this;
@@ -463,20 +463,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWorseThanDoubleBogey() : int
+    public function getWorseThanDoubleBogey() : ?int
     {
         return $this->worseThanDoubleBogey;
     }
     /**
      * 
      *
-     * @param int $worseThanDoubleBogey
+     * @param int|null $worseThanDoubleBogey
      *
      * @return self
      */
-    public function setWorseThanDoubleBogey(int $worseThanDoubleBogey) : self
+    public function setWorseThanDoubleBogey(?int $worseThanDoubleBogey) : self
     {
         $this->worseThanDoubleBogey = $worseThanDoubleBogey;
         return $this;
@@ -484,20 +484,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHoleInOnes() : int
+    public function getHoleInOnes() : ?int
     {
         return $this->holeInOnes;
     }
     /**
      * 
      *
-     * @param int $holeInOnes
+     * @param int|null $holeInOnes
      *
      * @return self
      */
-    public function setHoleInOnes(int $holeInOnes) : self
+    public function setHoleInOnes(?int $holeInOnes) : self
     {
         $this->holeInOnes = $holeInOnes;
         return $this;
@@ -505,20 +505,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTripleBogeys() : int
+    public function getTripleBogeys() : ?int
     {
         return $this->tripleBogeys;
     }
     /**
      * 
      *
-     * @param int $tripleBogeys
+     * @param int|null $tripleBogeys
      *
      * @return self
      */
-    public function setTripleBogeys(int $tripleBogeys) : self
+    public function setTripleBogeys(?int $tripleBogeys) : self
     {
         $this->tripleBogeys = $tripleBogeys;
         return $this;
@@ -526,20 +526,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWorseThanTripleBogey() : int
+    public function getWorseThanTripleBogey() : ?int
     {
         return $this->worseThanTripleBogey;
     }
     /**
      * 
      *
-     * @param int $worseThanTripleBogey
+     * @param int|null $worseThanTripleBogey
      *
      * @return self
      */
-    public function setWorseThanTripleBogey(int $worseThanTripleBogey) : self
+    public function setWorseThanTripleBogey(?int $worseThanTripleBogey) : self
     {
         $this->worseThanTripleBogey = $worseThanTripleBogey;
         return $this;
@@ -568,20 +568,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getLongestBirdieOrBetterStreak() : float
+    public function getLongestBirdieOrBetterStreak() : ?float
     {
         return $this->longestBirdieOrBetterStreak;
     }
     /**
      * 
      *
-     * @param float $longestBirdieOrBetterStreak
+     * @param float|null $longestBirdieOrBetterStreak
      *
      * @return self
      */
-    public function setLongestBirdieOrBetterStreak(float $longestBirdieOrBetterStreak) : self
+    public function setLongestBirdieOrBetterStreak(?float $longestBirdieOrBetterStreak) : self
     {
         $this->longestBirdieOrBetterStreak = $longestBirdieOrBetterStreak;
         return $this;
@@ -589,20 +589,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getConsecutiveBirdieOrBetterCount() : float
+    public function getConsecutiveBirdieOrBetterCount() : ?float
     {
         return $this->consecutiveBirdieOrBetterCount;
     }
     /**
      * 
      *
-     * @param float $consecutiveBirdieOrBetterCount
+     * @param float|null $consecutiveBirdieOrBetterCount
      *
      * @return self
      */
-    public function setConsecutiveBirdieOrBetterCount(float $consecutiveBirdieOrBetterCount) : self
+    public function setConsecutiveBirdieOrBetterCount(?float $consecutiveBirdieOrBetterCount) : self
     {
         $this->consecutiveBirdieOrBetterCount = $consecutiveBirdieOrBetterCount;
         return $this;
@@ -610,20 +610,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBounceBackCount() : float
+    public function getBounceBackCount() : ?float
     {
         return $this->bounceBackCount;
     }
     /**
      * 
      *
-     * @param float $bounceBackCount
+     * @param float|null $bounceBackCount
      *
      * @return self
      */
-    public function setBounceBackCount(float $bounceBackCount) : self
+    public function setBounceBackCount(?float $bounceBackCount) : self
     {
         $this->bounceBackCount = $bounceBackCount;
         return $this;
@@ -715,20 +715,20 @@ class PlayerRound
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeeTime() : string
+    public function getTeeTime() : ?string
     {
         return $this->teeTime;
     }
     /**
      * 
      *
-     * @param string $teeTime
+     * @param string|null $teeTime
      *
      * @return self
      */
-    public function setTeeTime(string $teeTime) : self
+    public function setTeeTime(?string $teeTime) : self
     {
         $this->teeTime = $teeTime;
         return $this;

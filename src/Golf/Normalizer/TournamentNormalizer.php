@@ -39,14 +39,23 @@ class TournamentNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('TournamentID', $data)) {
             $object->setTournamentID($data['TournamentID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('EndDate', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('EndDate', $data) && $data['EndDate'] !== null) {
             $object->setEndDate($data['EndDate']);
+        }
+        elseif (\array_key_exists('EndDate', $data) && $data['EndDate'] === null) {
+            $object->setEndDate(null);
         }
         if (\array_key_exists('IsOver', $data)) {
             $object->setIsOver($data['IsOver']);
@@ -54,47 +63,89 @@ class TournamentNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('IsInProgress', $data)) {
             $object->setIsInProgress($data['IsInProgress']);
         }
-        if (\array_key_exists('Venue', $data)) {
+        if (\array_key_exists('Venue', $data) && $data['Venue'] !== null) {
             $object->setVenue($data['Venue']);
         }
-        if (\array_key_exists('Location', $data)) {
+        elseif (\array_key_exists('Venue', $data) && $data['Venue'] === null) {
+            $object->setVenue(null);
+        }
+        if (\array_key_exists('Location', $data) && $data['Location'] !== null) {
             $object->setLocation($data['Location']);
         }
-        if (\array_key_exists('Par', $data)) {
+        elseif (\array_key_exists('Location', $data) && $data['Location'] === null) {
+            $object->setLocation(null);
+        }
+        if (\array_key_exists('Par', $data) && $data['Par'] !== null) {
             $object->setPar($data['Par']);
         }
-        if (\array_key_exists('Yards', $data)) {
+        elseif (\array_key_exists('Par', $data) && $data['Par'] === null) {
+            $object->setPar(null);
+        }
+        if (\array_key_exists('Yards', $data) && $data['Yards'] !== null) {
             $object->setYards($data['Yards']);
         }
-        if (\array_key_exists('Purse', $data)) {
+        elseif (\array_key_exists('Yards', $data) && $data['Yards'] === null) {
+            $object->setYards(null);
+        }
+        if (\array_key_exists('Purse', $data) && $data['Purse'] !== null) {
             $object->setPurse($data['Purse']);
         }
-        if (\array_key_exists('StartDateTime', $data)) {
+        elseif (\array_key_exists('Purse', $data) && $data['Purse'] === null) {
+            $object->setPurse(null);
+        }
+        if (\array_key_exists('StartDateTime', $data) && $data['StartDateTime'] !== null) {
             $object->setStartDateTime($data['StartDateTime']);
         }
-        if (\array_key_exists('Canceled', $data)) {
+        elseif (\array_key_exists('StartDateTime', $data) && $data['StartDateTime'] === null) {
+            $object->setStartDateTime(null);
+        }
+        if (\array_key_exists('Canceled', $data) && $data['Canceled'] !== null) {
             $object->setCanceled($data['Canceled']);
         }
-        if (\array_key_exists('Covered', $data)) {
+        elseif (\array_key_exists('Canceled', $data) && $data['Canceled'] === null) {
+            $object->setCanceled(null);
+        }
+        if (\array_key_exists('Covered', $data) && $data['Covered'] !== null) {
             $object->setCovered($data['Covered']);
         }
-        if (\array_key_exists('City', $data)) {
+        elseif (\array_key_exists('Covered', $data) && $data['Covered'] === null) {
+            $object->setCovered(null);
+        }
+        if (\array_key_exists('City', $data) && $data['City'] !== null) {
             $object->setCity($data['City']);
         }
-        if (\array_key_exists('State', $data)) {
+        elseif (\array_key_exists('City', $data) && $data['City'] === null) {
+            $object->setCity(null);
+        }
+        if (\array_key_exists('State', $data) && $data['State'] !== null) {
             $object->setState($data['State']);
         }
-        if (\array_key_exists('ZipCode', $data)) {
+        elseif (\array_key_exists('State', $data) && $data['State'] === null) {
+            $object->setState(null);
+        }
+        if (\array_key_exists('ZipCode', $data) && $data['ZipCode'] !== null) {
             $object->setZipCode($data['ZipCode']);
         }
-        if (\array_key_exists('Country', $data)) {
+        elseif (\array_key_exists('ZipCode', $data) && $data['ZipCode'] === null) {
+            $object->setZipCode(null);
+        }
+        if (\array_key_exists('Country', $data) && $data['Country'] !== null) {
             $object->setCountry($data['Country']);
         }
-        if (\array_key_exists('TimeZone', $data)) {
+        elseif (\array_key_exists('Country', $data) && $data['Country'] === null) {
+            $object->setCountry(null);
+        }
+        if (\array_key_exists('TimeZone', $data) && $data['TimeZone'] !== null) {
             $object->setTimeZone($data['TimeZone']);
         }
-        if (\array_key_exists('Format', $data)) {
+        elseif (\array_key_exists('TimeZone', $data) && $data['TimeZone'] === null) {
+            $object->setTimeZone(null);
+        }
+        if (\array_key_exists('Format', $data) && $data['Format'] !== null) {
             $object->setFormat($data['Format']);
+        }
+        elseif (\array_key_exists('Format', $data) && $data['Format'] === null) {
+            $object->setFormat(null);
         }
         if (\array_key_exists('Rounds', $data)) {
             $values = array();
@@ -103,8 +154,11 @@ class TournamentNormalizer implements DenormalizerInterface, NormalizerInterface
             }
             $object->setRounds($values);
         }
-        if (\array_key_exists('SportRadarTournamentID', $data)) {
+        if (\array_key_exists('SportRadarTournamentID', $data) && $data['SportRadarTournamentID'] !== null) {
             $object->setSportRadarTournamentID($data['SportRadarTournamentID']);
+        }
+        elseif (\array_key_exists('SportRadarTournamentID', $data) && $data['SportRadarTournamentID'] === null) {
+            $object->setSportRadarTournamentID(null);
         }
         return $object;
     }

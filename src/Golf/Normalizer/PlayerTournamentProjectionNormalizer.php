@@ -45,101 +45,197 @@ class PlayerTournamentProjectionNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('TournamentID', $data)) {
             $object->setTournamentID($data['TournamentID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Rank', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Rank', $data) && $data['Rank'] !== null) {
             $object->setRank($data['Rank']);
         }
-        if (\array_key_exists('Country', $data)) {
+        elseif (\array_key_exists('Rank', $data) && $data['Rank'] === null) {
+            $object->setRank(null);
+        }
+        if (\array_key_exists('Country', $data) && $data['Country'] !== null) {
             $object->setCountry($data['Country']);
         }
-        if (\array_key_exists('TotalScore', $data)) {
+        elseif (\array_key_exists('Country', $data) && $data['Country'] === null) {
+            $object->setCountry(null);
+        }
+        if (\array_key_exists('TotalScore', $data) && $data['TotalScore'] !== null) {
             $object->setTotalScore($data['TotalScore']);
         }
-        if (\array_key_exists('TotalStrokes', $data)) {
+        elseif (\array_key_exists('TotalScore', $data) && $data['TotalScore'] === null) {
+            $object->setTotalScore(null);
+        }
+        if (\array_key_exists('TotalStrokes', $data) && $data['TotalStrokes'] !== null) {
             $object->setTotalStrokes($data['TotalStrokes']);
         }
-        if (\array_key_exists('TotalThrough', $data)) {
+        elseif (\array_key_exists('TotalStrokes', $data) && $data['TotalStrokes'] === null) {
+            $object->setTotalStrokes(null);
+        }
+        if (\array_key_exists('TotalThrough', $data) && $data['TotalThrough'] !== null) {
             $object->setTotalThrough($data['TotalThrough']);
         }
-        if (\array_key_exists('Earnings', $data)) {
+        elseif (\array_key_exists('TotalThrough', $data) && $data['TotalThrough'] === null) {
+            $object->setTotalThrough(null);
+        }
+        if (\array_key_exists('Earnings', $data) && $data['Earnings'] !== null) {
             $object->setEarnings($data['Earnings']);
         }
-        if (\array_key_exists('FedExPoints', $data)) {
+        elseif (\array_key_exists('Earnings', $data) && $data['Earnings'] === null) {
+            $object->setEarnings(null);
+        }
+        if (\array_key_exists('FedExPoints', $data) && $data['FedExPoints'] !== null) {
             $object->setFedExPoints($data['FedExPoints']);
         }
-        if (\array_key_exists('FantasyPoints', $data)) {
+        elseif (\array_key_exists('FedExPoints', $data) && $data['FedExPoints'] === null) {
+            $object->setFedExPoints(null);
+        }
+        if (\array_key_exists('FantasyPoints', $data) && $data['FantasyPoints'] !== null) {
             $object->setFantasyPoints($data['FantasyPoints']);
         }
-        if (\array_key_exists('FantasyPointsDraftKings', $data)) {
+        elseif (\array_key_exists('FantasyPoints', $data) && $data['FantasyPoints'] === null) {
+            $object->setFantasyPoints(null);
+        }
+        if (\array_key_exists('FantasyPointsDraftKings', $data) && $data['FantasyPointsDraftKings'] !== null) {
             $object->setFantasyPointsDraftKings($data['FantasyPointsDraftKings']);
         }
-        if (\array_key_exists('DraftKingsSalary', $data)) {
+        elseif (\array_key_exists('FantasyPointsDraftKings', $data) && $data['FantasyPointsDraftKings'] === null) {
+            $object->setFantasyPointsDraftKings(null);
+        }
+        if (\array_key_exists('DraftKingsSalary', $data) && $data['DraftKingsSalary'] !== null) {
             $object->setDraftKingsSalary($data['DraftKingsSalary']);
         }
-        if (\array_key_exists('DoubleEagles', $data)) {
+        elseif (\array_key_exists('DraftKingsSalary', $data) && $data['DraftKingsSalary'] === null) {
+            $object->setDraftKingsSalary(null);
+        }
+        if (\array_key_exists('DoubleEagles', $data) && $data['DoubleEagles'] !== null) {
             $object->setDoubleEagles($data['DoubleEagles']);
         }
-        if (\array_key_exists('Eagles', $data)) {
+        elseif (\array_key_exists('DoubleEagles', $data) && $data['DoubleEagles'] === null) {
+            $object->setDoubleEagles(null);
+        }
+        if (\array_key_exists('Eagles', $data) && $data['Eagles'] !== null) {
             $object->setEagles($data['Eagles']);
         }
-        if (\array_key_exists('Birdies', $data)) {
+        elseif (\array_key_exists('Eagles', $data) && $data['Eagles'] === null) {
+            $object->setEagles(null);
+        }
+        if (\array_key_exists('Birdies', $data) && $data['Birdies'] !== null) {
             $object->setBirdies($data['Birdies']);
         }
-        if (\array_key_exists('Pars', $data)) {
+        elseif (\array_key_exists('Birdies', $data) && $data['Birdies'] === null) {
+            $object->setBirdies(null);
+        }
+        if (\array_key_exists('Pars', $data) && $data['Pars'] !== null) {
             $object->setPars($data['Pars']);
         }
-        if (\array_key_exists('Bogeys', $data)) {
+        elseif (\array_key_exists('Pars', $data) && $data['Pars'] === null) {
+            $object->setPars(null);
+        }
+        if (\array_key_exists('Bogeys', $data) && $data['Bogeys'] !== null) {
             $object->setBogeys($data['Bogeys']);
         }
-        if (\array_key_exists('DoubleBogeys', $data)) {
+        elseif (\array_key_exists('Bogeys', $data) && $data['Bogeys'] === null) {
+            $object->setBogeys(null);
+        }
+        if (\array_key_exists('DoubleBogeys', $data) && $data['DoubleBogeys'] !== null) {
             $object->setDoubleBogeys($data['DoubleBogeys']);
         }
-        if (\array_key_exists('WorseThanDoubleBogey', $data)) {
+        elseif (\array_key_exists('DoubleBogeys', $data) && $data['DoubleBogeys'] === null) {
+            $object->setDoubleBogeys(null);
+        }
+        if (\array_key_exists('WorseThanDoubleBogey', $data) && $data['WorseThanDoubleBogey'] !== null) {
             $object->setWorseThanDoubleBogey($data['WorseThanDoubleBogey']);
         }
-        if (\array_key_exists('HoleInOnes', $data)) {
+        elseif (\array_key_exists('WorseThanDoubleBogey', $data) && $data['WorseThanDoubleBogey'] === null) {
+            $object->setWorseThanDoubleBogey(null);
+        }
+        if (\array_key_exists('HoleInOnes', $data) && $data['HoleInOnes'] !== null) {
             $object->setHoleInOnes($data['HoleInOnes']);
         }
-        if (\array_key_exists('StreaksOfThreeBirdiesOrBetter', $data)) {
+        elseif (\array_key_exists('HoleInOnes', $data) && $data['HoleInOnes'] === null) {
+            $object->setHoleInOnes(null);
+        }
+        if (\array_key_exists('StreaksOfThreeBirdiesOrBetter', $data) && $data['StreaksOfThreeBirdiesOrBetter'] !== null) {
             $object->setStreaksOfThreeBirdiesOrBetter($data['StreaksOfThreeBirdiesOrBetter']);
         }
-        if (\array_key_exists('BogeyFreeRounds', $data)) {
+        elseif (\array_key_exists('StreaksOfThreeBirdiesOrBetter', $data) && $data['StreaksOfThreeBirdiesOrBetter'] === null) {
+            $object->setStreaksOfThreeBirdiesOrBetter(null);
+        }
+        if (\array_key_exists('BogeyFreeRounds', $data) && $data['BogeyFreeRounds'] !== null) {
             $object->setBogeyFreeRounds($data['BogeyFreeRounds']);
         }
-        if (\array_key_exists('RoundsUnderSeventy', $data)) {
+        elseif (\array_key_exists('BogeyFreeRounds', $data) && $data['BogeyFreeRounds'] === null) {
+            $object->setBogeyFreeRounds(null);
+        }
+        if (\array_key_exists('RoundsUnderSeventy', $data) && $data['RoundsUnderSeventy'] !== null) {
             $object->setRoundsUnderSeventy($data['RoundsUnderSeventy']);
         }
-        if (\array_key_exists('TripleBogeys', $data)) {
+        elseif (\array_key_exists('RoundsUnderSeventy', $data) && $data['RoundsUnderSeventy'] === null) {
+            $object->setRoundsUnderSeventy(null);
+        }
+        if (\array_key_exists('TripleBogeys', $data) && $data['TripleBogeys'] !== null) {
             $object->setTripleBogeys($data['TripleBogeys']);
         }
-        if (\array_key_exists('WorseThanTripleBogey', $data)) {
+        elseif (\array_key_exists('TripleBogeys', $data) && $data['TripleBogeys'] === null) {
+            $object->setTripleBogeys(null);
+        }
+        if (\array_key_exists('WorseThanTripleBogey', $data) && $data['WorseThanTripleBogey'] !== null) {
             $object->setWorseThanTripleBogey($data['WorseThanTripleBogey']);
         }
-        if (\array_key_exists('TeeTime', $data)) {
+        elseif (\array_key_exists('WorseThanTripleBogey', $data) && $data['WorseThanTripleBogey'] === null) {
+            $object->setWorseThanTripleBogey(null);
+        }
+        if (\array_key_exists('TeeTime', $data) && $data['TeeTime'] !== null) {
             $object->setTeeTime($data['TeeTime']);
         }
-        if (\array_key_exists('MadeCut', $data)) {
+        elseif (\array_key_exists('TeeTime', $data) && $data['TeeTime'] === null) {
+            $object->setTeeTime(null);
+        }
+        if (\array_key_exists('MadeCut', $data) && $data['MadeCut'] !== null) {
             $object->setMadeCut($data['MadeCut']);
         }
-        if (\array_key_exists('Win', $data)) {
+        elseif (\array_key_exists('MadeCut', $data) && $data['MadeCut'] === null) {
+            $object->setMadeCut(null);
+        }
+        if (\array_key_exists('Win', $data) && $data['Win'] !== null) {
             $object->setWin($data['Win']);
         }
-        if (\array_key_exists('TournamentStatus', $data)) {
+        elseif (\array_key_exists('Win', $data) && $data['Win'] === null) {
+            $object->setWin(null);
+        }
+        if (\array_key_exists('TournamentStatus', $data) && $data['TournamentStatus'] !== null) {
             $object->setTournamentStatus($data['TournamentStatus']);
         }
-        if (\array_key_exists('IsAlternate', $data)) {
+        elseif (\array_key_exists('TournamentStatus', $data) && $data['TournamentStatus'] === null) {
+            $object->setTournamentStatus(null);
+        }
+        if (\array_key_exists('IsAlternate', $data) && $data['IsAlternate'] !== null) {
             $object->setIsAlternate($data['IsAlternate']);
         }
-        if (\array_key_exists('FanDuelSalary', $data)) {
+        elseif (\array_key_exists('IsAlternate', $data) && $data['IsAlternate'] === null) {
+            $object->setIsAlternate(null);
+        }
+        if (\array_key_exists('FanDuelSalary', $data) && $data['FanDuelSalary'] !== null) {
             $object->setFanDuelSalary($data['FanDuelSalary']);
         }
-        if (\array_key_exists('FantasyDraftSalary', $data)) {
+        elseif (\array_key_exists('FanDuelSalary', $data) && $data['FanDuelSalary'] === null) {
+            $object->setFanDuelSalary(null);
+        }
+        if (\array_key_exists('FantasyDraftSalary', $data) && $data['FantasyDraftSalary'] !== null) {
             $object->setFantasyDraftSalary($data['FantasyDraftSalary']);
         }
-        if (\array_key_exists('MadeCutDidNotFinish', $data)) {
+        elseif (\array_key_exists('FantasyDraftSalary', $data) && $data['FantasyDraftSalary'] === null) {
+            $object->setFantasyDraftSalary(null);
+        }
+        if (\array_key_exists('MadeCutDidNotFinish', $data) && $data['MadeCutDidNotFinish'] !== null) {
             $object->setMadeCutDidNotFinish($data['MadeCutDidNotFinish']);
+        }
+        elseif (\array_key_exists('MadeCutDidNotFinish', $data) && $data['MadeCutDidNotFinish'] === null) {
+            $object->setMadeCutDidNotFinish(null);
         }
         if (\array_key_exists('Rounds', $data)) {
             $values = array();
@@ -148,41 +244,74 @@ class PlayerTournamentProjectionNormalizer implements DenormalizerInterface, Nor
             }
             $object->setRounds($values);
         }
-        if (\array_key_exists('OddsToWin', $data)) {
+        if (\array_key_exists('OddsToWin', $data) && $data['OddsToWin'] !== null) {
             $object->setOddsToWin($data['OddsToWin']);
         }
-        if (\array_key_exists('OddsToWinDescription', $data)) {
+        elseif (\array_key_exists('OddsToWin', $data) && $data['OddsToWin'] === null) {
+            $object->setOddsToWin(null);
+        }
+        if (\array_key_exists('OddsToWinDescription', $data) && $data['OddsToWinDescription'] !== null) {
             $object->setOddsToWinDescription($data['OddsToWinDescription']);
         }
-        if (\array_key_exists('FantasyPointsFanDuel', $data)) {
+        elseif (\array_key_exists('OddsToWinDescription', $data) && $data['OddsToWinDescription'] === null) {
+            $object->setOddsToWinDescription(null);
+        }
+        if (\array_key_exists('FantasyPointsFanDuel', $data) && $data['FantasyPointsFanDuel'] !== null) {
             $object->setFantasyPointsFanDuel($data['FantasyPointsFanDuel']);
         }
-        if (\array_key_exists('FantasyPointsFantasyDraft', $data)) {
+        elseif (\array_key_exists('FantasyPointsFanDuel', $data) && $data['FantasyPointsFanDuel'] === null) {
+            $object->setFantasyPointsFanDuel(null);
+        }
+        if (\array_key_exists('FantasyPointsFantasyDraft', $data) && $data['FantasyPointsFantasyDraft'] !== null) {
             $object->setFantasyPointsFantasyDraft($data['FantasyPointsFantasyDraft']);
         }
-        if (\array_key_exists('StreaksOfFourBirdiesOrBetter', $data)) {
+        elseif (\array_key_exists('FantasyPointsFantasyDraft', $data) && $data['FantasyPointsFantasyDraft'] === null) {
+            $object->setFantasyPointsFantasyDraft(null);
+        }
+        if (\array_key_exists('StreaksOfFourBirdiesOrBetter', $data) && $data['StreaksOfFourBirdiesOrBetter'] !== null) {
             $object->setStreaksOfFourBirdiesOrBetter($data['StreaksOfFourBirdiesOrBetter']);
         }
-        if (\array_key_exists('StreaksOfFiveBirdiesOrBetter', $data)) {
+        elseif (\array_key_exists('StreaksOfFourBirdiesOrBetter', $data) && $data['StreaksOfFourBirdiesOrBetter'] === null) {
+            $object->setStreaksOfFourBirdiesOrBetter(null);
+        }
+        if (\array_key_exists('StreaksOfFiveBirdiesOrBetter', $data) && $data['StreaksOfFiveBirdiesOrBetter'] !== null) {
             $object->setStreaksOfFiveBirdiesOrBetter($data['StreaksOfFiveBirdiesOrBetter']);
         }
-        if (\array_key_exists('ConsecutiveBirdieOrBetterCount', $data)) {
+        elseif (\array_key_exists('StreaksOfFiveBirdiesOrBetter', $data) && $data['StreaksOfFiveBirdiesOrBetter'] === null) {
+            $object->setStreaksOfFiveBirdiesOrBetter(null);
+        }
+        if (\array_key_exists('ConsecutiveBirdieOrBetterCount', $data) && $data['ConsecutiveBirdieOrBetterCount'] !== null) {
             $object->setConsecutiveBirdieOrBetterCount($data['ConsecutiveBirdieOrBetterCount']);
         }
-        if (\array_key_exists('BounceBackCount', $data)) {
+        elseif (\array_key_exists('ConsecutiveBirdieOrBetterCount', $data) && $data['ConsecutiveBirdieOrBetterCount'] === null) {
+            $object->setConsecutiveBirdieOrBetterCount(null);
+        }
+        if (\array_key_exists('BounceBackCount', $data) && $data['BounceBackCount'] !== null) {
             $object->setBounceBackCount($data['BounceBackCount']);
         }
-        if (\array_key_exists('RoundsWithFiveOrMoreBirdiesOrBetter', $data)) {
+        elseif (\array_key_exists('BounceBackCount', $data) && $data['BounceBackCount'] === null) {
+            $object->setBounceBackCount(null);
+        }
+        if (\array_key_exists('RoundsWithFiveOrMoreBirdiesOrBetter', $data) && $data['RoundsWithFiveOrMoreBirdiesOrBetter'] !== null) {
             $object->setRoundsWithFiveOrMoreBirdiesOrBetter($data['RoundsWithFiveOrMoreBirdiesOrBetter']);
+        }
+        elseif (\array_key_exists('RoundsWithFiveOrMoreBirdiesOrBetter', $data) && $data['RoundsWithFiveOrMoreBirdiesOrBetter'] === null) {
+            $object->setRoundsWithFiveOrMoreBirdiesOrBetter(null);
         }
         if (\array_key_exists('IsWithdrawn', $data)) {
             $object->setIsWithdrawn($data['IsWithdrawn']);
         }
-        if (\array_key_exists('FantasyPointsYahoo', $data)) {
+        if (\array_key_exists('FantasyPointsYahoo', $data) && $data['FantasyPointsYahoo'] !== null) {
             $object->setFantasyPointsYahoo($data['FantasyPointsYahoo']);
         }
-        if (\array_key_exists('StreaksOfSixBirdiesOrBetter', $data)) {
+        elseif (\array_key_exists('FantasyPointsYahoo', $data) && $data['FantasyPointsYahoo'] === null) {
+            $object->setFantasyPointsYahoo(null);
+        }
+        if (\array_key_exists('StreaksOfSixBirdiesOrBetter', $data) && $data['StreaksOfSixBirdiesOrBetter'] !== null) {
             $object->setStreaksOfSixBirdiesOrBetter($data['StreaksOfSixBirdiesOrBetter']);
+        }
+        elseif (\array_key_exists('StreaksOfSixBirdiesOrBetter', $data) && $data['StreaksOfSixBirdiesOrBetter'] === null) {
+            $object->setStreaksOfSixBirdiesOrBetter(null);
         }
         return $object;
     }

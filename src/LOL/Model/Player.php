@@ -13,67 +13,67 @@ class Player
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $commonName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $matchName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $gender;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthDate;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthCity;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $birthCountry;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $nationality;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $updated;
     /**
@@ -100,20 +100,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -121,20 +121,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -142,20 +142,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCommonName() : string
+    public function getCommonName() : ?string
     {
         return $this->commonName;
     }
     /**
      * 
      *
-     * @param string $commonName
+     * @param string|null $commonName
      *
      * @return self
      */
-    public function setCommonName(string $commonName) : self
+    public function setCommonName(?string $commonName) : self
     {
         $this->commonName = $commonName;
         return $this;
@@ -163,20 +163,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getMatchName() : string
+    public function getMatchName() : ?string
     {
         return $this->matchName;
     }
     /**
      * 
      *
-     * @param string $matchName
+     * @param string|null $matchName
      *
      * @return self
      */
-    public function setMatchName(string $matchName) : self
+    public function setMatchName(?string $matchName) : self
     {
         $this->matchName = $matchName;
         return $this;
@@ -184,20 +184,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -205,20 +205,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getGender() : string
+    public function getGender() : ?string
     {
         return $this->gender;
     }
     /**
      * 
      *
-     * @param string $gender
+     * @param string|null $gender
      *
      * @return self
      */
-    public function setGender(string $gender) : self
+    public function setGender(?string $gender) : self
     {
         $this->gender = $gender;
         return $this;
@@ -226,20 +226,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthDate() : string
+    public function getBirthDate() : ?string
     {
         return $this->birthDate;
     }
     /**
      * 
      *
-     * @param string $birthDate
+     * @param string|null $birthDate
      *
      * @return self
      */
-    public function setBirthDate(string $birthDate) : self
+    public function setBirthDate(?string $birthDate) : self
     {
         $this->birthDate = $birthDate;
         return $this;
@@ -247,20 +247,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthCity() : string
+    public function getBirthCity() : ?string
     {
         return $this->birthCity;
     }
     /**
      * 
      *
-     * @param string $birthCity
+     * @param string|null $birthCity
      *
      * @return self
      */
-    public function setBirthCity(string $birthCity) : self
+    public function setBirthCity(?string $birthCity) : self
     {
         $this->birthCity = $birthCity;
         return $this;
@@ -268,20 +268,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getBirthCountry() : string
+    public function getBirthCountry() : ?string
     {
         return $this->birthCountry;
     }
     /**
      * 
      *
-     * @param string $birthCountry
+     * @param string|null $birthCountry
      *
      * @return self
      */
-    public function setBirthCountry(string $birthCountry) : self
+    public function setBirthCountry(?string $birthCountry) : self
     {
         $this->birthCountry = $birthCountry;
         return $this;
@@ -289,20 +289,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getNationality() : string
+    public function getNationality() : ?string
     {
         return $this->nationality;
     }
     /**
      * 
      *
-     * @param string $nationality
+     * @param string|null $nationality
      *
      * @return self
      */
-    public function setNationality(string $nationality) : self
+    public function setNationality(?string $nationality) : self
     {
         $this->nationality = $nationality;
         return $this;
@@ -310,20 +310,20 @@ class Player
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdated() : string
+    public function getUpdated() : ?string
     {
         return $this->updated;
     }
     /**
      * 
      *
-     * @param string $updated
+     * @param string|null $updated
      *
      * @return self
      */
-    public function setUpdated(string $updated) : self
+    public function setUpdated(?string $updated) : self
     {
         $this->updated = $updated;
         return $this;

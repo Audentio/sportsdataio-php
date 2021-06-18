@@ -42,14 +42,23 @@ class MatchNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('Number', $data)) {
             $object->setNumber($data['Number']);
         }
-        if (\array_key_exists('MapName', $data)) {
+        if (\array_key_exists('MapName', $data) && $data['MapName'] !== null) {
             $object->setMapName($data['MapName']);
         }
-        if (\array_key_exists('WinningTeamId', $data)) {
+        elseif (\array_key_exists('MapName', $data) && $data['MapName'] === null) {
+            $object->setMapName(null);
+        }
+        if (\array_key_exists('WinningTeamId', $data) && $data['WinningTeamId'] !== null) {
             $object->setWinningTeamId($data['WinningTeamId']);
         }
-        if (\array_key_exists('GameVersion', $data)) {
+        elseif (\array_key_exists('WinningTeamId', $data) && $data['WinningTeamId'] === null) {
+            $object->setWinningTeamId(null);
+        }
+        if (\array_key_exists('GameVersion', $data) && $data['GameVersion'] !== null) {
             $object->setGameVersion($data['GameVersion']);
+        }
+        elseif (\array_key_exists('GameVersion', $data) && $data['GameVersion'] === null) {
+            $object->setGameVersion(null);
         }
         if (\array_key_exists('MatchBans', $data)) {
             $values = array();

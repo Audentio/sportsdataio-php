@@ -7,80 +7,80 @@ class CareerStat
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fighterId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sigStrikesLandedPerMinute;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sigStrikeAccuracy;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $takedownAverage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $submissionAverage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $knockoutPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $technicalKnockoutPercentage;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $decisionPercentage;
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFighterId() : int
+    public function getFighterId() : ?int
     {
         return $this->fighterId;
     }
     /**
      * 
      *
-     * @param int $fighterId
+     * @param int|null $fighterId
      *
      * @return self
      */
-    public function setFighterId(int $fighterId) : self
+    public function setFighterId(?int $fighterId) : self
     {
         $this->fighterId = $fighterId;
         return $this;
@@ -88,20 +88,20 @@ class CareerStat
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -109,20 +109,20 @@ class CareerStat
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -130,20 +130,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSigStrikesLandedPerMinute() : float
+    public function getSigStrikesLandedPerMinute() : ?float
     {
         return $this->sigStrikesLandedPerMinute;
     }
     /**
      * 
      *
-     * @param float $sigStrikesLandedPerMinute
+     * @param float|null $sigStrikesLandedPerMinute
      *
      * @return self
      */
-    public function setSigStrikesLandedPerMinute(float $sigStrikesLandedPerMinute) : self
+    public function setSigStrikesLandedPerMinute(?float $sigStrikesLandedPerMinute) : self
     {
         $this->sigStrikesLandedPerMinute = $sigStrikesLandedPerMinute;
         return $this;
@@ -151,20 +151,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSigStrikeAccuracy() : float
+    public function getSigStrikeAccuracy() : ?float
     {
         return $this->sigStrikeAccuracy;
     }
     /**
      * 
      *
-     * @param float $sigStrikeAccuracy
+     * @param float|null $sigStrikeAccuracy
      *
      * @return self
      */
-    public function setSigStrikeAccuracy(float $sigStrikeAccuracy) : self
+    public function setSigStrikeAccuracy(?float $sigStrikeAccuracy) : self
     {
         $this->sigStrikeAccuracy = $sigStrikeAccuracy;
         return $this;
@@ -172,20 +172,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTakedownAverage() : float
+    public function getTakedownAverage() : ?float
     {
         return $this->takedownAverage;
     }
     /**
      * 
      *
-     * @param float $takedownAverage
+     * @param float|null $takedownAverage
      *
      * @return self
      */
-    public function setTakedownAverage(float $takedownAverage) : self
+    public function setTakedownAverage(?float $takedownAverage) : self
     {
         $this->takedownAverage = $takedownAverage;
         return $this;
@@ -193,20 +193,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSubmissionAverage() : float
+    public function getSubmissionAverage() : ?float
     {
         return $this->submissionAverage;
     }
     /**
      * 
      *
-     * @param float $submissionAverage
+     * @param float|null $submissionAverage
      *
      * @return self
      */
-    public function setSubmissionAverage(float $submissionAverage) : self
+    public function setSubmissionAverage(?float $submissionAverage) : self
     {
         $this->submissionAverage = $submissionAverage;
         return $this;
@@ -214,20 +214,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKnockoutPercentage() : float
+    public function getKnockoutPercentage() : ?float
     {
         return $this->knockoutPercentage;
     }
     /**
      * 
      *
-     * @param float $knockoutPercentage
+     * @param float|null $knockoutPercentage
      *
      * @return self
      */
-    public function setKnockoutPercentage(float $knockoutPercentage) : self
+    public function setKnockoutPercentage(?float $knockoutPercentage) : self
     {
         $this->knockoutPercentage = $knockoutPercentage;
         return $this;
@@ -235,20 +235,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTechnicalKnockoutPercentage() : float
+    public function getTechnicalKnockoutPercentage() : ?float
     {
         return $this->technicalKnockoutPercentage;
     }
     /**
      * 
      *
-     * @param float $technicalKnockoutPercentage
+     * @param float|null $technicalKnockoutPercentage
      *
      * @return self
      */
-    public function setTechnicalKnockoutPercentage(float $technicalKnockoutPercentage) : self
+    public function setTechnicalKnockoutPercentage(?float $technicalKnockoutPercentage) : self
     {
         $this->technicalKnockoutPercentage = $technicalKnockoutPercentage;
         return $this;
@@ -256,20 +256,20 @@ class CareerStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getDecisionPercentage() : float
+    public function getDecisionPercentage() : ?float
     {
         return $this->decisionPercentage;
     }
     /**
      * 
      *
-     * @param float $decisionPercentage
+     * @param float|null $decisionPercentage
      *
      * @return self
      */
-    public function setDecisionPercentage(float $decisionPercentage) : self
+    public function setDecisionPercentage(?float $decisionPercentage) : self
     {
         $this->decisionPercentage = $decisionPercentage;
         return $this;

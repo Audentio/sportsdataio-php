@@ -10,7 +10,7 @@ class CompetitionsLeagues extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoi
      *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'xml')
+    public function __construct(string $format = 'JSON')
     {
         $this->format = $format;
     }
@@ -21,7 +21,7 @@ class CompetitionsLeagues extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoi
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}'), array($this->format), '/stats/{format}/Competitions');
+        return str_replace(array('{format}'), array($this->format), '/scores/{format}/Competitions');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

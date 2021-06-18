@@ -42,8 +42,11 @@ class LineupNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('GameId', $data)) {
             $object->setGameId($data['GameId']);
         }
-        if (\array_key_exists('Type', $data)) {
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
+        }
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
         }
         if (\array_key_exists('TeamId', $data)) {
             $object->setTeamId($data['TeamId']);
@@ -51,29 +54,53 @@ class LineupNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('PlayerId', $data)) {
             $object->setPlayerId($data['PlayerId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Position', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Position', $data) && $data['Position'] !== null) {
             $object->setPosition($data['Position']);
         }
-        if (\array_key_exists('ReplacedPlayerId', $data)) {
+        elseif (\array_key_exists('Position', $data) && $data['Position'] === null) {
+            $object->setPosition(null);
+        }
+        if (\array_key_exists('ReplacedPlayerId', $data) && $data['ReplacedPlayerId'] !== null) {
             $object->setReplacedPlayerId($data['ReplacedPlayerId']);
         }
-        if (\array_key_exists('ReplacedPlayerName', $data)) {
+        elseif (\array_key_exists('ReplacedPlayerId', $data) && $data['ReplacedPlayerId'] === null) {
+            $object->setReplacedPlayerId(null);
+        }
+        if (\array_key_exists('ReplacedPlayerName', $data) && $data['ReplacedPlayerName'] !== null) {
             $object->setReplacedPlayerName($data['ReplacedPlayerName']);
         }
-        if (\array_key_exists('GameMinute', $data)) {
+        elseif (\array_key_exists('ReplacedPlayerName', $data) && $data['ReplacedPlayerName'] === null) {
+            $object->setReplacedPlayerName(null);
+        }
+        if (\array_key_exists('GameMinute', $data) && $data['GameMinute'] !== null) {
             $object->setGameMinute($data['GameMinute']);
         }
-        if (\array_key_exists('GameMinuteExtra', $data)) {
+        elseif (\array_key_exists('GameMinute', $data) && $data['GameMinute'] === null) {
+            $object->setGameMinute(null);
+        }
+        if (\array_key_exists('GameMinuteExtra', $data) && $data['GameMinuteExtra'] !== null) {
             $object->setGameMinuteExtra($data['GameMinuteExtra']);
         }
-        if (\array_key_exists('PitchPositionHorizontal', $data)) {
+        elseif (\array_key_exists('GameMinuteExtra', $data) && $data['GameMinuteExtra'] === null) {
+            $object->setGameMinuteExtra(null);
+        }
+        if (\array_key_exists('PitchPositionHorizontal', $data) && $data['PitchPositionHorizontal'] !== null) {
             $object->setPitchPositionHorizontal($data['PitchPositionHorizontal']);
         }
-        if (\array_key_exists('PitchPositionVertical', $data)) {
+        elseif (\array_key_exists('PitchPositionHorizontal', $data) && $data['PitchPositionHorizontal'] === null) {
+            $object->setPitchPositionHorizontal(null);
+        }
+        if (\array_key_exists('PitchPositionVertical', $data) && $data['PitchPositionVertical'] !== null) {
             $object->setPitchPositionVertical($data['PitchPositionVertical']);
+        }
+        elseif (\array_key_exists('PitchPositionVertical', $data) && $data['PitchPositionVertical'] === null) {
+            $object->setPitchPositionVertical(null);
         }
         return $object;
     }

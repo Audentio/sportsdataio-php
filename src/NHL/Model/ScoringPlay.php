@@ -19,79 +19,79 @@ class ScoringPlay
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $sequence;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingMinutes;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $timeRemainingSeconds;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $scoredByTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $allowedByTeamID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $scoredByPlayerID;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $assistedByPlayerID1;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $assistedByPlayerID2;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $powerPlay;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $shortHanded;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $emptyNet;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamScore;
     /**
@@ -139,20 +139,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSequence() : int
+    public function getSequence() : ?int
     {
         return $this->sequence;
     }
     /**
      * 
      *
-     * @param int $sequence
+     * @param int|null $sequence
      *
      * @return self
      */
-    public function setSequence(int $sequence) : self
+    public function setSequence(?int $sequence) : self
     {
         $this->sequence = $sequence;
         return $this;
@@ -160,20 +160,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingMinutes() : int
+    public function getTimeRemainingMinutes() : ?int
     {
         return $this->timeRemainingMinutes;
     }
     /**
      * 
      *
-     * @param int $timeRemainingMinutes
+     * @param int|null $timeRemainingMinutes
      *
      * @return self
      */
-    public function setTimeRemainingMinutes(int $timeRemainingMinutes) : self
+    public function setTimeRemainingMinutes(?int $timeRemainingMinutes) : self
     {
         $this->timeRemainingMinutes = $timeRemainingMinutes;
         return $this;
@@ -181,20 +181,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTimeRemainingSeconds() : int
+    public function getTimeRemainingSeconds() : ?int
     {
         return $this->timeRemainingSeconds;
     }
     /**
      * 
      *
-     * @param int $timeRemainingSeconds
+     * @param int|null $timeRemainingSeconds
      *
      * @return self
      */
-    public function setTimeRemainingSeconds(int $timeRemainingSeconds) : self
+    public function setTimeRemainingSeconds(?int $timeRemainingSeconds) : self
     {
         $this->timeRemainingSeconds = $timeRemainingSeconds;
         return $this;
@@ -202,20 +202,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getScoredByTeamID() : int
+    public function getScoredByTeamID() : ?int
     {
         return $this->scoredByTeamID;
     }
     /**
      * 
      *
-     * @param int $scoredByTeamID
+     * @param int|null $scoredByTeamID
      *
      * @return self
      */
-    public function setScoredByTeamID(int $scoredByTeamID) : self
+    public function setScoredByTeamID(?int $scoredByTeamID) : self
     {
         $this->scoredByTeamID = $scoredByTeamID;
         return $this;
@@ -223,20 +223,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAllowedByTeamID() : int
+    public function getAllowedByTeamID() : ?int
     {
         return $this->allowedByTeamID;
     }
     /**
      * 
      *
-     * @param int $allowedByTeamID
+     * @param int|null $allowedByTeamID
      *
      * @return self
      */
-    public function setAllowedByTeamID(int $allowedByTeamID) : self
+    public function setAllowedByTeamID(?int $allowedByTeamID) : self
     {
         $this->allowedByTeamID = $allowedByTeamID;
         return $this;
@@ -244,20 +244,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getScoredByPlayerID() : int
+    public function getScoredByPlayerID() : ?int
     {
         return $this->scoredByPlayerID;
     }
     /**
      * 
      *
-     * @param int $scoredByPlayerID
+     * @param int|null $scoredByPlayerID
      *
      * @return self
      */
-    public function setScoredByPlayerID(int $scoredByPlayerID) : self
+    public function setScoredByPlayerID(?int $scoredByPlayerID) : self
     {
         $this->scoredByPlayerID = $scoredByPlayerID;
         return $this;
@@ -265,20 +265,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssistedByPlayerID1() : int
+    public function getAssistedByPlayerID1() : ?int
     {
         return $this->assistedByPlayerID1;
     }
     /**
      * 
      *
-     * @param int $assistedByPlayerID1
+     * @param int|null $assistedByPlayerID1
      *
      * @return self
      */
-    public function setAssistedByPlayerID1(int $assistedByPlayerID1) : self
+    public function setAssistedByPlayerID1(?int $assistedByPlayerID1) : self
     {
         $this->assistedByPlayerID1 = $assistedByPlayerID1;
         return $this;
@@ -286,20 +286,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssistedByPlayerID2() : int
+    public function getAssistedByPlayerID2() : ?int
     {
         return $this->assistedByPlayerID2;
     }
     /**
      * 
      *
-     * @param int $assistedByPlayerID2
+     * @param int|null $assistedByPlayerID2
      *
      * @return self
      */
-    public function setAssistedByPlayerID2(int $assistedByPlayerID2) : self
+    public function setAssistedByPlayerID2(?int $assistedByPlayerID2) : self
     {
         $this->assistedByPlayerID2 = $assistedByPlayerID2;
         return $this;
@@ -307,20 +307,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getPowerPlay() : bool
+    public function getPowerPlay() : ?bool
     {
         return $this->powerPlay;
     }
     /**
      * 
      *
-     * @param bool $powerPlay
+     * @param bool|null $powerPlay
      *
      * @return self
      */
-    public function setPowerPlay(bool $powerPlay) : self
+    public function setPowerPlay(?bool $powerPlay) : self
     {
         $this->powerPlay = $powerPlay;
         return $this;
@@ -328,20 +328,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getShortHanded() : bool
+    public function getShortHanded() : ?bool
     {
         return $this->shortHanded;
     }
     /**
      * 
      *
-     * @param bool $shortHanded
+     * @param bool|null $shortHanded
      *
      * @return self
      */
-    public function setShortHanded(bool $shortHanded) : self
+    public function setShortHanded(?bool $shortHanded) : self
     {
         $this->shortHanded = $shortHanded;
         return $this;
@@ -349,20 +349,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getEmptyNet() : bool
+    public function getEmptyNet() : ?bool
     {
         return $this->emptyNet;
     }
     /**
      * 
      *
-     * @param bool $emptyNet
+     * @param bool|null $emptyNet
      *
      * @return self
      */
-    public function setEmptyNet(bool $emptyNet) : self
+    public function setEmptyNet(?bool $emptyNet) : self
     {
         $this->emptyNet = $emptyNet;
         return $this;
@@ -370,20 +370,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamScore() : int
+    public function getAwayTeamScore() : ?int
     {
         return $this->awayTeamScore;
     }
     /**
      * 
      *
-     * @param int $awayTeamScore
+     * @param int|null $awayTeamScore
      *
      * @return self
      */
-    public function setAwayTeamScore(int $awayTeamScore) : self
+    public function setAwayTeamScore(?int $awayTeamScore) : self
     {
         $this->awayTeamScore = $awayTeamScore;
         return $this;
@@ -391,20 +391,20 @@ class ScoringPlay
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamScore() : int
+    public function getHomeTeamScore() : ?int
     {
         return $this->homeTeamScore;
     }
     /**
      * 
      *
-     * @param int $homeTeamScore
+     * @param int|null $homeTeamScore
      *
      * @return self
      */
-    public function setHomeTeamScore(int $homeTeamScore) : self
+    public function setHomeTeamScore(?int $homeTeamScore) : self
     {
         $this->homeTeamScore = $homeTeamScore;
         return $this;

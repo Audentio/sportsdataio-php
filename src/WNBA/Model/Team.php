@@ -13,7 +13,7 @@ class Team
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
@@ -25,25 +25,25 @@ class Team
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $conference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $wikipediaLogoUrl;
     /**
@@ -76,20 +76,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -118,20 +118,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -139,20 +139,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -160,20 +160,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getConference() : string
+    public function getConference() : ?string
     {
         return $this->conference;
     }
     /**
      * 
      *
-     * @param string $conference
+     * @param string|null $conference
      *
      * @return self
      */
-    public function setConference(string $conference) : self
+    public function setConference(?string $conference) : self
     {
         $this->conference = $conference;
         return $this;
@@ -181,20 +181,20 @@ class Team
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getWikipediaLogoUrl() : string
+    public function getWikipediaLogoUrl() : ?string
     {
         return $this->wikipediaLogoUrl;
     }
     /**
      * 
      *
-     * @param string $wikipediaLogoUrl
+     * @param string|null $wikipediaLogoUrl
      *
      * @return self
      */
-    public function setWikipediaLogoUrl(string $wikipediaLogoUrl) : self
+    public function setWikipediaLogoUrl(?string $wikipediaLogoUrl) : self
     {
         $this->wikipediaLogoUrl = $wikipediaLogoUrl;
         return $this;

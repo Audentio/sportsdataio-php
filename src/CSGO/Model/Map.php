@@ -7,37 +7,37 @@ class Map
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $number;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $currentRound;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamAScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamBScore;
     /**
@@ -49,20 +49,20 @@ class Map
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumber() : int
+    public function getNumber() : ?int
     {
         return $this->number;
     }
     /**
      * 
      *
-     * @param int $number
+     * @param int|null $number
      *
      * @return self
      */
-    public function setNumber(int $number) : self
+    public function setNumber(?int $number) : self
     {
         $this->number = $number;
         return $this;
@@ -70,20 +70,20 @@ class Map
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -91,20 +91,20 @@ class Map
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus() : string
+    public function getStatus() : ?string
     {
         return $this->status;
     }
     /**
      * 
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(?string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -112,20 +112,20 @@ class Map
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCurrentRound() : int
+    public function getCurrentRound() : ?int
     {
         return $this->currentRound;
     }
     /**
      * 
      *
-     * @param int $currentRound
+     * @param int|null $currentRound
      *
      * @return self
      */
-    public function setCurrentRound(int $currentRound) : self
+    public function setCurrentRound(?int $currentRound) : self
     {
         $this->currentRound = $currentRound;
         return $this;
@@ -133,20 +133,20 @@ class Map
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamAScore() : int
+    public function getTeamAScore() : ?int
     {
         return $this->teamAScore;
     }
     /**
      * 
      *
-     * @param int $teamAScore
+     * @param int|null $teamAScore
      *
      * @return self
      */
-    public function setTeamAScore(int $teamAScore) : self
+    public function setTeamAScore(?int $teamAScore) : self
     {
         $this->teamAScore = $teamAScore;
         return $this;
@@ -154,20 +154,20 @@ class Map
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamBScore() : int
+    public function getTeamBScore() : ?int
     {
         return $this->teamBScore;
     }
     /**
      * 
      *
-     * @param int $teamBScore
+     * @param int|null $teamBScore
      *
      * @return self
      */
-    public function setTeamBScore(int $teamBScore) : self
+    public function setTeamBScore(?int $teamBScore) : self
     {
         $this->teamBScore = $teamBScore;
         return $this;

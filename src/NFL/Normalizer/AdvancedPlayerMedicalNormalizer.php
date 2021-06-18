@@ -39,35 +39,62 @@ class AdvancedPlayerMedicalNormalizer implements DenormalizerInterface, Normaliz
         if (\array_key_exists('AdvancedPlayerMedicalID', $data)) {
             $object->setAdvancedPlayerMedicalID($data['AdvancedPlayerMedicalID']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
+        }
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
         }
         if (\array_key_exists('Season', $data)) {
             $object->setSeason($data['Season']);
         }
-        if (\array_key_exists('IncidentDate', $data)) {
+        if (\array_key_exists('IncidentDate', $data) && $data['IncidentDate'] !== null) {
             $object->setIncidentDate($data['IncidentDate']);
         }
-        if (\array_key_exists('InjuryDescription', $data)) {
+        elseif (\array_key_exists('IncidentDate', $data) && $data['IncidentDate'] === null) {
+            $object->setIncidentDate(null);
+        }
+        if (\array_key_exists('InjuryDescription', $data) && $data['InjuryDescription'] !== null) {
             $object->setInjuryDescription($data['InjuryDescription']);
         }
-        if (\array_key_exists('Severity', $data)) {
+        elseif (\array_key_exists('InjuryDescription', $data) && $data['InjuryDescription'] === null) {
+            $object->setInjuryDescription(null);
+        }
+        if (\array_key_exists('Severity', $data) && $data['Severity'] !== null) {
             $object->setSeverity($data['Severity']);
         }
-        if (\array_key_exists('GamesMissed', $data)) {
+        elseif (\array_key_exists('Severity', $data) && $data['Severity'] === null) {
+            $object->setSeverity(null);
+        }
+        if (\array_key_exists('GamesMissed', $data) && $data['GamesMissed'] !== null) {
             $object->setGamesMissed($data['GamesMissed']);
         }
-        if (\array_key_exists('GamesOnInjuryReport', $data)) {
+        elseif (\array_key_exists('GamesMissed', $data) && $data['GamesMissed'] === null) {
+            $object->setGamesMissed(null);
+        }
+        if (\array_key_exists('GamesOnInjuryReport', $data) && $data['GamesOnInjuryReport'] !== null) {
             $object->setGamesOnInjuryReport($data['GamesOnInjuryReport']);
         }
-        if (\array_key_exists('Surgery', $data)) {
+        elseif (\array_key_exists('GamesOnInjuryReport', $data) && $data['GamesOnInjuryReport'] === null) {
+            $object->setGamesOnInjuryReport(null);
+        }
+        if (\array_key_exists('Surgery', $data) && $data['Surgery'] !== null) {
             $object->setSurgery($data['Surgery']);
         }
-        if (\array_key_exists('RecoveryTimetable', $data)) {
+        elseif (\array_key_exists('Surgery', $data) && $data['Surgery'] === null) {
+            $object->setSurgery(null);
+        }
+        if (\array_key_exists('RecoveryTimetable', $data) && $data['RecoveryTimetable'] !== null) {
             $object->setRecoveryTimetable($data['RecoveryTimetable']);
+        }
+        elseif (\array_key_exists('RecoveryTimetable', $data) && $data['RecoveryTimetable'] === null) {
+            $object->setRecoveryTimetable(null);
         }
         return $object;
     }

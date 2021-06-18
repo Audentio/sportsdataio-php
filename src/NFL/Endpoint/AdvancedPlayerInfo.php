@@ -4,18 +4,18 @@ namespace Sportsdata\API\NFL\Endpoint;
 
 class AdvancedPlayerInfo extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \Sportsdata\API\NFL\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $playerid;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $playerid Each NFL player has a unique ID assigned by FantasyData. Player IDs can be determined by pulling player related data. Example:<code>732</code>.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $playerid)
+    public function __construct(string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\NFL\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -24,7 +24,7 @@ class AdvancedPlayerInfo extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{playerid}'), array($this->format, $this->playerid), '/advanced-metrics/{format}/AdvancedPlayerInfo/{playerid}');
+        return str_replace(array('{playerid}', '{format}'), array($this->playerid, $this->format), '/advanced-metrics/{format}/AdvancedPlayerInfo/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

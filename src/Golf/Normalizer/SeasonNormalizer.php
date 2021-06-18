@@ -39,14 +39,23 @@ class SeasonNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('SeasonID', $data)) {
             $object->setSeasonID($data['SeasonID']);
         }
-        if (\array_key_exists('Description', $data)) {
+        if (\array_key_exists('Description', $data) && $data['Description'] !== null) {
             $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        elseif (\array_key_exists('Description', $data) && $data['Description'] === null) {
+            $object->setDescription(null);
+        }
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('EndDate', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('EndDate', $data) && $data['EndDate'] !== null) {
             $object->setEndDate($data['EndDate']);
+        }
+        elseif (\array_key_exists('EndDate', $data) && $data['EndDate'] === null) {
+            $object->setEndDate(null);
         }
         return $object;
     }

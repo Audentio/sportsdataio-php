@@ -39,32 +39,59 @@ class NewsNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (\array_key_exists('NewsID', $data)) {
             $object->setNewsID($data['NewsID']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('TeamID', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('TeamID', $data) && $data['TeamID'] !== null) {
             $object->setTeamID($data['TeamID']);
         }
-        if (\array_key_exists('Team', $data)) {
+        elseif (\array_key_exists('TeamID', $data) && $data['TeamID'] === null) {
+            $object->setTeamID(null);
+        }
+        if (\array_key_exists('Team', $data) && $data['Team'] !== null) {
             $object->setTeam($data['Team']);
         }
-        if (\array_key_exists('Title', $data)) {
+        elseif (\array_key_exists('Team', $data) && $data['Team'] === null) {
+            $object->setTeam(null);
+        }
+        if (\array_key_exists('Title', $data) && $data['Title'] !== null) {
             $object->setTitle($data['Title']);
         }
-        if (\array_key_exists('Content', $data)) {
+        elseif (\array_key_exists('Title', $data) && $data['Title'] === null) {
+            $object->setTitle(null);
+        }
+        if (\array_key_exists('Content', $data) && $data['Content'] !== null) {
             $object->setContent($data['Content']);
         }
-        if (\array_key_exists('Url', $data)) {
+        elseif (\array_key_exists('Content', $data) && $data['Content'] === null) {
+            $object->setContent(null);
+        }
+        if (\array_key_exists('Url', $data) && $data['Url'] !== null) {
             $object->setUrl($data['Url']);
         }
-        if (\array_key_exists('Source', $data)) {
+        elseif (\array_key_exists('Url', $data) && $data['Url'] === null) {
+            $object->setUrl(null);
+        }
+        if (\array_key_exists('Source', $data) && $data['Source'] !== null) {
             $object->setSource($data['Source']);
         }
-        if (\array_key_exists('TermsOfUse', $data)) {
+        elseif (\array_key_exists('Source', $data) && $data['Source'] === null) {
+            $object->setSource(null);
+        }
+        if (\array_key_exists('TermsOfUse', $data) && $data['TermsOfUse'] !== null) {
             $object->setTermsOfUse($data['TermsOfUse']);
         }
-        if (\array_key_exists('Updated', $data)) {
+        elseif (\array_key_exists('TermsOfUse', $data) && $data['TermsOfUse'] === null) {
+            $object->setTermsOfUse(null);
+        }
+        if (\array_key_exists('Updated', $data) && $data['Updated'] !== null) {
             $object->setUpdated($data['Updated']);
+        }
+        elseif (\array_key_exists('Updated', $data) && $data['Updated'] === null) {
+            $object->setUpdated(null);
         }
         return $object;
     }

@@ -13,283 +13,283 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $teamID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $team;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $fantasyPosition;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $positionGroup;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $bMI;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $bMIRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $handSize;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $handSizeRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $armLength;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $armLengthRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $qualityScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $qualityScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fortyYardDash;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fortyYardDashRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $threeConeDrill;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $threeConeDrillRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $twentyYardShuttle;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $twentyYardShuttleRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $agilityScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $agilityScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $verticalJump;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $verticalJumpRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $broadJump;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $broadJumpRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $burstScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $burstScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sPARQx;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $sPARQxRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $athleticismScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $athleticismScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $speedScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $speedScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $throwVelocity;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $throwVelocityRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $wonderlicScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wonderlicScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $heightAdjustedSpeedScore;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $heightAdjustedSpeedScoreRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $catchRadius;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $catchRadiusRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $benchPress;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $benchPressRank;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $playmakingRadius;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playmakingRadiusRank;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $highlightClip;
     /**
@@ -340,20 +340,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -361,20 +361,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTeamID() : int
+    public function getTeamID() : ?int
     {
         return $this->teamID;
     }
     /**
      * 
      *
-     * @param int $teamID
+     * @param int|null $teamID
      *
      * @return self
      */
-    public function setTeamID(int $teamID) : self
+    public function setTeamID(?int $teamID) : self
     {
         $this->teamID = $teamID;
         return $this;
@@ -382,20 +382,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTeam() : string
+    public function getTeam() : ?string
     {
         return $this->team;
     }
     /**
      * 
      *
-     * @param string $team
+     * @param string|null $team
      *
      * @return self
      */
-    public function setTeam(string $team) : self
+    public function setTeam(?string $team) : self
     {
         $this->team = $team;
         return $this;
@@ -403,20 +403,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -424,20 +424,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFantasyPosition() : string
+    public function getFantasyPosition() : ?string
     {
         return $this->fantasyPosition;
     }
     /**
      * 
      *
-     * @param string $fantasyPosition
+     * @param string|null $fantasyPosition
      *
      * @return self
      */
-    public function setFantasyPosition(string $fantasyPosition) : self
+    public function setFantasyPosition(?string $fantasyPosition) : self
     {
         $this->fantasyPosition = $fantasyPosition;
         return $this;
@@ -445,20 +445,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPositionGroup() : string
+    public function getPositionGroup() : ?string
     {
         return $this->positionGroup;
     }
     /**
      * 
      *
-     * @param string $positionGroup
+     * @param string|null $positionGroup
      *
      * @return self
      */
-    public function setPositionGroup(string $positionGroup) : self
+    public function setPositionGroup(?string $positionGroup) : self
     {
         $this->positionGroup = $positionGroup;
         return $this;
@@ -466,20 +466,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBMI() : float
+    public function getBMI() : ?float
     {
         return $this->bMI;
     }
     /**
      * 
      *
-     * @param float $bMI
+     * @param float|null $bMI
      *
      * @return self
      */
-    public function setBMI(float $bMI) : self
+    public function setBMI(?float $bMI) : self
     {
         $this->bMI = $bMI;
         return $this;
@@ -487,20 +487,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBMIRank() : int
+    public function getBMIRank() : ?int
     {
         return $this->bMIRank;
     }
     /**
      * 
      *
-     * @param int $bMIRank
+     * @param int|null $bMIRank
      *
      * @return self
      */
-    public function setBMIRank(int $bMIRank) : self
+    public function setBMIRank(?int $bMIRank) : self
     {
         $this->bMIRank = $bMIRank;
         return $this;
@@ -508,20 +508,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getHandSize() : float
+    public function getHandSize() : ?float
     {
         return $this->handSize;
     }
     /**
      * 
      *
-     * @param float $handSize
+     * @param float|null $handSize
      *
      * @return self
      */
-    public function setHandSize(float $handSize) : self
+    public function setHandSize(?float $handSize) : self
     {
         $this->handSize = $handSize;
         return $this;
@@ -529,20 +529,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHandSizeRank() : int
+    public function getHandSizeRank() : ?int
     {
         return $this->handSizeRank;
     }
     /**
      * 
      *
-     * @param int $handSizeRank
+     * @param int|null $handSizeRank
      *
      * @return self
      */
-    public function setHandSizeRank(int $handSizeRank) : self
+    public function setHandSizeRank(?int $handSizeRank) : self
     {
         $this->handSizeRank = $handSizeRank;
         return $this;
@@ -550,20 +550,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getArmLength() : float
+    public function getArmLength() : ?float
     {
         return $this->armLength;
     }
     /**
      * 
      *
-     * @param float $armLength
+     * @param float|null $armLength
      *
      * @return self
      */
-    public function setArmLength(float $armLength) : self
+    public function setArmLength(?float $armLength) : self
     {
         $this->armLength = $armLength;
         return $this;
@@ -571,20 +571,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getArmLengthRank() : int
+    public function getArmLengthRank() : ?int
     {
         return $this->armLengthRank;
     }
     /**
      * 
      *
-     * @param int $armLengthRank
+     * @param int|null $armLengthRank
      *
      * @return self
      */
-    public function setArmLengthRank(int $armLengthRank) : self
+    public function setArmLengthRank(?int $armLengthRank) : self
     {
         $this->armLengthRank = $armLengthRank;
         return $this;
@@ -592,20 +592,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getQualityScore() : float
+    public function getQualityScore() : ?float
     {
         return $this->qualityScore;
     }
     /**
      * 
      *
-     * @param float $qualityScore
+     * @param float|null $qualityScore
      *
      * @return self
      */
-    public function setQualityScore(float $qualityScore) : self
+    public function setQualityScore(?float $qualityScore) : self
     {
         $this->qualityScore = $qualityScore;
         return $this;
@@ -613,20 +613,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getQualityScoreRank() : int
+    public function getQualityScoreRank() : ?int
     {
         return $this->qualityScoreRank;
     }
     /**
      * 
      *
-     * @param int $qualityScoreRank
+     * @param int|null $qualityScoreRank
      *
      * @return self
      */
-    public function setQualityScoreRank(int $qualityScoreRank) : self
+    public function setQualityScoreRank(?int $qualityScoreRank) : self
     {
         $this->qualityScoreRank = $qualityScoreRank;
         return $this;
@@ -634,20 +634,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFortyYardDash() : float
+    public function getFortyYardDash() : ?float
     {
         return $this->fortyYardDash;
     }
     /**
      * 
      *
-     * @param float $fortyYardDash
+     * @param float|null $fortyYardDash
      *
      * @return self
      */
-    public function setFortyYardDash(float $fortyYardDash) : self
+    public function setFortyYardDash(?float $fortyYardDash) : self
     {
         $this->fortyYardDash = $fortyYardDash;
         return $this;
@@ -655,20 +655,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFortyYardDashRank() : int
+    public function getFortyYardDashRank() : ?int
     {
         return $this->fortyYardDashRank;
     }
     /**
      * 
      *
-     * @param int $fortyYardDashRank
+     * @param int|null $fortyYardDashRank
      *
      * @return self
      */
-    public function setFortyYardDashRank(int $fortyYardDashRank) : self
+    public function setFortyYardDashRank(?int $fortyYardDashRank) : self
     {
         $this->fortyYardDashRank = $fortyYardDashRank;
         return $this;
@@ -676,20 +676,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getThreeConeDrill() : float
+    public function getThreeConeDrill() : ?float
     {
         return $this->threeConeDrill;
     }
     /**
      * 
      *
-     * @param float $threeConeDrill
+     * @param float|null $threeConeDrill
      *
      * @return self
      */
-    public function setThreeConeDrill(float $threeConeDrill) : self
+    public function setThreeConeDrill(?float $threeConeDrill) : self
     {
         $this->threeConeDrill = $threeConeDrill;
         return $this;
@@ -697,20 +697,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getThreeConeDrillRank() : int
+    public function getThreeConeDrillRank() : ?int
     {
         return $this->threeConeDrillRank;
     }
     /**
      * 
      *
-     * @param int $threeConeDrillRank
+     * @param int|null $threeConeDrillRank
      *
      * @return self
      */
-    public function setThreeConeDrillRank(int $threeConeDrillRank) : self
+    public function setThreeConeDrillRank(?int $threeConeDrillRank) : self
     {
         $this->threeConeDrillRank = $threeConeDrillRank;
         return $this;
@@ -718,20 +718,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTwentyYardShuttle() : float
+    public function getTwentyYardShuttle() : ?float
     {
         return $this->twentyYardShuttle;
     }
     /**
      * 
      *
-     * @param float $twentyYardShuttle
+     * @param float|null $twentyYardShuttle
      *
      * @return self
      */
-    public function setTwentyYardShuttle(float $twentyYardShuttle) : self
+    public function setTwentyYardShuttle(?float $twentyYardShuttle) : self
     {
         $this->twentyYardShuttle = $twentyYardShuttle;
         return $this;
@@ -739,20 +739,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getTwentyYardShuttleRank() : int
+    public function getTwentyYardShuttleRank() : ?int
     {
         return $this->twentyYardShuttleRank;
     }
     /**
      * 
      *
-     * @param int $twentyYardShuttleRank
+     * @param int|null $twentyYardShuttleRank
      *
      * @return self
      */
-    public function setTwentyYardShuttleRank(int $twentyYardShuttleRank) : self
+    public function setTwentyYardShuttleRank(?int $twentyYardShuttleRank) : self
     {
         $this->twentyYardShuttleRank = $twentyYardShuttleRank;
         return $this;
@@ -760,20 +760,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAgilityScore() : float
+    public function getAgilityScore() : ?float
     {
         return $this->agilityScore;
     }
     /**
      * 
      *
-     * @param float $agilityScore
+     * @param float|null $agilityScore
      *
      * @return self
      */
-    public function setAgilityScore(float $agilityScore) : self
+    public function setAgilityScore(?float $agilityScore) : self
     {
         $this->agilityScore = $agilityScore;
         return $this;
@@ -781,20 +781,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAgilityScoreRank() : int
+    public function getAgilityScoreRank() : ?int
     {
         return $this->agilityScoreRank;
     }
     /**
      * 
      *
-     * @param int $agilityScoreRank
+     * @param int|null $agilityScoreRank
      *
      * @return self
      */
-    public function setAgilityScoreRank(int $agilityScoreRank) : self
+    public function setAgilityScoreRank(?int $agilityScoreRank) : self
     {
         $this->agilityScoreRank = $agilityScoreRank;
         return $this;
@@ -802,20 +802,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getVerticalJump() : float
+    public function getVerticalJump() : ?float
     {
         return $this->verticalJump;
     }
     /**
      * 
      *
-     * @param float $verticalJump
+     * @param float|null $verticalJump
      *
      * @return self
      */
-    public function setVerticalJump(float $verticalJump) : self
+    public function setVerticalJump(?float $verticalJump) : self
     {
         $this->verticalJump = $verticalJump;
         return $this;
@@ -823,20 +823,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getVerticalJumpRank() : int
+    public function getVerticalJumpRank() : ?int
     {
         return $this->verticalJumpRank;
     }
     /**
      * 
      *
-     * @param int $verticalJumpRank
+     * @param int|null $verticalJumpRank
      *
      * @return self
      */
-    public function setVerticalJumpRank(int $verticalJumpRank) : self
+    public function setVerticalJumpRank(?int $verticalJumpRank) : self
     {
         $this->verticalJumpRank = $verticalJumpRank;
         return $this;
@@ -844,20 +844,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBroadJump() : float
+    public function getBroadJump() : ?float
     {
         return $this->broadJump;
     }
     /**
      * 
      *
-     * @param float $broadJump
+     * @param float|null $broadJump
      *
      * @return self
      */
-    public function setBroadJump(float $broadJump) : self
+    public function setBroadJump(?float $broadJump) : self
     {
         $this->broadJump = $broadJump;
         return $this;
@@ -865,20 +865,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBroadJumpRank() : int
+    public function getBroadJumpRank() : ?int
     {
         return $this->broadJumpRank;
     }
     /**
      * 
      *
-     * @param int $broadJumpRank
+     * @param int|null $broadJumpRank
      *
      * @return self
      */
-    public function setBroadJumpRank(int $broadJumpRank) : self
+    public function setBroadJumpRank(?int $broadJumpRank) : self
     {
         $this->broadJumpRank = $broadJumpRank;
         return $this;
@@ -886,20 +886,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBurstScore() : float
+    public function getBurstScore() : ?float
     {
         return $this->burstScore;
     }
     /**
      * 
      *
-     * @param float $burstScore
+     * @param float|null $burstScore
      *
      * @return self
      */
-    public function setBurstScore(float $burstScore) : self
+    public function setBurstScore(?float $burstScore) : self
     {
         $this->burstScore = $burstScore;
         return $this;
@@ -907,20 +907,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBurstScoreRank() : int
+    public function getBurstScoreRank() : ?int
     {
         return $this->burstScoreRank;
     }
     /**
      * 
      *
-     * @param int $burstScoreRank
+     * @param int|null $burstScoreRank
      *
      * @return self
      */
-    public function setBurstScoreRank(int $burstScoreRank) : self
+    public function setBurstScoreRank(?int $burstScoreRank) : self
     {
         $this->burstScoreRank = $burstScoreRank;
         return $this;
@@ -928,20 +928,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSPARQx() : float
+    public function getSPARQx() : ?float
     {
         return $this->sPARQx;
     }
     /**
      * 
      *
-     * @param float $sPARQx
+     * @param float|null $sPARQx
      *
      * @return self
      */
-    public function setSPARQx(float $sPARQx) : self
+    public function setSPARQx(?float $sPARQx) : self
     {
         $this->sPARQx = $sPARQx;
         return $this;
@@ -949,20 +949,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSPARQxRank() : int
+    public function getSPARQxRank() : ?int
     {
         return $this->sPARQxRank;
     }
     /**
      * 
      *
-     * @param int $sPARQxRank
+     * @param int|null $sPARQxRank
      *
      * @return self
      */
-    public function setSPARQxRank(int $sPARQxRank) : self
+    public function setSPARQxRank(?int $sPARQxRank) : self
     {
         $this->sPARQxRank = $sPARQxRank;
         return $this;
@@ -970,20 +970,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAthleticismScore() : float
+    public function getAthleticismScore() : ?float
     {
         return $this->athleticismScore;
     }
     /**
      * 
      *
-     * @param float $athleticismScore
+     * @param float|null $athleticismScore
      *
      * @return self
      */
-    public function setAthleticismScore(float $athleticismScore) : self
+    public function setAthleticismScore(?float $athleticismScore) : self
     {
         $this->athleticismScore = $athleticismScore;
         return $this;
@@ -991,20 +991,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAthleticismScoreRank() : int
+    public function getAthleticismScoreRank() : ?int
     {
         return $this->athleticismScoreRank;
     }
     /**
      * 
      *
-     * @param int $athleticismScoreRank
+     * @param int|null $athleticismScoreRank
      *
      * @return self
      */
-    public function setAthleticismScoreRank(int $athleticismScoreRank) : self
+    public function setAthleticismScoreRank(?int $athleticismScoreRank) : self
     {
         $this->athleticismScoreRank = $athleticismScoreRank;
         return $this;
@@ -1012,20 +1012,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSpeedScore() : float
+    public function getSpeedScore() : ?float
     {
         return $this->speedScore;
     }
     /**
      * 
      *
-     * @param float $speedScore
+     * @param float|null $speedScore
      *
      * @return self
      */
-    public function setSpeedScore(float $speedScore) : self
+    public function setSpeedScore(?float $speedScore) : self
     {
         $this->speedScore = $speedScore;
         return $this;
@@ -1033,20 +1033,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSpeedScoreRank() : int
+    public function getSpeedScoreRank() : ?int
     {
         return $this->speedScoreRank;
     }
     /**
      * 
      *
-     * @param int $speedScoreRank
+     * @param int|null $speedScoreRank
      *
      * @return self
      */
-    public function setSpeedScoreRank(int $speedScoreRank) : self
+    public function setSpeedScoreRank(?int $speedScoreRank) : self
     {
         $this->speedScoreRank = $speedScoreRank;
         return $this;
@@ -1054,20 +1054,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getThrowVelocity() : float
+    public function getThrowVelocity() : ?float
     {
         return $this->throwVelocity;
     }
     /**
      * 
      *
-     * @param float $throwVelocity
+     * @param float|null $throwVelocity
      *
      * @return self
      */
-    public function setThrowVelocity(float $throwVelocity) : self
+    public function setThrowVelocity(?float $throwVelocity) : self
     {
         $this->throwVelocity = $throwVelocity;
         return $this;
@@ -1075,20 +1075,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getThrowVelocityRank() : int
+    public function getThrowVelocityRank() : ?int
     {
         return $this->throwVelocityRank;
     }
     /**
      * 
      *
-     * @param int $throwVelocityRank
+     * @param int|null $throwVelocityRank
      *
      * @return self
      */
-    public function setThrowVelocityRank(int $throwVelocityRank) : self
+    public function setThrowVelocityRank(?int $throwVelocityRank) : self
     {
         $this->throwVelocityRank = $throwVelocityRank;
         return $this;
@@ -1096,20 +1096,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getWonderlicScore() : float
+    public function getWonderlicScore() : ?float
     {
         return $this->wonderlicScore;
     }
     /**
      * 
      *
-     * @param float $wonderlicScore
+     * @param float|null $wonderlicScore
      *
      * @return self
      */
-    public function setWonderlicScore(float $wonderlicScore) : self
+    public function setWonderlicScore(?float $wonderlicScore) : self
     {
         $this->wonderlicScore = $wonderlicScore;
         return $this;
@@ -1117,20 +1117,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWonderlicScoreRank() : int
+    public function getWonderlicScoreRank() : ?int
     {
         return $this->wonderlicScoreRank;
     }
     /**
      * 
      *
-     * @param int $wonderlicScoreRank
+     * @param int|null $wonderlicScoreRank
      *
      * @return self
      */
-    public function setWonderlicScoreRank(int $wonderlicScoreRank) : self
+    public function setWonderlicScoreRank(?int $wonderlicScoreRank) : self
     {
         $this->wonderlicScoreRank = $wonderlicScoreRank;
         return $this;
@@ -1138,20 +1138,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getHeightAdjustedSpeedScore() : float
+    public function getHeightAdjustedSpeedScore() : ?float
     {
         return $this->heightAdjustedSpeedScore;
     }
     /**
      * 
      *
-     * @param float $heightAdjustedSpeedScore
+     * @param float|null $heightAdjustedSpeedScore
      *
      * @return self
      */
-    public function setHeightAdjustedSpeedScore(float $heightAdjustedSpeedScore) : self
+    public function setHeightAdjustedSpeedScore(?float $heightAdjustedSpeedScore) : self
     {
         $this->heightAdjustedSpeedScore = $heightAdjustedSpeedScore;
         return $this;
@@ -1159,20 +1159,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHeightAdjustedSpeedScoreRank() : int
+    public function getHeightAdjustedSpeedScoreRank() : ?int
     {
         return $this->heightAdjustedSpeedScoreRank;
     }
     /**
      * 
      *
-     * @param int $heightAdjustedSpeedScoreRank
+     * @param int|null $heightAdjustedSpeedScoreRank
      *
      * @return self
      */
-    public function setHeightAdjustedSpeedScoreRank(int $heightAdjustedSpeedScoreRank) : self
+    public function setHeightAdjustedSpeedScoreRank(?int $heightAdjustedSpeedScoreRank) : self
     {
         $this->heightAdjustedSpeedScoreRank = $heightAdjustedSpeedScoreRank;
         return $this;
@@ -1180,20 +1180,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getCatchRadius() : float
+    public function getCatchRadius() : ?float
     {
         return $this->catchRadius;
     }
     /**
      * 
      *
-     * @param float $catchRadius
+     * @param float|null $catchRadius
      *
      * @return self
      */
-    public function setCatchRadius(float $catchRadius) : self
+    public function setCatchRadius(?float $catchRadius) : self
     {
         $this->catchRadius = $catchRadius;
         return $this;
@@ -1201,20 +1201,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCatchRadiusRank() : int
+    public function getCatchRadiusRank() : ?int
     {
         return $this->catchRadiusRank;
     }
     /**
      * 
      *
-     * @param int $catchRadiusRank
+     * @param int|null $catchRadiusRank
      *
      * @return self
      */
-    public function setCatchRadiusRank(int $catchRadiusRank) : self
+    public function setCatchRadiusRank(?int $catchRadiusRank) : self
     {
         $this->catchRadiusRank = $catchRadiusRank;
         return $this;
@@ -1222,20 +1222,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getBenchPress() : float
+    public function getBenchPress() : ?float
     {
         return $this->benchPress;
     }
     /**
      * 
      *
-     * @param float $benchPress
+     * @param float|null $benchPress
      *
      * @return self
      */
-    public function setBenchPress(float $benchPress) : self
+    public function setBenchPress(?float $benchPress) : self
     {
         $this->benchPress = $benchPress;
         return $this;
@@ -1243,20 +1243,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getBenchPressRank() : int
+    public function getBenchPressRank() : ?int
     {
         return $this->benchPressRank;
     }
     /**
      * 
      *
-     * @param int $benchPressRank
+     * @param int|null $benchPressRank
      *
      * @return self
      */
-    public function setBenchPressRank(int $benchPressRank) : self
+    public function setBenchPressRank(?int $benchPressRank) : self
     {
         $this->benchPressRank = $benchPressRank;
         return $this;
@@ -1264,20 +1264,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPlaymakingRadius() : float
+    public function getPlaymakingRadius() : ?float
     {
         return $this->playmakingRadius;
     }
     /**
      * 
      *
-     * @param float $playmakingRadius
+     * @param float|null $playmakingRadius
      *
      * @return self
      */
-    public function setPlaymakingRadius(float $playmakingRadius) : self
+    public function setPlaymakingRadius(?float $playmakingRadius) : self
     {
         $this->playmakingRadius = $playmakingRadius;
         return $this;
@@ -1285,20 +1285,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlaymakingRadiusRank() : int
+    public function getPlaymakingRadiusRank() : ?int
     {
         return $this->playmakingRadiusRank;
     }
     /**
      * 
      *
-     * @param int $playmakingRadiusRank
+     * @param int|null $playmakingRadiusRank
      *
      * @return self
      */
-    public function setPlaymakingRadiusRank(int $playmakingRadiusRank) : self
+    public function setPlaymakingRadiusRank(?int $playmakingRadiusRank) : self
     {
         $this->playmakingRadiusRank = $playmakingRadiusRank;
         return $this;
@@ -1306,20 +1306,20 @@ class AdvancedPlayer
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getHighlightClip() : string
+    public function getHighlightClip() : ?string
     {
         return $this->highlightClip;
     }
     /**
      * 
      *
-     * @param string $highlightClip
+     * @param string|null $highlightClip
      *
      * @return self
      */
-    public function setHighlightClip(string $highlightClip) : self
+    public function setHighlightClip(?string $highlightClip) : self
     {
         $this->highlightClip = $highlightClip;
         return $this;

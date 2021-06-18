@@ -13,31 +13,31 @@ class PlayerLine
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $position;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $playerID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $shoots;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lineType;
     /**
@@ -64,20 +64,20 @@ class PlayerLine
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getPosition() : string
+    public function getPosition() : ?string
     {
         return $this->position;
     }
     /**
      * 
      *
-     * @param string $position
+     * @param string|null $position
      *
      * @return self
      */
-    public function setPosition(string $position) : self
+    public function setPosition(?string $position) : self
     {
         $this->position = $position;
         return $this;
@@ -85,20 +85,20 @@ class PlayerLine
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getPlayerID() : int
+    public function getPlayerID() : ?int
     {
         return $this->playerID;
     }
     /**
      * 
      *
-     * @param int $playerID
+     * @param int|null $playerID
      *
      * @return self
      */
-    public function setPlayerID(int $playerID) : self
+    public function setPlayerID(?int $playerID) : self
     {
         $this->playerID = $playerID;
         return $this;
@@ -106,20 +106,20 @@ class PlayerLine
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -127,20 +127,20 @@ class PlayerLine
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getShoots() : string
+    public function getShoots() : ?string
     {
         return $this->shoots;
     }
     /**
      * 
      *
-     * @param string $shoots
+     * @param string|null $shoots
      *
      * @return self
      */
-    public function setShoots(string $shoots) : self
+    public function setShoots(?string $shoots) : self
     {
         $this->shoots = $shoots;
         return $this;
@@ -148,20 +148,20 @@ class PlayerLine
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLineType() : string
+    public function getLineType() : ?string
     {
         return $this->lineType;
     }
     /**
      * 
      *
-     * @param string $lineType
+     * @param string|null $lineType
      *
      * @return self
      */
-    public function setLineType(string $lineType) : self
+    public function setLineType(?string $lineType) : self
     {
         $this->lineType = $lineType;
         return $this;

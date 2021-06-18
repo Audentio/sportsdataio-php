@@ -39,8 +39,11 @@ class BettingEntityMetadataNormalizer implements DenormalizerInterface, Normaliz
         if (\array_key_exists('RecordId', $data)) {
             $object->setRecordId($data['RecordId']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         return $object;
     }

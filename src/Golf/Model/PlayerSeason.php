@@ -25,49 +25,49 @@ class PlayerSeason
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $worldGolfRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $worldGolfRankLastWeek;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $events;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $averagePoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $pointsLost;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $pointsGained;
     /**
@@ -136,20 +136,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -157,20 +157,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWorldGolfRank() : int
+    public function getWorldGolfRank() : ?int
     {
         return $this->worldGolfRank;
     }
     /**
      * 
      *
-     * @param int $worldGolfRank
+     * @param int|null $worldGolfRank
      *
      * @return self
      */
-    public function setWorldGolfRank(int $worldGolfRank) : self
+    public function setWorldGolfRank(?int $worldGolfRank) : self
     {
         $this->worldGolfRank = $worldGolfRank;
         return $this;
@@ -178,20 +178,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWorldGolfRankLastWeek() : int
+    public function getWorldGolfRankLastWeek() : ?int
     {
         return $this->worldGolfRankLastWeek;
     }
     /**
      * 
      *
-     * @param int $worldGolfRankLastWeek
+     * @param int|null $worldGolfRankLastWeek
      *
      * @return self
      */
-    public function setWorldGolfRankLastWeek(int $worldGolfRankLastWeek) : self
+    public function setWorldGolfRankLastWeek(?int $worldGolfRankLastWeek) : self
     {
         $this->worldGolfRankLastWeek = $worldGolfRankLastWeek;
         return $this;
@@ -199,20 +199,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getEvents() : int
+    public function getEvents() : ?int
     {
         return $this->events;
     }
     /**
      * 
      *
-     * @param int $events
+     * @param int|null $events
      *
      * @return self
      */
-    public function setEvents(int $events) : self
+    public function setEvents(?int $events) : self
     {
         $this->events = $events;
         return $this;
@@ -220,20 +220,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAveragePoints() : float
+    public function getAveragePoints() : ?float
     {
         return $this->averagePoints;
     }
     /**
      * 
      *
-     * @param float $averagePoints
+     * @param float|null $averagePoints
      *
      * @return self
      */
-    public function setAveragePoints(float $averagePoints) : self
+    public function setAveragePoints(?float $averagePoints) : self
     {
         $this->averagePoints = $averagePoints;
         return $this;
@@ -241,20 +241,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalPoints() : float
+    public function getTotalPoints() : ?float
     {
         return $this->totalPoints;
     }
     /**
      * 
      *
-     * @param float $totalPoints
+     * @param float|null $totalPoints
      *
      * @return self
      */
-    public function setTotalPoints(float $totalPoints) : self
+    public function setTotalPoints(?float $totalPoints) : self
     {
         $this->totalPoints = $totalPoints;
         return $this;
@@ -262,20 +262,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPointsLost() : float
+    public function getPointsLost() : ?float
     {
         return $this->pointsLost;
     }
     /**
      * 
      *
-     * @param float $pointsLost
+     * @param float|null $pointsLost
      *
      * @return self
      */
-    public function setPointsLost(float $pointsLost) : self
+    public function setPointsLost(?float $pointsLost) : self
     {
         $this->pointsLost = $pointsLost;
         return $this;
@@ -283,20 +283,20 @@ class PlayerSeason
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPointsGained() : float
+    public function getPointsGained() : ?float
     {
         return $this->pointsGained;
     }
     /**
      * 
      *
-     * @param float $pointsGained
+     * @param float|null $pointsGained
      *
      * @return self
      */
-    public function setPointsGained(float $pointsGained) : self
+    public function setPointsGained(?float $pointsGained) : self
     {
         $this->pointsGained = $pointsGained;
         return $this;

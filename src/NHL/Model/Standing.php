@@ -25,103 +25,103 @@ class Standing
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $conference;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $division;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $wins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $losses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $overtimeLosses;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $percentage;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $divisionWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $divisionLosses;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $shutoutWins;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $conferenceRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $divisionRank;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $globalTeamID;
     /**
@@ -190,20 +190,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey() : string
+    public function getKey() : ?string
     {
         return $this->key;
     }
     /**
      * 
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key) : self
+    public function setKey(?string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -211,20 +211,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity() : string
+    public function getCity() : ?string
     {
         return $this->city;
     }
     /**
      * 
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city) : self
+    public function setCity(?string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -232,20 +232,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -253,20 +253,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getConference() : string
+    public function getConference() : ?string
     {
         return $this->conference;
     }
     /**
      * 
      *
-     * @param string $conference
+     * @param string|null $conference
      *
      * @return self
      */
-    public function setConference(string $conference) : self
+    public function setConference(?string $conference) : self
     {
         $this->conference = $conference;
         return $this;
@@ -274,20 +274,20 @@ class Standing
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDivision() : string
+    public function getDivision() : ?string
     {
         return $this->division;
     }
     /**
      * 
      *
-     * @param string $division
+     * @param string|null $division
      *
      * @return self
      */
-    public function setDivision(string $division) : self
+    public function setDivision(?string $division) : self
     {
         $this->division = $division;
         return $this;
@@ -295,20 +295,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getWins() : int
+    public function getWins() : ?int
     {
         return $this->wins;
     }
     /**
      * 
      *
-     * @param int $wins
+     * @param int|null $wins
      *
      * @return self
      */
-    public function setWins(int $wins) : self
+    public function setWins(?int $wins) : self
     {
         $this->wins = $wins;
         return $this;
@@ -316,20 +316,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getLosses() : int
+    public function getLosses() : ?int
     {
         return $this->losses;
     }
     /**
      * 
      *
-     * @param int $losses
+     * @param int|null $losses
      *
      * @return self
      */
-    public function setLosses(int $losses) : self
+    public function setLosses(?int $losses) : self
     {
         $this->losses = $losses;
         return $this;
@@ -337,20 +337,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOvertimeLosses() : int
+    public function getOvertimeLosses() : ?int
     {
         return $this->overtimeLosses;
     }
     /**
      * 
      *
-     * @param int $overtimeLosses
+     * @param int|null $overtimeLosses
      *
      * @return self
      */
-    public function setOvertimeLosses(int $overtimeLosses) : self
+    public function setOvertimeLosses(?int $overtimeLosses) : self
     {
         $this->overtimeLosses = $overtimeLosses;
         return $this;
@@ -358,20 +358,20 @@ class Standing
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getPercentage() : float
+    public function getPercentage() : ?float
     {
         return $this->percentage;
     }
     /**
      * 
      *
-     * @param float $percentage
+     * @param float|null $percentage
      *
      * @return self
      */
-    public function setPercentage(float $percentage) : self
+    public function setPercentage(?float $percentage) : self
     {
         $this->percentage = $percentage;
         return $this;
@@ -379,20 +379,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceWins() : int
+    public function getConferenceWins() : ?int
     {
         return $this->conferenceWins;
     }
     /**
      * 
      *
-     * @param int $conferenceWins
+     * @param int|null $conferenceWins
      *
      * @return self
      */
-    public function setConferenceWins(int $conferenceWins) : self
+    public function setConferenceWins(?int $conferenceWins) : self
     {
         $this->conferenceWins = $conferenceWins;
         return $this;
@@ -400,20 +400,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceLosses() : int
+    public function getConferenceLosses() : ?int
     {
         return $this->conferenceLosses;
     }
     /**
      * 
      *
-     * @param int $conferenceLosses
+     * @param int|null $conferenceLosses
      *
      * @return self
      */
-    public function setConferenceLosses(int $conferenceLosses) : self
+    public function setConferenceLosses(?int $conferenceLosses) : self
     {
         $this->conferenceLosses = $conferenceLosses;
         return $this;
@@ -421,20 +421,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDivisionWins() : int
+    public function getDivisionWins() : ?int
     {
         return $this->divisionWins;
     }
     /**
      * 
      *
-     * @param int $divisionWins
+     * @param int|null $divisionWins
      *
      * @return self
      */
-    public function setDivisionWins(int $divisionWins) : self
+    public function setDivisionWins(?int $divisionWins) : self
     {
         $this->divisionWins = $divisionWins;
         return $this;
@@ -442,20 +442,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDivisionLosses() : int
+    public function getDivisionLosses() : ?int
     {
         return $this->divisionLosses;
     }
     /**
      * 
      *
-     * @param int $divisionLosses
+     * @param int|null $divisionLosses
      *
      * @return self
      */
-    public function setDivisionLosses(int $divisionLosses) : self
+    public function setDivisionLosses(?int $divisionLosses) : self
     {
         $this->divisionLosses = $divisionLosses;
         return $this;
@@ -463,20 +463,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getShutoutWins() : int
+    public function getShutoutWins() : ?int
     {
         return $this->shutoutWins;
     }
     /**
      * 
      *
-     * @param int $shutoutWins
+     * @param int|null $shutoutWins
      *
      * @return self
      */
-    public function setShutoutWins(int $shutoutWins) : self
+    public function setShutoutWins(?int $shutoutWins) : self
     {
         $this->shutoutWins = $shutoutWins;
         return $this;
@@ -484,20 +484,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getConferenceRank() : int
+    public function getConferenceRank() : ?int
     {
         return $this->conferenceRank;
     }
     /**
      * 
      *
-     * @param int $conferenceRank
+     * @param int|null $conferenceRank
      *
      * @return self
      */
-    public function setConferenceRank(int $conferenceRank) : self
+    public function setConferenceRank(?int $conferenceRank) : self
     {
         $this->conferenceRank = $conferenceRank;
         return $this;
@@ -505,20 +505,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getDivisionRank() : int
+    public function getDivisionRank() : ?int
     {
         return $this->divisionRank;
     }
     /**
      * 
      *
-     * @param int $divisionRank
+     * @param int|null $divisionRank
      *
      * @return self
      */
-    public function setDivisionRank(int $divisionRank) : self
+    public function setDivisionRank(?int $divisionRank) : self
     {
         $this->divisionRank = $divisionRank;
         return $this;
@@ -526,20 +526,20 @@ class Standing
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getGlobalTeamID() : int
+    public function getGlobalTeamID() : ?int
     {
         return $this->globalTeamID;
     }
     /**
      * 
      *
-     * @param int $globalTeamID
+     * @param int|null $globalTeamID
      *
      * @return self
      */
-    public function setGlobalTeamID(int $globalTeamID) : self
+    public function setGlobalTeamID(?int $globalTeamID) : self
     {
         $this->globalTeamID = $globalTeamID;
         return $this;

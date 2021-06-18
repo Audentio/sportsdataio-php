@@ -48,8 +48,11 @@ class CanceledMembershipNormalizer implements DenormalizerInterface, NormalizerI
         if (\array_key_exists('PlayerID', $data)) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('Created', $data)) {
+        if (\array_key_exists('Created', $data) && $data['Created'] !== null) {
             $object->setCreated($data['Created']);
+        }
+        elseif (\array_key_exists('Created', $data) && $data['Created'] === null) {
+            $object->setCreated(null);
         }
         return $object;
     }

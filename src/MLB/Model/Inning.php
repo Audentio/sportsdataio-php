@@ -25,13 +25,13 @@ class Inning
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $awayTeamRuns;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $homeTeamRuns;
     /**
@@ -100,20 +100,20 @@ class Inning
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getAwayTeamRuns() : int
+    public function getAwayTeamRuns() : ?int
     {
         return $this->awayTeamRuns;
     }
     /**
      * 
      *
-     * @param int $awayTeamRuns
+     * @param int|null $awayTeamRuns
      *
      * @return self
      */
-    public function setAwayTeamRuns(int $awayTeamRuns) : self
+    public function setAwayTeamRuns(?int $awayTeamRuns) : self
     {
         $this->awayTeamRuns = $awayTeamRuns;
         return $this;
@@ -121,20 +121,20 @@ class Inning
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getHomeTeamRuns() : int
+    public function getHomeTeamRuns() : ?int
     {
         return $this->homeTeamRuns;
     }
     /**
      * 
      *
-     * @param int $homeTeamRuns
+     * @param int|null $homeTeamRuns
      *
      * @return self
      */
-    public function setHomeTeamRuns(int $homeTeamRuns) : self
+    public function setHomeTeamRuns(?int $homeTeamRuns) : self
     {
         $this->homeTeamRuns = $homeTeamRuns;
         return $this;

@@ -42,29 +42,53 @@ class DfsSlatePlayerNormalizer implements DenormalizerInterface, NormalizerInter
         if (\array_key_exists('SlateID', $data)) {
             $object->setSlateID($data['SlateID']);
         }
-        if (\array_key_exists('SlateTournamentID', $data)) {
+        if (\array_key_exists('SlateTournamentID', $data) && $data['SlateTournamentID'] !== null) {
             $object->setSlateTournamentID($data['SlateTournamentID']);
         }
-        if (\array_key_exists('PlayerID', $data)) {
+        elseif (\array_key_exists('SlateTournamentID', $data) && $data['SlateTournamentID'] === null) {
+            $object->setSlateTournamentID(null);
+        }
+        if (\array_key_exists('PlayerID', $data) && $data['PlayerID'] !== null) {
             $object->setPlayerID($data['PlayerID']);
         }
-        if (\array_key_exists('PlayerTournamentProjectionID', $data)) {
+        elseif (\array_key_exists('PlayerID', $data) && $data['PlayerID'] === null) {
+            $object->setPlayerID(null);
+        }
+        if (\array_key_exists('PlayerTournamentProjectionID', $data) && $data['PlayerTournamentProjectionID'] !== null) {
             $object->setPlayerTournamentProjectionID($data['PlayerTournamentProjectionID']);
         }
-        if (\array_key_exists('OperatorPlayerID', $data)) {
+        elseif (\array_key_exists('PlayerTournamentProjectionID', $data) && $data['PlayerTournamentProjectionID'] === null) {
+            $object->setPlayerTournamentProjectionID(null);
+        }
+        if (\array_key_exists('OperatorPlayerID', $data) && $data['OperatorPlayerID'] !== null) {
             $object->setOperatorPlayerID($data['OperatorPlayerID']);
         }
-        if (\array_key_exists('OperatorSlatePlayerID', $data)) {
+        elseif (\array_key_exists('OperatorPlayerID', $data) && $data['OperatorPlayerID'] === null) {
+            $object->setOperatorPlayerID(null);
+        }
+        if (\array_key_exists('OperatorSlatePlayerID', $data) && $data['OperatorSlatePlayerID'] !== null) {
             $object->setOperatorSlatePlayerID($data['OperatorSlatePlayerID']);
         }
-        if (\array_key_exists('OperatorPlayerName', $data)) {
+        elseif (\array_key_exists('OperatorSlatePlayerID', $data) && $data['OperatorSlatePlayerID'] === null) {
+            $object->setOperatorSlatePlayerID(null);
+        }
+        if (\array_key_exists('OperatorPlayerName', $data) && $data['OperatorPlayerName'] !== null) {
             $object->setOperatorPlayerName($data['OperatorPlayerName']);
         }
-        if (\array_key_exists('OperatorPosition', $data)) {
+        elseif (\array_key_exists('OperatorPlayerName', $data) && $data['OperatorPlayerName'] === null) {
+            $object->setOperatorPlayerName(null);
+        }
+        if (\array_key_exists('OperatorPosition', $data) && $data['OperatorPosition'] !== null) {
             $object->setOperatorPosition($data['OperatorPosition']);
         }
-        if (\array_key_exists('OperatorSalary', $data)) {
+        elseif (\array_key_exists('OperatorPosition', $data) && $data['OperatorPosition'] === null) {
+            $object->setOperatorPosition(null);
+        }
+        if (\array_key_exists('OperatorSalary', $data) && $data['OperatorSalary'] !== null) {
             $object->setOperatorSalary($data['OperatorSalary']);
+        }
+        elseif (\array_key_exists('OperatorSalary', $data) && $data['OperatorSalary'] === null) {
+            $object->setOperatorSalary(null);
         }
         if (\array_key_exists('OperatorRosterSlots', $data)) {
             $values = array();
@@ -73,8 +97,11 @@ class DfsSlatePlayerNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setOperatorRosterSlots($values);
         }
-        if (\array_key_exists('RemovedByOperator', $data)) {
+        if (\array_key_exists('RemovedByOperator', $data) && $data['RemovedByOperator'] !== null) {
             $object->setRemovedByOperator($data['RemovedByOperator']);
+        }
+        elseif (\array_key_exists('RemovedByOperator', $data) && $data['RemovedByOperator'] === null) {
+            $object->setRemovedByOperator(null);
         }
         return $object;
     }

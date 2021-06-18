@@ -13,7 +13,7 @@ class Conference
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -25,13 +25,13 @@ class Conference
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $conferenceName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $divisionName;
     /**
@@ -58,20 +58,20 @@ class Conference
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -100,20 +100,20 @@ class Conference
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getConferenceName() : string
+    public function getConferenceName() : ?string
     {
         return $this->conferenceName;
     }
     /**
      * 
      *
-     * @param string $conferenceName
+     * @param string|null $conferenceName
      *
      * @return self
      */
-    public function setConferenceName(string $conferenceName) : self
+    public function setConferenceName(?string $conferenceName) : self
     {
         $this->conferenceName = $conferenceName;
         return $this;
@@ -121,20 +121,20 @@ class Conference
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDivisionName() : string
+    public function getDivisionName() : ?string
     {
         return $this->divisionName;
     }
     /**
      * 
      *
-     * @param string $divisionName
+     * @param string|null $divisionName
      *
      * @return self
      */
-    public function setDivisionName(string $divisionName) : self
+    public function setDivisionName(?string $divisionName) : self
     {
         $this->divisionName = $divisionName;
         return $this;

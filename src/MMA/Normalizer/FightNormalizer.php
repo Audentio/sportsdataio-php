@@ -39,35 +39,65 @@ class FightNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('FightId', $data)) {
             $object->setFightId($data['FightId']);
         }
-        if (\array_key_exists('Order', $data)) {
+        if (\array_key_exists('Order', $data) && $data['Order'] !== null) {
             $object->setOrder($data['Order']);
         }
-        if (\array_key_exists('Status', $data)) {
+        elseif (\array_key_exists('Order', $data) && $data['Order'] === null) {
+            $object->setOrder(null);
+        }
+        if (\array_key_exists('Status', $data) && $data['Status'] !== null) {
             $object->setStatus($data['Status']);
         }
-        if (\array_key_exists('WeightClass', $data)) {
+        elseif (\array_key_exists('Status', $data) && $data['Status'] === null) {
+            $object->setStatus(null);
+        }
+        if (\array_key_exists('WeightClass', $data) && $data['WeightClass'] !== null) {
             $object->setWeightClass($data['WeightClass']);
         }
-        if (\array_key_exists('CardSegment', $data)) {
+        elseif (\array_key_exists('WeightClass', $data) && $data['WeightClass'] === null) {
+            $object->setWeightClass(null);
+        }
+        if (\array_key_exists('CardSegment', $data) && $data['CardSegment'] !== null) {
             $object->setCardSegment($data['CardSegment']);
         }
-        if (\array_key_exists('Referee', $data)) {
+        elseif (\array_key_exists('CardSegment', $data) && $data['CardSegment'] === null) {
+            $object->setCardSegment(null);
+        }
+        if (\array_key_exists('Referee', $data) && $data['Referee'] !== null) {
             $object->setReferee($data['Referee']);
         }
-        if (\array_key_exists('Rounds', $data)) {
+        elseif (\array_key_exists('Referee', $data) && $data['Referee'] === null) {
+            $object->setReferee(null);
+        }
+        if (\array_key_exists('Rounds', $data) && $data['Rounds'] !== null) {
             $object->setRounds($data['Rounds']);
         }
-        if (\array_key_exists('ResultClock', $data)) {
+        elseif (\array_key_exists('Rounds', $data) && $data['Rounds'] === null) {
+            $object->setRounds(null);
+        }
+        if (\array_key_exists('ResultClock', $data) && $data['ResultClock'] !== null) {
             $object->setResultClock($data['ResultClock']);
         }
-        if (\array_key_exists('ResultRound', $data)) {
+        elseif (\array_key_exists('ResultClock', $data) && $data['ResultClock'] === null) {
+            $object->setResultClock(null);
+        }
+        if (\array_key_exists('ResultRound', $data) && $data['ResultRound'] !== null) {
             $object->setResultRound($data['ResultRound']);
         }
-        if (\array_key_exists('ResultType', $data)) {
+        elseif (\array_key_exists('ResultRound', $data) && $data['ResultRound'] === null) {
+            $object->setResultRound(null);
+        }
+        if (\array_key_exists('ResultType', $data) && $data['ResultType'] !== null) {
             $object->setResultType($data['ResultType']);
         }
-        if (\array_key_exists('WinnerId', $data)) {
+        elseif (\array_key_exists('ResultType', $data) && $data['ResultType'] === null) {
+            $object->setResultType(null);
+        }
+        if (\array_key_exists('WinnerId', $data) && $data['WinnerId'] !== null) {
             $object->setWinnerId($data['WinnerId']);
+        }
+        elseif (\array_key_exists('WinnerId', $data) && $data['WinnerId'] === null) {
+            $object->setWinnerId(null);
         }
         if (\array_key_exists('Fighters', $data)) {
             $values = array();
@@ -76,8 +106,11 @@ class FightNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             }
             $object->setFighters($values);
         }
-        if (\array_key_exists('Active', $data)) {
+        if (\array_key_exists('Active', $data) && $data['Active'] !== null) {
             $object->setActive($data['Active']);
+        }
+        elseif (\array_key_exists('Active', $data) && $data['Active'] === null) {
+            $object->setActive(null);
         }
         return $object;
     }

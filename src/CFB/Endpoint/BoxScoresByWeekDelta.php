@@ -4,31 +4,31 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class BoxScoresByWeekDelta extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $week;
+    protected $season;
     protected $minutes;
+    protected $format;
     /**
     * 
     *
-    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-    * @param string $season 
-             Year of the season.
-             <br>Examples: <code>2015</code>, <code>2016</code>, etc.
-           
     * @param string $week 
              The week of the game(s).
              <br>Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc.
            
+    * @param string $season 
+             Year of the season.
+             <br>Examples: <code>2015</code>, <code>2016</code>, etc.
+           
     * @param string $minutes Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:
     <code>1</code> or <code>2</code>.
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $season, string $week, string $minutes)
+    public function __construct(string $week, string $season, string $minutes, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->week = $week;
+        $this->season = $season;
         $this->minutes = $minutes;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -37,7 +37,7 @@ class BoxScoresByWeekDelta extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoi
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{week}', '{minutes}'), array($this->format, $this->season, $this->week, $this->minutes), '/stats/{format}/BoxScoresByWeekDelta/{season}/{week}/{minutes}');
+        return str_replace(array('{week}', '{season}', '{minutes}', '{format}'), array($this->week, $this->season, $this->minutes, $this->format), '/stats/{format}/BoxScoresByWeekDelta/{season}/{week}/{minutes}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

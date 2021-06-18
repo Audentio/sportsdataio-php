@@ -4,21 +4,21 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class BettingTrendsByMatchup extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $team;
     protected $opponent;
+    protected $team;
+    protected $format;
     /**
      * 
      *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $team The abbreviation of the requested team. <br> Examples: <code>MIA</code>, <code>ND</code>, <code>PITT</code>, etc.
      * @param string $opponent The abbreviation of the requested opponent. <br> Examples: <code>MIA</code>, <code>ND</code>, <code>PITT</code>, etc.
+     * @param string $team The abbreviation of the requested team. <br> Examples: <code>MIA</code>, <code>ND</code>, <code>PITT</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      */
-    public function __construct(string $format = 'XML', string $team, string $opponent)
+    public function __construct(string $opponent, string $team, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->team = $team;
         $this->opponent = $opponent;
+        $this->team = $team;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -27,7 +27,7 @@ class BettingTrendsByMatchup extends \Sportsdata\API\CFB\Runtime\Client\BaseEndp
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{team}', '{opponent}'), array($this->format, $this->team, $this->opponent), '/odds/{format}/MatchupTrends/{team}/{opponent}');
+        return str_replace(array('{opponent}', '{team}', '{format}'), array($this->opponent, $this->team, $this->format), '/odds/{format}/MatchupTrends/{team}/{opponent}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

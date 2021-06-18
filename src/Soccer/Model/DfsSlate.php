@@ -13,55 +13,55 @@ class DfsSlate
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operator;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $operatorSlateID;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorDay;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorStartTime;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $numberOfGames;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isMultiDaySlate;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $removedByOperator;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $operatorGameType;
     /**
@@ -85,13 +85,13 @@ class DfsSlate
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $salaryCap;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $competitionId;
     /**
@@ -118,20 +118,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperator() : string
+    public function getOperator() : ?string
     {
         return $this->operator;
     }
     /**
      * 
      *
-     * @param string $operator
+     * @param string|null $operator
      *
      * @return self
      */
-    public function setOperator(string $operator) : self
+    public function setOperator(?string $operator) : self
     {
         $this->operator = $operator;
         return $this;
@@ -139,20 +139,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getOperatorSlateID() : int
+    public function getOperatorSlateID() : ?int
     {
         return $this->operatorSlateID;
     }
     /**
      * 
      *
-     * @param int $operatorSlateID
+     * @param int|null $operatorSlateID
      *
      * @return self
      */
-    public function setOperatorSlateID(int $operatorSlateID) : self
+    public function setOperatorSlateID(?int $operatorSlateID) : self
     {
         $this->operatorSlateID = $operatorSlateID;
         return $this;
@@ -160,20 +160,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorName() : string
+    public function getOperatorName() : ?string
     {
         return $this->operatorName;
     }
     /**
      * 
      *
-     * @param string $operatorName
+     * @param string|null $operatorName
      *
      * @return self
      */
-    public function setOperatorName(string $operatorName) : self
+    public function setOperatorName(?string $operatorName) : self
     {
         $this->operatorName = $operatorName;
         return $this;
@@ -181,20 +181,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorDay() : string
+    public function getOperatorDay() : ?string
     {
         return $this->operatorDay;
     }
     /**
      * 
      *
-     * @param string $operatorDay
+     * @param string|null $operatorDay
      *
      * @return self
      */
-    public function setOperatorDay(string $operatorDay) : self
+    public function setOperatorDay(?string $operatorDay) : self
     {
         $this->operatorDay = $operatorDay;
         return $this;
@@ -202,20 +202,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorStartTime() : string
+    public function getOperatorStartTime() : ?string
     {
         return $this->operatorStartTime;
     }
     /**
      * 
      *
-     * @param string $operatorStartTime
+     * @param string|null $operatorStartTime
      *
      * @return self
      */
-    public function setOperatorStartTime(string $operatorStartTime) : self
+    public function setOperatorStartTime(?string $operatorStartTime) : self
     {
         $this->operatorStartTime = $operatorStartTime;
         return $this;
@@ -223,20 +223,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumberOfGames() : int
+    public function getNumberOfGames() : ?int
     {
         return $this->numberOfGames;
     }
     /**
      * 
      *
-     * @param int $numberOfGames
+     * @param int|null $numberOfGames
      *
      * @return self
      */
-    public function setNumberOfGames(int $numberOfGames) : self
+    public function setNumberOfGames(?int $numberOfGames) : self
     {
         $this->numberOfGames = $numberOfGames;
         return $this;
@@ -244,20 +244,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsMultiDaySlate() : bool
+    public function getIsMultiDaySlate() : ?bool
     {
         return $this->isMultiDaySlate;
     }
     /**
      * 
      *
-     * @param bool $isMultiDaySlate
+     * @param bool|null $isMultiDaySlate
      *
      * @return self
      */
-    public function setIsMultiDaySlate(bool $isMultiDaySlate) : self
+    public function setIsMultiDaySlate(?bool $isMultiDaySlate) : self
     {
         $this->isMultiDaySlate = $isMultiDaySlate;
         return $this;
@@ -265,20 +265,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRemovedByOperator() : bool
+    public function getRemovedByOperator() : ?bool
     {
         return $this->removedByOperator;
     }
     /**
      * 
      *
-     * @param bool $removedByOperator
+     * @param bool|null $removedByOperator
      *
      * @return self
      */
-    public function setRemovedByOperator(bool $removedByOperator) : self
+    public function setRemovedByOperator(?bool $removedByOperator) : self
     {
         $this->removedByOperator = $removedByOperator;
         return $this;
@@ -286,20 +286,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getOperatorGameType() : string
+    public function getOperatorGameType() : ?string
     {
         return $this->operatorGameType;
     }
     /**
      * 
      *
-     * @param string $operatorGameType
+     * @param string|null $operatorGameType
      *
      * @return self
      */
-    public function setOperatorGameType(string $operatorGameType) : self
+    public function setOperatorGameType(?string $operatorGameType) : self
     {
         $this->operatorGameType = $operatorGameType;
         return $this;
@@ -370,20 +370,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getSalaryCap() : int
+    public function getSalaryCap() : ?int
     {
         return $this->salaryCap;
     }
     /**
      * 
      *
-     * @param int $salaryCap
+     * @param int|null $salaryCap
      *
      * @return self
      */
-    public function setSalaryCap(int $salaryCap) : self
+    public function setSalaryCap(?int $salaryCap) : self
     {
         $this->salaryCap = $salaryCap;
         return $this;
@@ -391,20 +391,20 @@ class DfsSlate
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCompetitionId() : int
+    public function getCompetitionId() : ?int
     {
         return $this->competitionId;
     }
     /**
      * 
      *
-     * @param int $competitionId
+     * @param int|null $competitionId
      *
      * @return self
      */
-    public function setCompetitionId(int $competitionId) : self
+    public function setCompetitionId(?int $competitionId) : self
     {
         $this->competitionId = $competitionId;
         return $this;

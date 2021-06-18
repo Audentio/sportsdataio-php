@@ -13,13 +13,13 @@ class ChampionInfo
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
@@ -46,20 +46,20 @@ class ChampionInfo
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getName() : string
+    public function getName() : ?string
     {
         return $this->name;
     }
     /**
      * 
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(?string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -67,20 +67,20 @@ class ChampionInfo
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle() : string
+    public function getTitle() : ?string
     {
         return $this->title;
     }
     /**
      * 
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title) : self
+    public function setTitle(?string $title) : self
     {
         $this->title = $title;
         return $this;

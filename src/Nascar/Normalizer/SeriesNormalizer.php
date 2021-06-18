@@ -39,8 +39,11 @@ class SeriesNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('SeriesID', $data)) {
             $object->setSeriesID($data['SeriesID']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
+        }
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
         }
         return $object;
     }

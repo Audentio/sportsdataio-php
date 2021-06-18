@@ -48,20 +48,35 @@ class RoundNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('SeasonType', $data)) {
             $object->setSeasonType($data['SeasonType']);
         }
-        if (\array_key_exists('Name', $data)) {
+        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
         }
-        if (\array_key_exists('Type', $data)) {
+        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+            $object->setName(null);
+        }
+        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);
         }
-        if (\array_key_exists('StartDate', $data)) {
+        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+            $object->setType(null);
+        }
+        if (\array_key_exists('StartDate', $data) && $data['StartDate'] !== null) {
             $object->setStartDate($data['StartDate']);
         }
-        if (\array_key_exists('EndDate', $data)) {
+        elseif (\array_key_exists('StartDate', $data) && $data['StartDate'] === null) {
+            $object->setStartDate(null);
+        }
+        if (\array_key_exists('EndDate', $data) && $data['EndDate'] !== null) {
             $object->setEndDate($data['EndDate']);
         }
-        if (\array_key_exists('CurrentWeek', $data)) {
+        elseif (\array_key_exists('EndDate', $data) && $data['EndDate'] === null) {
+            $object->setEndDate(null);
+        }
+        if (\array_key_exists('CurrentWeek', $data) && $data['CurrentWeek'] !== null) {
             $object->setCurrentWeek($data['CurrentWeek']);
+        }
+        elseif (\array_key_exists('CurrentWeek', $data) && $data['CurrentWeek'] === null) {
+            $object->setCurrentWeek(null);
         }
         if (\array_key_exists('CurrentRound', $data)) {
             $object->setCurrentRound($data['CurrentRound']);

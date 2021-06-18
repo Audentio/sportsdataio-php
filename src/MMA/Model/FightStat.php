@@ -7,176 +7,176 @@ class FightStat
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $fighterId;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $lastName;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $winner;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPoints;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $fantasyPointsDraftKings;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $knockdowns;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalStrikesAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $totalStrikesLanded;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sigStrikesAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $sigStrikesLanded;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $takedownsAttempted;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $takedownsLanded;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $takedownsSlams;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $takedownAccuracy;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $advances;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $reversals;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $submissions;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $slamRate;
     /**
      * 
      *
-     * @var float
+     * @var float|null
      */
     protected $timeInControl;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $firstRoundWin;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $secondRoundWin;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $thirdRoundWin;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $fourthRoundWin;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $fifthRoundWin;
     /**
      * 
      *
-     * @var bool
+     * @var bool|null
      */
     protected $decisionWin;
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getFighterId() : int
+    public function getFighterId() : ?int
     {
         return $this->fighterId;
     }
     /**
      * 
      *
-     * @param int $fighterId
+     * @param int|null $fighterId
      *
      * @return self
      */
-    public function setFighterId(int $fighterId) : self
+    public function setFighterId(?int $fighterId) : self
     {
         $this->fighterId = $fighterId;
         return $this;
@@ -184,20 +184,20 @@ class FightStat
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstName() : string
+    public function getFirstName() : ?string
     {
         return $this->firstName;
     }
     /**
      * 
      *
-     * @param string $firstName
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(?string $firstName) : self
     {
         $this->firstName = $firstName;
         return $this;
@@ -205,20 +205,20 @@ class FightStat
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastName() : string
+    public function getLastName() : ?string
     {
         return $this->lastName;
     }
     /**
      * 
      *
-     * @param string $lastName
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(?string $lastName) : self
     {
         $this->lastName = $lastName;
         return $this;
@@ -226,20 +226,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getWinner() : bool
+    public function getWinner() : ?bool
     {
         return $this->winner;
     }
     /**
      * 
      *
-     * @param bool $winner
+     * @param bool|null $winner
      *
      * @return self
      */
-    public function setWinner(bool $winner) : self
+    public function setWinner(?bool $winner) : self
     {
         $this->winner = $winner;
         return $this;
@@ -247,20 +247,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPoints() : float
+    public function getFantasyPoints() : ?float
     {
         return $this->fantasyPoints;
     }
     /**
      * 
      *
-     * @param float $fantasyPoints
+     * @param float|null $fantasyPoints
      *
      * @return self
      */
-    public function setFantasyPoints(float $fantasyPoints) : self
+    public function setFantasyPoints(?float $fantasyPoints) : self
     {
         $this->fantasyPoints = $fantasyPoints;
         return $this;
@@ -268,20 +268,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getFantasyPointsDraftKings() : float
+    public function getFantasyPointsDraftKings() : ?float
     {
         return $this->fantasyPointsDraftKings;
     }
     /**
      * 
      *
-     * @param float $fantasyPointsDraftKings
+     * @param float|null $fantasyPointsDraftKings
      *
      * @return self
      */
-    public function setFantasyPointsDraftKings(float $fantasyPointsDraftKings) : self
+    public function setFantasyPointsDraftKings(?float $fantasyPointsDraftKings) : self
     {
         $this->fantasyPointsDraftKings = $fantasyPointsDraftKings;
         return $this;
@@ -289,20 +289,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getKnockdowns() : float
+    public function getKnockdowns() : ?float
     {
         return $this->knockdowns;
     }
     /**
      * 
      *
-     * @param float $knockdowns
+     * @param float|null $knockdowns
      *
      * @return self
      */
-    public function setKnockdowns(float $knockdowns) : self
+    public function setKnockdowns(?float $knockdowns) : self
     {
         $this->knockdowns = $knockdowns;
         return $this;
@@ -310,20 +310,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalStrikesAttempted() : float
+    public function getTotalStrikesAttempted() : ?float
     {
         return $this->totalStrikesAttempted;
     }
     /**
      * 
      *
-     * @param float $totalStrikesAttempted
+     * @param float|null $totalStrikesAttempted
      *
      * @return self
      */
-    public function setTotalStrikesAttempted(float $totalStrikesAttempted) : self
+    public function setTotalStrikesAttempted(?float $totalStrikesAttempted) : self
     {
         $this->totalStrikesAttempted = $totalStrikesAttempted;
         return $this;
@@ -331,20 +331,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalStrikesLanded() : float
+    public function getTotalStrikesLanded() : ?float
     {
         return $this->totalStrikesLanded;
     }
     /**
      * 
      *
-     * @param float $totalStrikesLanded
+     * @param float|null $totalStrikesLanded
      *
      * @return self
      */
-    public function setTotalStrikesLanded(float $totalStrikesLanded) : self
+    public function setTotalStrikesLanded(?float $totalStrikesLanded) : self
     {
         $this->totalStrikesLanded = $totalStrikesLanded;
         return $this;
@@ -352,20 +352,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSigStrikesAttempted() : float
+    public function getSigStrikesAttempted() : ?float
     {
         return $this->sigStrikesAttempted;
     }
     /**
      * 
      *
-     * @param float $sigStrikesAttempted
+     * @param float|null $sigStrikesAttempted
      *
      * @return self
      */
-    public function setSigStrikesAttempted(float $sigStrikesAttempted) : self
+    public function setSigStrikesAttempted(?float $sigStrikesAttempted) : self
     {
         $this->sigStrikesAttempted = $sigStrikesAttempted;
         return $this;
@@ -373,20 +373,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSigStrikesLanded() : float
+    public function getSigStrikesLanded() : ?float
     {
         return $this->sigStrikesLanded;
     }
     /**
      * 
      *
-     * @param float $sigStrikesLanded
+     * @param float|null $sigStrikesLanded
      *
      * @return self
      */
-    public function setSigStrikesLanded(float $sigStrikesLanded) : self
+    public function setSigStrikesLanded(?float $sigStrikesLanded) : self
     {
         $this->sigStrikesLanded = $sigStrikesLanded;
         return $this;
@@ -394,20 +394,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTakedownsAttempted() : float
+    public function getTakedownsAttempted() : ?float
     {
         return $this->takedownsAttempted;
     }
     /**
      * 
      *
-     * @param float $takedownsAttempted
+     * @param float|null $takedownsAttempted
      *
      * @return self
      */
-    public function setTakedownsAttempted(float $takedownsAttempted) : self
+    public function setTakedownsAttempted(?float $takedownsAttempted) : self
     {
         $this->takedownsAttempted = $takedownsAttempted;
         return $this;
@@ -415,20 +415,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTakedownsLanded() : float
+    public function getTakedownsLanded() : ?float
     {
         return $this->takedownsLanded;
     }
     /**
      * 
      *
-     * @param float $takedownsLanded
+     * @param float|null $takedownsLanded
      *
      * @return self
      */
-    public function setTakedownsLanded(float $takedownsLanded) : self
+    public function setTakedownsLanded(?float $takedownsLanded) : self
     {
         $this->takedownsLanded = $takedownsLanded;
         return $this;
@@ -436,20 +436,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTakedownsSlams() : float
+    public function getTakedownsSlams() : ?float
     {
         return $this->takedownsSlams;
     }
     /**
      * 
      *
-     * @param float $takedownsSlams
+     * @param float|null $takedownsSlams
      *
      * @return self
      */
-    public function setTakedownsSlams(float $takedownsSlams) : self
+    public function setTakedownsSlams(?float $takedownsSlams) : self
     {
         $this->takedownsSlams = $takedownsSlams;
         return $this;
@@ -457,20 +457,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTakedownAccuracy() : float
+    public function getTakedownAccuracy() : ?float
     {
         return $this->takedownAccuracy;
     }
     /**
      * 
      *
-     * @param float $takedownAccuracy
+     * @param float|null $takedownAccuracy
      *
      * @return self
      */
-    public function setTakedownAccuracy(float $takedownAccuracy) : self
+    public function setTakedownAccuracy(?float $takedownAccuracy) : self
     {
         $this->takedownAccuracy = $takedownAccuracy;
         return $this;
@@ -478,20 +478,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getAdvances() : float
+    public function getAdvances() : ?float
     {
         return $this->advances;
     }
     /**
      * 
      *
-     * @param float $advances
+     * @param float|null $advances
      *
      * @return self
      */
-    public function setAdvances(float $advances) : self
+    public function setAdvances(?float $advances) : self
     {
         $this->advances = $advances;
         return $this;
@@ -499,20 +499,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getReversals() : float
+    public function getReversals() : ?float
     {
         return $this->reversals;
     }
     /**
      * 
      *
-     * @param float $reversals
+     * @param float|null $reversals
      *
      * @return self
      */
-    public function setReversals(float $reversals) : self
+    public function setReversals(?float $reversals) : self
     {
         $this->reversals = $reversals;
         return $this;
@@ -520,20 +520,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSubmissions() : float
+    public function getSubmissions() : ?float
     {
         return $this->submissions;
     }
     /**
      * 
      *
-     * @param float $submissions
+     * @param float|null $submissions
      *
      * @return self
      */
-    public function setSubmissions(float $submissions) : self
+    public function setSubmissions(?float $submissions) : self
     {
         $this->submissions = $submissions;
         return $this;
@@ -541,20 +541,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getSlamRate() : float
+    public function getSlamRate() : ?float
     {
         return $this->slamRate;
     }
     /**
      * 
      *
-     * @param float $slamRate
+     * @param float|null $slamRate
      *
      * @return self
      */
-    public function setSlamRate(float $slamRate) : self
+    public function setSlamRate(?float $slamRate) : self
     {
         $this->slamRate = $slamRate;
         return $this;
@@ -562,20 +562,20 @@ class FightStat
     /**
      * 
      *
-     * @return float
+     * @return float|null
      */
-    public function getTimeInControl() : float
+    public function getTimeInControl() : ?float
     {
         return $this->timeInControl;
     }
     /**
      * 
      *
-     * @param float $timeInControl
+     * @param float|null $timeInControl
      *
      * @return self
      */
-    public function setTimeInControl(float $timeInControl) : self
+    public function setTimeInControl(?float $timeInControl) : self
     {
         $this->timeInControl = $timeInControl;
         return $this;
@@ -583,20 +583,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getFirstRoundWin() : bool
+    public function getFirstRoundWin() : ?bool
     {
         return $this->firstRoundWin;
     }
     /**
      * 
      *
-     * @param bool $firstRoundWin
+     * @param bool|null $firstRoundWin
      *
      * @return self
      */
-    public function setFirstRoundWin(bool $firstRoundWin) : self
+    public function setFirstRoundWin(?bool $firstRoundWin) : self
     {
         $this->firstRoundWin = $firstRoundWin;
         return $this;
@@ -604,20 +604,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getSecondRoundWin() : bool
+    public function getSecondRoundWin() : ?bool
     {
         return $this->secondRoundWin;
     }
     /**
      * 
      *
-     * @param bool $secondRoundWin
+     * @param bool|null $secondRoundWin
      *
      * @return self
      */
-    public function setSecondRoundWin(bool $secondRoundWin) : self
+    public function setSecondRoundWin(?bool $secondRoundWin) : self
     {
         $this->secondRoundWin = $secondRoundWin;
         return $this;
@@ -625,20 +625,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getThirdRoundWin() : bool
+    public function getThirdRoundWin() : ?bool
     {
         return $this->thirdRoundWin;
     }
     /**
      * 
      *
-     * @param bool $thirdRoundWin
+     * @param bool|null $thirdRoundWin
      *
      * @return self
      */
-    public function setThirdRoundWin(bool $thirdRoundWin) : self
+    public function setThirdRoundWin(?bool $thirdRoundWin) : self
     {
         $this->thirdRoundWin = $thirdRoundWin;
         return $this;
@@ -646,20 +646,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getFourthRoundWin() : bool
+    public function getFourthRoundWin() : ?bool
     {
         return $this->fourthRoundWin;
     }
     /**
      * 
      *
-     * @param bool $fourthRoundWin
+     * @param bool|null $fourthRoundWin
      *
      * @return self
      */
-    public function setFourthRoundWin(bool $fourthRoundWin) : self
+    public function setFourthRoundWin(?bool $fourthRoundWin) : self
     {
         $this->fourthRoundWin = $fourthRoundWin;
         return $this;
@@ -667,20 +667,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getFifthRoundWin() : bool
+    public function getFifthRoundWin() : ?bool
     {
         return $this->fifthRoundWin;
     }
     /**
      * 
      *
-     * @param bool $fifthRoundWin
+     * @param bool|null $fifthRoundWin
      *
      * @return self
      */
-    public function setFifthRoundWin(bool $fifthRoundWin) : self
+    public function setFifthRoundWin(?bool $fifthRoundWin) : self
     {
         $this->fifthRoundWin = $fifthRoundWin;
         return $this;
@@ -688,20 +688,20 @@ class FightStat
     /**
      * 
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getDecisionWin() : bool
+    public function getDecisionWin() : ?bool
     {
         return $this->decisionWin;
     }
     /**
      * 
      *
-     * @param bool $decisionWin
+     * @param bool|null $decisionWin
      *
      * @return self
      */
-    public function setDecisionWin(bool $decisionWin) : self
+    public function setDecisionWin(?bool $decisionWin) : self
     {
         $this->decisionWin = $decisionWin;
         return $this;

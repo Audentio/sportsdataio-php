@@ -4,25 +4,27 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class GamesByWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
-    protected $season;
     protected $week;
+    protected $season;
+    protected $format;
     /**
-     * 
-     *
-     * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
-     * @param string $season 
-              Year of the season.
-              <br>Examples: <code>2015</code>, <code>2016</code>, etc.
+    * 
+    *
     * @param string $week 
-              The week of the game(s).
-              <br>Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc.
+             The week of the game(s).
+             <br>Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc.
+           
+    * @param string $season 
+             Year of the season.
+             <br>Examples: <code>2015</code>, <code>2016</code>, etc.
+           
+    * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
     */
-    public function __construct(string $format, string $season, string $week)
+    public function __construct(string $week, string $season, string $format = 'JSON')
     {
-        $this->format = $format;
-        $this->season = $season;
         $this->week = $week;
+        $this->season = $season;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -31,7 +33,7 @@ class GamesByWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implem
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{season}', '{week}'), array($this->format, $this->season, $this->week), '/stats/{format}/GamesByWeek/{season}/{week}');
+        return str_replace(array('{week}', '{season}', '{format}'), array($this->week, $this->season, $this->format), '/scores/{format}/GamesByWeek/{season}/{week}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

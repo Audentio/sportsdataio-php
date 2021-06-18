@@ -4,20 +4,21 @@ namespace Sportsdata\API\CFB\Endpoint;
 
 class PlayerDetailsByPlayer extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \Sportsdata\API\CFB\Runtime\Client\Endpoint
 {
-    protected $format;
     protected $playerid;
+    protected $format;
     /**
-     * 
-     *
-     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
-     * @param string $playerid 
-              Unique FantasyData Player ID.
-              Example:<code>50002016</code>.
+    * 
+    *
+    * @param string $playerid 
+             Unique FantasyData Player ID.
+             Example:<code>50002016</code>.
+           
+    * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     */
-    public function __construct(string $format = 'XML', string $playerid)
+    public function __construct(string $playerid, string $format = 'JSON')
     {
-        $this->format = $format;
         $this->playerid = $playerid;
+        $this->format = $format;
     }
     use \Sportsdata\API\CFB\Runtime\Client\EndpointTrait;
     public function getMethod() : string
@@ -26,7 +27,7 @@ class PlayerDetailsByPlayer extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpo
     }
     public function getUri() : string
     {
-        return str_replace(array('{format}', '{playerid}'), array($this->format, $this->playerid), '/stats/{format}/Player/{playerid}');
+        return str_replace(array('{playerid}', '{format}'), array($this->playerid, $this->format), '/scores/{format}/Player/{playerid}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {

@@ -73,6 +73,12 @@ class ScoringDetail
     /**
      * 
      *
+     * @var int|null
+     */
+    protected $scoringPlayID;
+    /**
+     * 
+     *
      * @return string|null
      */
     public function getGameKey() : ?string
@@ -299,6 +305,27 @@ class ScoringDetail
     public function setScoreID(?int $scoreID) : self
     {
         $this->scoreID = $scoreID;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return int|null
+     */
+    public function getScoringPlayID() : ?int
+    {
+        return $this->scoringPlayID;
+    }
+    /**
+     * 
+     *
+     * @param int|null $scoringPlayID
+     *
+     * @return self
+     */
+    public function setScoringPlayID(?int $scoringPlayID) : self
+    {
+        $this->scoringPlayID = $scoringPlayID;
         return $this;
     }
 }

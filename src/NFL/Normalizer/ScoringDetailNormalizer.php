@@ -84,6 +84,12 @@ class ScoringDetailNormalizer implements DenormalizerInterface, NormalizerInterf
         elseif (\array_key_exists('ScoreID', $data) && $data['ScoreID'] === null) {
             $object->setScoreID(null);
         }
+        if (\array_key_exists('ScoringPlayID', $data) && $data['ScoringPlayID'] !== null) {
+            $object->setScoringPlayID($data['ScoringPlayID']);
+        }
+        elseif (\array_key_exists('ScoringPlayID', $data) && $data['ScoringPlayID'] === null) {
+            $object->setScoringPlayID(null);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -121,6 +127,9 @@ class ScoringDetailNormalizer implements DenormalizerInterface, NormalizerInterf
         }
         if (null !== $object->getScoreID()) {
             $data['ScoreID'] = $object->getScoreID();
+        }
+        if (null !== $object->getScoringPlayID()) {
+            $data['ScoringPlayID'] = $object->getScoringPlayID();
         }
         return $data;
     }

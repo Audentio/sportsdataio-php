@@ -863,6 +863,19 @@ class Client extends \Sportsdata\API\NBA\Runtime\Client\Client
     /**
      * 
      *
+     * @param string $marketId The MarketId of the desired market for which to pull all outcomes/bets. Valid entries include: <code>406451</code>, <code>404168</code>, etc.
+     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\Sportsdata\API\NBA\Model\BettingMarketResult|\Psr\Http\Message\ResponseInterface
+     */
+    public function bettingResultsByMarket(string $marketId, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new \Sportsdata\API\NBA\Endpoint\BettingResultsByMarket($marketId, $format), $fetch);
+    }
+    /**
+     * 
+     *
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *

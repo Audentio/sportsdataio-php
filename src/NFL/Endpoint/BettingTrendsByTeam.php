@@ -38,13 +38,14 @@ class BettingTrendsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoin
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\TeamTrends
+     * @return null|\Sportsdata\API\NFL\Model\TeamTrends|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\TeamTrends', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

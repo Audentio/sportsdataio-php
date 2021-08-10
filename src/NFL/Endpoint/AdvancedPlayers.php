@@ -35,13 +35,14 @@ class AdvancedPlayers extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint im
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\PlayerInfo[]
+     * @return null|\Sportsdata\API\NFL\Model\PlayerInfo[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\PlayerInfo[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

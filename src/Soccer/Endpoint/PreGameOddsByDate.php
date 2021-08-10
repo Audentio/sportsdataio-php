@@ -39,13 +39,14 @@ class PreGameOddsByDate extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoi
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Soccer\Model\GameInfo[]
+     * @return null|\Sportsdata\API\Soccer\Model\GameInfo[]|\Sportsdata\API\Soccer\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\GameInfo[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

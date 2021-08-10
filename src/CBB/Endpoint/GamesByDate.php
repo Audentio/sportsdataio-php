@@ -39,13 +39,14 @@ class GamesByDate extends \Sportsdata\API\CBB\Runtime\Client\BaseEndpoint implem
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CBB\Model\Game[]
+     * @return null|\Sportsdata\API\CBB\Model\Game[]|\Sportsdata\API\CBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Game[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

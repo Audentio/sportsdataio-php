@@ -39,13 +39,14 @@ class Schedule extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint implemen
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Game[]
+     * @return null|\Sportsdata\API\CSGO\Model\Game[]|\Sportsdata\API\CSGO\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Game[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

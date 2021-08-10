@@ -38,13 +38,14 @@ class Schedules extends \Sportsdata\API\CWBB\Runtime\Client\BaseEndpoint impleme
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CWBB\Model\Game[]
+     * @return null|\Sportsdata\API\CWBB\Model\Game[]|\Sportsdata\API\CWBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Game[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

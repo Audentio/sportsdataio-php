@@ -39,13 +39,14 @@ class ProjectedPlayerGameStatsByDateWDfsSalaries extends \Sportsdata\API\Soccer\
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Soccer\Model\PlayerGameProjection[]
+     * @return null|\Sportsdata\API\Soccer\Model\PlayerGameProjection[]|\Sportsdata\API\Soccer\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\PlayerGameProjection[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

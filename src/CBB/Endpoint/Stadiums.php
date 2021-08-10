@@ -35,13 +35,14 @@ class Stadiums extends \Sportsdata\API\CBB\Runtime\Client\BaseEndpoint implement
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CBB\Model\Stadium[]
+     * @return null|\Sportsdata\API\CBB\Model\Stadium[]|\Sportsdata\API\CBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Stadium[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

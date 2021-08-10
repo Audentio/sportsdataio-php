@@ -35,13 +35,14 @@ class Teams extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implements \
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\Team[]
+     * @return null|\Sportsdata\API\CFB\Model\Team[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Team[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

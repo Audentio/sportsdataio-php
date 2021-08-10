@@ -44,13 +44,14 @@ class PlayerSeasonStatsByTeam extends \Sportsdata\API\NBA\Runtime\Client\BaseEnd
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NBA\Model\PlayerSeason[]
+     * @return null|\Sportsdata\API\NBA\Model\PlayerSeason[]|\Sportsdata\API\NBA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NBA\\Model\\PlayerSeason[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NBA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

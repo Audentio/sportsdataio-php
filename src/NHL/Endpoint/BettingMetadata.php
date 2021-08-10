@@ -35,13 +35,14 @@ class BettingMetadata extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint im
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NHL\Model\BettingEntityMetadata[]
+     * @return null|\Sportsdata\API\NHL\Model\BettingEntityMetadata[]|\Sportsdata\API\NHL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\BettingEntityMetadata[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -35,13 +35,14 @@ class LeagueHierarchyConferencesAndTeams extends \Sportsdata\API\CWBB\Runtime\Cl
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CWBB\Model\Conference[]
+     * @return null|\Sportsdata\API\CWBB\Model\Conference[]|\Sportsdata\API\CWBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Conference[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -35,13 +35,14 @@ class CurrentSeason extends \Sportsdata\API\WNBA\Runtime\Client\BaseEndpoint imp
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Season
+     * @return null|\Sportsdata\API\WNBA\Model\Season|\Sportsdata\API\WNBA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\WNBA\\Model\\Season', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\WNBA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

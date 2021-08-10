@@ -41,13 +41,14 @@ class PreGameOddsByWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint 
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\GameInfo[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

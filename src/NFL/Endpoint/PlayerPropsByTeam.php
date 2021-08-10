@@ -44,13 +44,14 @@ class PlayerPropsByTeam extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint 
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\PlayerProp[]
+     * @return null|\Sportsdata\API\NFL\Model\PlayerProp[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\PlayerProp[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

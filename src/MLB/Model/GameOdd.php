@@ -103,6 +103,12 @@ class GameOdd
     /**
      * 
      *
+     * @var string|null
+     */
+    protected $oddType;
+    /**
+     * 
+     *
      * @return int
      */
     public function getGameOddId() : int
@@ -434,6 +440,27 @@ class GameOdd
     public function setSportsbookUrl(?string $sportsbookUrl) : self
     {
         $this->sportsbookUrl = $sportsbookUrl;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string|null
+     */
+    public function getOddType() : ?string
+    {
+        return $this->oddType;
+    }
+    /**
+     * 
+     *
+     * @param string|null $oddType
+     *
+     * @return self
+     */
+    public function setOddType(?string $oddType) : self
+    {
+        $this->oddType = $oddType;
         return $this;
     }
 }

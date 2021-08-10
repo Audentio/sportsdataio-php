@@ -47,13 +47,14 @@ class TeamGameStatsByWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoin
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\TeamGame[]
+     * @return null|\Sportsdata\API\CFB\Model\TeamGame[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\TeamGame[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

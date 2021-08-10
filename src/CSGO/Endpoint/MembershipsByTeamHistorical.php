@@ -39,13 +39,14 @@ class MembershipsByTeamHistorical extends \Sportsdata\API\CSGO\Runtime\Client\Ba
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Membership[]
+     * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Sportsdata\API\CSGO\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Membership[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

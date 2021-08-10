@@ -35,13 +35,14 @@ class Stadiums extends \Sportsdata\API\WNBA\Runtime\Client\BaseEndpoint implemen
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Stadium[]
+     * @return null|\Sportsdata\API\WNBA\Model\Stadium[]|\Sportsdata\API\WNBA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\WNBA\\Model\\Stadium[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\WNBA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

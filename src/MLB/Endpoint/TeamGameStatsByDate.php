@@ -39,13 +39,14 @@ class TeamGameStatsByDate extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoin
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MLB\Model\TeamGame[]
+     * @return null|\Sportsdata\API\MLB\Model\TeamGame[]|\Sportsdata\API\MLB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\TeamGame[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

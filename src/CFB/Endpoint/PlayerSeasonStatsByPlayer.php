@@ -43,13 +43,14 @@ class PlayerSeasonStatsByPlayer extends \Sportsdata\API\CFB\Runtime\Client\BaseE
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]
+     * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\PlayerSeason[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

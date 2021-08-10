@@ -10,7 +10,7 @@ class Client extends \Sportsdata\API\MMA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\MMA\Model\Fighter[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\MMA\Model\Fighter[]|\Sportsdata\API\MMA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function fighters(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -23,7 +23,7 @@ class Client extends \Sportsdata\API\MMA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\MMA\Model\EventDetail|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\MMA\Model\EventDetail|\Sportsdata\API\MMA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function event(string $eventid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -36,7 +36,7 @@ class Client extends \Sportsdata\API\MMA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\MMA\Model\Fighter|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\MMA\Model\Fighter|\Sportsdata\API\MMA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function fighter(string $fighterid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -50,7 +50,7 @@ class Client extends \Sportsdata\API\MMA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\MMA\Model\Event[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\MMA\Model\Event[]|\Sportsdata\API\MMA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function schedule(string $season, string $league, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -62,7 +62,7 @@ class Client extends \Sportsdata\API\MMA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\MMA\Model\League[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\MMA\Model\League[]|\Sportsdata\API\MMA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function leagues(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -75,7 +75,7 @@ class Client extends \Sportsdata\API\MMA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\MMA\Model\FightDetail|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\MMA\Model\FightDetail|\Sportsdata\API\MMA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function fight(string $fightid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {

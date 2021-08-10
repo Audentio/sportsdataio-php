@@ -39,13 +39,14 @@ class PlayerSeasonStatsWWorldGolfRankings extends \Sportsdata\API\Golf\Runtime\C
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Golf\Model\PlayerSeason[]
+     * @return null|\Sportsdata\API\Golf\Model\PlayerSeason[]|\Sportsdata\API\Golf\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\PlayerSeason[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

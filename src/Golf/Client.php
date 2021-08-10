@@ -10,7 +10,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Tournament[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Tournament[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function schedule(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -22,7 +22,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Player[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Player[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function players(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -36,7 +36,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Golf\Model\Player|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Golf\Model\Player|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function player(string $playerid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -49,7 +49,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Leaderboard|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Leaderboard|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function leaderboard(string $tournamentid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -63,7 +63,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Golf\Model\News[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Golf\Model\News[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function newsByPlayer(string $playerid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -77,7 +77,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Golf\Model\News[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Golf\Model\News[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function newsByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -89,7 +89,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\News[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\News[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function news(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -101,7 +101,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Injury[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Injury[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function injuries(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -113,7 +113,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Injury[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Injury[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function injuriesHistorical(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -128,7 +128,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Golf\Model\PlayerTournament|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Golf\Model\PlayerTournament|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerTournamentStatsByPlayer(string $playerid, string $tournamentid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -141,7 +141,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\PlayerTournamentProjection[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\PlayerTournamentProjection[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function playerTournamentProjectedStatsWDraftkingsSalaries(string $tournamentid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -155,7 +155,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Golf\Model\PlayerSeason[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Golf\Model\PlayerSeason[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerSeasonStatsWWorldGolfRankings(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -169,7 +169,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Golf\Model\Tournament[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Golf\Model\Tournament[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function scheduleBySeason(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -182,7 +182,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\DfsSlate[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\DfsSlate[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function dfsSlates(string $tournamentid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -194,7 +194,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Season|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Season|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function currentSeason(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -206,7 +206,7 @@ class Client extends \Sportsdata\API\Golf\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Golf\Model\Headshot[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Golf\Model\Headshot[]|\Sportsdata\API\Golf\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function headshots(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {

@@ -39,13 +39,14 @@ class PlayersByTeam extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint imp
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Player[]
+     * @return null|\Sportsdata\API\CSGO\Model\Player[]|\Sportsdata\API\CSGO\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Player[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

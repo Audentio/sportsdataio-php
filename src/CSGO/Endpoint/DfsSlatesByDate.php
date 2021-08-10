@@ -39,13 +39,14 @@ class DfsSlatesByDate extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint i
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CSGO\Model\DfsSlate[]
+     * @return null|\Sportsdata\API\CSGO\Model\DfsSlate[]|\Sportsdata\API\CSGO\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\DfsSlate[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

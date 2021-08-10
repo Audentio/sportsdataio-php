@@ -39,13 +39,14 @@ class DriverDetails extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint i
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Nascar\Model\Driver
+     * @return null|\Sportsdata\API\Nascar\Model\Driver|\Sportsdata\API\Nascar\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Nascar\\Model\\Driver', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Nascar\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

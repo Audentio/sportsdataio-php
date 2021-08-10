@@ -38,13 +38,14 @@ class Schedule extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implement
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\Schedule[]
+     * @return null|\Sportsdata\API\NFL\Model\Schedule[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Schedule[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

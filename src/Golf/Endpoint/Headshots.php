@@ -35,13 +35,14 @@ class Headshots extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint impleme
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Golf\Model\Headshot[]
+     * @return null|\Sportsdata\API\Golf\Model\Headshot[]|\Sportsdata\API\Golf\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Headshot[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

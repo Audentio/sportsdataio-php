@@ -35,13 +35,14 @@ class AreasCountries extends \Sportsdata\API\CSGO\Runtime\Client\BaseEndpoint im
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Area[]
+     * @return null|\Sportsdata\API\CSGO\Model\Area[]|\Sportsdata\API\CSGO\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Area[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CSGO\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

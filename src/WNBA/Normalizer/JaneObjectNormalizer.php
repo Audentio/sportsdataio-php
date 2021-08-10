@@ -14,7 +14,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    protected $normalizers = array('Sportsdata\\API\\WNBA\\Model\\Team' => 'Sportsdata\\API\\WNBA\\Normalizer\\TeamNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Stadium' => 'Sportsdata\\API\\WNBA\\Normalizer\\StadiumNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Season' => 'Sportsdata\\API\\WNBA\\Normalizer\\SeasonNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Game' => 'Sportsdata\\API\\WNBA\\Normalizer\\GameNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Quarter' => 'Sportsdata\\API\\WNBA\\Normalizer\\QuarterNormalizer', '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Sportsdata\\API\\WNBA\\Runtime\\Normalizer\\ReferenceNormalizer'), $normalizersCache = array();
+    protected $normalizers = array('Sportsdata\\API\\WNBA\\Model\\Team' => 'Sportsdata\\API\\WNBA\\Normalizer\\TeamNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Stadium' => 'Sportsdata\\API\\WNBA\\Normalizer\\StadiumNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Season' => 'Sportsdata\\API\\WNBA\\Normalizer\\SeasonNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Game' => 'Sportsdata\\API\\WNBA\\Normalizer\\GameNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Quarter' => 'Sportsdata\\API\\WNBA\\Normalizer\\QuarterNormalizer', 'Sportsdata\\API\\WNBA\\Model\\Error' => 'Sportsdata\\API\\WNBA\\Normalizer\\ErrorNormalizer', '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Sportsdata\\API\\WNBA\\Runtime\\Normalizer\\ReferenceNormalizer'), $normalizersCache = array();
     public function supportsDenormalization($data, $type, $format = null)
     {
         return array_key_exists($type, $this->normalizers);

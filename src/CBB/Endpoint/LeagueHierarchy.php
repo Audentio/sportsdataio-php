@@ -35,13 +35,14 @@ class LeagueHierarchy extends \Sportsdata\API\CBB\Runtime\Client\BaseEndpoint im
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CBB\Model\Conference[]
+     * @return null|\Sportsdata\API\CBB\Model\Conference[]|\Sportsdata\API\CBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Conference[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

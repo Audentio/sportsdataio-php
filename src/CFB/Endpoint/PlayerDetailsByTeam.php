@@ -41,13 +41,14 @@ class PlayerDetailsByTeam extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoin
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\Player[]
+     * @return null|\Sportsdata\API\CFB\Model\Player[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Player[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

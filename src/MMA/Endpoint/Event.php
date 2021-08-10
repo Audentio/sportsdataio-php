@@ -38,13 +38,14 @@ class Event extends \Sportsdata\API\MMA\Runtime\Client\BaseEndpoint implements \
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MMA\Model\EventDetail
+     * @return null|\Sportsdata\API\MMA\Model\EventDetail|\Sportsdata\API\MMA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MMA\\Model\\EventDetail', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MMA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

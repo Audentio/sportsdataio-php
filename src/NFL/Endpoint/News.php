@@ -35,13 +35,14 @@ class News extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint implements \S
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\News[]
+     * @return null|\Sportsdata\API\NFL\Model\News[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\News[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

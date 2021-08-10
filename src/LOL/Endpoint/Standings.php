@@ -39,13 +39,14 @@ class Standings extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint implemen
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\LOL\Model\Standing[]
+     * @return null|\Sportsdata\API\LOL\Model\Standing[]|\Sportsdata\API\LOL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\LOL\\Model\\Standing[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\LOL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -39,13 +39,14 @@ class NewsByDate extends \Sportsdata\API\NBA\Runtime\Client\BaseEndpoint impleme
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NBA\Model\News[]
+     * @return null|\Sportsdata\API\NBA\Model\News[]|\Sportsdata\API\NBA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NBA\\Model\\News[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NBA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

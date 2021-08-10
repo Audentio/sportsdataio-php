@@ -35,13 +35,14 @@ class AreGamesInProgress extends \Sportsdata\API\WNBA\Runtime\Client\BaseEndpoin
      * {@inheritdoc}
      *
      *
-     * @return null
+     * @return null|\Sportsdata\API\WNBA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return json_decode($body);
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\WNBA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

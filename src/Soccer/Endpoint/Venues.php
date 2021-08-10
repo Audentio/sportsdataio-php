@@ -35,13 +35,14 @@ class Venues extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint implemen
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Soccer\Model\Venue[]
+     * @return null|\Sportsdata\API\Soccer\Model\Venue[]|\Sportsdata\API\Soccer\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Venue[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

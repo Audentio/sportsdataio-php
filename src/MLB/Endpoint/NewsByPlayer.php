@@ -39,13 +39,14 @@ class NewsByPlayer extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint imple
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MLB\Model\News[]
+     * @return null|\Sportsdata\API\MLB\Model\News[]|\Sportsdata\API\MLB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\News[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -38,13 +38,14 @@ class PlayerTournamentProjectedStatsWDraftkingsSalaries extends \Sportsdata\API\
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Golf\Model\PlayerTournamentProjection[]
+     * @return null|\Sportsdata\API\Golf\Model\PlayerTournamentProjection[]|\Sportsdata\API\Golf\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\PlayerTournamentProjection[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

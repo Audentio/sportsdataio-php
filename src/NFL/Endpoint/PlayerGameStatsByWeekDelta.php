@@ -52,13 +52,14 @@ class PlayerGameStatsByWeekDelta extends \Sportsdata\API\NFL\Runtime\Client\Base
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\PlayerGame[]
+     * @return null|\Sportsdata\API\NFL\Model\PlayerGame[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\PlayerGame[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

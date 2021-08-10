@@ -35,13 +35,14 @@ class Teams extends \Sportsdata\API\CWBB\Runtime\Client\BaseEndpoint implements 
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CWBB\Model\Team[]
+     * @return null|\Sportsdata\API\CWBB\Model\Team[]|\Sportsdata\API\CWBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Team[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

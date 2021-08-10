@@ -35,13 +35,14 @@ class ConferenceHierarchyWithTeams extends \Sportsdata\API\CFB\Runtime\Client\Ba
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\Conference[]
+     * @return null|\Sportsdata\API\CFB\Model\Conference[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Conference[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -38,13 +38,14 @@ class TeamSeasonStatsStandings extends \Sportsdata\API\CFB\Runtime\Client\BaseEn
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CFB\Model\TeamSeason[]
+     * @return null|\Sportsdata\API\CFB\Model\TeamSeason[]|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\TeamSeason[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

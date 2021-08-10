@@ -10,7 +10,7 @@ class Client extends \Sportsdata\API\WNBA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Team[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\WNBA\Model\Team[]|\Sportsdata\API\WNBA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function teams(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -22,7 +22,7 @@ class Client extends \Sportsdata\API\WNBA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\WNBA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function areGamesInProgress(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -34,7 +34,7 @@ class Client extends \Sportsdata\API\WNBA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Stadium[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\WNBA\Model\Stadium[]|\Sportsdata\API\WNBA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function stadiums(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -46,7 +46,7 @@ class Client extends \Sportsdata\API\WNBA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Season|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\WNBA\Model\Season|\Sportsdata\API\WNBA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function currentSeason(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -59,7 +59,7 @@ class Client extends \Sportsdata\API\WNBA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Game[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\WNBA\Model\Game[]|\Sportsdata\API\WNBA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function schedule(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -72,7 +72,7 @@ class Client extends \Sportsdata\API\WNBA\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\WNBA\Model\Game[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\WNBA\Model\Game[]|\Sportsdata\API\WNBA\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function gamesByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {

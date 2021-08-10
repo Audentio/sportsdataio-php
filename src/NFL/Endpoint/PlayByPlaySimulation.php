@@ -38,13 +38,14 @@ class PlayByPlaySimulation extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoi
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\PlayByPlay[]
+     * @return null|\Sportsdata\API\NFL\Model\PlayByPlay[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\PlayByPlay[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

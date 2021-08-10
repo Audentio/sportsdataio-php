@@ -40,13 +40,14 @@ class GamesByDate extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implem
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NHL\Model\Game[]
+     * @return null|\Sportsdata\API\NHL\Model\Game[]|\Sportsdata\API\NHL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Game[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

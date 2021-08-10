@@ -39,13 +39,14 @@ class PlayerSeasonStats extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint 
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MLB\Model\PlayerSeason[]
+     * @return null|\Sportsdata\API\MLB\Model\PlayerSeason[]|\Sportsdata\API\MLB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\PlayerSeason[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

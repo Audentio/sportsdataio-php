@@ -35,13 +35,14 @@ class RotoballerArticles extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\Article[]
+     * @return null|\Sportsdata\API\NFL\Model\Article[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Article[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

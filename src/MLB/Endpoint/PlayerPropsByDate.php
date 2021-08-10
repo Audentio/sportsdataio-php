@@ -38,13 +38,14 @@ class PlayerPropsByDate extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint 
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MLB\Model\PlayerProp[]
+     * @return null|\Sportsdata\API\MLB\Model\PlayerProp[]|\Sportsdata\API\MLB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\PlayerProp[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

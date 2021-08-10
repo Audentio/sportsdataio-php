@@ -126,6 +126,12 @@ class GameOddNormalizer implements DenormalizerInterface, NormalizerInterface, D
         elseif (\array_key_exists('SportsbookUrl', $data) && $data['SportsbookUrl'] === null) {
             $object->setSportsbookUrl(null);
         }
+        if (\array_key_exists('OddType', $data) && $data['OddType'] !== null) {
+            $object->setOddType($data['OddType']);
+        }
+        elseif (\array_key_exists('OddType', $data) && $data['OddType'] === null) {
+            $object->setOddType(null);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -178,6 +184,9 @@ class GameOddNormalizer implements DenormalizerInterface, NormalizerInterface, D
         }
         if (null !== $object->getSportsbookUrl()) {
             $data['SportsbookUrl'] = $object->getSportsbookUrl();
+        }
+        if (null !== $object->getOddType()) {
+            $data['OddType'] = $object->getOddType();
         }
         return $data;
     }

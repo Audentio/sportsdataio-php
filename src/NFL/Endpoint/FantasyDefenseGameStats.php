@@ -47,13 +47,14 @@ class FantasyDefenseGameStats extends \Sportsdata\API\NFL\Runtime\Client\BaseEnd
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\FantasyDefenseGame[]
+     * @return null|\Sportsdata\API\NFL\Model\FantasyDefenseGame[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\FantasyDefenseGame[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -12,7 +12,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\PlayerGameProjection[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\PlayerGameProjection[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function projectedPlayerGameStatsByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -28,7 +28,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\PlayerGameProjection[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\PlayerGameProjection[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function projectedPlayerGameStatsByPlayer(string $playerid, string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -42,7 +42,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\DfsSlate[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\DfsSlate[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function dfsSlatesByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -56,7 +56,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Game[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Game[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function gamesByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -68,7 +68,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Area[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Area[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function areasCountries(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -80,7 +80,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Competition[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Competition[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function competitionsLeagues(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -92,7 +92,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Team[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Team[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function teams(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -104,7 +104,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Venue[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Venue[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function venues(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -118,7 +118,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\SeasonTeam[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\SeasonTeam[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function seasonTeams(string $seasonid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -132,7 +132,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Game[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Game[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function schedule(string $roundid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -144,7 +144,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Player[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Player[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function players(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -158,7 +158,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Player|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Player|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function player(string $playerid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -172,7 +172,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Player[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Player[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playersByTeam(string $teamid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -185,7 +185,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\CompetitionDetail|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\CompetitionDetail|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function competitionFixturesLeagueDetails(string $competitionid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -199,7 +199,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function membershipsByTeamActive(string $teamid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -213,7 +213,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function membershipsByTeamHistorical(string $teamid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -225,7 +225,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function membershipsActive(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -237,7 +237,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\Membership[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function membershipsHistorical(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -251,7 +251,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\Standing[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\Standing[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function standings(string $roundid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -265,7 +265,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CSGO\Model\BoxScore[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CSGO\Model\BoxScore[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function boxScoresByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -278,7 +278,7 @@ class Client extends \Sportsdata\API\CSGO\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CSGO\Model\BoxScore[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CSGO\Model\BoxScore[]|\Sportsdata\API\CSGO\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function boxScore(string $gameid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {

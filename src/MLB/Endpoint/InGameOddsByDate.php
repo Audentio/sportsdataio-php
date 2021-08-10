@@ -38,13 +38,14 @@ class InGameOddsByDate extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint i
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MLB\Model\GameInfo[]
+     * @return null|\Sportsdata\API\MLB\Model\GameInfo[]|\Sportsdata\API\MLB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\GameInfo[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

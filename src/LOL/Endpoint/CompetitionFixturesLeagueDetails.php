@@ -38,13 +38,14 @@ class CompetitionFixturesLeagueDetails extends \Sportsdata\API\LOL\Runtime\Clien
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\LOL\Model\CompetitionDetail
+     * @return null|\Sportsdata\API\LOL\Model\CompetitionDetail|\Sportsdata\API\LOL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\LOL\\Model\\CompetitionDetail', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\LOL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

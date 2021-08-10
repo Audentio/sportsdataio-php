@@ -38,13 +38,14 @@ class PreGameOddsLineMovement extends \Sportsdata\API\NBA\Runtime\Client\BaseEnd
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NBA\Model\GameInfo[]
+     * @return null|\Sportsdata\API\NBA\Model\GameInfo[]|\Sportsdata\API\NBA\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NBA\\Model\\GameInfo[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NBA\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

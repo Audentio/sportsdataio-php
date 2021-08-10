@@ -35,13 +35,14 @@ class CurrentSeason extends \Sportsdata\API\CWBB\Runtime\Client\BaseEndpoint imp
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CWBB\Model\Season
+     * @return null|\Sportsdata\API\CWBB\Model\Season|\Sportsdata\API\CWBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Season', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -38,13 +38,14 @@ class Leaderboard extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint imple
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Golf\Model\Leaderboard
+     * @return null|\Sportsdata\API\Golf\Model\Leaderboard|\Sportsdata\API\Golf\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Leaderboard', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

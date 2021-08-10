@@ -43,13 +43,14 @@ class BettingTrendsByMatchup extends \Sportsdata\API\CBB\Runtime\Client\BaseEndp
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\CBB\Model\MatchupTrends
+     * @return null|\Sportsdata\API\CBB\Model\MatchupTrends|\Sportsdata\API\CBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\MatchupTrends', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

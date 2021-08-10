@@ -39,13 +39,14 @@ class PlayersByTeam extends \Sportsdata\API\Soccer\Runtime\Client\BaseEndpoint i
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Soccer\Model\Player[]
+     * @return null|\Sportsdata\API\Soccer\Model\Player[]|\Sportsdata\API\Soccer\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Player[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

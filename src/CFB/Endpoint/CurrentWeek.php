@@ -35,13 +35,14 @@ class CurrentWeek extends \Sportsdata\API\CFB\Runtime\Client\BaseEndpoint implem
      * {@inheritdoc}
      *
      *
-     * @return null
+     * @return null|\Sportsdata\API\CFB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return json_decode($body);
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CFB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -10,7 +10,7 @@ class Client extends \Sportsdata\API\Nascar\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Nascar\Model\Series[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Nascar\Model\Series[]|\Sportsdata\API\Nascar\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function series(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -24,7 +24,7 @@ class Client extends \Sportsdata\API\Nascar\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Nascar\Model\Race[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Nascar\Model\Race[]|\Sportsdata\API\Nascar\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function racesSchedule(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -36,7 +36,7 @@ class Client extends \Sportsdata\API\Nascar\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\Nascar\Model\Driver[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\Nascar\Model\Driver[]|\Sportsdata\API\Nascar\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function drivers(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -50,7 +50,7 @@ class Client extends \Sportsdata\API\Nascar\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Nascar\Model\Driver|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Nascar\Model\Driver|\Sportsdata\API\Nascar\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function driverDetails(string $driverid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -64,7 +64,7 @@ class Client extends \Sportsdata\API\Nascar\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Nascar\Model\RaceResult|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Nascar\Model\RaceResult|\Sportsdata\API\Nascar\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function raceResults(string $raceid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -78,7 +78,7 @@ class Client extends \Sportsdata\API\Nascar\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\Nascar\Model\DriverRaceProjection[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\Nascar\Model\DriverRaceProjection[]|\Sportsdata\API\Nascar\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function driverRaceProjectionsEntryList(string $raceid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {

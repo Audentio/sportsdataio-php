@@ -35,13 +35,14 @@ class AreAnyGamesInProgress extends \Sportsdata\API\CWBB\Runtime\Client\BaseEndp
      * {@inheritdoc}
      *
      *
-     * @return null
+     * @return null|\Sportsdata\API\CWBB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return json_decode($body);
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\CWBB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

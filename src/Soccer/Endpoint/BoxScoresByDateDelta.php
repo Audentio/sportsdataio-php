@@ -43,13 +43,14 @@ class BoxScoresByDateDelta extends \Sportsdata\API\Soccer\Runtime\Client\BaseEnd
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Soccer\Model\BoxScore[]
+     * @return null|\Sportsdata\API\Soccer\Model\BoxScore[]|\Sportsdata\API\Soccer\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\BoxScore[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

@@ -38,13 +38,14 @@ class InGameOddsLineMovement extends \Sportsdata\API\NHL\Runtime\Client\BaseEndp
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NHL\Model\GameInfo[]
+     * @return null|\Sportsdata\API\NHL\Model\GameInfo[]|\Sportsdata\API\NHL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\GameInfo[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

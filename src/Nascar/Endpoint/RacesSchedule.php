@@ -39,13 +39,14 @@ class RacesSchedule extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint i
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Nascar\Model\Race[]
+     * @return null|\Sportsdata\API\Nascar\Model\Race[]|\Sportsdata\API\Nascar\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Nascar\\Model\\Race[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Nascar\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

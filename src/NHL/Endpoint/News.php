@@ -35,13 +35,14 @@ class News extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoint implements \S
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NHL\Model\News[]
+     * @return null|\Sportsdata\API\NHL\Model\News[]|\Sportsdata\API\NHL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\News[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

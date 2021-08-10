@@ -35,13 +35,14 @@ class MembershipsActive extends \Sportsdata\API\LOL\Runtime\Client\BaseEndpoint 
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\LOL\Model\Membership[]
+     * @return null|\Sportsdata\API\LOL\Model\Membership[]|\Sportsdata\API\LOL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\LOL\\Model\\Membership[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\LOL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

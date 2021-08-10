@@ -47,13 +47,14 @@ class TeamGameStats extends \Sportsdata\API\NFL\Runtime\Client\BaseEndpoint impl
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NFL\Model\TeamGame[]
+     * @return null|\Sportsdata\API\NFL\Model\TeamGame[]|\Sportsdata\API\NFL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\TeamGame[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NFL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

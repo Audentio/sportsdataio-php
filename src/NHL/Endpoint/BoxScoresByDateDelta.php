@@ -45,13 +45,14 @@ class BoxScoresByDateDelta extends \Sportsdata\API\NHL\Runtime\Client\BaseEndpoi
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NHL\Model\BoxScore[]
+     * @return null|\Sportsdata\API\NHL\Model\BoxScore[]|\Sportsdata\API\NHL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\BoxScore[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

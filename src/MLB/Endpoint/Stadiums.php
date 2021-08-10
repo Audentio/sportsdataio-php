@@ -35,13 +35,14 @@ class Stadiums extends \Sportsdata\API\MLB\Runtime\Client\BaseEndpoint implement
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\MLB\Model\Stadium[]
+     * @return null|\Sportsdata\API\MLB\Model\Stadium[]|\Sportsdata\API\MLB\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Stadium[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\MLB\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

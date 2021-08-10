@@ -35,13 +35,14 @@ class MembershipsHistorical extends \Sportsdata\API\Soccer\Runtime\Client\BaseEn
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Soccer\Model\Membership[]
+     * @return null|\Sportsdata\API\Soccer\Model\Membership[]|\Sportsdata\API\Soccer\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Membership[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Soccer\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

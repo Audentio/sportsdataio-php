@@ -44,13 +44,14 @@ class ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalaries extends \Sportsdata\A
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\NHL\Model\PlayerGameProjection
+     * @return null|\Sportsdata\API\NHL\Model\PlayerGameProjection|\Sportsdata\API\NHL\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\PlayerGameProjection', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\NHL\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

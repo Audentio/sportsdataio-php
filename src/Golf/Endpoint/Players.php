@@ -35,13 +35,14 @@ class Players extends \Sportsdata\API\Golf\Runtime\Client\BaseEndpoint implement
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Golf\Model\Player[]
+     * @return null|\Sportsdata\API\Golf\Model\Player[]|\Sportsdata\API\Golf\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Player[]', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Golf\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

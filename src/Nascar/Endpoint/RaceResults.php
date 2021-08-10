@@ -39,13 +39,14 @@ class RaceResults extends \Sportsdata\API\Nascar\Runtime\Client\BaseEndpoint imp
      * {@inheritdoc}
      *
      *
-     * @return null|\Sportsdata\API\Nascar\Model\RaceResult
+     * @return null|\Sportsdata\API\Nascar\Model\RaceResult|\Sportsdata\API\Nascar\Model\Error
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'Sportsdata\\API\\Nascar\\Model\\RaceResult', 'json');
         }
+        return $serializer->deserialize($body, 'Sportsdata\\API\\Nascar\\Model\\Error', 'json');
     }
     public function getAuthenticationScopes() : array
     {

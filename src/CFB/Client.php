@@ -10,7 +10,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function areGamesInProgress(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -22,7 +22,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function currentSeason(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -34,7 +34,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function currentWeek(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -46,7 +46,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Conference[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Conference[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function conferenceHierarchyWithTeams(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -58,7 +58,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Team[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Team[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function teams(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -71,7 +71,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Game[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Game[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function schedules(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -87,7 +87,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\Game[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\Game[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function gamesByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -107,7 +107,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\Game[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\Game[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function gamesByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -127,7 +127,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\TeamGame[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\TeamGame[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function teamGameStatsByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -140,7 +140,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\TeamSeason[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\TeamSeason[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function teamSeasonStatsStandings(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -152,7 +152,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Stadium[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Stadium[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function stadiums(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -164,7 +164,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function currentSeasontype(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -176,7 +176,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Season|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Season|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function currentSeasonDetails(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -188,7 +188,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Player[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Player[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function playerDetailsByActive(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -204,7 +204,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\Player[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\Player[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerDetailsByPlayer(string $playerid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -220,7 +220,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\Player[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\Player[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerDetailsByTeam(string $team, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -233,7 +233,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function boxScore(string $gameid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -249,7 +249,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function boxScoresByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -262,7 +262,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function playerSeasonStats(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -278,7 +278,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerSeasonStatsByTeam(string $team, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -294,7 +294,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\PlayerSeason[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerSeasonStatsByPlayer(string $playerid, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -308,7 +308,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function boxScoresByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -330,7 +330,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\BoxScore[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function boxScoresByWeekDelta(string $week, string $season, string $minutes, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -350,7 +350,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\PlayerGame[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\PlayerGame[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerGameStatsByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -374,7 +374,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\PlayerGame[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\PlayerGame[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerGameStatsByPlayer(string $week, string $season, string $playerid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -390,7 +390,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
     * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     *
-    * @return null|\Sportsdata\API\CFB\Model\PlayerGame[]|\Psr\Http\Message\ResponseInterface
+    * @return null|\Sportsdata\API\CFB\Model\PlayerGame[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
     */
     public function playerGameLogsBySeason(string $playerid, string $season, string $numberofgames, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -404,7 +404,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function preGameOddsByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -417,7 +417,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function preGameOddsLineMovement(string $gameid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -431,7 +431,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function inGameOddsByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -444,7 +444,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function inGameOddsLineMovement(string $gameid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -458,7 +458,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function alternateMarketPreGameOddsByWeek(string $week, string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -471,7 +471,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\GameInfo[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function alternateMarketPreGameOddsLineMovement(string $gameid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -484,7 +484,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\TeamTrends|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\TeamTrends|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingTrendsByTeam(string $team, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -498,7 +498,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\MatchupTrends|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\MatchupTrends|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingTrendsByMatchup(string $opponent, string $team, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -511,7 +511,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingEventsByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -524,7 +524,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingEventsBySeason(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -537,7 +537,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingFuturesBySeason(string $season, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -550,7 +550,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingMarket|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingMarket|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingMarket(string $marketId, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -563,7 +563,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingMarket[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingMarket[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingMarketsByEvent(string $eventId, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -577,7 +577,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingMarket[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingMarket[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingMarketsByMarketType(string $marketTypeID, string $eventId, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -590,7 +590,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingMarket[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingMarket[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingMarketsByGameid(string $gameid, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -603,7 +603,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingEvent[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingPlayerPropsByDate(string $date, string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -615,7 +615,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\BettingEntityMetadata[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\BettingEntityMetadata[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function bettingMetadata(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {
@@ -627,7 +627,7 @@ class Client extends \Sportsdata\API\CFB\Runtime\Client\Client
      * @param string $format Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\Sportsdata\API\CFB\Model\Sportsbook[]|\Psr\Http\Message\ResponseInterface
+     * @return null|\Sportsdata\API\CFB\Model\Sportsbook[]|\Sportsdata\API\CFB\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function sportsbooksActive(string $format = 'JSON', string $fetch = self::FETCH_OBJECT)
     {

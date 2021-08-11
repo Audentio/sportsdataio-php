@@ -36,19 +36,19 @@ class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('message', $data)) {
-            $object->setMessage($data['message']);
+        if (\array_key_exists('Description', $data)) {
+            $object->setDescription($data['Description']);
         }
-        if (\array_key_exists('code', $data)) {
-            $object->setCode($data['code']);
+        if (\array_key_exists('Code', $data)) {
+            $object->setCode($data['Code']);
         }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['message'] = $object->getMessage();
-        $data['code'] = $object->getCode();
+        $data['Description'] = $object->getDescription();
+        $data['Code'] = $object->getCode();
         return $data;
     }
 }

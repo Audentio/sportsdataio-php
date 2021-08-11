@@ -9,7 +9,7 @@ class Error
      *
      * @var string
      */
-    protected $message;
+    protected $description;
     /**
      * 
      *
@@ -21,20 +21,20 @@ class Error
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getDescription() : string
     {
-        return $this->message;
+        return $this->description;
     }
     /**
      * 
      *
-     * @param string $message
+     * @param string $description
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setDescription(string $description) : self
     {
-        $this->message = $message;
+        $this->description = $description;
         return $this;
     }
     /**

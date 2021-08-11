@@ -7,32 +7,32 @@ class Error
     /**
      * 
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * 
      *
-     * @var int
+     * @var int|null
      */
     protected $code;
     /**
      * 
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription() : string
+    public function getDescription() : ?string
     {
         return $this->description;
     }
     /**
      * 
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(?string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -40,20 +40,20 @@ class Error
     /**
      * 
      *
-     * @return int
+     * @return int|null
      */
-    public function getCode() : int
+    public function getCode() : ?int
     {
         return $this->code;
     }
     /**
      * 
      *
-     * @param int $code
+     * @param int|null $code
      *
      * @return self
      */
-    public function setCode(int $code) : self
+    public function setCode(?int $code) : self
     {
         $this->code = $code;
         return $this;
